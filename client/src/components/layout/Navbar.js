@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import lctw from '../../images/LCTW.png';
+
 class Navbar extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <Link className="nav-link" to="/">
+            LCTW
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,7 +32,7 @@ class Navbar extends Component {
 
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Pricing
+                  Events
                 </a>
               </li>
 
@@ -43,7 +45,7 @@ class Navbar extends Component {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Dropdown link
+                  Meet Our Board
                 </a>
 
                 <div
@@ -51,47 +53,34 @@ class Navbar extends Component {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <a className="dropdown-item" href="#">
-                    Action
+                    Founder / CEO
                   </a>
                   <a className="dropdown-item" href="#">
-                    Another action
+                    Treasurer
                   </a>
                   <a className="dropdown-item" href="#">
-                    Something else here
+                    Graphics Designer
+                  </a>
+                  <a className="dropdown-item" href="#">
+                    Executive Outreach Director
                   </a>
                 </div>
               </li>
 
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown link
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Donations
                 </a>
-
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </div>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
         </nav>
+        <img className="lctw" src={lctw} height="100" alt="lctw" />
       </div>
     );
   }
