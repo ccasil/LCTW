@@ -12,8 +12,12 @@ import Graphics from "./components/pages/Graphics";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
 import Contact from "./components/pages/Contact";
+import Services from "./components/pages/Services";
 
 import "./App.css";
+
+// http://www.bgmanteca.org/newpage-1
+// https://lovechangingtheworld.weebly.com/
 
 class App extends Component {
   render() {
@@ -22,8 +26,9 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Route exact path="/" component={Landing} />
-          <div className="container">
+          <div className="container text-justify">
             <Route exact path="/ourmission" component={OurMission} />
+            <Route exact path="/services" component={Services} />
             <Route exact path="/events" component={Events} />
             <Route exact path="/founder" component={Founder} />
             <Route exact path="/treasurer" component={Treasurer} />

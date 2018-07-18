@@ -6,6 +6,7 @@ import lctw from '../../images/LCTW.png';
 class Navbar extends Component {
   render() {
     return <div>
+      <img className="lctw" src={lctw} height="100" alt="lctw" />
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link className="nav-link" to="/">
             LCTW
@@ -20,8 +21,12 @@ class Navbar extends Component {
                   Our Mission
                 </Link>
               </li>
-
-              <li className="nav-item">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Services">
+                Services
+                </Link>
+            </li>
+            <li className="nav-item">
                 <Link className="nav-link" to="/events">
                   Events
                 </Link>
@@ -61,7 +66,6 @@ class Navbar extends Component {
             </ul>
           </div>
         </nav>
-        <img className="lctw" src={lctw} height="100" alt="lctw" />
       </div>;
   }
 }
