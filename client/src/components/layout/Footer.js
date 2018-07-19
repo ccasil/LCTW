@@ -5,7 +5,6 @@ class Footer extends Component {
     render() {
         return (
             <div id="footer">
-                <h1>WANT TO REACH OUT INSTANTLY?</h1>
                 <table class="table table-borderless">
                     <thead>
                         <tr>
@@ -15,25 +14,27 @@ class Footer extends Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                <a href="https://www.facebook.com/lovechangingtheworld" target="_blank">
-                                    <i class="fab fa-facebook-square"></i>
+                            <th>
+                                <a className="footermedialink" href="https://www.facebook.com/lovechangingtheworld" target="_blank">
+                                    <i className="fab fa-facebook-square"></i>
                                 </a>
-                                <a href="https://twitter.com/LCTW_" target="_blank">
-                                    <i class="fab fa-twitter-square"></i>
+                                <a className="footermedialink" href="https://twitter.com/LCTW_" target="_blank">
+                                    <i className="fab fa-twitter-square"></i>
                                     </a>
-                                <a href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
-                                    <i class="fab fa-instagram"></i>
+                                <a className="footermedialink" href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
+                                    <i className="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.snapchat.com/add/lctw1" target="_blank">
-                                    <i class="fab fa-snapchat-square"></i>
+                                <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
+                                    <i className="fab fa-snapchat-square"></i>
                                     </a>
+                            </th>
+                            <td><p>Address: 3098 Florence Ave, San Jose, CA 95127</p>
+                                <p>Phone: (347) 849-4618</p>
                             </td>
-                            <td>Address: 3098 Florence Ave, San Jose, CA 95127</td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Phone: (347) 849-4618</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

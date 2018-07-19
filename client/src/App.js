@@ -13,6 +13,7 @@ import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
 import Contact from "./components/pages/Contact";
 import Services from "./components/pages/Services";
+import Sponsors from "./components/pages/Sponsors";
 
 import "./App.css";
 
@@ -36,6 +37,7 @@ class App extends Component {
             <Route exact path="/executive" component={Executive} />
             <Route exact path="/donations" component={Donations} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/sponsors" component={Sponsors} />
           </div>
           <Footer />
         </div>
