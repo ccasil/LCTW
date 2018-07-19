@@ -4,7 +4,7 @@ import treasurer from "../../images/treasurer.jpeg";
 class Treasurer extends Component {
     render() {
         return <div className="treasurer">
-            <h1>Meet Our Founder/CEO</h1>
+            <h1>Meet Our Treasurer</h1>
             <div className="">
               <div className="">
                 <img className="ceo" src={treasurer} height="400px;" alt="ceo" />
