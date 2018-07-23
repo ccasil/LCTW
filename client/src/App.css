@@ -26,32 +26,3 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-
-#footer {
-  background: #c30600;
-  color: white;
-}
-
-.medialink {
-  margin-right: 20px;
-  font-size: 28px;
-  color: black;
-}
-
-.navbarmedialink {
-  margin-right: 20px;
-  font-size: 28px;
-  color: gray;
-}
-
-.footermedialink {
-  margin-right: 20px;
-  font-size: 28px;
-  color: white;
-}
-
-.footermedialink:hover {
-  color: white;
-  text-decoration: underline;
-}
