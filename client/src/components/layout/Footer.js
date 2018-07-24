@@ -30,6 +30,7 @@ class Footer extends Component {
                                     </a>
                             </th>
                             <td><p>Address: 3098 Florence Ave, San Jose, CA 95127</p>
+                                <p>Email: info@lovechangingtheworld.org</p>
                                 <p>Phone: (347) 849-4618</p>
                             </td>
                         </tr>

@@ -52,6 +52,11 @@ class Navbar extends Component {
                   Donations
                 </Link>
               </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/programs">
+                Our Programs
+                </Link>
+            </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">
                   Contact Us
