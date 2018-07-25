@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import "../css/Navbar.css";
 import lctw from '../../images/LCTW.png';
 
 class Navbar extends Component {
@@ -13,7 +13,7 @@ class Navbar extends Component {
           </button>
         <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
           <ul className="navbar-nav mx-auto text-center">
-              <li className="nav-item active">
+              <li className="nav-item">
                 <Link className="nav-link" to="/ourmission">
                   Our Mission
                 </Link>
@@ -52,6 +52,11 @@ class Navbar extends Component {
                   Donations
                 </Link>
               </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/programs">
+                Our Programs
+                </Link>
+            </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">
                   Contact Us

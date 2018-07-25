@@ -11,6 +11,7 @@ import Treasurer from "./components/pages/Treasurer";
 import Graphics from "./components/pages/Graphics";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
+import Programs from "./components/pages/Programs";
 import Contact from "./components/pages/Contact";
 import Services from "./components/pages/Services";
 import Sponsors from "./components/pages/Sponsors";
@@ -36,6 +37,7 @@ class App extends Component {
             <Route exact path="/graphics" component={Graphics} />
             <Route exact path="/executive" component={Executive} />
             <Route exact path="/donations" component={Donations} />
+            <Route exact path="/programs" component={Programs} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/sponsors" component={Sponsors} />
           </div>

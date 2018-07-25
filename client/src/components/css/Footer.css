@@ -1,0 +1,17 @@
+
+#footer {
+  background: #c30600;
+  color: white;
+}
+
+.footermedialink {
+  margin-right: 20px;
+  font-size: 28px;
+  color: white;
+}
+
+.footermedialink:hover {
+  /* color: white; */
+  filter: invert(100%);
+  /* text-decoration: underline; */
+}

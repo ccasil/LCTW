@@ -1,0 +1,20 @@
+.socialmedialink {
+  margin-right: 20px;
+  font-size: 22px;
+  color: red;
+}
+.socialmedialink:hover {
+  color: black;
+  /* filter: invert(100%); */
+  /* text-decoration: underline; */
+}
+
+.logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
