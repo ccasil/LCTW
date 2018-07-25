@@ -25,4 +25,15 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+
+.landing {
+  
+  background: url('./images/background.jpg');
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height:100vh;
+    color: white;
+    position: relative;
 }
