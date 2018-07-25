@@ -9,6 +9,17 @@
   /* text-decoration: underline; */
 }
 
+.landing {
+  background: url('../../images/background.jpg');
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height:100vh;
+    color: white;
+    position: relative;
+}
+
 .logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
