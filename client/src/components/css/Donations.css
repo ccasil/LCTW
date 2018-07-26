@@ -5,5 +5,30 @@
 }
 
 .buttonspace {
-    margin: 16px;
+   margin: 16px;
+}
+
+.cartItem {
+	max-width: 50%;
+	min-width:220px;
+	display: inline-block;
+	text-align: center;
+	
+}
+
+.shoppingImg {
+	width: 70%;
+}
+
+.cartForm .ShoppingOptions{
+	height: 120px;
+	text-align: center;
+}
+
+.cartForm .ShoppingOptions table {
+	min-width: 100%;
+}
+
+.cartButton{
+	margin-top: 5px;
 }
