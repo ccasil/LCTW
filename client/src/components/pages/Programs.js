@@ -55,7 +55,7 @@ class Programs extends Component {
                 <ul>
                     <li>Various Candy</li>
                     <li>Flavored Condoms</li>
-                    <li>Regular COndoms</li>
+                    <li>Regular Condoms</li>
                     <li>Women Condoms</li>
                     <li>Men Plus Size Condoms</li>
                     <li>Lubricant</li>

@@ -54,7 +54,7 @@ class Landing extends Component {
           </p>
           <p>
             Our #LCTW Family would like to THANK YOU for your help,
-            donations, sponsorship, & support.... We LOVE you all.
+            donations, sponsorship, & support... We LOVE you all.
           </p>
         </div>
       </div>

@@ -6,7 +6,7 @@ class Services extends Component {
             <div>
                 <h1>Services Provided:</h1>
                 Our organization is experienced in Homelessness and will provide these services through
-                referrals. Food Vida Life Center
+                referrals.
                 <ul>
                     <li>Food Vida Life Center (FREE Food), Every Saturday (8:30AM-1PM) @ New Mission Community Church</li>
                     <li>Clothes</li>
