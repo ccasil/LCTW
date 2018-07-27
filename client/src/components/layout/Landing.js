@@ -44,10 +44,11 @@ class Landing extends Component {
             </div>
           </div>
 
-          <p>Donations</p>
+          <p>Donations: 
           <button className="btn btn-primary" target="_blank" href="https://www.paypal.me/lovechangingtheworld">
             PayPal
           </button>
+          </p>
           <p>
             Sponsors: Santa Clara County Department of Health Services,
             New Mission Community Church, Safeway, & Peter's Bakery.

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ceo from "../../images/ceo.jpeg";
+import ceo from '../../images/Board/ceo.jpeg';
 
 class Founder extends Component {
   render() {

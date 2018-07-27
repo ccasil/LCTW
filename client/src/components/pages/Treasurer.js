@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import treasurer from "../../images/treasurer.jpeg";
+import treasurer from '../../images/Board/treasurer.jpeg';
 
 class Treasurer extends Component {
     render() {
