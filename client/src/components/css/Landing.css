@@ -1,0 +1,31 @@
+.socialmedialink {
+  margin-right: 20px;
+  font-size: 22px;
+  color: red;
+}
+.socialmedialink:hover {
+  color: black;
+  /* filter: invert(100%); */
+  /* text-decoration: underline; */
+}
+
+.landing {
+  background: url('../../images/background.jpg');
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height:100vh;
+    color: white;
+    position: relative;
+}
+
+.logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

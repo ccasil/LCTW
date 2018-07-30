@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import executive from "../../images/executive.jpg";
+import executive from '../../images/Board/executive.jpg';
 
 class Executive extends Component {
   render() {

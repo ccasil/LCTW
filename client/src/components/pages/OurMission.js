@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import $ from 'jquery';
-import "./OurMission.css";
+import "../css/OurMission.css";
 
 // image routes
 import image1 from '../../images/OurMissionImages/1_2_orig.jpg';

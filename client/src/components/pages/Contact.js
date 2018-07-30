@@ -23,8 +23,8 @@ class Contact extends Component {
           <div className="form-group">
             <label for="contact">Select One*</label>
             <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
+              <option>Email</option>
+              <option>Phone</option>
             </select>
           </div>
           <submit />
