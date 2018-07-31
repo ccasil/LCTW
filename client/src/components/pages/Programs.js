@@ -5,12 +5,12 @@ class Programs extends Component {
     render() {
         return (
             <div>
-                <h1>Our Programs</h1>
+                <h1 className="display-1">Our Programs</h1>
                 <h2 className="font-weight-bold">Love Blessings Backpacks</h2>
-                <p>Includes personal care and hygiene items, healthy snacks and list of social services (certified food distribution, medical care, shelter, etc.) socks, underclothes, t-shirts, blue jeans, and other clothing is included. Distributed monthly at locations most frequented by homeless populations.</p>
-                <p>Men, Women, Children, Infants and Toddlers of all sizes</p>
-                <p className="font-weight-light font-italic">(Please, no used items)</p>
-                <ul>
+                <p className="lead">Includes personal care and hygiene items, healthy snacks and list of social services (certified food distribution, medical care, shelter, etc.) socks, underclothes, t-shirts, blue jeans, and other clothing is included. Distributed monthly at locations most frequented by homeless populations.</p>
+                <p className="lead">Men, Women, Children, Infants and Toddlers of all sizes</p>
+                <p className="lead font-weight-light font-italic">(Please, no used items)</p>
+                <ul className="list-unstyled">
                     <li>Backpacks</li>
                     <li>Socks</li>
                     <li>T-Shirts</li>
@@ -47,32 +47,29 @@ class Programs extends Component {
                     <li>Cots</li>
                 </ul>
                 <h2 className="font-weight-bold">Love Blessings Gift Bags</h2>
-                <p>Includes personal care and hygiene items, healthy snacks and list of social services (certified food distribution, medical care, shelter, etc.) socks, and other clothing is included. Distributed monthly at locations most frequented by homeless populations.</p>
+                <p className="lead">Includes personal care and hygiene items, healthy snacks and list of social services (certified food distribution, medical care, shelter, etc.) socks, and other clothing is included. Distributed monthly at locations most frequented by homeless populations.</p>
 
                 <h2 className="font-weight-bold">Love Blessings Condoms & Candy Bags</h2>
-                <p>Provides HIV/STD education and prevention through the distribution of small gift packets that include condoms, candies, and information about safer sex practices and health resources.</p>
-                <p className="font-weight-light font-italic">(Individual Packages or cases/Please, no used items)</p>
-                <ul>
+                <p className="lead">Provides HIV/STD education and prevention through the distribution of small gift packets that include condoms, candies, and information about safer sex practices and health resources.</p>
+                <p className="lead font-weight-light font-italic">(Individual Packages or cases/Please, no used items)</p>
+                <ul className="list-unstyled">
                     <li>Various Candy</li>
                     <li>Flavored Condoms</li>
                     <li>Regular Condoms</li>
                     <li>Women Condoms</li>
                     <li>Men Plus Size Condoms</li>
                     <li>Lubricant</li>
-                    <li>STD/HIV Prevention Information</li>
+                    <li></li>
+                    {/* <li>STD/HIV Prevention Information</li>
                     <li>Get Tested Information</li>
-                    <li>Planned Parenthood Information</li>
-                    <li>Anonymous and Confidential</li>
-
-                    <li>Free HIV Testing: 1 (408) 792-3720</li>
-                    <li>All Information is provided by Santa Clara County Public Health Department</li>
-                    <li>The Crane Center</li>
-                    <li>Planned Parenthood</li>
+                    <li>Planned Parenthood Information</li> */}
+                    <li>Anonymous and Confidential Free HIV Testing: 1 (408) 792-3720</li>
+                    <li>All Information is provided by Santa Clara County Public Health Department, The Crane Center and Planned Parenthood</li>
                 </ul>
                 <h2 className="font-weight-bold">Shower of Love</h2>
-                <p>Will provide access to showers and laundry services to chronic and transitional homeless populations.</p>
+                <p className="lead">Will provide access to showers and laundry services to chronic and transitional homeless populations.</p>
                 <h2 className="font-weight-bold">"I AM" WORTH IT!!! (coming soon)</h2>
-                <p>Design to Empower, Encourage, and Inspire young girls to know their worth.</p>
+                <p className="lead">Design to Empower, Encourage, and Inspire young girls to know their worth.</p>
             </div>
         );
     }

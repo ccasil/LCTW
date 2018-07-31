@@ -4,10 +4,10 @@ class Services extends Component {
     render() {
         return (
             <div>
-                <h1>Services Provided:</h1>
-                Our organization is experienced in Homelessness and will provide these services through
-                referrals.
-                <ul>
+                <h1 className="display-1">Services Provided:</h1>
+                <p className="lead">Our organization is experienced in Homelessness and will provide these services through
+                referrals.</p>
+                <ul className="list-unstyled">
                     <li>Food Vida Life Center (FREE Food), Every Saturday (8:30AM-1PM) @ New Mission Community Church</li>
                     <li>Clothes</li>
                     <li>Love Blessings Gift Bags</li>

@@ -11,7 +11,7 @@ class Sponsors extends Component {
     render() {
         return (
             <div>
-                <h1>SPONSORS</h1>
+                <h1 className="display-1">SPONSORS</h1>
                 <img class="d-block w-100" src={Safeway}></img>
                 <img class="d-block w-100" src={Lucky}></img>
                 <img class="d-block w-100" src={TheHomeDepot}></img>

@@ -4,21 +4,21 @@ import ceo from '../../images/Board/ceo.jpeg';
 class Founder extends Component {
   render() {
     return <div className="founder">
-        <h1>Meet Our Founder/CEO</h1>
+      <h1 className="display-1">Meet Our Founder/CEO</h1>
         <div className="">
           <div className="">
             <img className="ceo" src={ceo} height="400px;" alt="ceo" />
           </div>
           <div className="">
-            <p>Missionary Chelette H. DeWees, Pastor</p>
-            <p>
+          <p className="font-weight-bold">Missionary Chelette H. DeWees, Pastor</p>
+          <p className="lead">
               Over 35 years of experience as a nurse, Missionary Chelette
               has worked in various hospitals and homes caring for people.
               In 1998 she worked at ESO as an AIDS Peer Health Educator,
               educating Junior High school students in the Bay Area about
               abstinence STD/HIV Prevention.
             </p>
-            <p>
+          <p className="lead">
               Missionary Chelette also worked at the Southside San Jose Boys
               & Girls Club of America as Asst. Director facilitating groups,
               such as Smart Girls and Passport to Manhood, which educated
@@ -26,12 +26,12 @@ class Founder extends Component {
               abuse.
             </p>
 
-            <p>
+          <p className="lead">
               In 2001 she founded Youth On The Rising Outreach, a non-profit
               organization for youth, which she ran at the Assemblies of God
               Church for 3 years.
             </p>
-            <p>
+          <p className="lead">
               On December 18, 2012, Missionary Chelette had an accident at
               the Cheesecake Factory, which changed her whole life. It's
               only the Grace of God and the love she has for Jesus and all
@@ -55,13 +55,13 @@ class Founder extends Component {
               Ministries, host the prayer lines, run the Greater Greater
               Works revival, "LIVE PRAYER" and more.
             </p>
-            <p>
+          <p className="lead">
               This helped her to regain her independent lifestyle and
               motivated her to start the non-profit organization Love
               Changing The World, Inc. This organization is built on love...
               "ALL FOR YOUR GLORY"
             </p>
-            <p>
+          <p className="lead">
               Currently the Founder and CEO of Our Father International
               Prayer-line Ministries & Love Changing The World, INC. After
               hosting and running revivals on Prayer lines for the last 14
@@ -72,7 +72,7 @@ class Founder extends Component {
               Fulmore.
             </p>
 
-            <p>
+          <p className="lead">
               OFIPL Ministries was founder February 04, 2013 as a way of
               enriching the world through love, faith, hope, and prayer. It
               has reached thousands and helped many to overcome some of
@@ -80,14 +80,14 @@ class Founder extends Component {
               8 active Prayer-line Ministries.
             </p>
 
-            <p>
+          <p className="lead">
               The Visionary Missionary Chelette H. DeWees has a heart to
               reach the world through love by building loving communities
               and uniting people worldwide. Truly today she "WALKS BY FAITH
               NOT BY SIGHT". she may have lost her sight, but has founded
               her VISION...
             </p>
-            <p>
+          <p className="lead">
               Love Changing The World, Inc. #LCTW is a non- profit
               organization which was found February 27, 2017.
             </p>
