@@ -5,7 +5,7 @@ class Programs extends Component {
     render() {
         return (
             <div>
-                <h1 className="display-1">Our Programs</h1>
+                <h1 className="display-1">Programs</h1>
                 <h2 className="font-weight-bold">Love Blessings Backpacks</h2>
                 <p className="lead">Includes personal care and hygiene items, healthy snacks and list of social services (certified food distribution, medical care, shelter, etc.) socks, underclothes, t-shirts, blue jeans, and other clothing is included. Distributed monthly at locations most frequented by homeless populations.</p>
                 <p className="lead">Men, Women, Children, Infants and Toddlers of all sizes</p>

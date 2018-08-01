@@ -4,7 +4,7 @@ class Services extends Component {
     render() {
         return (
             <div>
-                <h1 className="display-1">Services Provided:</h1>
+                <h1 className="display-1">Services</h1>
                 <p className="lead">Our organization is experienced in Homelessness and will provide these services through
                 referrals.</p>
                 <ul className="list-unstyled">
