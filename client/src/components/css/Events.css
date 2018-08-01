@@ -1,0 +1,48 @@
+/* Upcoming Events Styling */
+.upcomingEventItem {
+    margin: 20px 30px;
+}
+.upcomingEventItem img {
+    height: 300px;
+    width: 300px;
+}
+.upcomingEventItem h3 {
+    padding-left: 10px;
+}
+.upcomingEventItem p {
+    padding-left: 10px;
+}
+
+/* Previous Events Styling */
+.previousEvents {
+    margin: auto;
+    padding-left: 50px;
+    width: 90%;
+}
+.eventItem {
+    padding: 15px;
+}
+.eventItem img {
+    height: 200px;
+    width: 200px;
+}
+.eventItem h3 {
+    padding-left: 10px;
+}
+.eventItem p {
+    padding-left: 10px;
+}
+
+/* Modal Styling */
+.modal-dialog {
+    max-width: 80%;
+}
+.modal-body {
+    margin: auto;
+    padding-left: 70px;
+}
+.modal-body img {
+    height: 250px;
+    width: 250px;
+    padding: 16px;
+}
