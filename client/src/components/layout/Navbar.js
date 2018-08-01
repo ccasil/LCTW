@@ -36,14 +36,8 @@ class Navbar extends Component {
                   <Link className="dropdown-item" to="/founder">
                     Founder / CEO
                   </Link>
-                  <Link className="dropdown-item" to="/treasurer">
-                    Treasurer
-                  </Link>
-                  <Link className="dropdown-item" to="/graphics">
-                    Graphics Designer
-                  </Link>
                   <Link className="dropdown-item" to="/executive">
-                    Executive Outreach Director
+                    Executive Board
                   </Link>
                 </div>
               </li>

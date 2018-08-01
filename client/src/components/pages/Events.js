@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import "../css/Events.css";
 
 // upcoming events placeholder routes
-import placeholder1 from '/Users/robertgormley/Desktop/LCTW/LCTW/client/src/images/Events/26904406_782267771982878_8167205781200355992_n.jpg';
-import placeholder2 from '/Users/robertgormley/Desktop/LCTW/LCTW/client/src/images/Events/34035695_853175221558799_4338713599494062080_n.jpg';
+import placeholder1 from '../../images/Events/26904406_782267771982878_8167205781200355992_n.jpg';
+import placeholder2 from '../../images/Events/34035695_853175221558799_4338713599494062080_n.jpg';
 
 // image routes for Event 1
 import event1_image2 from '../../images/Events/Event_1/2.jpg';
@@ -415,7 +415,7 @@ class Events extends Component {
     render() {
         return (
             <div class="eventsContainer container">
-                <h1 class="col-12" >Upcoming Events</h1>
+                <h1 class="col-12 display-1" >Upcoming Events</h1>
                 <div class="upcomingEventsRow row">
                     <div class="upcomingEventItem">
                         <a class="btn" data-toggle="modal" data-target="#placeholder1">
@@ -434,7 +434,7 @@ class Events extends Component {
                 </div>
 
                 <div class="previousEventsContainer container">
-                    <h1 class="col-12">Previous Events</h1>
+                    <h1 class="col-12 display-4">Previous Events</h1>
                     <div class="previousEvents row">
                         <div class="eventsRow row">
                             <div class="eventItem">

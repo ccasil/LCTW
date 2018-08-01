@@ -7,8 +7,6 @@ import Landing from "./components/layout/Landing";
 import OurMission from "./components/pages/OurMission";
 import Events from "./components/pages/Events";
 import Founder from "./components/pages/Founder";
-import Treasurer from "./components/pages/Treasurer";
-import Graphics from "./components/pages/Graphics";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
 import Programs from "./components/pages/Programs";
@@ -33,8 +31,6 @@ class App extends Component {
             <Route exact path="/services" component={Services} />
             <Route exact path="/events" component={Events} />
             <Route exact path="/founder" component={Founder} />
-            <Route exact path="/treasurer" component={Treasurer} />
-            <Route exact path="/graphics" component={Graphics} />
             <Route exact path="/executive" component={Executive} />
             <Route exact path="/donations" component={Donations} />
             <Route exact path="/programs" component={Programs} />
