@@ -17,22 +17,27 @@ class Landing extends Component {
         </div>
         <div>
           <h1 className="display-4">Follow Our Movement</h1>
-              <a className="socialmedialink" href="https://www.facebook.com/lovechangingtheworld" target="_blank">
-                <i className="fab fa-facebook-square" /> Facebook
+          <a className="socialmedialink" href="https://www.facebook.com/lovechangingtheworld" target="_blank">
+            <i className="fab fa-facebook-square" /> Facebook
               </a>
-              <a className="socialmedialink" href="https://twitter.com/LCTW_" target="_blank">
-                <i className="fab fa-twitter-square" /> Twitter
+          <a className="socialmedialink" href="https://twitter.com/LCTW_" target="_blank">
+            <i className="fab fa-twitter-square" /> Twitter
               </a>
-              <a className="socialmedialink" href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
-                <i className="fab fa-instagram" /> Instagram
+          <a className="socialmedialink" href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
+            <i className="fab fa-instagram" /> Instagram
               </a>
-              <a className="socialmedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
-                <i className="fab fa-snapchat-square" /> Snapchat
+          <a className="socialmedialink" href="https://www.youtube.com/channel/UCjF_zBD7MSpuplF-ULDabDw/featured" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+              </a>
+          <a className="socialmedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
+            <i className="fab fa-snapchat-square" /> Snapchat
               </a>
 
-          <h5>Donations:  <button type="button" className="btn btn-primary" target="_blank" href="https://www.paypal.me/lovechangingtheworld">PayPal
-          </button>
-          </h5>
+          <h5>Donations</h5>
+            <form action="https://www.paypal.me/lovechangingtheworld" target="_blank">
+              <input type="submit" className="btn btn-primary buttonspace" value="PayPal" />
+            </form>
+          
           <p className="lead">
             Sponsors: Santa Clara County Department of Health Services,
             New Mission Community Church, Safeway, & Peter's Bakery.

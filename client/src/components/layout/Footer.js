@@ -5,11 +5,11 @@ import "../css/Footer.css";
 class Footer extends Component {
     render() {
         return (
-            <div class="container-fluid" id="footer">
-                <table class="table table-borderless">
+            <div className="container-fluid" id="footer">
+                <table className="table table-borderless">
                     <thead>
                         <tr>
-                            <th scope="col">Follow Us</th>
+                            <th scope="col">Follow Our Movement</th>
                             <th scope="col">Contact Us</th>
                         </tr>
                     </thead>
@@ -24,6 +24,9 @@ class Footer extends Component {
                                     </a>
                                 <a className="footermedialink" href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
                                     <i className="fab fa-instagram"></i>
+                                </a>
+                                <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
+                                    <i class="fab fa-youtube"></i>
                                 </a>
                                 <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
                                     <i className="fab fa-snapchat-square"></i>
