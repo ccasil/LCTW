@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../css/Footer.css";
 
 class Footer extends Component {
@@ -26,7 +26,7 @@ class Footer extends Component {
                                     <i className="fab fa-instagram"></i>
                                 </a>
                                 <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
-                                    <i class="fab fa-youtube"></i>
+                                    <i className="fab fa-youtube"></i>
                                 </a>
                                 <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
                                     <i className="fab fa-snapchat-square"></i>
