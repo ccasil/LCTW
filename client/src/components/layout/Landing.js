@@ -42,10 +42,6 @@ class Landing extends Component {
             Sponsors: Santa Clara County Department of Health Services,
             New Mission Community Church, Safeway, & Peter's Bakery.
           </p>
-          <p className="lead">
-            Our #LCTW Family would like to THANK YOU for your help,
-            donations, sponsorship, & support... We LOVE you all.
-          </p>
         </div>
       </div>
     );

@@ -7,6 +7,11 @@ class Navbar extends Component {
   render() {
     return <div>
       <Link to="/"><img className="lctw" src={lctw} height="100" alt="lctw" /></Link>
+
+        <form className="float-right buttonspace" action="https://www.paypal.me/lovechangingtheworld" target="_blank">
+          <input type="submit" className="btn btn-primary btn-sm my-2 my-sm-0" value="Donate" />
+        </form>
+
       <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />

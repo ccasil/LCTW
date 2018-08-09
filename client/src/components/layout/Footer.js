@@ -9,7 +9,7 @@ class Footer extends Component {
                 <table className="table table-borderless">
                     <thead>
                         <tr>
-                            <th scope="col">Follow Our Movement</th>
+                            <th scope="col">Follow Our Movement #LCTW</th>
                             <th scope="col">Contact Us</th>
                         </tr>
                     </thead>
@@ -25,7 +25,10 @@ class Footer extends Component {
                                 <a className="footermedialink" href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
                                     <i className="fab fa-instagram"></i>
                                 </a>
-                                <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
+                                <a className="footermedialink" href="https://www.linkedin.com/in/love-changing-the-world-inc-8b4384148/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a className="footermedialink" href="https://www.youtube.com/channel/UCjF_zBD7MSpuplF-ULDabDw/featured" target="_blank">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                                 <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
