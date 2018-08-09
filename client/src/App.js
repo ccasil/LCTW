@@ -10,9 +10,9 @@ import Founder from "./components/pages/Founder";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
 import Programs from "./components/pages/Programs";
-import Contact from "./components/pages/Contact";
+import Mailing from "./components/pages/Mailing";
 import Services from "./components/pages/Services";
-import Sponsors from "./components/pages/Sponsors";
+import Staff from "./components/pages/Staff";
 
 import "./App.css";
 
@@ -32,10 +32,10 @@ class App extends Component {
             <Route exact path="/events" component={Events} />
             <Route exact path="/founder" component={Founder} />
             <Route exact path="/executive" component={Executive} />
+            <Route exact path="/staff" component={Staff} />
             <Route exact path="/donations" component={Donations} />
             <Route exact path="/programs" component={Programs} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/sponsors" component={Sponsors} />
+            <Route exact path="/mailing" component={Mailing} />
           </div>
           <Footer />
         </div>

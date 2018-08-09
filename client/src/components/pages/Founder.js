@@ -4,7 +4,7 @@ import ceo from '../../images/Board/ceo.jpeg';
 class Founder extends Component {
   render() {
     return <div className="founder">
-      <h1 className="display-1">Meet Our Founder/CEO</h1>
+      <h1 className="display-1">Meet Our Founder/President, CEO</h1>
         <div className="">
           <div className="">
             <img className="ceo" src={ceo} height="400px;" alt="ceo" />

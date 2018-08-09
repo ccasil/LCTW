@@ -44,7 +44,7 @@ class Navbar extends Component {
                 <Link className="dropdown-item" to="/executive">
                   Board of Directors
                   </Link>
-                <Link className="dropdown-item" to="/executive">
+                <Link className="dropdown-item" to="/staff">
                   Staff
                   </Link>
               </div>
@@ -59,31 +59,26 @@ class Navbar extends Component {
                 Programs
                 </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+            <li className="nav-item dropdown navbar-logo mx-auto">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Contact Us
-                </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/sponsors">
-                Sponsors
-                </Link>
+                </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <Link className="dropdown-item" to="/mailing">
+                  Mailing List
+                  </Link>
+                <Link className="dropdown-item" to="/sponsorform">
+                  Sponsors
+                  </Link>
+                <Link className="dropdown-item" to="/volunteerform">
+                  Volunteers / Internships
+                  </Link>
+                <Link className="dropdown-item" to="/homelessform">
+                  Homeless
+                  </Link>
+              </div>
             </li>
           </ul>
-          {/* <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
-            <li class="nav-item"><a className="navbarmedialink" href="https://www.facebook.com/lovechangingtheworld" target="_blank">
-              <i className="fab fa-facebook-square"></i>
-            </a></li>
-            <li class="nav-item"><a className="navbarmedialink" href="https://twitter.com/LCTW_" target="_blank">
-              <i className="fab fa-twitter-square"></i>
-            </a></li>
-            <li class="nav-item"><a className="navbarmedialink" href="http://www.instagram.com/_lovechangingtheworld_" target="_blank">
-              <i className="fab fa-instagram"></i>
-            </a></li>
-            <li class="nav-item"><a className="navbarmedialink" href="https://www.snapchat.com/add/lctw1" target="_blank">
-              <i className="fab fa-snapchat-square"></i>
-            </a></li>
-          </ul> */}
         </div>
       </nav>
     </div>;

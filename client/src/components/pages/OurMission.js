@@ -92,7 +92,8 @@ class OurMission extends Component {
 
       <div className="ourmission">
         <h1 className="display-1">OUR MISSION</h1>
-        <h4 className="lead"> The Mission of Love Changing The World (LCTW) is to feed, clothe, comfort and
+        <h4 className="lead"> The Mission of Love Changing The World is all about love first. </h4>
+        <h4 className="lead">#LCTW is to feed, clothe, comfort and
 care for vulnerable people living in poverty with LOVE to all generations without
 discrimination. </h4>
 
