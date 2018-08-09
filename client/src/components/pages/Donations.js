@@ -2,11 +2,60 @@ import React, { Component } from 'react'
 import "../css/Donations.css";
 
 
-import Shirt from '../../images/Shop/IMG_0023.JPG';
+import BlackRed from '../../images/Shop/LOVE 1.jpg';
+import BlackWhite from '../../images/Shop/LOVE 2.jpg';
+import RedBlack from '../../images/Shop/LOVE 4.jpg';
+import RedWhite from '../../images/Shop/LOVE 3.jpg';
+import WhiteBlack from '../../images/Shop/LOVE 5.jpg';
+import WhiteRed from '../../images/Shop/LOVE 6.jpg';
+
 import Apron from '../../images/Shop/IMG_4275.JPG';
 
 
-class Donations extends Component {
+class Donations extends React.Component {
+
+  constructor(props){
+        
+      super(props);
+     
+      this.state = {
+        value : 'select',
+        image : BlackRed,
+      } ,
+      this.change = this.change.bind(this)
+      this.switchImage = this.switchImage.bind(this)
+    }
+
+    change(event){    
+      console.log(event.target.value)
+      this.setState({value: event.target.value, image: this.switchImage(event.target.value)});
+      console.log(this.state)
+    }
+
+    switchImage(param){
+      console.log(param)
+     
+      switch(param){
+        case 'Black - Red Text':
+          return BlackRed
+        case 'Black - White Text':
+          return BlackWhite
+        case 'Red - Black Text':
+          return RedBlack
+        case 'Red - White Text':
+          return RedWhite
+        case 'White - Red Text':
+          return WhiteRed
+        case 'White - Black Text':
+          return WhiteBlack                    
+        default:
+          return BlackRed
+
+      }
+
+    }
+  
+
   render() {
     return (
       <div className="donations">
@@ -27,7 +76,11 @@ class Donations extends Component {
 
         <div className="cartItem">
           <h4> Shirts! </h4>
-          <img alt="shirt" className="shoppingImg" src={Shirt}></img>
+
+          <img alt="shirt" className="shoppingImg" src={this.state.image}></img>
+          
+
+
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
           <input type="hidden" name="cmd" value="_cart"></input>
           <input type="hidden" name="business" value="H4y4shi@gmail.com"></input>
@@ -47,12 +100,19 @@ class Donations extends Component {
               <option value="Medium">Medium $20.00 USD</option>
               <option value="Large">Large $20.00 USD</option>
               <option value="Extra-Large">Extra-Large $20.00 USD</option>
+              <option value="XX-Large">XX-Large $25.00 USD</option>
+              <option value="3X-Large">3X-Large $25.00 USD</option>
+              <option value="4X-Large">4X-Large $25.00 USD</option>
+              <option value="5X-Large">5X-Large $25.00 USD</option>
+
             </select> </td></tr>
-            <tr><td><input type="hidden" name="on1" value="Color"></input>Color</td></tr><tr><td><select name="os1">
-              <option value="Red - White Text">Red - White Text </option>
-              <option value="Red - Black Text">Red - Black Text </option>
+            <tr><td><input type="hidden" name="on1" value="Color"></input>Color</td></tr><tr><td><select name="os1" onChange={this.change} value ={this.state.value}>
               <option value="Black - Red Text">Black - Red Text </option>
               <option value="Black - White Text">Black - White Text </option>
+              <option value="Red - Black Text">Red - Black Text </option>
+              <option value="Red - White Text">Red - White Text </option>
+              <option value="White - Black Text">White - Black Text </option>
+              <option value="White - Red Text">White - Red Text </option>
             </select> </td></tr>
             </tbody>
             </table>
@@ -65,6 +125,14 @@ class Donations extends Component {
             <input type="hidden" name="option_amount2" value="20.00"></input>
             <input type="hidden" name="option_select3" value="Extra-Large"></input>
             <input type="hidden" name="option_amount3" value="20.00"></input>
+            <input type="hidden" name="option_select4" value="XX-Large"></input>
+            <input type="hidden" name="option_amount4" value="25.00"></input>
+            <input type="hidden" name="option_select5" value="3X-Large"></input>
+            <input type="hidden" name="option_amount5" value="25.00"></input>
+            <input type="hidden" name="option_select6" value="4X-Large"></input>
+            <input type="hidden" name="option_amount6" value="25.00"></input>
+            <input type="hidden" name="option_select7" value="5X-Large"></input>
+            <input type="hidden" name="option_amount7" value="25.00"></input>
             <input type="hidden" name="option_index" value="0"></input>
           </div>
           <input type="image" className="cartButton" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
