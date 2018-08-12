@@ -51,7 +51,7 @@ class Programs extends Component {
 
                 <h2 className="font-weight-bold">Love Blessings Condoms & Candy Bags</h2>
                 <p className="lead">Provides HIV/STD education and prevention through the distribution of small gift packets that include condoms, candies, and information about safer sex practices and health resources.</p>
-                <p className="lead font-weight-light font-italic">(Individual Packages or cases/Please, no used items)</p>
+                <p className="lead font-weight-light font-italic">(Individual Packages or cases / Please, no used items)</p>
                 <ul className="list-unstyled">
                     <li>Various Candy</li>
                     <li>Flavored Condoms</li>
@@ -59,12 +59,6 @@ class Programs extends Component {
                     <li>Women Condoms</li>
                     <li>Men Plus Size Condoms</li>
                     <li>Lubricant</li>
-                    <li></li>
-                    {/* <li>STD/HIV Prevention Information</li>
-                    <li>Get Tested Information</li>
-                    <li>Planned Parenthood Information</li> */}
-                    <li>Anonymous and Confidential Free HIV Testing: 1 (408) 792-3720</li>
-                    <li>All Information is provided by Santa Clara County Public Health Department, The Crane Center and Planned Parenthood</li>
                 </ul>
                 <h2 className="font-weight-bold">Shower of Love</h2>
                 <p className="lead">Will provide access to showers and laundry services to chronic and transitional homeless populations.</p>

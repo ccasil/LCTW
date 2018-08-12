@@ -13,11 +13,6 @@ class Services extends Component {
                     <li>Love Blessings Gift Bags</li>
                     <li>Love Blessings “Backpacks”</li>
                     <li>Loving Condoms and Candy Bags</li>
-                    <span className="font-weight-bold">Resources:</span>
-                    <li>STD/HIV Prevention &amp; Control/Loving Condoms &amp; Candy Bags</li>
-                    <li>Support for the Blind and Visually Impaired</li>
-                    <li>Support for Pregnant teens with Toddlers</li>
-                    <li>Homeless Support and Outreach Services</li>
                 </ul>
                 <h4><span className="font-weight-bold">Providing Services in Areas:</span> San Joaquin, Santa Clara, Merced & also the city of Mount Vernon, New York</h4>
                 <h4><span className="font-weight-bold">VOLUNTEERS NEEDED!!!</span> If you have an interest in helping others please do not HESITATE to reach out.</h4>

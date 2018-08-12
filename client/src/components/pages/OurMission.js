@@ -101,7 +101,7 @@ discrimination. </h4>
         <p className="lead">We accomplish this mission by unifying our communities through areas of:</p>
 
         <ul className="list-unstyled">
-          <li>Building Loving Communities</li>
+          <li>Building LOVING Communities</li>
           <li>Sponsoring events of advocacy and activism;</li>
           <li>Provide resources for people in need;</li>
           <li>Partnership with other Non-profit organizations and Stakeholders.</li>

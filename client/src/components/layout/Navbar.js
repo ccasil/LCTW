@@ -30,7 +30,7 @@ class Navbar extends Component {
                 </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Services">
+              <Link className="nav-link" to="/services">
                 Services
                 </Link>
             </li>
@@ -85,7 +85,7 @@ class Navbar extends Component {
               </div>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/programs">
+              <Link className="nav-link" to="/resources">
                 Resources
                 </Link>
             </li>

@@ -5,12 +5,11 @@ class Founder extends Component {
   render() {
     return <div className="founder">
       <h1 className="display-1">Meet Our Founder/President, CEO</h1>
-        <div className="">
-          <div className="">
+          <div className="d-inline">
             <img className="ceo" src={ceo} height="400px;" alt="ceo" />
+            <p className="font-weight-bold">Missionary Chelette H. DeWees, Pastor</p>
           </div>
-          <div className="">
-          <p className="font-weight-bold">Missionary Chelette H. DeWees, Pastor</p>
+        <div className="d-inline">
           <p className="lead">
               Over 35 years of experience as a nurse, Missionary Chelette
               has worked in various hospitals and homes caring for people.
@@ -92,7 +91,6 @@ class Founder extends Component {
               organization which was found February 27, 2017.
             </p>
           </div>
-        </div>
       </div>;
   }
 }

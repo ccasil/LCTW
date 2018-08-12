@@ -11,8 +11,13 @@ import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
 import Programs from "./components/pages/Programs";
 import Mailing from "./components/pages/Mailing";
+import SponsorForm from "./components/pages/SponsorForm";
+import VolunteerForm from "./components/pages/VolunteerForm";
+import HomelessForm from "./components/pages/HomelessForm";
 import Services from "./components/pages/Services";
 import Staff from "./components/pages/Staff";
+import Resources from "./components/pages/Resources";
+
 
 import "./App.css";
 
@@ -36,6 +41,10 @@ class App extends Component {
             <Route exact path="/donations" component={Donations} />
             <Route exact path="/programs" component={Programs} />
             <Route exact path="/mailing" component={Mailing} />
+            <Route exact path="/sponsorform" component={SponsorForm} />
+            <Route exact path="/volunteerform" component={VolunteerForm} />
+            <Route exact path="/homelessform" component={HomelessForm} />
+            <Route exact path="/resources" component={Resources} />
           </div>
           <Footer />
         </div>

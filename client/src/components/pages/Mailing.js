@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import "../css/Contact.css";
+import "../css/Mailing.css";
 
 class Contact extends Component {
   render() {
     return (
       <div className="contact">
         <h1 className="display-1">Contact Us</h1>
-        <p className="lead">Hello there, feel free to leave your contact info so that we can reach out to you and keep you updated with our upcoming events and much more.</p>
+        <p className="lead">Hello, feel free to leave your contact info so that we can reach out to you and keep you updated with our upcoming events and much more.</p>
         <form>
 
           <div className="form-group">
