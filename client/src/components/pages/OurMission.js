@@ -93,7 +93,7 @@ class OurMission extends Component {
 
       <div className="ourmission">
         <h1 className="display-1">OUR MISSION</h1>
-        <h4 className="lead"> The Mission of Love Changing The World is all about love first. </h4>
+        <h4 className="lead"> The Mission of Love Changing The World is all about LOVE first!</h4>
         <h4 className="lead">#LCTW is to feed, clothe, comfort and
 care for vulnerable people living in poverty with LOVE to all generations without
 discrimination. </h4>
@@ -102,10 +102,11 @@ discrimination. </h4>
 
         <ul className="list-unstyled">
           <li>Building LOVING Communities</li>
-          <li>Sponsoring events of advocacy and activism;</li>
-          <li>Provide resources for people in need;</li>
-          <li>Partnership with other Non-profit organizations and Stakeholders.</li>
-          <li>Meeting human needs with love.</li>
+          <li>Sponsoring events of advocacy and activism</li>
+          <li>Provide resources for people in need</li>
+          <li>Fundraising</li>
+          <li>Partnership with other Non-profit organizations and Stakeholders</li>
+          <li>Meeting human needs with love</li>
         </ul>
 
         {/* display carousel */}

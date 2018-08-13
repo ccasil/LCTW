@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ccasil.github.io/LCTW/",
+  "homepage": "https://ccasil.github.io/LCTW_gh-pages/",
   "dependencies": {
     "classnames": "^2.2.6",
     "gh-pages": "^1.2.0",
