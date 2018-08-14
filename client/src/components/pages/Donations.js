@@ -21,7 +21,7 @@ class Donations extends React.Component {
       this.state = {
         value : 'select',
         image : BlackRed,
-      } ,
+      }
       this.change = this.change.bind(this)
       this.switchImage = this.switchImage.bind(this)
     }
@@ -132,7 +132,7 @@ class Donations extends React.Component {
 
         <div className="cartItem">
           <h4> Aprons! </h4>
-          <img className="shoppingImg" src={Apron}></img>
+          <img className="shoppingImg" src={Apron} alt="apron"></img>
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
           <div className="ShoppingOptions">
           <input type="hidden" name="cmd" value="_cart"></input>

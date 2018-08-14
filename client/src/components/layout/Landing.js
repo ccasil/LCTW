@@ -26,14 +26,14 @@ class Landing extends Component {
         </div>
         <div>
           <h1 className="display-4">SPONSORS</h1>
-          <a href="https://www.plannedparenthood.org/" target="_blank" className="d-line"><img className="w-100 img-fluid" src={PlannedParenthood}></img></a>
-          <a href="https://www.sccgov.org/sites/phd/services/hiv-resources/pages/std-hiv-test-home.aspx" target="_blank" className="d-line"><img class="w-100 img-fluid" src={SCPublicHealth}></img></a>
-          <a href="http://petersbakery.com/" target="_blank" className="d-line"><img className="w-100 img-fluid" src={PetersBakery}></img></a>
-          <img className="w-100 img-fluid d-inline" src={Safeway}></img>
-          <img className="w-100 img-fluid d-inline" src={Lucky}></img>
-          <img className="w-100 img-fluid d-inline" src={TheHomeDepot}></img>
-          <img className="w-100 img-fluid d-inline" src={Walmart}></img>
-          <img className="w-100 img-fluid d-inline" src={HomeFirst}></img>
+          <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer" className="d-line"><img className="w-100 img-fluid" src={PlannedParenthood} alt="Planned Parenthood"></img></a>
+          <a href="https://www.sccgov.org/sites/phd/services/hiv-resources/pages/std-hiv-test-home.aspx" target="_blank" rel="noopener noreferrer" className="d-line"><img class="w-100 img-fluid" src={SCPublicHealth} alt="Santa Clara Public Health"></img></a>
+          <a href="http://petersbakery.com/" target="_blank" rel="noopener noreferrer" className="d-line"><img className="w-100 img-fluid" src={PetersBakery} alt="Peter's Bakery"></img></a>
+          <img className="w-100 img-fluid d-inline" src={Safeway} alt="Safeway"></img>
+          <img className="w-100 img-fluid d-inline" src={Lucky} alt="Lucky"></img>
+          <img className="w-100 img-fluid d-inline" src={TheHomeDepot} alt="The Home Depot"></img>
+          <img className="w-100 img-fluid d-inline" src={Walmart} alt="Walmart"></img>
+          <img className="w-100 img-fluid d-inline" src={HomeFirst} alt="Home First"></img>
         </div>
       </div>
     );
