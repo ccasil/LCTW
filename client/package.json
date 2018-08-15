@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ccasil.github.io/LCTW_gh-pages/",
   "dependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
