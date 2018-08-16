@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import "../css/Founder.css";
 import ceo from '../../images/Board/ceo.jpeg';
 
 class Founder extends Component {
   render() {
     return <div className="founder">
       <h1 className="display-1">Meet Our Founder/President, CEO</h1>
-          <div className="d-inline">
-            <img className="ceo" src={ceo} height="400px;" alt="ceo" />
+          <div className="photospace float-left">
+            <img className="ceo float-left" src={ceo} height="400px;" alt="ceo" />
             <p className="font-weight-bold">Missionary Chelette H. DeWees, Pastor</p>
           </div>
         <div className="d-inline">
