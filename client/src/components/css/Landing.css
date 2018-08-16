@@ -22,9 +22,9 @@
 }
 #toptext {
   margin: 25px;
-} */
+}
  #bottomtext {
-  margin: 25px;
+  margin-top: 75px;
 }
 .box {
   display: flex;

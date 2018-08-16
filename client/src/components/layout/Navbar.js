@@ -7,7 +7,17 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <div className="d-inline buttonspace float-right">
+
+        <Link to="/">
+          <img
+            className="d-inline mx-auto mainlogo"
+            src={lctw}
+            height="100"
+            alt="lctw"
+          />
+        </Link>
+
+        <div className="d-inline buttonspace">
           <form
             action="https://www.paypal.com/cgi-bin/webscr"
             method="post"
@@ -36,14 +46,6 @@ class Navbar extends Component {
             />
           </form>
         </div>
-        <Link to="/">
-          <img
-            className="d-inline mx-auto mainlogo"
-            src={lctw}
-            height="100"
-            alt="lctw"
-          />
-        </Link>
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
           <button
