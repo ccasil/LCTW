@@ -9,6 +9,7 @@ import RedWhite from '../../images/Shop/LOVE 3.jpg';
 import WhiteBlack from '../../images/Shop/LOVE 5.jpg';
 import WhiteRed from '../../images/Shop/LOVE 6.jpg';
 
+// New Image Needed
 import Apron from '../../images/Shop/IMG_4275.JPG';
 
 

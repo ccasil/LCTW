@@ -7,3 +7,27 @@
 .buttonspace {
   margin: 10px;
 }
+
+.mainlogo {
+	max-width: 100%;
+	height: 5rem;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 480px){
+	.mainlogo {
+		height: 6rem;
+	}
+}
+
+@media (min-width: 768px){
+	.mainlogo {
+		height: 7rem;
+	}
+}
+
+@media (min-width: 1024px){
+	.mainlogo {
+		height: 8rem;
+	}
+}

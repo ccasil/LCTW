@@ -38,7 +38,7 @@ class Navbar extends Component {
         </div>
         <Link to="/">
           <img
-            className="d-inline mx-auto"
+            className="d-inline mx-auto mainlogo"
             src={lctw}
             height="100"
             alt="lctw"
