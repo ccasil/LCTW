@@ -45,6 +45,14 @@ class Navbar extends Component {
             />
           </form>
         </div>
+        <Link to="/">
+          <img
+            className="d-inline mx-auto mainlogo"
+            src={lctw}
+            height="100"
+            alt="lctw"
+          />
+        </Link>
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
           <button

@@ -7,8 +7,8 @@
 }
 
 .shoppingImg {
-	max-width: 70%;
-	
+	width: 70%;
+	height: 40%;	
 	border-radius: 10px;
 }
 
@@ -24,3 +24,23 @@
 .cartButton{
 	margin-top: 5px;
 }
+
+@media (min-width: 480px){
+	.shoppingImg {
+		height: 8rem;
+	}
+}
+
+@media (min-width: 768px){
+	.shoppingImg {
+		height: 10rem;
+	}
+}
+
+@media (min-width: 1024px){
+	.shoppingImg {
+		height: 13rem;
+	}
+}
+
+
