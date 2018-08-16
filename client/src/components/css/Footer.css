@@ -2,8 +2,17 @@
 #footer {
   background: #c30600;
   color: white;
-}
+  margin-bottom: 0px;
+  position: relative;
+  margin-top: 180px;
+  /* negative value of footer height */
+  /* height: 180px;
+  clear: both; */
 
+}
+.table {
+  margin-bottom: 0px;
+}
 .footermedialink {
   margin-right: 20px;
   font-size: 28px;
