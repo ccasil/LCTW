@@ -134,6 +134,16 @@ class OurMission extends Component {
     }
   };
   render() {
+    const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10,
+      image11, image12, image13, image14, image15, image16, image17, image18, image19, image11,
+      image21, image22, image23, image24, image25, image26, image27, image28, image29, image30,
+    image31, image32, image33, image34, image35, image36, image37, image38, image39, image40,
+      image41, image42, image43, image44, image45, image46, image47, image48, image49, image50,
+      image51, image52, image53, image54, image55, image56, image57, image58, image59, image60,
+      image61, image62, image63, image64, image65, image66, image67, image68, image69, image70,
+      image71, image72, image73, image74, image75, image76, image77, image78, image79, image80,
+      image81];
+
     let { leftIcon, rightIcon } = this.state;
     return <div className="ourmission">
         <h1 className="display-1">OUR MISSION</h1>
@@ -165,103 +175,16 @@ class OurMission extends Component {
           <div className="row">
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
               <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                <div>
-                  <img style={{ width: 900, height: 600 }} src={image1} />
-                  <div className="carousel-caption">Image1</div>
-                </div>
-                <div>
-                  <img style={{ width: 900, height: 600 }} src={image2} />
-                  <div className="carousel-caption">Image2</div>
-                </div>
-                <div>
-                  <img style={{ width: 900, height: 600 }} src={image3} />
-                  <div className="carousel-caption">Image3</div>
-                </div>
-
-                <div>
-                <img style={{ width: 900, height: 600 }} src={image4} />
-                  <div className="carousel-caption">Image4</div>
-                </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image5} />
-                <div className="carousel-caption">Image5</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image6} />
-                <div className="carousel-caption">Image6</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image7} />
-                <div className="carousel-caption">Image7</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image8} />
-                <div className="carousel-caption">Image8</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image9} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image10} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image11} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image12} />
-                  <div className="carousel-caption">Image4</div>
-                </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image13} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image14} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image15} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image16} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image17} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image18} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image19} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image20} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image21} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image22} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image23} />
-                <div className="carousel-caption">Image4</div>
-              </div>
-              <div>
-                <img style={{ width: 900, height: 600 }} src={image24} />
-                <div className="carousel-caption">Image4</div>
-              </div>
+               
+                {images.map(function (image, index) {
+                  return <div>
+                      
+                      <img key={index} src={image} style={{ width: 900, height: 600 }} />
+                    
+                    </div>;
+                })}
+    
+                
               </React_Bootstrap_Carousel>
             </div>
           </div>
