@@ -163,11 +163,7 @@ class OurMission extends Component {
         {/* display carousel */}
         <div className="container-fluid">
           <div className="row">
-<<<<<<< HEAD
-            <div className="col-md-12" style={{ marginTop: 20, marginBottom: 20 }}>
-=======
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
->>>>>>> a746dddac12cf1e9bd1657b211d5da71e7f1a822
               <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 <div>
                   <img style={{ width: 900, height: 600 }} src={image1} />
@@ -177,14 +173,6 @@ class OurMission extends Component {
                   <img style={{ width: 900, height: 600 }} src={image2} />
                   <div className="carousel-caption">Image2</div>
                 </div>
-<<<<<<< HEAD
-                <div >
-                  <img style={{ width: "100%", height: "100%" }} src={image3} />
-                  <div className="carousel-caption">Image3</div>
-                </div>
-              <div >
-                <img style={{ width: "100%", height: "100%" }} src={image4} />
-=======
                 <div>
                   <img style={{ width: 900, height: 600 }} src={image3} />
                   <div className="carousel-caption">Image3</div>
@@ -272,7 +260,6 @@ class OurMission extends Component {
               </div>
               <div>
                 <img style={{ width: 900, height: 600 }} src={image24} />
->>>>>>> a746dddac12cf1e9bd1657b211d5da71e7f1a822
                 <div className="carousel-caption">Image4</div>
               </div>
               </React_Bootstrap_Carousel>
