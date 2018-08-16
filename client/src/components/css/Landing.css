@@ -3,6 +3,7 @@
   font-size: 35px;
   color: red;
 }
+
 .socialmedialink:hover {
   color: black;
   /* filter: invert(100%); */
@@ -19,10 +20,16 @@
     color: white;
     position: relative;
 }
+#toptext {
+  margin-bottom: 175px;
+}
+#bottomtext {
+  margin-top: 175px;
+}
 
 .logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 375px;
+  height: 300px;
   margin: 25px;
 }
 

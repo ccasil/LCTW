@@ -142,7 +142,7 @@ class OurMission extends Component {
           The Mission of Love Changing The World is all about LOVE first!
         </h4>
         <h4 className="lead">
-          #LCTW is to feed, clothe, comfort and care for vulnerable people
+          LCTW is to feed, clothe, comfort and care for vulnerable people
           living in poverty with LOVE to all generations without
           discrimination.{" "}
         </h4>
@@ -163,26 +163,23 @@ class OurMission extends Component {
         {/* display carousel */}
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12" style={{ marginTop: 20 }}>
+            <div className="col-md-12" style={{ marginTop: 20, marginBottom: 20 }}>
               <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 <div >
                   <img style={{ width: "100%", height: "100%" }} src={image1} />
                   <div className="carousel-caption">Image1</div>
                 </div>
-
                 <div>
                   <img style={{ width: "100%", height: "100%" }} src={image2} />
                   <div className="carousel-caption">Image2</div>
                 </div>
                 <div >
                   <img style={{ width: "100%", height: "100%" }} src={image3} />
-                  <div className="carousel-caption">Imag3</div>
+                  <div className="carousel-caption">Image3</div>
                 </div>
-
-
               <div >
                 <img style={{ width: "100%", height: "100%" }} src={image4} />
-                <div className="carousel-caption">Imag4</div>
+                <div className="carousel-caption">Image4</div>
               </div>
               </React_Bootstrap_Carousel>
             </div>
