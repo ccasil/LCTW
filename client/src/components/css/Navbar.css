@@ -6,6 +6,8 @@
 
 .buttonspace {
   margin: 10px;
+  position: absolute;
+  right: 0; 
 }
 
 .mainlogo {
