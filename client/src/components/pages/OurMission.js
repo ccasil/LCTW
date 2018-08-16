@@ -175,17 +175,11 @@ class OurMission extends Component {
           <div className="row">
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
               <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-
-               
                 {images.map(function (image, index) {
-                  return <div>
-                      
-                      <img key={index} src={image} style={{ width: 900, height: 600 }} />
-                    
+                  return <div className="text-center">
+                      <img key={index} src={image} style={{height: 600 }} />
                     </div>;
                 })}
-    
-                
               </React_Bootstrap_Carousel>
             </div>
           </div>
