@@ -142,7 +142,7 @@ class OurMission extends Component {
           The Mission of Love Changing The World is all about LOVE first!
         </h4>
         <h4 className="lead">
-          #LCTW is to feed, clothe, comfort and care for vulnerable people
+          LCTW is to feed, clothe, comfort and care for vulnerable people
           living in poverty with LOVE to all generations without
           discrimination.{" "}
         </h4>
@@ -169,7 +169,6 @@ class OurMission extends Component {
                   <img style={{ width: 900, height: 600 }} src={image1} />
                   <div className="carousel-caption">Image1</div>
                 </div>
-
                 <div>
                   <img style={{ width: 900, height: 600 }} src={image2} />
                   <div className="carousel-caption">Image2</div>

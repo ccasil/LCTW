@@ -19,9 +19,9 @@ class Landing extends Component {
       <div>
         <div className="landing">
           <div>
-            <h1 className="display-1">~ Love One Another ~</h1>
+            <h1 id="toptext" className="display-1">~ Love One Another ~</h1>
             <img className="logo" src={logo} height="100vh" alt="logo" />
-            <h1 className="display-1">Building LOVING communities...</h1>
+            <h1 id="bottomtext" className="display-1">Building LOVING Communities...</h1>
           </div>
         </div>
         <div>
