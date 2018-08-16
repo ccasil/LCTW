@@ -1,28 +1,57 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import "../css/Mailing.css";
 
 class Contact extends Component {
+
+  handleSubmit = async(e) => {
+    e.preventDefault();
+    const first_name = document.getElementById('first_name').value;
+    const last_name = document.getElementById('last_name').value;
+    const phoneemail = document.getElementById('phoneemail').value;
+    const contactvia = document.getElementById('contactvia').value;
+    const comments = document.getElementById('comments').value;
+    axios({
+      method: "POST",
+      url: "http://localhost:3000/send",
+      data: {
+        first_name: first_name,
+        last_name: last_name,
+        contactvia: contactvia,
+        phoneemail: phoneemail,
+        comments: comments
+      }
+    }).then((response) => {
+      if (response.data.msg === 'success') {
+        alert("Message Sent.");
+        this.resetForm()
+      } else if (response.data.msg === 'fail') {
+        alert("Message failed to send.")
+      }
+    })
+  }
+
   render() {
     return (
       <div className="contact">
         <h1 className="display-1">Contact Us</h1>
         <p className="lead">Hello, feel free to leave your contact info so that we can reach out to you and keep you updated with our upcoming events and much more.</p>
-        <form>
+        <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
 
           <div className="form-group">
             <p>Name*</p><div className="row">
               <div className="col">
-                <input type="text" className="form-control" placeholder="First" name="first_name" />
+                <input id="first_name" type="text" className="form-control" placeholder="First" name="first_name" />
               </div>
               <div className="col">
-                <input type="text" className="form-control" placeholder="Last" name="last_name" />
+                <input id="last_name" type="text" className="form-control" placeholder="Last" name="last_name" />
               </div>
             </div>
           </div>
 
           <div className="form-group">
             <label for="contact">Select One*</label>
-            <select className="form-control" id="exampleFormControlSelect1">
+            <select id="contactvia"  className="form-control" id="exampleFormControlSelect1">
               <option>Email</option>
               <option>Phone</option>
             </select>
@@ -30,12 +59,12 @@ class Contact extends Component {
 
           <div className="form-group">
             <p>Email / Phone</p>
-            <input type="text" className="form-control" placeholder="" name="contactinfo" />
+            <input id="phoneemail" type="text" className="form-control" placeholder="" name="contactinfo" />
           </div>
 
           <div className="form-group">
             <p>Comments</p>
-            <textarea className="form-control" placeholder="" rows="3" name="comments" />
+            <textarea id="comments" className="form-control" placeholder="" rows="3" name="comments" />
           </div>
 
           <button type="submit" className="btn btn-primary">Submit</button>

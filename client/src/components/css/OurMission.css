@@ -5,41 +5,14 @@
     height: 80px;
     width: 80px;
 }
-.carousel-control-next-icon {
-    margin-right: 90px;
-}
-.carousel-control-prev {
-    color: red;
-}
-.carousel-control-next-icon {
-    color: black;
-}
+
+
 .carousel {
-    /* border: 3px solid blue; */
-    height: 500px;
-    width: 500px;
-    margin-bottom: 20px;
+  width:900px;
+  height:500px;
+  margin: auto;
 }
-/* .carousel-inner {
-    border: 3px solid red;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-} */
-/* .carousel-item {
-    border: 3px solid green;
-    width: auto;
-    max-width: 400px;
-    height: auto;
-    max-height: 400px;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-} */
-/* .carousel-item img {
-    max-width: 100%;
-    max-height: 100%;
-} */
+
 .portrait {
     height: 480px;
     width: 360px;
