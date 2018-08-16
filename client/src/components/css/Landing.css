@@ -21,10 +21,15 @@
     position: relative;
 }
 #toptext {
-  margin-bottom: 175px;
+  margin: 25px;
+} */
+ #bottomtext {
+  margin: 25px;
 }
-#bottomtext {
-  margin-top: 175px;
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {

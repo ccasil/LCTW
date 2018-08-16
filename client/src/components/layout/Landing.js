@@ -17,13 +17,15 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <div className="landing">
+        <div className="landing box">
           <div>
             <h1 id="toptext" className="display-1">~ Love One Another ~</h1>
             <img className="logo" src={logo} height="100vh" alt="logo" />
             <h1 id="bottomtext" className="display-1">Building LOVING Communities...</h1>
           </div>
         </div>
+
+        
         <div>
           <h1 className="display-4">SPONSORS</h1>
           <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer" className="d-line"><img className="w-100 img-fluid" src={PlannedParenthood} alt="Planned Parenthood"></img></a>
