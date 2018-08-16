@@ -163,7 +163,7 @@ class OurMission extends Component {
         {/* display carousel */}
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+            {/* <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
               <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 <div>
                   <img style={{ width: 900, height: 600 }} src={image1} />
@@ -263,7 +263,21 @@ class OurMission extends Component {
                 <img style={{ width: 900, height: 600 }} src={image24} />
                 <div className="carousel-caption">Image4</div>
               </div>
-              </React_Bootstrap_Carousel>
+              </React_Bootstrap_Carousel> */}
+
+          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+            <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+              <div>
+                <img style={{ height: 500 }} src={image1} />
+              </div>
+
+              <div>
+                <img style={{ height: 500 }} src={image2} />
+              </div>
+              <div>
+                <img style={{ height: 500 }} src={image3} />
+              </div>
+            </React_Bootstrap_Carousel>
             </div>
           </div>
         </div>
