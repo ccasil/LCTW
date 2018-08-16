@@ -10,14 +10,14 @@ class Resources extends Component {
                     <li>Support for the Blind and Visually Impaired</li>
                     <li>Support for Pregnant teens with Toddlers</li>
                     <li>Homeless Support and Outreach Services</li>
-                    <li>Anonymous and Confidential Free HIV Testing: 1 (408) 792-3720</li>
                 </ul>
 
                 <ul className="list-unstyled">
-                    <li><span className="font-weight-bold">Homeless Hotline:</span></li>
+                    <li><span className="font-weight-bold">Homeless Helpline:</span> 1 (408) 510-7600</li>
+                    <li><span className="font-weight-bold">Anonymous and Confidential Free HIV Testing:</span> 1 (408) 792-3720</li>
                     <li><span className="font-weight-bold">Suicide Hotline: </span><a href="http://www.suicide.org/hotlines/california-suicide-hotlines.html" target="_blank" rel="noopener noreferrer" className="d-line">http://www.suicide.org/hotlines/california-suicide-hotlines.html</a></li>
                     <li><span className="font-weight-bold">Abuse: </span><a href="http://www.thehotline.org/" target="_blank" rel="noopener noreferrer" className="d-line">http://www.thehotline.org/</a></li>
-                    <li><span className="font-weight-bold">National Domestic Violence Hotline</span> (for support, resources and advice for safety): 1 (800) 799-SAFE (7233)</li>
+                    <li><span className="font-weight-bold">National Domestic Violence Hotline (for support, resources and advice for safety):</span> 1 (800) 799-SAFE (7233)</li>
                     <li><span className="font-weight-bold">Women Rising Above Abuse (WRAA): </span><a href="http://womenrisingaboveabuse.org/" target="_blank" rel="noopener noreferrer" className="d-line">http://womenrisingaboveabuse.org/</a></li>
                 </ul>
                 <hr />
