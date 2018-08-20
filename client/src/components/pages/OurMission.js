@@ -135,7 +135,7 @@ class OurMission extends Component {
   };
   render() {
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10,
-      image11, image12, image13, image14, image15, image16, image17, image18, image19, image11,
+      image11, image12, image13, image14, image15, image16, image17, image18, image19, image20,
       image21, image22, image23, image24, image25, image26, image27, image28, image29, image30,
     image31, image32, image33, image34, image35, image36, image37, image38, image39, image40,
       image41, image42, image43, image44, image45, image46, image47, image48, image49, image50,

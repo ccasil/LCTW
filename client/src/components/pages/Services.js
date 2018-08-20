@@ -20,7 +20,7 @@ class Services extends Component {
 know their worth.</li>
                 </ul>
                 <h4><span className="font-weight-bold">Providing Services in Areas:</span> San Joaquin, Santa Clara, Merced & also the city of Mount Vernon, New York</h4>
-                <h4><span className="font-weight-bold">VOLUNTEERS NEEDED!!!</span> If you have an interest in helping others please do not HESITATE to reach out.</h4>
+                {/* <h4><span className="font-weight-bold">VOLUNTEERS NEEDED!!!</span> If you have an interest in helping others please do not HESITATE to reach out.</h4> */}
             </div>
         );
     }
