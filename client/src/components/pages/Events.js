@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import "../css/Events.css";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
 
 // upcoming events placeholder routes
 import placeholder1 from '../../images/Events/26904406_782267771982878_8167205781200355992_n.jpg';
@@ -411,753 +413,732 @@ import event11_image5 from '../../images/Events/Event_11/5.jpg';
 
 
 class Events extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { modal1: false, modal2: false, modal3: false, modal4: false, modal5: false, modal6: false, modal7: false, modal8: false, modal9: false, modal10: false, modal11: false };
+    
+        this.toggle1 = this.toggle1.bind(this);
+        this.toggle2 = this.toggle2.bind(this);
+        this.toggle3 = this.toggle3.bind(this);
+        this.toggle4 = this.toggle4.bind(this);
+        this.toggle5 = this.toggle5.bind(this);
+        this.toggle6 = this.toggle6.bind(this);
+        this.toggle7 = this.toggle7.bind(this);
+        this.toggle8 = this.toggle8.bind(this);
+        this.toggle9 = this.toggle9.bind(this);
+        this.toggle10 = this.toggle10.bind(this);
+        this.toggle11 = this.toggle11.bind(this);
 
-    render() {
+        this.toggle12 = this.toggle12.bind(this);
+        this.toggle13 = this.toggle13.bind(this);
+    }
+
+    //   Toggle Upcoming Events
+    toggle12() {
+        this.setState({
+            modal12: !this.state.modal12
+        });
+    }
+        toggle13() {
+        this.setState({
+            modal13: !this.state.modal13
+        });
+    }
+
+    //   Toggle Previous Events
+    toggle1() {
+        this.setState({
+          modal1: !this.state.modal1
+        });
+      }
+      toggle2() {
+        this.setState({
+          modal2: !this.state.modal2
+        });
+      }
+      toggle3() {
+        this.setState({
+          modal3: !this.state.modal3
+        });
+      }
+      toggle4() {
+        this.setState({
+          modal4: !this.state.modal4
+        });
+      }
+      toggle5() {
+        this.setState({
+          modal5: !this.state.modal5
+        });
+      }
+      toggle6() {
+        this.setState({
+          modal6: !this.state.modal6
+        });
+      }
+      toggle7() {
+        this.setState({
+          modal7: !this.state.modal7
+        });
+      }
+      toggle8() {
+        this.setState({
+          modal8: !this.state.modal8
+        });
+      }
+      toggle9() {
+        this.setState({
+          modal9: !this.state.modal9
+        });
+      }
+      toggle10() {
+        this.setState({
+          modal10: !this.state.modal10
+        });
+      }
+      toggle11() {
+        this.setState({
+          modal11: !this.state.modal11
+        });
+      }
+
+      render() {
         return (
-            <div class="eventsContainer container">
-                <h1 class="col-12 display-1" >Upcoming Events</h1>
-                <div class="upcomingEventsRow row">
-                    <div class="upcomingEventItem">
-                        <a class="btn" data-toggle="modal" data-target="#placeholder1">
-                            <img class="row" src={placeholder1} alt="Placeholder Image 1"></img>
+            <div>
+                <h1 className="display-1">Events</h1>
+
+                <h1>Upcoming Events</h1>
+                <div className="row">
+                    <div className="col">
+                        <h3>New Event 1</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle12}>
+                            <img className="btnImg" src={placeholder1} alt="Placeholder Image 1"></img>
                         </a>
-                        <h3 class="row">Placeholder 1</h3>
-                        <p class="row">Description</p>
+                        <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle12}>New Event 1</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">New Event1 Details</p>
+                                <p> Further details here... </p>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle12}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
                     </div>
-                    <div class="upcomingEventItem">
-                        <a class="btn" data-toggle="modal" data-target="#placeholder2">
-                            <img class="row" src={placeholder2} alt="Placeholder Image 2"></img>
+
+                    <div className="col">
+                        <h3>New Event 2</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle13}>
+                            <img className="btnImg" src={placeholder2} alt="Placeholder Image 1"></img>
                         </a>
-                        <h3 class="row">Placeholder 2</h3>
-                        <p class="row">Description</p>
+                        <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle13}>New Event 2</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">New Event2 Details</p>
+                                <p> Further details here... </p>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle13}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
                     </div>
                 </div>
 
-                <div class="previousEventsContainer container">
-                    <h1 class="col-12 display-4">Previous Events</h1>
-                    <div class="previousEvents row">
-                        <div class="eventsRow row">
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong1">
-                                    <img class="row" src={event1_image2} alt="Banner Image 1"></img>
-                                </a>
-                                <h3 class="row">Event 1</h3>
-                                <p class="row">Description</p>
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong2">
-                                    <img class="row" src={event2_image9} alt="Banner Image 2"></img>
-                                </a>
-                                <h3 class="row">Event 2</h3>
-                                <p class="row">Description</p> 
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong3">
-                                    <img class="row" src={event3_image1} alt="Banner Image 3"></img>
-                                </a>
-                                <h3 class="row">Event 3</h3>
-                                <p class="row">Description</p> 
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong4">
-                                    <img class="row" src={event4_image1} alt="Banner Image 4"></img>
-                                </a>
-                                <h3 class="row">Event 4</h3>
-                                <p class="row">Description</p> 
-                            </div>
-                        </div>
-                        <div class="eventsRow row">
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong5">
-                                    <img class="row" src={event5_image1} alt="Banner Image 5"></img>
-                                </a>
-                                <h3 class="row">Event 5</h3>
-                                <p class="row">Description</p>
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong6">
-                                    <img class="row" src={event6_image1} alt="Banner Image 6"></img>
-                                </a>
-                                <h3 class="row">Event 6</h3>
-                                <p class="row">Description</p>  
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong7">
-                                    <img class="row" src={event7_image1} alt="Banner Image 7"></img>
-                                </a>
-                                <h3 class="row">Event 7</h3>
-                                <p class="row">Description</p>
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong8">
-                                    <img class="row" src={event8_image1} alt="Banner Image 8"></img>
-                                </a>
-                                <h3 class="row">Event 8</h3>
-                                <p class="row">Description</p>   
-                            </div>
-                        </div>
-                        <div class="eventsRow row">
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong9">
-                                    <img class="row" src={event9_image1} alt="Banner Image 9"></img>
-                                </a>
-                                <h3 class="row">Event 9</h3>
-                                <p class="row">Description</p> 
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong10">
-                                    <img class="row" src={event10_image1} alt="Banner Image 10"></img>
-                                </a>
-                                <h3 class="row">Event 10</h3>
-                                <p class="row">Description</p>   
-                            </div>
-                            <div class="eventItem">
-                                <a class="btn" data-toggle="modal" data-target="#ModalLong11">
-                                    <img class="row" src={event11_image1} alt="Banner Image 11"></img>
-                                </a>
-                                <h3 class="row">Event 11</h3>
-                                <p class="row">Description</p>
-                            </div>
-                        </div>
+                <h1 id="prevEventsTitle">Previous Events</h1>
+
+                {/* 1st Row */}
+                <div className="row">
+                    <div className="col moveLeft">
+                        <h3>Event 1</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle1}>
+                            <img className="btnImg" src={event1_image2} alt="Modal Image 2"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal1} toggle={this.toggle1} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle1}>Event1</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event1 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event1_image2} alt="Modal Image 2"></img>
+                                    <img src={event1_image3} alt="Modal Image 3"></img>
+                                    <img src={event1_image4} alt="Modal Image 4"></img>
+                                    <img src={event1_image5} alt="Modal Image 5"></img>
+                                    <img src={event1_image6} alt="Modal Image 6"></img>
+                                    <img src={event1_image7} alt="Modal Image 7"></img>
+                                    <img src={event1_image8} alt="Modal Image 8"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle1}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col moveLeft">
+                        <h3>Event 2</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle2}>
+                            <img className="btnImg" src={event2_image9} alt="Modal Image 9"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle2}>Event2</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event2 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event2_image9} alt="Modal Image 9"></img>
+                                    <img src={event2_image10} alt="Modal Image 10"></img>
+                                    <img src={event2_image11} alt="Modal Image 10"></img>
+                                    <img src={event2_image12} alt="Modal Image 10"></img>
+                                    <img src={event2_image13} alt="Modal Image 10"></img>
+                                    <img src={event2_image14} alt="Modal Image 10"></img>
+                                    <img src={event2_image15} alt="Modal Image 10"></img>
+                                    <img src={event2_image16} alt="Modal Image 10"></img>
+                                    <img src={event2_image17} alt="Modal Image 10"></img>
+                                    <img src={event2_image18} alt="Modal Image 10"></img>
+                                    <img src={event2_image19} alt="Modal Image 10"></img>
+                                    <img src={event2_image20} alt="Modal Image 10"></img>
+                                    <img src={event2_image21} alt="Modal Image 10"></img>
+                                    <img src={event2_image22} alt="Modal Image 10"></img>
+                                    <img src={event2_image23} alt="Modal Image 10"></img>
+                                    <img src={event2_image24} alt="Modal Image 10"></img>
+                                    <img src={event2_image25} alt="Modal Image 10"></img>
+                                    <img src={event2_image26} alt="Modal Image 10"></img>
+                                    <img src={event2_image27} alt="Modal Image 10"></img>
+                                    <img src={event2_image28} alt="Modal Image 10"></img>
+                                    <img src={event2_image29} alt="Modal Image 10"></img>
+                                    <img src={event2_image30} alt="Modal Image 10"></img>
+                                    <img src={event2_image31} alt="Modal Image 10"></img>
+                                    <img src={event2_image32} alt="Modal Image 10"></img>
+                                    <img src={event2_image33} alt="Modal Image 10"></img>
+                                    <img src={event2_image34} alt="Modal Image 10"></img>
+                                    <img src={event2_image35} alt="Modal Image 10"></img>
+                                    <img src={event2_image36} alt="Modal Image 10"></img>
+                                    <img src={event2_image37} alt="Modal Image 10"></img>
+                                    <img src={event2_image38} alt="Modal Image 10"></img>
+                                    <img src={event2_image39} alt="Modal Image 10"></img>
+                                    <img src={event2_image40} alt="Modal Image 10"></img>
+                                    <img src={event2_image41} alt="Modal Image 10"></img>
+                                    <img src={event2_image42} alt="Modal Image 10"></img>
+                                    <img src={event2_image43} alt="Modal Image 10"></img>
+                                    <img src={event2_image44} alt="Modal Image 10"></img>
+                                    <img src={event2_image45} alt="Modal Image 10"></img>
+                                    <img src={event2_image46} alt="Modal Image 10"></img>
+                                    <img src={event2_image47} alt="Modal Image 10"></img>
+                                    <img src={event2_image48} alt="Modal Image 10"></img>
+                                    <img src={event2_image49} alt="Modal Image 10"></img>
+                                    <img src={event2_image50} alt="Modal Image 10"></img>
+                                    <img src={event2_image51} alt="Modal Image 10"></img>
+                                    <img src={event2_image52} alt="Modal Image 10"></img>
+                                    <img src={event2_image53} alt="Modal Image 10"></img>
+                                    <img src={event2_image54} alt="Modal Image 10"></img>
+                                    <img src={event2_image55} alt="Modal Image 10"></img>
+                                    <img src={event2_image56} alt="Modal Image 10"></img>
+                                    <img src={event2_image57} alt="Modal Image 10"></img>
+                                    <img src={event2_image58} alt="Modal Image 10"></img>
+                                    <img src={event2_image59} alt="Modal Image 10"></img>
+                                    <img src={event2_image60} alt="Modal Image 10"></img>
+                                    <img src={event2_image61} alt="Modal Image 10"></img>
+                                    <img src={event2_image62} alt="Modal Image 10"></img>
+                                    <img src={event2_image63} alt="Modal Image 10"></img>
+                                    <img src={event2_image64} alt="Modal Image 10"></img>
+                                    <img src={event2_image65} alt="Modal Image 10"></img>
+                                    <img src={event2_image66} alt="Modal Image 10"></img>
+                                    <img src={event2_image67} alt="Modal Image 10"></img>
+                                    <img src={event2_image68} alt="Modal Image 10"></img>
+                                    <img src={event2_image69} alt="Modal Image 10"></img>
+                                    <img src={event2_image70} alt="Modal Image 10"></img>
+                                    <img src={event2_image71} alt="Modal Image 10"></img>
+                                    <img src={event2_image72} alt="Modal Image 10"></img>
+                                    <img src={event2_image73} alt="Modal Image 10"></img>
+                                    <img src={event2_image74} alt="Modal Image 10"></img>
+                                    <img src={event2_image75} alt="Modal Image 10"></img>
+                                    <img src={event2_image76} alt="Modal Image 10"></img>
+                                    <img src={event2_image77} alt="Modal Image 10"></img>
+                                    <img src={event2_image78} alt="Modal Image 10"></img>
+                                    <img src={event2_image79} alt="Modal Image 10"></img>
+                                    <img src={event2_image80} alt="Modal Image 10"></img>
+                                    <img src={event2_image81} alt="Modal Image 10"></img>
+                                    <img src={event2_image82} alt="Modal Image 10"></img>
+                                    <img src={event2_image83} alt="Modal Image 10"></img>
+                                    <img src={event2_image84} alt="Modal Image 10"></img>
+                                    <img src={event2_image85} alt="Modal Image 10"></img>
+                                    <img src={event2_image86} alt="Modal Image 10"></img>
+                                    <img src={event2_image87} alt="Modal Image 10"></img>
+                                    <img src={event2_image88} alt="Modal Image 10"></img>
+                                    <img src={event2_image89} alt="Modal Image 10"></img>
+                                    <img src={event2_image90} alt="Modal Image 10"></img>
+                                    <img src={event2_image91} alt="Modal Image 10"></img>
+                                    <img src={event2_image92} alt="Modal Image 10"></img>
+                                    <img src={event2_image93} alt="Modal Image 10"></img>
+                                    <img src={event2_image94} alt="Modal Image 10"></img>
+                                    <img src={event2_image95} alt="Modal Image 10"></img>
+                                    <img src={event2_image96} alt="Modal Image 10"></img>
+                                    <img src={event2_image97} alt="Modal Image 10"></img>
+                                    <img src={event2_image98} alt="Modal Image 10"></img>
+                                    <img src={event2_image99} alt="Modal Image 10"></img>
+                                    <img src={event2_image100} alt="Modal Image 10"></img>
+                                    <img src={event2_image101} alt="Modal Image 10"></img>
+                                    <img src={event2_image102} alt="Modal Image 10"></img>
+                                    <img src={event2_image103} alt="Modal Image 10"></img>
+                                    <img src={event2_image104} alt="Modal Image 10"></img>
+                                    <img src={event2_image105} alt="Modal Image 10"></img>
+                                    <img src={event2_image106} alt="Modal Image 10"></img>
+                                    <img src={event2_image107} alt="Modal Image 10"></img>
+                                    <img src={event2_image108} alt="Modal Image 10"></img>
+                                    <img src={event2_image109} alt="Modal Image 10"></img>
+                                    <img src={event2_image110} alt="Modal Image 10"></img>
+                                    <img src={event2_image111} alt="Modal Image 10"></img>
+                                    <img src={event2_image112} alt="Modal Image 10"></img>
+                                    <img src={event2_image113} alt="Modal Image 10"></img>
+                                    <img src={event2_image114} alt="Modal Image 10"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle2}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col moveLeft">
+                        <h3>Event 3</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle3}>
+                            <img className="btnImg" src={event3_image1} alt="Modal Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle3}>Event3</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event3 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event3_image1} alt="Modal Image 1"></img>
+                                    <img src={event3_image2} alt="Modal Image 1"></img>
+                                    <img src={event3_image3} alt="Modal Image 1"></img>
+                                    <img src={event3_image4} alt="Modal Image 1"></img>
+                                    <img src={event3_image5} alt="Modal Image 1"></img>
+                                    <img src={event3_image6} alt="Modal Image 1"></img>
+                                    <img src={event3_image7} alt="Modal Image 1"></img>
+                                    <img src={event3_image8} alt="Modal Image 1"></img>
+                                    <img src={event3_image9} alt="Modal Image 1"></img>
+                                    <img src={event3_image10} alt="Modal Image 1"></img>
+                                    <img src={event3_image11} alt="Modal Image 1"></img>
+                                    <img src={event3_image12} alt="Modal Image 1"></img>
+                                    <img src={event3_image13} alt="Modal Image 1"></img>
+                                    <img src={event3_image14} alt="Modal Image 1"></img>
+                                    <img src={event3_image15} alt="Modal Image 1"></img>
+                                    <img src={event3_image16} alt="Modal Image 1"></img>
+                                    <img src={event3_image17} alt="Modal Image 1"></img>
+                                    <img src={event3_image18} alt="Modal Image 1"></img>
+                                    <img src={event3_image19} alt="Modal Image 1"></img>
+                                    <img src={event3_image20} alt="Modal Image 1"></img>
+                                    <img src={event3_image21} alt="Modal Image 1"></img>
+                                    <img src={event3_image22} alt="Modal Image 1"></img>
+                                    <img src={event3_image23} alt="Modal Image 1"></img>
+                                    <img src={event3_image24} alt="Modal Image 1"></img>
+                                    <img src={event3_image25} alt="Modal Image 1"></img>
+                                    <img src={event3_image26} alt="Modal Image 1"></img>
+                                    <img src={event3_image27} alt="Modal Image 1"></img>
+                                    <img src={event3_image28} alt="Modal Image 1"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle3}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col moveLeft">
+                        <h3>Event 4</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle4}>
+                            <img className="btnImg" src={event4_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal4} toggle={this.toggle4} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle4}>Event4</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event4 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event4_image1} alt="Banner Image 1"></img>
+                                    <img src={event4_image2} alt="Banner Image 2"></img>
+                                    <img src={event4_image3} alt="Banner Image 3"></img>
+                                    <img src={event4_image4} alt="Banner Image 4"></img>
+                                    <img src={event4_image5} alt="Banner Image 5"></img>
+                                    <img src={event4_image6} alt="Banner Image 6"></img>
+                                    <img src={event4_image7} alt="Banner Image 7"></img>
+                                    <img src={event4_image8} alt="Banner Image 8"></img>
+                                    <img src={event4_image9} alt="Banner Image 9"></img>
+                                    <img src={event4_image10} alt="Banner Image 10"></img>
+                                    <img src={event4_image11} alt="Banner Image 1"></img>
+                                    <img src={event4_image12} alt="Banner Image 2"></img>
+                                    <img src={event4_image13} alt="Banner Image 3"></img>
+                                    <img src={event4_image14} alt="Banner Image 4"></img>
+                                    <img src={event4_image15} alt="Banner Image 5"></img>
+                                    <img src={event4_image16} alt="Banner Image 6"></img>
+                                    <img src={event4_image17} alt="Banner Image 7"></img>
+                                    <img src={event4_image18} alt="Banner Image 8"></img>
+                                    <img src={event4_image19} alt="Banner Image 9"></img>
+                                    <img src={event4_image20} alt="Banner Image 10"></img>
+                                    <img src={event4_image21} alt="Banner Image 1"></img>
+                                    <img src={event4_image22} alt="Banner Image 2"></img>
+                                    <img src={event4_image23} alt="Banner Image 3"></img>
+                                    <img src={event4_image24} alt="Banner Image 4"></img>
+                                    <img src={event4_image25} alt="Banner Image 5"></img>
+                                    <img src={event4_image26} alt="Banner Image 6"></img>
+                                    <img src={event4_image27} alt="Banner Image 7"></img>
+                                    <img src={event4_image28} alt="Banner Image 8"></img>
+                                    <img src={event4_image29} alt="Banner Image 9"></img>
+                                    <img src={event4_image30} alt="Banner Image 10"></img>
+                                    <img src={event4_image31} alt="Banner Image 1"></img>
+                                    <img src={event4_image32} alt="Banner Image 2"></img>
+                                    <img src={event4_image33} alt="Banner Image 3"></img>
+                                    <img src={event4_image34} alt="Banner Image 4"></img>
+                                    <img src={event4_image35} alt="Banner Image 5"></img>
+                                    <img src={event4_image36} alt="Banner Image 6"></img>
+                                    <img src={event4_image37} alt="Banner Image 7"></img>
+                                    <img src={event4_image38} alt="Banner Image 8"></img>
+                                    <img src={event4_image39} alt="Banner Image 9"></img>
+                                    <img src={event4_image40} alt="Banner Image 10"></img>
+                                    <img src={event4_image41} alt="Banner Image 1"></img>
+                                    <img src={event4_image42} alt="Banner Image 2"></img>
+                                    <img src={event4_image43} alt="Banner Image 3"></img>
+                                    <img src={event4_image44} alt="Banner Image 4"></img>
+                                    <img src={event4_image45} alt="Banner Image 5"></img>
+                                    <img src={event4_image46} alt="Banner Image 6"></img>
+                                    <img src={event4_image47} alt="Banner Image 7"></img>
+                                    <img src={event4_image48} alt="Banner Image 8"></img>
+                                    <img src={event4_image49} alt="Banner Image 9"></img>
+                                    <img src={event4_image50} alt="Banner Image 10"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle4}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                {/* 2nd Row */}    
+                <div className="row">
+                    <div className="col">
+                        <h3>Event 5</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle5}>
+                            <img className="btnImg" src={event5_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal5} toggle={this.toggle5} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle5}>Event5</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event5 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event5_image1} alt="Banner Image 1"></img>
+                                    <img src={event5_image2} alt="Banner Image 2"></img>
+                                    <img src={event5_image3} alt="Banner Image 3"></img>
+                                    <img src={event5_image4} alt="Banner Image 4"></img>
+                                    <img src={event5_image5} alt="Banner Image 5"></img>
+                                    <img src={event5_image6} alt="Banner Image 6"></img>
+                                    <img src={event5_image7} alt="Banner Image 7"></img>
+                                    <img src={event5_image8} alt="Banner Image 8"></img>
+                                    <img src={event5_image9} alt="Banner Image 9"></img>
+                                    <img src={event5_image10} alt="Banner Image 10"></img>
+                                    <img src={event5_image11} alt="Banner Image 11"></img>
+                                    <img src={event5_image12} alt="Banner Image 12"></img>
+                                    <img src={event5_image13} alt="Banner Image 13"></img>
+                                    <img src={event5_image14} alt="Banner Image 14"></img>
+                                    <img src={event5_image15} alt="Banner Image 15"></img>
+                                    <img src={event5_image16} alt="Banner Image 16"></img>
+                                    <img src={event5_image17} alt="Banner Image 17"></img>
+                                    <img src={event5_image18} alt="Banner Image 18"></img>
+                                    <img src={event5_image19} alt="Banner Image 19"></img>
+                                    <img src={event5_image20} alt="Banner Image 20"></img>
+                                    <img src={event5_image21} alt="Banner Image 21"></img>
+                                    <img src={event5_image22} alt="Banner Image 22"></img>
+                                    <img src={event5_image23} alt="Banner Image 23"></img>
+                                    <img src={event5_image24} alt="Banner Image 24"></img>
+                                    <img src={event5_image25} alt="Banner Image 25"></img>
+                                    <img src={event5_image26} alt="Banner Image 26"></img>
+                                    <img src={event5_image28} alt="Banner Image 28"></img>
+                                    <img src={event5_image29} alt="Banner Image 29"></img>
+                                    <img src={event5_image30} alt="Banner Image 30"></img>
+                                    <img src={event5_image31} alt="Banner Image 31"></img>
+                                    <img src={event5_image32} alt="Banner Image 32"></img>
+                                    <img src={event5_image33} alt="Banner Image 33"></img>
+                                    <img src={event5_image34} alt="Banner Image 34"></img>
+                                    <img src={event5_image35} alt="Banner Image 35"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle5}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col">
+                        <h3>Event 6</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle6}>
+                            <img className="btnImg" src={event6_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal6} toggle={this.toggle6} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle6}>Event6</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event6 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event6_image1} alt="Banner Image 1"></img>
+                                    <img src={event6_image2} alt="Banner Image 2"></img>
+                                    <img src={event6_image3} alt="Banner Image 3"></img>
+                                    <img src={event6_image4} alt="Banner Image 4"></img>
+                                    <img src={event6_image5} alt="Banner Image 5"></img>
+                                    <img src={event6_image6} alt="Banner Image 6"></img>
+                                    <img src={event6_image7} alt="Banner Image 7"></img>
+                                    <img src={event6_image8} alt="Banner Image 8"></img>
+                                    <img src={event6_image9} alt="Banner Image 9"></img>
+                                    <img src={event6_image10} alt="Banner Image 10"></img>
+                                    <img src={event6_image11} alt="Banner Image 11"></img>
+                                    <img src={event6_image12} alt="Banner Image 12"></img>
+                                    <img src={event6_image13} alt="Banner Image 13"></img>
+                                    <img src={event6_image14} alt="Banner Image 14"></img>
+                                    <img src={event6_image15} alt="Banner Image 15"></img>
+                                    <img src={event6_image16} alt="Banner Image 16"></img>
+                                    <img src={event6_image17} alt="Banner Image 17"></img>
+                                    <img src={event6_image18} alt="Banner Image 18"></img>
+                                    <img src={event6_image19} alt="Banner Image 19"></img>
+                                    <img src={event6_image20} alt="Banner Image 20"></img>
+                                    <img src={event6_image21} alt="Banner Image 21"></img>
+                                    <img src={event6_image22} alt="Banner Image 22"></img>
+                                    <img src={event6_image23} alt="Banner Image 23"></img>
+                                    <img src={event6_image24} alt="Banner Image 24"></img>
+                                    <img src={event6_image25} alt="Banner Image 25"></img>
+                                    <img src={event6_image26} alt="Banner Image 26"></img>
+                                    <img src={event6_image27} alt="Banner Image 27"></img>
+                                    <img src={event6_image28} alt="Banner Image 28"></img>
+                                    <img src={event6_image29} alt="Banner Image 29"></img>
+                                    <img src={event6_image30} alt="Banner Image 30"></img>
+                                    <img src={event6_image31} alt="Banner Image 31"></img>
+                                    <img src={event6_image32} alt="Banner Image 32"></img>
+                                    <img src={event6_image33} alt="Banner Image 33"></img>
+                                    <img src={event6_image34} alt="Banner Image 34"></img>
+                                    <img src={event6_image35} alt="Banner Image 35"></img>
+                                    <img src={event6_image36} alt="Banner Image 36"></img>
+                                    <img src={event6_image37} alt="Banner Image 37"></img>
+                                    <img src={event6_image38} alt="Banner Image 38"></img>
+                                    <img src={event6_image39} alt="Banner Image 39"></img>
+                                    <img src={event6_image40} alt="Banner Image 40"></img>
+                                    <img src={event6_image41} alt="Banner Image 41"></img>
+                                    <img src={event6_image42} alt="Banner Image 42"></img>
+                                    <img src={event6_image43} alt="Banner Image 43"></img>
+                                    <img src={event6_image44} alt="Banner Image 44"></img>
+                                    <img src={event6_image45} alt="Banner Image 45"></img>
+                                    <img src={event6_image46} alt="Banner Image 46"></img>
+                                    <img src={event6_image47} alt="Banner Image 47"></img>
+                                    <img src={event6_image48} alt="Banner Image 48"></img>
+                                    <img src={event6_image49} alt="Banner Image 49"></img>
+                                    <img src={event6_image50} alt="Banner Image 50"></img>
+                                    <img src={event6_image51} alt="Banner Image 51"></img>
+                                    <img src={event6_image52} alt="Banner Image 52"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle6}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col">
+                        <h3>Event 7</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle7}>
+                            <img className="btnImg" src={event7_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal7} toggle={this.toggle7} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle7}>Event7</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event7 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event7_image1} alt="Banner Image 1"></img>
+                                    <img src={event7_image2} alt="Banner Image 2"></img>
+                                    <img src={event7_image3} alt="Banner Image 3"></img>
+                                    <img src={event7_image4} alt="Banner Image 4"></img>
+                                    <img src={event7_image5} alt="Banner Image 5"></img>
+                                    <img src={event7_image6} alt="Banner Image 6"></img>
+                                    <img src={event7_image7} alt="Banner Image 7"></img>
+                                    <img src={event7_image8} alt="Banner Image 8"></img>
+                                    <img src={event7_image9} alt="Banner Image 9"></img>
+                                    <img src={event7_image10} alt="Banner Image 10"></img>
+                                    <img src={event7_image11} alt="Banner Image 11"></img>
+                                    <img src={event7_image12} alt="Banner Image 12"></img>
+                                    <img src={event7_image13} alt="Banner Image 13"></img>
+                                    <img src={event7_image14} alt="Banner Image 14"></img>
+                                    <img src={event7_image15} alt="Banner Image 15"></img>
+                                    <img src={event7_image16} alt="Banner Image 16"></img>
+                                    <img src={event7_image17} alt="Banner Image 17"></img>
+                                    <img src={event7_image18} alt="Banner Image 18"></img>
+                                    <img src={event7_image19} alt="Banner Image 19"></img>
+                                    <img src={event7_image20} alt="Banner Image 20"></img>
+                                    <img src={event7_image21} alt="Banner Image 21"></img>
+                                    <img src={event7_image22} alt="Banner Image 22"></img>
+                                    <img src={event7_image23} alt="Banner Image 23"></img>
+                                    <img src={event7_image24} alt="Banner Image 24"></img>
+                                    <img src={event7_image25} alt="Banner Image 25"></img>
+                                    <img src={event7_image26} alt="Banner Image 26"></img>
+                                    <img src={event7_image27} alt="Banner Image 27"></img>
+                                    <img src={event7_image28} alt="Banner Image 28"></img>
+                                    <img src={event7_image29} alt="Banner Image 29"></img>
+                                    <img src={event7_image30} alt="Banner Image 30"></img>
+                                    <img src={event7_image31} alt="Banner Image 31"></img>
+                                    <img src={event7_image32} alt="Banner Image 32"></img>
+                                    <img src={event7_image33} alt="Banner Image 33"></img>
+                                    <img src={event7_image34} alt="Banner Image 34"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle7}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col">
+                        <h3>Event 8</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle8}>
+                            <img className="btnImg" src={event8_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal8} toggle={this.toggle8} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle8}>Event8</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event8 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event8_image1} alt="Banner Image 1"></img>
+                                    <img src={event8_image2} alt="Banner Image 2"></img>
+                                    <img src={event8_image3} alt="Banner Image 3"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle8}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
                     </div>
                 </div>
 
-                {/* Modal for Placeholder1 */}
-                <div class="modal fade" id="placeholder1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Placeholder 1</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Event Details
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+                {/* 3rd Row */}
+                <div className="row spaceToFooter">
+                    <div className="col">
+                        <h3>Event 9</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle9}>
+                            <img className="btnImg" src={event9_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal9} toggle={this.toggle9} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle9}>Event9</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event9 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event9_image1} alt="Banner Image 1"></img>
+                                    <img src={event9_image2} alt="Banner Image 2"></img>
+                                    <img src={event9_image3} alt="Banner Image 3"></img>
+                                    <img src={event9_image4} alt="Banner Image 4"></img>
+                                    <img src={event9_image5} alt="Banner Image 5"></img>
+                                    <img src={event9_image6} alt="Banner Image 6"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle9}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
                     </div>
+
+                    <div className="col">
+                        <h3>Event 10</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle10}>
+                            <img className="btnImg" src={event10_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal10} toggle={this.toggle10} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle10}>Event10</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event10 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event10_image1} alt="Banner Image 1"></img>
+                                    <img src={event10_image2} alt="Banner Image 2"></img>
+                                    <img src={event10_image3} alt="Banner Image 3"></img>
+                                    <img src={event10_image4} alt="Banner Image 4"></img>
+                                    <img src={event10_image5} alt="Banner Image 5"></img>
+                                    <img src={event10_image6} alt="Banner Image 6"></img>
+                                    <img src={event10_image7} alt="Banner Image 7"></img>
+                                    <img src={event10_image8} alt="Banner Image 8"></img>
+                                    <img src={event10_image9} alt="Banner Image 9"></img>
+                                    <img src={event10_image10} alt="Banner Image 10"></img>
+                                    <img src={event10_image11} alt="Banner Image 1"></img>
+                                    <img src={event10_image12} alt="Banner Image 2"></img>
+                                    <img src={event10_image13} alt="Banner Image 3"></img>
+                                    <img src={event10_image14} alt="Banner Image 4"></img>
+                                    <img src={event10_image15} alt="Banner Image 5"></img>
+                                    <img src={event10_image16} alt="Banner Image 6"></img>
+                                    <img src={event10_image17} alt="Banner Image 7"></img>
+                                    <img src={event10_image18} alt="Banner Image 8"></img>
+                                    <img src={event10_image19} alt="Banner Image 9"></img>
+                                    <img src={event10_image20} alt="Banner Image 10"></img>
+                                    <img src={event10_image21} alt="Banner Image 1"></img>
+                                    <img src={event10_image22} alt="Banner Image 2"></img>
+                                    <img src={event10_image23} alt="Banner Image 3"></img>
+                                    <img src={event10_image24} alt="Banner Image 4"></img>
+                                    <img src={event10_image25} alt="Banner Image 5"></img>
+                                    <img src={event10_image26} alt="Banner Image 6"></img>
+                                    <img src={event10_image27} alt="Banner Image 7"></img>
+                                    <img src={event10_image28} alt="Banner Image 8"></img>
+                                    <img src={event10_image29} alt="Banner Image 9"></img>
+                                    <img src={event10_image30} alt="Banner Image 10"></img>
+                                    <img src={event10_image31} alt="Banner Image 1"></img>
+                                    <img src={event10_image32} alt="Banner Image 2"></img>
+                                    <img src={event10_image33} alt="Banner Image 3"></img>
+                                    <img src={event10_image34} alt="Banner Image 4"></img>
+                                    <img src={event10_image35} alt="Banner Image 5"></img>
+                                    <img src={event10_image36} alt="Banner Image 6"></img>
+                                    <img src={event10_image37} alt="Banner Image 7"></img>
+                                    <img src={event10_image38} alt="Banner Image 8"></img>
+                                    <img src={event10_image39} alt="Banner Image 9"></img>
+                                    <img src={event10_image40} alt="Banner Image 10"></img>
+                                    <img src={event10_image41} alt="Banner Image 1"></img>
+                                    <img src={event10_image42} alt="Banner Image 2"></img>
+                                    <img src={event10_image43} alt="Banner Image 3"></img>
+                                    <img src={event10_image44} alt="Banner Image 4"></img>
+                                    <img src={event10_image45} alt="Banner Image 5"></img>
+                                    <img src={event10_image46} alt="Banner Image 6"></img>
+                                    <img src={event10_image47} alt="Banner Image 7"></img>
+                                    <img src={event10_image48} alt="Banner Image 8"></img>
+                                    <img src={event10_image49} alt="Banner Image 9"></img>
+                                    <img src={event10_image50} alt="Banner Image 10"></img>
+                                    <img src={event10_image51} alt="Banner Image 1"></img>
+                                    <img src={event10_image52} alt="Banner Image 2"></img>
+                                    <img src={event10_image53} alt="Banner Image 3"></img>
+                                    <img src={event10_image54} alt="Banner Image 4"></img>
+                                    <img src={event10_image55} alt="Banner Image 5"></img>
+                                    <img src={event10_image56} alt="Banner Image 6"></img>
+                                    <img src={event10_image57} alt="Banner Image 7"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle10}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+
+                    <div className="col">
+                        <h3>Event 11</h3>
+                        <a className="btn-block" color="danger" onClick={this.toggle11}>
+                            <img className="btnImg" src={event11_image1} alt="Banner Image 1"></img>
+                        </a>
+                        <Modal isOpen={this.state.modal11} toggle={this.toggle11} className={this.props.className}>
+                            <ModalHeader toggle={this.toggle11}>Event11</ModalHeader>
+                            <ModalBody>
+                                <p className="lead">Event11 Details</p>
+                                <ul className="list-unstyled">
+                                    <img src={event11_image1} alt="Banner Image 1"></img>
+                                    <img src={event11_image2} alt="Banner Image 2"></img>
+                                    <img src={event11_image3} alt="Banner Image 3"></img>
+                                    <img src={event11_image4} alt="Banner Image 4"></img>
+                                    <img src={event11_image5} alt="Banner Image 5"></img>
+                                </ul>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="secondary" onClick={this.toggle11}>Close</Button>
+                            </ModalFooter>
+                        </Modal>
+                    </div>
+                
                 </div>
 
-                {/* Modal for Placeholder2 */}
-                <div class="modal fade" id="placeholder2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Placeholder 2</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Event Details
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                {/* Modal for Event 1 */}
-                <div class="modal fade" id="ModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 1</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event1_image2} alt="Modal Image 2"></img>
-                                <img src={event1_image3} alt="Modal Image 3"></img>
-                                <img src={event1_image4} alt="Modal Image 4"></img>
-                                <img src={event1_image5} alt="Modal Image 5"></img>
-                                <img src={event1_image6} alt="Modal Image 6"></img>
-                                <img src={event1_image7} alt="Modal Image 7"></img>
-                                <img src={event1_image8} alt="Modal Image 8"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 2 */}
-                <div class="modal fade" id="ModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 2</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event2_image9} alt="Modal Image 9"></img>
-                                <img src={event2_image10} alt="Modal Image 10"></img>
-                                <img src={event2_image11} alt="Modal Image 10"></img>
-                                <img src={event2_image12} alt="Modal Image 10"></img>
-                                <img src={event2_image13} alt="Modal Image 10"></img>
-                                <img src={event2_image14} alt="Modal Image 10"></img>
-                                <img src={event2_image15} alt="Modal Image 10"></img>
-                                <img src={event2_image16} alt="Modal Image 10"></img>
-                                <img src={event2_image17} alt="Modal Image 10"></img>
-                                <img src={event2_image18} alt="Modal Image 10"></img>
-                                <img src={event2_image19} alt="Modal Image 10"></img>
-                                <img src={event2_image20} alt="Modal Image 10"></img>
-                                <img src={event2_image21} alt="Modal Image 10"></img>
-                                <img src={event2_image22} alt="Modal Image 10"></img>
-                                <img src={event2_image23} alt="Modal Image 10"></img>
-                                <img src={event2_image24} alt="Modal Image 10"></img>
-                                <img src={event2_image25} alt="Modal Image 10"></img>
-                                <img src={event2_image26} alt="Modal Image 10"></img>
-                                <img src={event2_image27} alt="Modal Image 10"></img>
-                                <img src={event2_image28} alt="Modal Image 10"></img>
-                                <img src={event2_image29} alt="Modal Image 10"></img>
-                                <img src={event2_image30} alt="Modal Image 10"></img>
-                                <img src={event2_image31} alt="Modal Image 10"></img>
-                                <img src={event2_image32} alt="Modal Image 10"></img>
-                                <img src={event2_image33} alt="Modal Image 10"></img>
-                                <img src={event2_image34} alt="Modal Image 10"></img>
-                                <img src={event2_image35} alt="Modal Image 10"></img>
-                                <img src={event2_image36} alt="Modal Image 10"></img>
-                                <img src={event2_image37} alt="Modal Image 10"></img>
-                                <img src={event2_image38} alt="Modal Image 10"></img>
-                                <img src={event2_image39} alt="Modal Image 10"></img>
-                                <img src={event2_image40} alt="Modal Image 10"></img>
-                                <img src={event2_image41} alt="Modal Image 10"></img>
-                                <img src={event2_image42} alt="Modal Image 10"></img>
-                                <img src={event2_image43} alt="Modal Image 10"></img>
-                                <img src={event2_image44} alt="Modal Image 10"></img>
-                                <img src={event2_image45} alt="Modal Image 10"></img>
-                                <img src={event2_image46} alt="Modal Image 10"></img>
-                                <img src={event2_image47} alt="Modal Image 10"></img>
-                                <img src={event2_image48} alt="Modal Image 10"></img>
-                                <img src={event2_image49} alt="Modal Image 10"></img>
-                                <img src={event2_image50} alt="Modal Image 10"></img>
-                                <img src={event2_image51} alt="Modal Image 10"></img>
-                                <img src={event2_image52} alt="Modal Image 10"></img>
-                                <img src={event2_image53} alt="Modal Image 10"></img>
-                                <img src={event2_image54} alt="Modal Image 10"></img>
-                                <img src={event2_image55} alt="Modal Image 10"></img>
-                                <img src={event2_image56} alt="Modal Image 10"></img>
-                                <img src={event2_image57} alt="Modal Image 10"></img>
-                                <img src={event2_image58} alt="Modal Image 10"></img>
-                                <img src={event2_image59} alt="Modal Image 10"></img>
-                                <img src={event2_image60} alt="Modal Image 10"></img>
-                                <img src={event2_image61} alt="Modal Image 10"></img>
-                                <img src={event2_image62} alt="Modal Image 10"></img>
-                                <img src={event2_image63} alt="Modal Image 10"></img>
-                                <img src={event2_image64} alt="Modal Image 10"></img>
-                                <img src={event2_image65} alt="Modal Image 10"></img>
-                                <img src={event2_image66} alt="Modal Image 10"></img>
-                                <img src={event2_image67} alt="Modal Image 10"></img>
-                                <img src={event2_image68} alt="Modal Image 10"></img>
-                                <img src={event2_image69} alt="Modal Image 10"></img>
-                                <img src={event2_image70} alt="Modal Image 10"></img>
-                                <img src={event2_image71} alt="Modal Image 10"></img>
-                                <img src={event2_image72} alt="Modal Image 10"></img>
-                                <img src={event2_image73} alt="Modal Image 10"></img>
-                                <img src={event2_image74} alt="Modal Image 10"></img>
-                                <img src={event2_image75} alt="Modal Image 10"></img>
-                                <img src={event2_image76} alt="Modal Image 10"></img>
-                                <img src={event2_image77} alt="Modal Image 10"></img>
-                                <img src={event2_image78} alt="Modal Image 10"></img>
-                                <img src={event2_image79} alt="Modal Image 10"></img>
-                                <img src={event2_image80} alt="Modal Image 10"></img>
-                                <img src={event2_image81} alt="Modal Image 10"></img>
-                                <img src={event2_image82} alt="Modal Image 10"></img>
-                                <img src={event2_image83} alt="Modal Image 10"></img>
-                                <img src={event2_image84} alt="Modal Image 10"></img>
-                                <img src={event2_image85} alt="Modal Image 10"></img>
-                                <img src={event2_image86} alt="Modal Image 10"></img>
-                                <img src={event2_image87} alt="Modal Image 10"></img>
-                                <img src={event2_image88} alt="Modal Image 10"></img>
-                                <img src={event2_image89} alt="Modal Image 10"></img>
-                                <img src={event2_image90} alt="Modal Image 10"></img>
-                                <img src={event2_image91} alt="Modal Image 10"></img>
-                                <img src={event2_image92} alt="Modal Image 10"></img>
-                                <img src={event2_image93} alt="Modal Image 10"></img>
-                                <img src={event2_image94} alt="Modal Image 10"></img>
-                                <img src={event2_image95} alt="Modal Image 10"></img>
-                                <img src={event2_image96} alt="Modal Image 10"></img>
-                                <img src={event2_image97} alt="Modal Image 10"></img>
-                                <img src={event2_image98} alt="Modal Image 10"></img>
-                                <img src={event2_image99} alt="Modal Image 10"></img>
-                                <img src={event2_image100} alt="Modal Image 10"></img>
-                                <img src={event2_image101} alt="Modal Image 10"></img>
-                                <img src={event2_image102} alt="Modal Image 10"></img>
-                                <img src={event2_image103} alt="Modal Image 10"></img>
-                                <img src={event2_image104} alt="Modal Image 10"></img>
-                                <img src={event2_image105} alt="Modal Image 10"></img>
-                                <img src={event2_image106} alt="Modal Image 10"></img>
-                                <img src={event2_image107} alt="Modal Image 10"></img>
-                                <img src={event2_image108} alt="Modal Image 10"></img>
-                                <img src={event2_image109} alt="Modal Image 10"></img>
-                                <img src={event2_image110} alt="Modal Image 10"></img>
-                                <img src={event2_image111} alt="Modal Image 10"></img>
-                                <img src={event2_image112} alt="Modal Image 10"></img>
-                                <img src={event2_image113} alt="Modal Image 10"></img>
-                                <img src={event2_image114} alt="Modal Image 10"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 3 */}
-                <div class="modal fade" id="ModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 3</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event3_image1} alt="Modal Image 1"></img>
-                                <img src={event3_image2} alt="Modal Image 1"></img>
-                                <img src={event3_image3} alt="Modal Image 1"></img>
-                                <img src={event3_image4} alt="Modal Image 1"></img>
-                                <img src={event3_image5} alt="Modal Image 1"></img>
-                                <img src={event3_image6} alt="Modal Image 1"></img>
-                                <img src={event3_image7} alt="Modal Image 1"></img>
-                                <img src={event3_image8} alt="Modal Image 1"></img>
-                                <img src={event3_image9} alt="Modal Image 1"></img>
-                                <img src={event3_image10} alt="Modal Image 1"></img>
-                                <img src={event3_image11} alt="Modal Image 1"></img>
-                                <img src={event3_image12} alt="Modal Image 1"></img>
-                                <img src={event3_image13} alt="Modal Image 1"></img>
-                                <img src={event3_image14} alt="Modal Image 1"></img>
-                                <img src={event3_image15} alt="Modal Image 1"></img>
-                                <img src={event3_image16} alt="Modal Image 1"></img>
-                                <img src={event3_image17} alt="Modal Image 1"></img>
-                                <img src={event3_image18} alt="Modal Image 1"></img>
-                                <img src={event3_image19} alt="Modal Image 1"></img>
-                                <img src={event3_image20} alt="Modal Image 1"></img>
-                                <img src={event3_image21} alt="Modal Image 1"></img>
-                                <img src={event3_image22} alt="Modal Image 1"></img>
-                                <img src={event3_image23} alt="Modal Image 1"></img>
-                                <img src={event3_image24} alt="Modal Image 1"></img>
-                                <img src={event3_image25} alt="Modal Image 1"></img>
-                                <img src={event3_image26} alt="Modal Image 1"></img>
-                                <img src={event3_image27} alt="Modal Image 1"></img>
-                                <img src={event3_image28} alt="Modal Image 1"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 4 */}
-                <div class="modal fade" id="ModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 4</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event4_image1} alt="Banner Image 1"></img>
-                                <img src={event4_image2} alt="Banner Image 2"></img>
-                                <img src={event4_image3} alt="Banner Image 3"></img>
-                                <img src={event4_image4} alt="Banner Image 4"></img>
-                                <img src={event4_image5} alt="Banner Image 5"></img>
-                                <img src={event4_image6} alt="Banner Image 6"></img>
-                                <img src={event4_image7} alt="Banner Image 7"></img>
-                                <img src={event4_image8} alt="Banner Image 8"></img>
-                                <img src={event4_image9} alt="Banner Image 9"></img>
-                                <img src={event4_image10} alt="Banner Image 10"></img>
-                                <img src={event4_image11} alt="Banner Image 1"></img>
-                                <img src={event4_image12} alt="Banner Image 2"></img>
-                                <img src={event4_image13} alt="Banner Image 3"></img>
-                                <img src={event4_image14} alt="Banner Image 4"></img>
-                                <img src={event4_image15} alt="Banner Image 5"></img>
-                                <img src={event4_image16} alt="Banner Image 6"></img>
-                                <img src={event4_image17} alt="Banner Image 7"></img>
-                                <img src={event4_image18} alt="Banner Image 8"></img>
-                                <img src={event4_image19} alt="Banner Image 9"></img>
-                                <img src={event4_image20} alt="Banner Image 10"></img>
-                                <img src={event4_image21} alt="Banner Image 1"></img>
-                                <img src={event4_image22} alt="Banner Image 2"></img>
-                                <img src={event4_image23} alt="Banner Image 3"></img>
-                                <img src={event4_image24} alt="Banner Image 4"></img>
-                                <img src={event4_image25} alt="Banner Image 5"></img>
-                                <img src={event4_image26} alt="Banner Image 6"></img>
-                                <img src={event4_image27} alt="Banner Image 7"></img>
-                                <img src={event4_image28} alt="Banner Image 8"></img>
-                                <img src={event4_image29} alt="Banner Image 9"></img>
-                                <img src={event4_image30} alt="Banner Image 10"></img>
-                                <img src={event4_image31} alt="Banner Image 1"></img>
-                                <img src={event4_image32} alt="Banner Image 2"></img>
-                                <img src={event4_image33} alt="Banner Image 3"></img>
-                                <img src={event4_image34} alt="Banner Image 4"></img>
-                                <img src={event4_image35} alt="Banner Image 5"></img>
-                                <img src={event4_image36} alt="Banner Image 6"></img>
-                                <img src={event4_image37} alt="Banner Image 7"></img>
-                                <img src={event4_image38} alt="Banner Image 8"></img>
-                                <img src={event4_image39} alt="Banner Image 9"></img>
-                                <img src={event4_image40} alt="Banner Image 10"></img>
-                                <img src={event4_image41} alt="Banner Image 1"></img>
-                                <img src={event4_image42} alt="Banner Image 2"></img>
-                                <img src={event4_image43} alt="Banner Image 3"></img>
-                                <img src={event4_image44} alt="Banner Image 4"></img>
-                                <img src={event4_image45} alt="Banner Image 5"></img>
-                                <img src={event4_image46} alt="Banner Image 6"></img>
-                                <img src={event4_image47} alt="Banner Image 7"></img>
-                                <img src={event4_image48} alt="Banner Image 8"></img>
-                                <img src={event4_image49} alt="Banner Image 9"></img>
-                                <img src={event4_image50} alt="Banner Image 10"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 5 */}
-                <div class="modal fade" id="ModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 5</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event5_image1} alt="Banner Image 1"></img>
-                                <img src={event5_image2} alt="Banner Image 2"></img>
-                                <img src={event5_image3} alt="Banner Image 3"></img>
-                                <img src={event5_image4} alt="Banner Image 4"></img>
-                                <img src={event5_image5} alt="Banner Image 5"></img>
-                                <img src={event5_image6} alt="Banner Image 6"></img>
-                                <img src={event5_image7} alt="Banner Image 7"></img>
-                                <img src={event5_image8} alt="Banner Image 8"></img>
-                                <img src={event5_image9} alt="Banner Image 9"></img>
-                                <img src={event5_image10} alt="Banner Image 10"></img>
-                                <img src={event5_image11} alt="Banner Image 11"></img>
-                                <img src={event5_image12} alt="Banner Image 12"></img>
-                                <img src={event5_image13} alt="Banner Image 13"></img>
-                                <img src={event5_image14} alt="Banner Image 14"></img>
-                                <img src={event5_image15} alt="Banner Image 15"></img>
-                                <img src={event5_image16} alt="Banner Image 16"></img>
-                                <img src={event5_image17} alt="Banner Image 17"></img>
-                                <img src={event5_image18} alt="Banner Image 18"></img>
-                                <img src={event5_image19} alt="Banner Image 19"></img>
-                                <img src={event5_image20} alt="Banner Image 20"></img>
-                                <img src={event5_image21} alt="Banner Image 21"></img>
-                                <img src={event5_image22} alt="Banner Image 22"></img>
-                                <img src={event5_image23} alt="Banner Image 23"></img>
-                                <img src={event5_image24} alt="Banner Image 24"></img>
-                                <img src={event5_image25} alt="Banner Image 25"></img>
-                                <img src={event5_image26} alt="Banner Image 26"></img>
-                                <img src={event5_image28} alt="Banner Image 28"></img>
-                                <img src={event5_image29} alt="Banner Image 29"></img>
-                                <img src={event5_image30} alt="Banner Image 30"></img>
-                                <img src={event5_image31} alt="Banner Image 31"></img>
-                                <img src={event5_image32} alt="Banner Image 32"></img>
-                                <img src={event5_image33} alt="Banner Image 33"></img>
-                                <img src={event5_image34} alt="Banner Image 34"></img>
-                                <img src={event5_image35} alt="Banner Image 35"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 6 */}
-                <div class="modal fade" id="ModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 6</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event6_image1} alt="Banner Image 1"></img>
-                                <img src={event6_image2} alt="Banner Image 2"></img>
-                                <img src={event6_image3} alt="Banner Image 3"></img>
-                                <img src={event6_image4} alt="Banner Image 4"></img>
-                                <img src={event6_image5} alt="Banner Image 5"></img>
-                                <img src={event6_image6} alt="Banner Image 6"></img>
-                                <img src={event6_image7} alt="Banner Image 7"></img>
-                                <img src={event6_image8} alt="Banner Image 8"></img>
-                                <img src={event6_image9} alt="Banner Image 9"></img>
-                                <img src={event6_image10} alt="Banner Image 10"></img>
-                                <img src={event6_image11} alt="Banner Image 11"></img>
-                                <img src={event6_image12} alt="Banner Image 12"></img>
-                                <img src={event6_image13} alt="Banner Image 13"></img>
-                                <img src={event6_image14} alt="Banner Image 14"></img>
-                                <img src={event6_image15} alt="Banner Image 15"></img>
-                                <img src={event6_image16} alt="Banner Image 16"></img>
-                                <img src={event6_image17} alt="Banner Image 17"></img>
-                                <img src={event6_image18} alt="Banner Image 18"></img>
-                                <img src={event6_image19} alt="Banner Image 19"></img>
-                                <img src={event6_image20} alt="Banner Image 20"></img>
-                                <img src={event6_image21} alt="Banner Image 21"></img>
-                                <img src={event6_image22} alt="Banner Image 22"></img>
-                                <img src={event6_image23} alt="Banner Image 23"></img>
-                                <img src={event6_image24} alt="Banner Image 24"></img>
-                                <img src={event6_image25} alt="Banner Image 25"></img>
-                                <img src={event6_image26} alt="Banner Image 26"></img>
-                                <img src={event6_image27} alt="Banner Image 27"></img>
-                                <img src={event6_image28} alt="Banner Image 28"></img>
-                                <img src={event6_image29} alt="Banner Image 29"></img>
-                                <img src={event6_image30} alt="Banner Image 30"></img>
-                                <img src={event6_image31} alt="Banner Image 31"></img>
-                                <img src={event6_image32} alt="Banner Image 32"></img>
-                                <img src={event6_image33} alt="Banner Image 33"></img>
-                                <img src={event6_image34} alt="Banner Image 34"></img>
-                                <img src={event6_image35} alt="Banner Image 35"></img>
-                                <img src={event6_image36} alt="Banner Image 36"></img>
-                                <img src={event6_image37} alt="Banner Image 37"></img>
-                                <img src={event6_image38} alt="Banner Image 38"></img>
-                                <img src={event6_image39} alt="Banner Image 39"></img>
-                                <img src={event6_image40} alt="Banner Image 40"></img>
-                                <img src={event6_image41} alt="Banner Image 41"></img>
-                                <img src={event6_image42} alt="Banner Image 42"></img>
-                                <img src={event6_image43} alt="Banner Image 43"></img>
-                                <img src={event6_image44} alt="Banner Image 44"></img>
-                                <img src={event6_image45} alt="Banner Image 45"></img>
-                                <img src={event6_image46} alt="Banner Image 46"></img>
-                                <img src={event6_image47} alt="Banner Image 47"></img>
-                                <img src={event6_image48} alt="Banner Image 48"></img>
-                                <img src={event6_image49} alt="Banner Image 49"></img>
-                                <img src={event6_image50} alt="Banner Image 50"></img>
-                                <img src={event6_image51} alt="Banner Image 51"></img>
-                                <img src={event6_image52} alt="Banner Image 52"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 7 */}
-                <div class="modal fade" id="ModalLong7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 7</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event7_image1} alt="Banner Image 1"></img>
-                                <img src={event7_image2} alt="Banner Image 2"></img>
-                                <img src={event7_image3} alt="Banner Image 3"></img>
-                                <img src={event7_image4} alt="Banner Image 4"></img>
-                                <img src={event7_image5} alt="Banner Image 5"></img>
-                                <img src={event7_image6} alt="Banner Image 6"></img>
-                                <img src={event7_image7} alt="Banner Image 7"></img>
-                                <img src={event7_image8} alt="Banner Image 8"></img>
-                                <img src={event7_image9} alt="Banner Image 9"></img>
-                                <img src={event7_image10} alt="Banner Image 10"></img>
-                                <img src={event7_image11} alt="Banner Image 11"></img>
-                                <img src={event7_image12} alt="Banner Image 12"></img>
-                                <img src={event7_image13} alt="Banner Image 13"></img>
-                                <img src={event7_image14} alt="Banner Image 14"></img>
-                                <img src={event7_image15} alt="Banner Image 15"></img>
-                                <img src={event7_image16} alt="Banner Image 16"></img>
-                                <img src={event7_image17} alt="Banner Image 17"></img>
-                                <img src={event7_image18} alt="Banner Image 18"></img>
-                                <img src={event7_image19} alt="Banner Image 19"></img>
-                                <img src={event7_image20} alt="Banner Image 20"></img>
-                                <img src={event7_image21} alt="Banner Image 21"></img>
-                                <img src={event7_image22} alt="Banner Image 22"></img>
-                                <img src={event7_image23} alt="Banner Image 23"></img>
-                                <img src={event7_image24} alt="Banner Image 24"></img>
-                                <img src={event7_image25} alt="Banner Image 25"></img>
-                                <img src={event7_image26} alt="Banner Image 26"></img>
-                                <img src={event7_image27} alt="Banner Image 27"></img>
-                                <img src={event7_image28} alt="Banner Image 28"></img>
-                                <img src={event7_image29} alt="Banner Image 29"></img>
-                                <img src={event7_image30} alt="Banner Image 30"></img>
-                                <img src={event7_image31} alt="Banner Image 31"></img>
-                                <img src={event7_image32} alt="Banner Image 32"></img>
-                                <img src={event7_image33} alt="Banner Image 33"></img>
-                                <img src={event7_image34} alt="Banner Image 34"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 8 */}
-                <div class="modal fade" id="ModalLong8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 8</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event8_image1} alt="Banner Image 1"></img>
-                                <img src={event8_image2} alt="Banner Image 2"></img>
-                                <img src={event8_image3} alt="Banner Image 3"></img>
- 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 9 */}
-                <div class="modal fade" id="ModalLong9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 9</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event9_image1} alt="Banner Image 1"></img>
-                                <img src={event9_image2} alt="Banner Image 2"></img>
-                                <img src={event9_image3} alt="Banner Image 3"></img>
-                                <img src={event9_image4} alt="Banner Image 4"></img>
-                                <img src={event9_image5} alt="Banner Image 5"></img>
-                                <img src={event9_image6} alt="Banner Image 6"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 10 */}
-                <div class="modal fade" id="ModalLong10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 10</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event10_image1} alt="Banner Image 1"></img>
-                                <img src={event10_image2} alt="Banner Image 2"></img>
-                                <img src={event10_image3} alt="Banner Image 3"></img>
-                                <img src={event10_image4} alt="Banner Image 4"></img>
-                                <img src={event10_image5} alt="Banner Image 5"></img>
-                                <img src={event10_image6} alt="Banner Image 6"></img>
-                                <img src={event10_image7} alt="Banner Image 7"></img>
-                                <img src={event10_image8} alt="Banner Image 8"></img>
-                                <img src={event10_image9} alt="Banner Image 9"></img>
-                                <img src={event10_image10} alt="Banner Image 10"></img>
-                                <img src={event10_image11} alt="Banner Image 1"></img>
-                                <img src={event10_image12} alt="Banner Image 2"></img>
-                                <img src={event10_image13} alt="Banner Image 3"></img>
-                                <img src={event10_image14} alt="Banner Image 4"></img>
-                                <img src={event10_image15} alt="Banner Image 5"></img>
-                                <img src={event10_image16} alt="Banner Image 6"></img>
-                                <img src={event10_image17} alt="Banner Image 7"></img>
-                                <img src={event10_image18} alt="Banner Image 8"></img>
-                                <img src={event10_image19} alt="Banner Image 9"></img>
-                                <img src={event10_image20} alt="Banner Image 10"></img>
-                                <img src={event10_image21} alt="Banner Image 1"></img>
-                                <img src={event10_image22} alt="Banner Image 2"></img>
-                                <img src={event10_image23} alt="Banner Image 3"></img>
-                                <img src={event10_image24} alt="Banner Image 4"></img>
-                                <img src={event10_image25} alt="Banner Image 5"></img>
-                                <img src={event10_image26} alt="Banner Image 6"></img>
-                                <img src={event10_image27} alt="Banner Image 7"></img>
-                                <img src={event10_image28} alt="Banner Image 8"></img>
-                                <img src={event10_image29} alt="Banner Image 9"></img>
-                                <img src={event10_image30} alt="Banner Image 10"></img>
-                                <img src={event10_image31} alt="Banner Image 1"></img>
-                                <img src={event10_image32} alt="Banner Image 2"></img>
-                                <img src={event10_image33} alt="Banner Image 3"></img>
-                                <img src={event10_image34} alt="Banner Image 4"></img>
-                                <img src={event10_image35} alt="Banner Image 5"></img>
-                                <img src={event10_image36} alt="Banner Image 6"></img>
-                                <img src={event10_image37} alt="Banner Image 7"></img>
-                                <img src={event10_image38} alt="Banner Image 8"></img>
-                                <img src={event10_image39} alt="Banner Image 9"></img>
-                                <img src={event10_image40} alt="Banner Image 10"></img>
-                                <img src={event10_image41} alt="Banner Image 1"></img>
-                                <img src={event10_image42} alt="Banner Image 2"></img>
-                                <img src={event10_image43} alt="Banner Image 3"></img>
-                                <img src={event10_image44} alt="Banner Image 4"></img>
-                                <img src={event10_image45} alt="Banner Image 5"></img>
-                                <img src={event10_image46} alt="Banner Image 6"></img>
-                                <img src={event10_image47} alt="Banner Image 7"></img>
-                                <img src={event10_image48} alt="Banner Image 8"></img>
-                                <img src={event10_image49} alt="Banner Image 9"></img>
-                                <img src={event10_image50} alt="Banner Image 10"></img>
-                                <img src={event10_image51} alt="Banner Image 1"></img>
-                                <img src={event10_image52} alt="Banner Image 2"></img>
-                                <img src={event10_image53} alt="Banner Image 3"></img>
-                                <img src={event10_image54} alt="Banner Image 4"></img>
-                                <img src={event10_image55} alt="Banner Image 5"></img>
-                                <img src={event10_image56} alt="Banner Image 6"></img>
-                                <img src={event10_image57} alt="Banner Image 7"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Modal for Event 11 */}
-                <div class="modal fade" id="ModalLong11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Event 11</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src={event11_image1} alt="Banner Image 1"></img>
-                                <img src={event11_image2} alt="Banner Image 2"></img>
-                                <img src={event11_image3} alt="Banner Image 3"></img>
-                                <img src={event11_image4} alt="Banner Image 4"></img>
-                                <img src={event11_image5} alt="Banner Image 5"></img>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        )
+            )
+        }
     }
-}
 
-
-export default Events;
+    export default Events;
