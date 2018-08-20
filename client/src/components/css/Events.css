@@ -33,7 +33,7 @@
     padding-left: 10px;
 }
 
-/* Modal Styling */
+/* Old Modal Styling */
 .modal-dialog {
     max-width: 80%;
 }
@@ -45,4 +45,25 @@
     height: 250px;
     width: 250px;
     padding: 16px;
+}
+
+/* New Modal Styling */
+a :hover {
+    opacity: 0.5;
+}
+.moveLeft {
+    margin-left: -42px;
+}
+.col {
+    text-align: center;
+}
+.btnImg {
+    height: 250px;
+    width: 250px;
+}
+.spaceToFooter {
+    margin-bottom: 20px;
+}
+#prevEventsTitle {
+    margin: 20px auto;
 }

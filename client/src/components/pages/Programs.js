@@ -44,8 +44,8 @@ class Programs extends Component {
     return <div>
         <h1 className="display-1">Programs</h1>
         <div className="row">
-        <div className="col">
-          <Button className="btn-block" color="danger" onClick={this.toggle1}>
+        <div className="col-12">
+          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle1}>
               Love Blessings Backpacks
             </Button>
             <Modal isOpen={this.state.modal1} toggle={this.toggle1} className={this.props.className}>
@@ -96,8 +96,8 @@ class Programs extends Component {
             </Modal>
           </div>
 
-      <div className="col">
-          <Button className="btn-block" color="danger" onClick={this.toggle2}>
+      <div className="col-12">
+          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle2}>
             Love Blessings Gift Bags
           </Button>
           <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
@@ -146,8 +146,8 @@ class Programs extends Component {
           </Modal>
           </div>
 
-      <div className="col">
-          <Button className="btn-block" color="danger" onClick={this.toggle3}>
+      <div className="col-12">
+          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle3}>
             Love Blessings Condoms & Candy Bags
           </Button>
           <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
@@ -192,11 +192,9 @@ class Programs extends Component {
             </ModalFooter>
           </Modal>
           </div>
-        </div>
 
-      <div className="row">
-        <div className="col">
-          <Button className="btn-block" color="danger" onClick={this.toggle4}>
+        <div className="col-12">
+          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle4}>
           Shower of Love
           </Button>
         <Modal isOpen={this.state.modal4} toggle={this.toggle4} className={this.props.className}>
@@ -217,8 +215,8 @@ class Programs extends Component {
         </Modal>
         </div>
 
-        <div className="col">
-          <Button className="btn-block" color="danger" onClick={this.toggle5}>
+        <div className="col-12">
+          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle5}>
           "I AM" WORTH IT!!! (coming soon)
           </Button>
         <Modal isOpen={this.state.modal5} toggle={this.toggle5} className={this.props.className}>
