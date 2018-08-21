@@ -503,6 +503,84 @@ class Events extends Component {
       }
 
       render() {
+
+        const imgArr_event1 = [
+            event1_image2, event1_image3, event1_image4, event1_image5, event1_image6, event1_image7, event1_image8,
+        ];
+
+        const imgArr_event2 = [
+            event2_image9, event2_image10, event2_image11, event2_image12, event2_image13, event2_image14, event2_image15, event2_image16, event2_image17, event2_image18, event2_image19,
+            event2_image20, event2_image21, event2_image22, event2_image23, event2_image24, event2_image25, event2_image26, event2_image27, event2_image28, event2_image29,
+            event2_image30, event2_image31, event2_image32, event2_image33, event2_image34, event2_image35, event2_image36, event2_image37, event2_image38, event2_image39,
+            event2_image40, event2_image41, event2_image42, event2_image43, event2_image44, event2_image45, event2_image46, event2_image47, event2_image48, event2_image49,
+            event2_image50, event2_image51, event2_image52, event2_image53, event2_image54, event2_image55, event2_image56, event2_image57, event2_image58, event2_image59,
+            event2_image60, event2_image61, event2_image62, event2_image63, event2_image64, event2_image65, event2_image66, event2_image67, event2_image68, event2_image69,
+            event2_image70, event2_image71, event2_image72, event2_image73, event2_image74, event2_image75, event2_image76, event2_image77, event2_image78, event2_image79,
+            event2_image80, event2_image81, event2_image82, event2_image83, event2_image84, event2_image85, event2_image86, event2_image87, event2_image88, event2_image89,
+            event2_image90, event2_image91, event2_image92, event2_image93, event2_image94, event2_image95, event2_image96, event2_image97, event2_image98, event2_image99,
+            event2_image100, event2_image101, event2_image102, event2_image103, event2_image104, event2_image105, event2_image106, event2_image107, event2_image108, event2_image109,
+            event2_image110, event2_image111, event2_image112, event2_image113, event2_image114
+        ];
+
+        const imgArr_event3 = [
+            event3_image1, event3_image2, event3_image3, event3_image4, event3_image5, event3_image6, event3_image7, event3_image8, event3_image9,
+            event3_image10, event3_image11, event3_image12, event3_image13, event3_image14, event3_image15, event3_image16, event3_image17, event3_image18, event3_image19,
+            event3_image20, event3_image21, event3_image22, event3_image23, event3_image24, event3_image25, event3_image26, event3_image27, event3_image28
+        ];
+
+        const imgArr_event4 = [
+            event4_image1, event4_image2, event4_image3, event4_image4, event4_image5, event4_image6, event4_image7, event4_image8, event4_image9,
+            event4_image10, event4_image11, event4_image12, event4_image13, event4_image14, event4_image15, event4_image16, event4_image17, event4_image18, event4_image19,
+            event4_image20, event4_image21, event4_image22, event4_image23, event4_image24, event4_image25, event4_image26, event4_image27, event4_image28, event4_image29,
+            event4_image30, event4_image31, event4_image32, event4_image33, event4_image34, event4_image35, event4_image36, event4_image37, event4_image38, event4_image39,
+            event4_image40, event4_image41, event4_image42, event4_image43, event4_image44, event4_image45, event4_image46, event4_image47, event4_image48, event4_image49,
+            event4_image50
+        ];
+
+        const imgArr_event5 = [
+            event5_image1, event5_image2, event5_image3, event5_image4, event5_image5, event5_image6, event5_image7, event5_image8, event5_image9,  
+            event5_image10, event5_image11, event5_image12, event5_image13, event5_image14, event5_image15, event5_image16, event5_image17, event5_image18, event5_image19,  
+            event5_image20, event5_image21, event5_image22, event5_image23, event5_image24, event5_image25, event5_image26, event5_image28, event5_image29,  
+            event5_image30, event5_image31, event5_image32, event5_image33, event5_image34, event5_image35
+        ];
+
+        const imgArr_event6 = [
+            event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, 
+            event6_image10, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, 
+            event6_image20, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, 
+            event6_image30, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, 
+            event6_image40, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, 
+            event6_image50, event6_image51, event6_image51
+        ];
+
+        const imgArr_event7 = [
+            event7_image1, event7_image2, event7_image3, event7_image4, event7_image5, event7_image6, event7_image7, event7_image8, event7_image9, 
+            event7_image10, event7_image11, event7_image12, event7_image13, event7_image14, event7_image15, event7_image16, event7_image17, event7_image18, event7_image19, 
+            event7_image20, event7_image21, event7_image22, event7_image23, event7_image24, event7_image25, event7_image26, event7_image27, event7_image28, event7_image29, 
+            event7_image30, event7_image31, event7_image32, event7_image33, event7_image34 
+        ];
+
+        const imgArr_event8 = [
+            event8_image1, event8_image2, event8_image3
+        ];
+
+        const imgArr_event9 = [
+            event9_image1, event9_image2, event9_image3, event9_image4, event9_image5, event9_image6 
+        ];
+
+        const imgArr_event10 = [
+            event10_image1, event10_image2, event10_image3, event10_image4, event10_image5, event10_image6, event10_image7, event10_image8, event10_image9, 
+            event10_image10, event10_image11, event10_image12, event10_image13, event10_image14, event10_image15, event10_image16, event10_image17, event10_image18, event10_image19, 
+            event10_image20, event10_image21, event10_image22, event10_image23, event10_image24, event10_image25, event10_image26, event10_image27, event10_image28, event10_image29, 
+            event10_image30, event10_image31, event10_image32, event10_image33, event10_image34, event10_image35, event10_image36, event10_image37, event10_image38, event10_image39, 
+            event10_image40, event10_image41, event10_image42, event10_image43, event10_image44, event10_image45, event10_image46, event10_image47, event10_image48, event10_image49, 
+            event10_image50, event10_image51, event10_image52, event10_image53, event10_image54, event10_image55, event10_image56, event10_image57, 
+        ];
+
+        const imgArr_event11 = [
+            event11_image1, event11_image2, event11_image3, event11_image4, event11_image5, 
+        ];
+
         return (
             <div>
                 <h1 className="display-1">Events</h1>
@@ -557,14 +635,12 @@ class Events extends Component {
                             <ModalHeader toggle={this.toggle1}>Event1</ModalHeader>
                             <ModalBody>
                                 <p className="lead">Event1 Details</p>
-                                <ul className="list-unstyled">
-                                    <img src={event1_image2} alt="Modal Image 2"></img>
-                                    <img src={event1_image3} alt="Modal Image 3"></img>
-                                    <img src={event1_image4} alt="Modal Image 4"></img>
-                                    <img src={event1_image5} alt="Modal Image 5"></img>
-                                    <img src={event1_image6} alt="Modal Image 6"></img>
-                                    <img src={event1_image7} alt="Modal Image 7"></img>
-                                    <img src={event1_image8} alt="Modal Image 8"></img>
+                                <ul>
+                                    {imgArr_event1.map(function (image, index) {
+                                        return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -583,112 +659,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event2 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event2_image9} alt="Modal Image 9"></img>
-                                    <img src={event2_image10} alt="Modal Image 10"></img>
-                                    <img src={event2_image11} alt="Modal Image 10"></img>
-                                    <img src={event2_image12} alt="Modal Image 10"></img>
-                                    <img src={event2_image13} alt="Modal Image 10"></img>
-                                    <img src={event2_image14} alt="Modal Image 10"></img>
-                                    <img src={event2_image15} alt="Modal Image 10"></img>
-                                    <img src={event2_image16} alt="Modal Image 10"></img>
-                                    <img src={event2_image17} alt="Modal Image 10"></img>
-                                    <img src={event2_image18} alt="Modal Image 10"></img>
-                                    <img src={event2_image19} alt="Modal Image 10"></img>
-                                    <img src={event2_image20} alt="Modal Image 10"></img>
-                                    <img src={event2_image21} alt="Modal Image 10"></img>
-                                    <img src={event2_image22} alt="Modal Image 10"></img>
-                                    <img src={event2_image23} alt="Modal Image 10"></img>
-                                    <img src={event2_image24} alt="Modal Image 10"></img>
-                                    <img src={event2_image25} alt="Modal Image 10"></img>
-                                    <img src={event2_image26} alt="Modal Image 10"></img>
-                                    <img src={event2_image27} alt="Modal Image 10"></img>
-                                    <img src={event2_image28} alt="Modal Image 10"></img>
-                                    <img src={event2_image29} alt="Modal Image 10"></img>
-                                    <img src={event2_image30} alt="Modal Image 10"></img>
-                                    <img src={event2_image31} alt="Modal Image 10"></img>
-                                    <img src={event2_image32} alt="Modal Image 10"></img>
-                                    <img src={event2_image33} alt="Modal Image 10"></img>
-                                    <img src={event2_image34} alt="Modal Image 10"></img>
-                                    <img src={event2_image35} alt="Modal Image 10"></img>
-                                    <img src={event2_image36} alt="Modal Image 10"></img>
-                                    <img src={event2_image37} alt="Modal Image 10"></img>
-                                    <img src={event2_image38} alt="Modal Image 10"></img>
-                                    <img src={event2_image39} alt="Modal Image 10"></img>
-                                    <img src={event2_image40} alt="Modal Image 10"></img>
-                                    <img src={event2_image41} alt="Modal Image 10"></img>
-                                    <img src={event2_image42} alt="Modal Image 10"></img>
-                                    <img src={event2_image43} alt="Modal Image 10"></img>
-                                    <img src={event2_image44} alt="Modal Image 10"></img>
-                                    <img src={event2_image45} alt="Modal Image 10"></img>
-                                    <img src={event2_image46} alt="Modal Image 10"></img>
-                                    <img src={event2_image47} alt="Modal Image 10"></img>
-                                    <img src={event2_image48} alt="Modal Image 10"></img>
-                                    <img src={event2_image49} alt="Modal Image 10"></img>
-                                    <img src={event2_image50} alt="Modal Image 10"></img>
-                                    <img src={event2_image51} alt="Modal Image 10"></img>
-                                    <img src={event2_image52} alt="Modal Image 10"></img>
-                                    <img src={event2_image53} alt="Modal Image 10"></img>
-                                    <img src={event2_image54} alt="Modal Image 10"></img>
-                                    <img src={event2_image55} alt="Modal Image 10"></img>
-                                    <img src={event2_image56} alt="Modal Image 10"></img>
-                                    <img src={event2_image57} alt="Modal Image 10"></img>
-                                    <img src={event2_image58} alt="Modal Image 10"></img>
-                                    <img src={event2_image59} alt="Modal Image 10"></img>
-                                    <img src={event2_image60} alt="Modal Image 10"></img>
-                                    <img src={event2_image61} alt="Modal Image 10"></img>
-                                    <img src={event2_image62} alt="Modal Image 10"></img>
-                                    <img src={event2_image63} alt="Modal Image 10"></img>
-                                    <img src={event2_image64} alt="Modal Image 10"></img>
-                                    <img src={event2_image65} alt="Modal Image 10"></img>
-                                    <img src={event2_image66} alt="Modal Image 10"></img>
-                                    <img src={event2_image67} alt="Modal Image 10"></img>
-                                    <img src={event2_image68} alt="Modal Image 10"></img>
-                                    <img src={event2_image69} alt="Modal Image 10"></img>
-                                    <img src={event2_image70} alt="Modal Image 10"></img>
-                                    <img src={event2_image71} alt="Modal Image 10"></img>
-                                    <img src={event2_image72} alt="Modal Image 10"></img>
-                                    <img src={event2_image73} alt="Modal Image 10"></img>
-                                    <img src={event2_image74} alt="Modal Image 10"></img>
-                                    <img src={event2_image75} alt="Modal Image 10"></img>
-                                    <img src={event2_image76} alt="Modal Image 10"></img>
-                                    <img src={event2_image77} alt="Modal Image 10"></img>
-                                    <img src={event2_image78} alt="Modal Image 10"></img>
-                                    <img src={event2_image79} alt="Modal Image 10"></img>
-                                    <img src={event2_image80} alt="Modal Image 10"></img>
-                                    <img src={event2_image81} alt="Modal Image 10"></img>
-                                    <img src={event2_image82} alt="Modal Image 10"></img>
-                                    <img src={event2_image83} alt="Modal Image 10"></img>
-                                    <img src={event2_image84} alt="Modal Image 10"></img>
-                                    <img src={event2_image85} alt="Modal Image 10"></img>
-                                    <img src={event2_image86} alt="Modal Image 10"></img>
-                                    <img src={event2_image87} alt="Modal Image 10"></img>
-                                    <img src={event2_image88} alt="Modal Image 10"></img>
-                                    <img src={event2_image89} alt="Modal Image 10"></img>
-                                    <img src={event2_image90} alt="Modal Image 10"></img>
-                                    <img src={event2_image91} alt="Modal Image 10"></img>
-                                    <img src={event2_image92} alt="Modal Image 10"></img>
-                                    <img src={event2_image93} alt="Modal Image 10"></img>
-                                    <img src={event2_image94} alt="Modal Image 10"></img>
-                                    <img src={event2_image95} alt="Modal Image 10"></img>
-                                    <img src={event2_image96} alt="Modal Image 10"></img>
-                                    <img src={event2_image97} alt="Modal Image 10"></img>
-                                    <img src={event2_image98} alt="Modal Image 10"></img>
-                                    <img src={event2_image99} alt="Modal Image 10"></img>
-                                    <img src={event2_image100} alt="Modal Image 10"></img>
-                                    <img src={event2_image101} alt="Modal Image 10"></img>
-                                    <img src={event2_image102} alt="Modal Image 10"></img>
-                                    <img src={event2_image103} alt="Modal Image 10"></img>
-                                    <img src={event2_image104} alt="Modal Image 10"></img>
-                                    <img src={event2_image105} alt="Modal Image 10"></img>
-                                    <img src={event2_image106} alt="Modal Image 10"></img>
-                                    <img src={event2_image107} alt="Modal Image 10"></img>
-                                    <img src={event2_image108} alt="Modal Image 10"></img>
-                                    <img src={event2_image109} alt="Modal Image 10"></img>
-                                    <img src={event2_image110} alt="Modal Image 10"></img>
-                                    <img src={event2_image111} alt="Modal Image 10"></img>
-                                    <img src={event2_image112} alt="Modal Image 10"></img>
-                                    <img src={event2_image113} alt="Modal Image 10"></img>
-                                    <img src={event2_image114} alt="Modal Image 10"></img>
+                                    {imgArr_event2.map(function (image, index) {
+                                        return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -707,34 +682,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event3 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event3_image1} alt="Modal Image 1"></img>
-                                    <img src={event3_image2} alt="Modal Image 1"></img>
-                                    <img src={event3_image3} alt="Modal Image 1"></img>
-                                    <img src={event3_image4} alt="Modal Image 1"></img>
-                                    <img src={event3_image5} alt="Modal Image 1"></img>
-                                    <img src={event3_image6} alt="Modal Image 1"></img>
-                                    <img src={event3_image7} alt="Modal Image 1"></img>
-                                    <img src={event3_image8} alt="Modal Image 1"></img>
-                                    <img src={event3_image9} alt="Modal Image 1"></img>
-                                    <img src={event3_image10} alt="Modal Image 1"></img>
-                                    <img src={event3_image11} alt="Modal Image 1"></img>
-                                    <img src={event3_image12} alt="Modal Image 1"></img>
-                                    <img src={event3_image13} alt="Modal Image 1"></img>
-                                    <img src={event3_image14} alt="Modal Image 1"></img>
-                                    <img src={event3_image15} alt="Modal Image 1"></img>
-                                    <img src={event3_image16} alt="Modal Image 1"></img>
-                                    <img src={event3_image17} alt="Modal Image 1"></img>
-                                    <img src={event3_image18} alt="Modal Image 1"></img>
-                                    <img src={event3_image19} alt="Modal Image 1"></img>
-                                    <img src={event3_image20} alt="Modal Image 1"></img>
-                                    <img src={event3_image21} alt="Modal Image 1"></img>
-                                    <img src={event3_image22} alt="Modal Image 1"></img>
-                                    <img src={event3_image23} alt="Modal Image 1"></img>
-                                    <img src={event3_image24} alt="Modal Image 1"></img>
-                                    <img src={event3_image25} alt="Modal Image 1"></img>
-                                    <img src={event3_image26} alt="Modal Image 1"></img>
-                                    <img src={event3_image27} alt="Modal Image 1"></img>
-                                    <img src={event3_image28} alt="Modal Image 1"></img>
+                                {imgArr_event3.map(function (image, index) {
+                                    return (
+                                        <img key={index} src={image}/>
+                                    )
+                                })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -753,56 +705,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event4 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event4_image1} alt="Banner Image 1"></img>
-                                    <img src={event4_image2} alt="Banner Image 2"></img>
-                                    <img src={event4_image3} alt="Banner Image 3"></img>
-                                    <img src={event4_image4} alt="Banner Image 4"></img>
-                                    <img src={event4_image5} alt="Banner Image 5"></img>
-                                    <img src={event4_image6} alt="Banner Image 6"></img>
-                                    <img src={event4_image7} alt="Banner Image 7"></img>
-                                    <img src={event4_image8} alt="Banner Image 8"></img>
-                                    <img src={event4_image9} alt="Banner Image 9"></img>
-                                    <img src={event4_image10} alt="Banner Image 10"></img>
-                                    <img src={event4_image11} alt="Banner Image 1"></img>
-                                    <img src={event4_image12} alt="Banner Image 2"></img>
-                                    <img src={event4_image13} alt="Banner Image 3"></img>
-                                    <img src={event4_image14} alt="Banner Image 4"></img>
-                                    <img src={event4_image15} alt="Banner Image 5"></img>
-                                    <img src={event4_image16} alt="Banner Image 6"></img>
-                                    <img src={event4_image17} alt="Banner Image 7"></img>
-                                    <img src={event4_image18} alt="Banner Image 8"></img>
-                                    <img src={event4_image19} alt="Banner Image 9"></img>
-                                    <img src={event4_image20} alt="Banner Image 10"></img>
-                                    <img src={event4_image21} alt="Banner Image 1"></img>
-                                    <img src={event4_image22} alt="Banner Image 2"></img>
-                                    <img src={event4_image23} alt="Banner Image 3"></img>
-                                    <img src={event4_image24} alt="Banner Image 4"></img>
-                                    <img src={event4_image25} alt="Banner Image 5"></img>
-                                    <img src={event4_image26} alt="Banner Image 6"></img>
-                                    <img src={event4_image27} alt="Banner Image 7"></img>
-                                    <img src={event4_image28} alt="Banner Image 8"></img>
-                                    <img src={event4_image29} alt="Banner Image 9"></img>
-                                    <img src={event4_image30} alt="Banner Image 10"></img>
-                                    <img src={event4_image31} alt="Banner Image 1"></img>
-                                    <img src={event4_image32} alt="Banner Image 2"></img>
-                                    <img src={event4_image33} alt="Banner Image 3"></img>
-                                    <img src={event4_image34} alt="Banner Image 4"></img>
-                                    <img src={event4_image35} alt="Banner Image 5"></img>
-                                    <img src={event4_image36} alt="Banner Image 6"></img>
-                                    <img src={event4_image37} alt="Banner Image 7"></img>
-                                    <img src={event4_image38} alt="Banner Image 8"></img>
-                                    <img src={event4_image39} alt="Banner Image 9"></img>
-                                    <img src={event4_image40} alt="Banner Image 10"></img>
-                                    <img src={event4_image41} alt="Banner Image 1"></img>
-                                    <img src={event4_image42} alt="Banner Image 2"></img>
-                                    <img src={event4_image43} alt="Banner Image 3"></img>
-                                    <img src={event4_image44} alt="Banner Image 4"></img>
-                                    <img src={event4_image45} alt="Banner Image 5"></img>
-                                    <img src={event4_image46} alt="Banner Image 6"></img>
-                                    <img src={event4_image47} alt="Banner Image 7"></img>
-                                    <img src={event4_image48} alt="Banner Image 8"></img>
-                                    <img src={event4_image49} alt="Banner Image 9"></img>
-                                    <img src={event4_image50} alt="Banner Image 10"></img>
+                                    {imgArr_event4.map(function (image, index) {
+                                        return (
+                                        <img key={index} src={image}/>
+                                    )
+                                })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -823,40 +730,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event5 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event5_image1} alt="Banner Image 1"></img>
-                                    <img src={event5_image2} alt="Banner Image 2"></img>
-                                    <img src={event5_image3} alt="Banner Image 3"></img>
-                                    <img src={event5_image4} alt="Banner Image 4"></img>
-                                    <img src={event5_image5} alt="Banner Image 5"></img>
-                                    <img src={event5_image6} alt="Banner Image 6"></img>
-                                    <img src={event5_image7} alt="Banner Image 7"></img>
-                                    <img src={event5_image8} alt="Banner Image 8"></img>
-                                    <img src={event5_image9} alt="Banner Image 9"></img>
-                                    <img src={event5_image10} alt="Banner Image 10"></img>
-                                    <img src={event5_image11} alt="Banner Image 11"></img>
-                                    <img src={event5_image12} alt="Banner Image 12"></img>
-                                    <img src={event5_image13} alt="Banner Image 13"></img>
-                                    <img src={event5_image14} alt="Banner Image 14"></img>
-                                    <img src={event5_image15} alt="Banner Image 15"></img>
-                                    <img src={event5_image16} alt="Banner Image 16"></img>
-                                    <img src={event5_image17} alt="Banner Image 17"></img>
-                                    <img src={event5_image18} alt="Banner Image 18"></img>
-                                    <img src={event5_image19} alt="Banner Image 19"></img>
-                                    <img src={event5_image20} alt="Banner Image 20"></img>
-                                    <img src={event5_image21} alt="Banner Image 21"></img>
-                                    <img src={event5_image22} alt="Banner Image 22"></img>
-                                    <img src={event5_image23} alt="Banner Image 23"></img>
-                                    <img src={event5_image24} alt="Banner Image 24"></img>
-                                    <img src={event5_image25} alt="Banner Image 25"></img>
-                                    <img src={event5_image26} alt="Banner Image 26"></img>
-                                    <img src={event5_image28} alt="Banner Image 28"></img>
-                                    <img src={event5_image29} alt="Banner Image 29"></img>
-                                    <img src={event5_image30} alt="Banner Image 30"></img>
-                                    <img src={event5_image31} alt="Banner Image 31"></img>
-                                    <img src={event5_image32} alt="Banner Image 32"></img>
-                                    <img src={event5_image33} alt="Banner Image 33"></img>
-                                    <img src={event5_image34} alt="Banner Image 34"></img>
-                                    <img src={event5_image35} alt="Banner Image 35"></img>
+                                    {imgArr_event5.map(function (image, index) {
+                                        return (
+                                        <img key={index} src={image}/>
+                                    )
+                                })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -875,58 +753,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event6 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event6_image1} alt="Banner Image 1"></img>
-                                    <img src={event6_image2} alt="Banner Image 2"></img>
-                                    <img src={event6_image3} alt="Banner Image 3"></img>
-                                    <img src={event6_image4} alt="Banner Image 4"></img>
-                                    <img src={event6_image5} alt="Banner Image 5"></img>
-                                    <img src={event6_image6} alt="Banner Image 6"></img>
-                                    <img src={event6_image7} alt="Banner Image 7"></img>
-                                    <img src={event6_image8} alt="Banner Image 8"></img>
-                                    <img src={event6_image9} alt="Banner Image 9"></img>
-                                    <img src={event6_image10} alt="Banner Image 10"></img>
-                                    <img src={event6_image11} alt="Banner Image 11"></img>
-                                    <img src={event6_image12} alt="Banner Image 12"></img>
-                                    <img src={event6_image13} alt="Banner Image 13"></img>
-                                    <img src={event6_image14} alt="Banner Image 14"></img>
-                                    <img src={event6_image15} alt="Banner Image 15"></img>
-                                    <img src={event6_image16} alt="Banner Image 16"></img>
-                                    <img src={event6_image17} alt="Banner Image 17"></img>
-                                    <img src={event6_image18} alt="Banner Image 18"></img>
-                                    <img src={event6_image19} alt="Banner Image 19"></img>
-                                    <img src={event6_image20} alt="Banner Image 20"></img>
-                                    <img src={event6_image21} alt="Banner Image 21"></img>
-                                    <img src={event6_image22} alt="Banner Image 22"></img>
-                                    <img src={event6_image23} alt="Banner Image 23"></img>
-                                    <img src={event6_image24} alt="Banner Image 24"></img>
-                                    <img src={event6_image25} alt="Banner Image 25"></img>
-                                    <img src={event6_image26} alt="Banner Image 26"></img>
-                                    <img src={event6_image27} alt="Banner Image 27"></img>
-                                    <img src={event6_image28} alt="Banner Image 28"></img>
-                                    <img src={event6_image29} alt="Banner Image 29"></img>
-                                    <img src={event6_image30} alt="Banner Image 30"></img>
-                                    <img src={event6_image31} alt="Banner Image 31"></img>
-                                    <img src={event6_image32} alt="Banner Image 32"></img>
-                                    <img src={event6_image33} alt="Banner Image 33"></img>
-                                    <img src={event6_image34} alt="Banner Image 34"></img>
-                                    <img src={event6_image35} alt="Banner Image 35"></img>
-                                    <img src={event6_image36} alt="Banner Image 36"></img>
-                                    <img src={event6_image37} alt="Banner Image 37"></img>
-                                    <img src={event6_image38} alt="Banner Image 38"></img>
-                                    <img src={event6_image39} alt="Banner Image 39"></img>
-                                    <img src={event6_image40} alt="Banner Image 40"></img>
-                                    <img src={event6_image41} alt="Banner Image 41"></img>
-                                    <img src={event6_image42} alt="Banner Image 42"></img>
-                                    <img src={event6_image43} alt="Banner Image 43"></img>
-                                    <img src={event6_image44} alt="Banner Image 44"></img>
-                                    <img src={event6_image45} alt="Banner Image 45"></img>
-                                    <img src={event6_image46} alt="Banner Image 46"></img>
-                                    <img src={event6_image47} alt="Banner Image 47"></img>
-                                    <img src={event6_image48} alt="Banner Image 48"></img>
-                                    <img src={event6_image49} alt="Banner Image 49"></img>
-                                    <img src={event6_image50} alt="Banner Image 50"></img>
-                                    <img src={event6_image51} alt="Banner Image 51"></img>
-                                    <img src={event6_image52} alt="Banner Image 52"></img>
+                                    {imgArr_event6.map(function (image, index) {
+                                        return (
+                                        <img key={index} src={image}/>
+                                    )
+                                })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -945,40 +776,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event7 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event7_image1} alt="Banner Image 1"></img>
-                                    <img src={event7_image2} alt="Banner Image 2"></img>
-                                    <img src={event7_image3} alt="Banner Image 3"></img>
-                                    <img src={event7_image4} alt="Banner Image 4"></img>
-                                    <img src={event7_image5} alt="Banner Image 5"></img>
-                                    <img src={event7_image6} alt="Banner Image 6"></img>
-                                    <img src={event7_image7} alt="Banner Image 7"></img>
-                                    <img src={event7_image8} alt="Banner Image 8"></img>
-                                    <img src={event7_image9} alt="Banner Image 9"></img>
-                                    <img src={event7_image10} alt="Banner Image 10"></img>
-                                    <img src={event7_image11} alt="Banner Image 11"></img>
-                                    <img src={event7_image12} alt="Banner Image 12"></img>
-                                    <img src={event7_image13} alt="Banner Image 13"></img>
-                                    <img src={event7_image14} alt="Banner Image 14"></img>
-                                    <img src={event7_image15} alt="Banner Image 15"></img>
-                                    <img src={event7_image16} alt="Banner Image 16"></img>
-                                    <img src={event7_image17} alt="Banner Image 17"></img>
-                                    <img src={event7_image18} alt="Banner Image 18"></img>
-                                    <img src={event7_image19} alt="Banner Image 19"></img>
-                                    <img src={event7_image20} alt="Banner Image 20"></img>
-                                    <img src={event7_image21} alt="Banner Image 21"></img>
-                                    <img src={event7_image22} alt="Banner Image 22"></img>
-                                    <img src={event7_image23} alt="Banner Image 23"></img>
-                                    <img src={event7_image24} alt="Banner Image 24"></img>
-                                    <img src={event7_image25} alt="Banner Image 25"></img>
-                                    <img src={event7_image26} alt="Banner Image 26"></img>
-                                    <img src={event7_image27} alt="Banner Image 27"></img>
-                                    <img src={event7_image28} alt="Banner Image 28"></img>
-                                    <img src={event7_image29} alt="Banner Image 29"></img>
-                                    <img src={event7_image30} alt="Banner Image 30"></img>
-                                    <img src={event7_image31} alt="Banner Image 31"></img>
-                                    <img src={event7_image32} alt="Banner Image 32"></img>
-                                    <img src={event7_image33} alt="Banner Image 33"></img>
-                                    <img src={event7_image34} alt="Banner Image 34"></img>
+                                    {imgArr_event7.map(function (image, index) {
+                                            return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -997,9 +799,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event8 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event8_image1} alt="Banner Image 1"></img>
-                                    <img src={event8_image2} alt="Banner Image 2"></img>
-                                    <img src={event8_image3} alt="Banner Image 3"></img>
+                                    {imgArr_event8.map(function (image, index) {
+                                            return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -1021,12 +825,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event9 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event9_image1} alt="Banner Image 1"></img>
-                                    <img src={event9_image2} alt="Banner Image 2"></img>
-                                    <img src={event9_image3} alt="Banner Image 3"></img>
-                                    <img src={event9_image4} alt="Banner Image 4"></img>
-                                    <img src={event9_image5} alt="Banner Image 5"></img>
-                                    <img src={event9_image6} alt="Banner Image 6"></img>
+                                    {imgArr_event9.map(function (image, index) {
+                                            return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -1045,63 +848,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event10 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event10_image1} alt="Banner Image 1"></img>
-                                    <img src={event10_image2} alt="Banner Image 2"></img>
-                                    <img src={event10_image3} alt="Banner Image 3"></img>
-                                    <img src={event10_image4} alt="Banner Image 4"></img>
-                                    <img src={event10_image5} alt="Banner Image 5"></img>
-                                    <img src={event10_image6} alt="Banner Image 6"></img>
-                                    <img src={event10_image7} alt="Banner Image 7"></img>
-                                    <img src={event10_image8} alt="Banner Image 8"></img>
-                                    <img src={event10_image9} alt="Banner Image 9"></img>
-                                    <img src={event10_image10} alt="Banner Image 10"></img>
-                                    <img src={event10_image11} alt="Banner Image 1"></img>
-                                    <img src={event10_image12} alt="Banner Image 2"></img>
-                                    <img src={event10_image13} alt="Banner Image 3"></img>
-                                    <img src={event10_image14} alt="Banner Image 4"></img>
-                                    <img src={event10_image15} alt="Banner Image 5"></img>
-                                    <img src={event10_image16} alt="Banner Image 6"></img>
-                                    <img src={event10_image17} alt="Banner Image 7"></img>
-                                    <img src={event10_image18} alt="Banner Image 8"></img>
-                                    <img src={event10_image19} alt="Banner Image 9"></img>
-                                    <img src={event10_image20} alt="Banner Image 10"></img>
-                                    <img src={event10_image21} alt="Banner Image 1"></img>
-                                    <img src={event10_image22} alt="Banner Image 2"></img>
-                                    <img src={event10_image23} alt="Banner Image 3"></img>
-                                    <img src={event10_image24} alt="Banner Image 4"></img>
-                                    <img src={event10_image25} alt="Banner Image 5"></img>
-                                    <img src={event10_image26} alt="Banner Image 6"></img>
-                                    <img src={event10_image27} alt="Banner Image 7"></img>
-                                    <img src={event10_image28} alt="Banner Image 8"></img>
-                                    <img src={event10_image29} alt="Banner Image 9"></img>
-                                    <img src={event10_image30} alt="Banner Image 10"></img>
-                                    <img src={event10_image31} alt="Banner Image 1"></img>
-                                    <img src={event10_image32} alt="Banner Image 2"></img>
-                                    <img src={event10_image33} alt="Banner Image 3"></img>
-                                    <img src={event10_image34} alt="Banner Image 4"></img>
-                                    <img src={event10_image35} alt="Banner Image 5"></img>
-                                    <img src={event10_image36} alt="Banner Image 6"></img>
-                                    <img src={event10_image37} alt="Banner Image 7"></img>
-                                    <img src={event10_image38} alt="Banner Image 8"></img>
-                                    <img src={event10_image39} alt="Banner Image 9"></img>
-                                    <img src={event10_image40} alt="Banner Image 10"></img>
-                                    <img src={event10_image41} alt="Banner Image 1"></img>
-                                    <img src={event10_image42} alt="Banner Image 2"></img>
-                                    <img src={event10_image43} alt="Banner Image 3"></img>
-                                    <img src={event10_image44} alt="Banner Image 4"></img>
-                                    <img src={event10_image45} alt="Banner Image 5"></img>
-                                    <img src={event10_image46} alt="Banner Image 6"></img>
-                                    <img src={event10_image47} alt="Banner Image 7"></img>
-                                    <img src={event10_image48} alt="Banner Image 8"></img>
-                                    <img src={event10_image49} alt="Banner Image 9"></img>
-                                    <img src={event10_image50} alt="Banner Image 10"></img>
-                                    <img src={event10_image51} alt="Banner Image 1"></img>
-                                    <img src={event10_image52} alt="Banner Image 2"></img>
-                                    <img src={event10_image53} alt="Banner Image 3"></img>
-                                    <img src={event10_image54} alt="Banner Image 4"></img>
-                                    <img src={event10_image55} alt="Banner Image 5"></img>
-                                    <img src={event10_image56} alt="Banner Image 6"></img>
-                                    <img src={event10_image57} alt="Banner Image 7"></img>
+                                    {imgArr_event10.map(function (image, index) {
+                                        return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
@@ -1120,11 +871,11 @@ class Events extends Component {
                             <ModalBody>
                                 <p className="lead">Event11 Details</p>
                                 <ul className="list-unstyled">
-                                    <img src={event11_image1} alt="Banner Image 1"></img>
-                                    <img src={event11_image2} alt="Banner Image 2"></img>
-                                    <img src={event11_image3} alt="Banner Image 3"></img>
-                                    <img src={event11_image4} alt="Banner Image 4"></img>
-                                    <img src={event11_image5} alt="Banner Image 5"></img>
+                                {imgArr_event11.map(function (image, index) {
+                                        return (
+                                            <img key={index} src={image}/>
+                                        )
+                                    })}
                                 </ul>
                             </ModalBody>
                             <ModalFooter>
