@@ -17,11 +17,6 @@ import Apron2 from '../../images/Shop/Apron2.JPG';
 import Apron3 from '../../images/Shop/Apron3.JPG';
 import Apron4 from '../../images/Shop/Apron4.JPG';
 
-
-// New Image Needed
-import Apron from '../../images/Shop/IMG_4275.JPG';
-
-
 class Donations extends React.Component {
 
   constructor(props){
