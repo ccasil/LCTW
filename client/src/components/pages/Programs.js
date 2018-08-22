@@ -148,11 +148,11 @@ class Programs extends Component {
 
       <div className="col-12">
           <Button className="btn-block btn-lg" color="danger" onClick={this.toggle3}>
-            Love Blessings Condoms & Candy Bags
+            Love Blessings Condoms &amp; Candy Bags
           </Button>
           <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
             <ModalHeader toggle={this.toggle3}>
-              Love Blessings Condoms & Candy Bags
+              Love Blessings Condoms &amp; Candy Bags
             </ModalHeader>
             <ModalBody>
               <p className="lead">
@@ -225,7 +225,7 @@ class Programs extends Component {
             </ModalHeader>
           <ModalBody>
             <p className="lead">
-              Support for young children to Empower, Encourage, & Inspire them to know their worth.
+              Support for young children to Empower, Encourage, &amp; Inspire them to know their worth.
               </p>
 
           </ModalBody>

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+import React from 'react';
 import "../css/Donations.css";
 
 
@@ -22,7 +23,7 @@ class Donations extends React.Component {
   constructor(props){
         
       super(props);
-     
+
       this.state = {
         value : 'select',
         image : BlackRed,
@@ -53,7 +54,7 @@ class Donations extends React.Component {
 
     switchImage(param){
       console.log(param)
-     
+      
       switch(param){
         case 'Black Shirt - Red Text':
           return BlackRed
@@ -99,7 +100,6 @@ class Donations extends React.Component {
       <div className="donations">
         <h1 className="display-1">Donations</h1>
         <p className="lead">Hello all, The Love Changing The World Family is seeking donations for the homeless and less fortunate. We are looking to make a difference in local communities and even expand our loving gestures beyond. Recently, there has been a tragic storm in Houston, Texas, and we are looking to be as helpful as possible to help the families that has suffered from loss of personal items and even homes. Remember there is no donation too small, spread the word and LOVE. There will be links to send funds to. Thank you for your generous HEARTS! We LOVE you ALL!!!</p>
- 
 
         <div className="cartItem">
           <h4> Shirts! </h4>
@@ -118,7 +118,7 @@ class Donations extends React.Component {
           <input type="hidden" name="shipping" value="5.00"></input>
           <input type="hidden" name="add" value="1"></input>
           <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest"></input>
-           
+          
           <div className="ShoppingOptions">
           <table>
             <tbody>
@@ -229,7 +229,7 @@ class Donations extends React.Component {
           <input type="hidden" name="shipping" value="5.00"></input>
           <input type="hidden" name="add" value="1"></input>
           <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest"></input>
-           
+          
           <div className="ShoppingOptions">
           <table>
             <tbody>

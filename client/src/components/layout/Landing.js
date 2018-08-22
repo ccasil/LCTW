@@ -24,7 +24,6 @@ class Landing extends Component {
             <h1 id="bottomtext" className="display-1">Building LOVING Communities...</h1>
           </div>
         </div>
-
         
         <div>
           <h1 className="display-4">SPONSORS</h1>
