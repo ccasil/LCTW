@@ -9,15 +9,15 @@ class Contact extends Component {
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
     const phoneemail = document.getElementById('phoneemail').value;
-    const contactvia = document.getElementById('contactvia').value;
+    // const contactvia = document.getElementById('contactvia').value;
     const comments = document.getElementById('comments').value;
     axios({
       method: "POST",
-      url: "http://localhost:3000/send",
+      url: "http://localhost:8000/send",
       data: {
         first_name: first_name,
         last_name: last_name,
-        contactvia: contactvia,
+        // contactvia: contactvia,
         phoneemail: phoneemail,
         comments: comments
       }
@@ -25,21 +25,27 @@ class Contact extends Component {
       if (response.data.msg === 'success') {
         alert("Message Sent.");
         this.resetForm()
-      } else if (response.data.msg === 'fail') {
+      } else {
         alert("Message failed to send.")
       }
     })
   }
+  resetForm() {
+    document.getElementById('contact-form').reset();
+  }
 
   render() {
-    return (
-      <div className="contact">
+    return <div className="contact">
         <h1 className="display-1">Contact Us</h1>
-        <p className="lead">Hello, feel free to leave your contact info so that we can reach out to you and keep you updated with our upcoming events and much more.</p>
+        <p className="lead">
+          Hello, feel free to leave your contact info so that we can reach
+          out to you and keep you updated with our upcoming events and much
+          more.
+        </p>
         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-
           <div className="form-group">
-            <p>Name*</p><div className="row">
+            <p>Name*</p>
+            <div className="row">
               <div className="col">
                 <input id="first_name" type="text" className="form-control" placeholder="First" name="first_name" />
               </div>
@@ -49,13 +55,13 @@ class Contact extends Component {
             </div>
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label for="contact">Select One*</label>
-            <select id="contactvia"  className="form-control" id="exampleFormControlSelect1">
-              <option>Email</option>
-              <option>Phone</option>
+            <select id="contactvia" className="form-control" id="exampleFormControlSelect1">
+              <option value="email">Email</option>
+            <option value="phone">Phone</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="form-group">
             <p>Email / Phone</p>
@@ -67,10 +73,12 @@ class Contact extends Component {
             <textarea id="comments" className="form-control" placeholder="" rows="3" name="comments" />
           </div>
 
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </form>
 
-        <iframe title="NMCC" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1426987778764!2d-121.82791258487573!3d37.362800243527666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcd693018f1c5%3A0x85f2b0df85498748!2s3098+Florence+Ave%2C+San+Jose%2C+CA+95127!5e0!3m2!1sen!2sus!4v1533251610484" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+        <iframe title="NMCC" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1426987778764!2d-121.82791258487573!3d37.362800243527666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcd693018f1c5%3A0x85f2b0df85498748!2s3098+Florence+Ave%2C+San+Jose%2C+CA+95127!5e0!3m2!1sen!2sus!4v1533251610484" width="100%" height="450" frameborder="0" allowfullscreen />
 
         <div className="row">
           <div className="col">
@@ -80,14 +88,11 @@ class Contact extends Component {
           </div>
           <div className="col">
             <form action="https://goo.gl/maps/vkXWFWQsZCy" target="_blank">
-              <input type="submit" className="btn btn-secondary float-right" value="Find Us"/>
+              <input type="submit" className="btn btn-secondary float-right" value="Find Us" />
             </form>
           </div>
-
         </div>
-
-      </div >
-    )
+      </div>;
   }
 }
 
