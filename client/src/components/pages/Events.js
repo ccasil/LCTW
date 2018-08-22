@@ -3,6 +3,12 @@ import "../css/Events.css";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 
+
+import { React_Bootstrap_Carousel } from "react-bootstrap-carousel";
+
+import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+
+
 // upcoming events placeholder routes
 import placeholder1 from '../../images/Events/26904406_782267771982878_8167205781200355992_n.jpg';
 import placeholder2 from '../../images/Events/34035695_853175221558799_4338713599494062080_n.jpg';
@@ -415,22 +421,16 @@ import event11_image5 from '../../images/Events/Event_11/5.jpg';
 class Events extends Component {
     constructor(props) {
         super(props);
-        this.state = { modal1: false, modal2: false, modal3: false, modal4: false, modal5: false, modal6: false, modal7: false, modal8: false, modal9: false, modal10: false, modal11: false };
+        this.state = {  modal12: false, modal13: false, autoplay: true };
     
-        this.toggle1 = this.toggle1.bind(this);
-        this.toggle2 = this.toggle2.bind(this);
-        this.toggle3 = this.toggle3.bind(this);
-        this.toggle4 = this.toggle4.bind(this);
-        this.toggle5 = this.toggle5.bind(this);
-        this.toggle6 = this.toggle6.bind(this);
-        this.toggle7 = this.toggle7.bind(this);
-        this.toggle8 = this.toggle8.bind(this);
-        this.toggle9 = this.toggle9.bind(this);
-        this.toggle10 = this.toggle10.bind(this);
-        this.toggle11 = this.toggle11.bind(this);
-
+     
         this.toggle12 = this.toggle12.bind(this);
         this.toggle13 = this.toggle13.bind(this);
+
+
+
+
+    
     }
 
     //   Toggle Upcoming Events
@@ -446,61 +446,36 @@ class Events extends Component {
     }
 
     //   Toggle Previous Events
-    toggle1() {
-        this.setState({
-          modal1: !this.state.modal1
-        });
-      }
-      toggle2() {
-        this.setState({
-          modal2: !this.state.modal2
-        });
-      }
-      toggle3() {
-        this.setState({
-          modal3: !this.state.modal3
-        });
-      }
-      toggle4() {
-        this.setState({
-          modal4: !this.state.modal4
-        });
-      }
-      toggle5() {
-        this.setState({
-          modal5: !this.state.modal5
-        });
-      }
-      toggle6() {
-        this.setState({
-          modal6: !this.state.modal6
-        });
-      }
-      toggle7() {
-        this.setState({
-          modal7: !this.state.modal7
-        });
-      }
-      toggle8() {
-        this.setState({
-          modal8: !this.state.modal8
-        });
-      }
-      toggle9() {
-        this.setState({
-          modal9: !this.state.modal9
-        });
-      }
-      toggle10() {
-        this.setState({
-          modal10: !this.state.modal10
-        });
-      }
-      toggle11() {
-        this.setState({
-          modal11: !this.state.modal11
-        });
-      }
+    
+    onSelect = (active, direction) => {
+        console.log(`active=${active} && direction=${direction}`);
+    };
+    slideNext = () => {
+        this.slider.slideNext();
+    };
+    slidePrev = () => {
+        this.slider.slidePrev();
+    };
+    goToSlide = () => {
+        this.slider.goToSlide(4);
+    };
+    autoplay = () => {
+        this.setState({ autoplay: !this.state.autoplay });
+    };
+    _changeIcon = () => {
+        let { leftIcon, rightIcon } = this.state;
+        if (leftIcon && rightIcon) {
+            this.setState({
+                leftIcon: undefined,
+                rightIcon: undefined
+            });
+        } else {
+            this.setState({
+                leftIcon: <span className="fa fa-glass" />,
+                rightIcon: <span className="fa fa-music" />
+            });
+        }
+    };
 
       render() {
 
@@ -580,315 +555,203 @@ class Events extends Component {
         const imgArr_event11 = [
             event11_image1, event11_image2, event11_image3, event11_image4, event11_image5, 
         ];
+          let { leftIcon, rightIcon } = this.state;
+        return <div>
+            <h1 className="display-1">Events</h1>
 
-        return (
-            <div>
-                <h1 className="display-1">Events</h1>
+            <h1>Upcoming Events</h1>
+            <div className="row">
+              <div className="col">
+                <h3>New Event 1</h3>
+                <a className="btn-block" color="danger" onClick={this.toggle12}>
+                  <img className="btnImg" src={placeholder1} alt="Placeholder Image 1" />
+                </a>
+                <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
+                  <ModalHeader toggle={this.toggle12}>
+                    New Event 1
+                  </ModalHeader>
+                  <ModalBody>
+                    <p className="lead">New Event1 Details</p>
+                    <p> Further details here... </p>
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button color="secondary" onClick={this.toggle12}>
+                      Close
+                    </Button>
+                  </ModalFooter>
+                </Modal>
+              </div>
 
-                <h1>Upcoming Events</h1>
-                <div className="row">
-                    <div className="col">
-                        <h3>New Event 1</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle12}>
-                            <img className="btnImg" src={placeholder1} alt="Placeholder Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle12}>New Event 1</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">New Event1 Details</p>
-                                <p> Further details here... </p>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle12}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
+              <div className="col">
+                <h3>New Event 2</h3>
+                <a className="btn-block" color="danger" onClick={this.toggle13}>
+                  <img className="btnImg" src={placeholder2} alt="Placeholder Image 1" />
+                </a>
+                <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
+                  <ModalHeader toggle={this.toggle13}>
+                    New Event 2
+                  </ModalHeader>
+                  <ModalBody>
+                    <p className="lead">New Event2 Details</p>
+                    <p> Further details here... </p>
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button color="secondary" onClick={this.toggle13}>
+                      Close
+                    </Button>
+                  </ModalFooter>
+                </Modal>
+              </div>
+            </div>
 
-                    <div className="col">
-                        <h3>New Event 2</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle13}>
-                            <img className="btnImg" src={placeholder2} alt="Placeholder Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle13}>New Event 2</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">New Event2 Details</p>
-                                <p> Further details here... </p>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle13}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
+            <h1 id="prevEventsTitle">Previous Events</h1>
+
+            {/* 1st Row */}
+           
+              <div className="row">
+              <h1>Event 1</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                  <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                            {imgArr_event1.map(function(image, index) {
+                      return <div className="text-center">
+                          <img key={index} src={image} style={{ height: 600 }} alt="" />
+                        </div>;
+                    })}
+                  </React_Bootstrap_Carousel>
                 </div>
+              </div>
 
-                <h1 id="prevEventsTitle">Previous Events</h1>
-
-                {/* 1st Row */}
-                <div className="row">
-                    <div className="col moveLeft">
-                        <h3>Event 1</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle1}>
-                            <img className="btnImg" src={event1_image2} alt="Modal Image 2"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal1} toggle={this.toggle1} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle1}>Event1</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event1 Details</p>
-                                <ul>
-                                    {imgArr_event1.map(function (image, index) {
-                                        return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle1}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col moveLeft">
-                        <h3>Event 2</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle2}>
-                            <img className="btnImg" src={event2_image9} alt="Modal Image 9"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle2}>Event2</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event2 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event2.map(function (image, index) {
-                                        return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle2}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col moveLeft">
-                        <h3>Event 3</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle3}>
-                            <img className="btnImg" src={event3_image1} alt="Modal Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle3}>Event3</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event3 Details</p>
-                                <ul className="list-unstyled">
-                                {imgArr_event3.map(function (image, index) {
-                                    return (
-                                        <img key={index} src={image}/>
-                                    )
-                                })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle3}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col moveLeft">
-                        <h3>Event 4</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle4}>
-                            <img className="btnImg" src={event4_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal4} toggle={this.toggle4} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle4}>Event4</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event4 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event4.map(function (image, index) {
-                                        return (
-                                        <img key={index} src={image}/>
-                                    )
-                                })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle4}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                {/* 2nd Row */}    
-                <div className="row">
-                    <div className="col">
-                        <h3>Event 5</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle5}>
-                            <img className="btnImg" src={event5_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal5} toggle={this.toggle5} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle5}>Event5</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event5 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event5.map(function (image, index) {
-                                        return (
-                                        <img key={index} src={image}/>
-                                    )
-                                })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle5}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col">
-                        <h3>Event 6</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle6}>
-                            <img className="btnImg" src={event6_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal6} toggle={this.toggle6} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle6}>Event6</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event6 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event6.map(function (image, index) {
-                                        return (
-                                        <img key={index} src={image}/>
-                                    )
-                                })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle6}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col">
-                        <h3>Event 7</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle7}>
-                            <img className="btnImg" src={event7_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal7} toggle={this.toggle7} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle7}>Event7</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event7 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event7.map(function (image, index) {
-                                            return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle7}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col">
-                        <h3>Event 8</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle8}>
-                            <img className="btnImg" src={event8_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal8} toggle={this.toggle8} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle8}>Event8</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event8 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event8.map(function (image, index) {
-                                            return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle8}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-                </div>
-
-                {/* 3rd Row */}
-                <div className="row spaceToFooter">
-                    <div className="col">
-                        <h3>Event 9</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle9}>
-                            <img className="btnImg" src={event9_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal9} toggle={this.toggle9} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle9}>Event9</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event9 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event9.map(function (image, index) {
-                                            return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle9}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col">
-                        <h3>Event 10</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle10}>
-                            <img className="btnImg" src={event10_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal10} toggle={this.toggle10} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle10}>Event10</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event10 Details</p>
-                                <ul className="list-unstyled">
-                                    {imgArr_event10.map(function (image, index) {
-                                        return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle10}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-
-                    <div className="col">
-                        <h3>Event 11</h3>
-                        <a className="btn-block" color="danger" onClick={this.toggle11}>
-                            <img className="btnImg" src={event11_image1} alt="Banner Image 1"></img>
-                        </a>
-                        <Modal isOpen={this.state.modal11} toggle={this.toggle11} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle11}>Event11</ModalHeader>
-                            <ModalBody>
-                                <p className="lead">Event11 Details</p>
-                                <ul className="list-unstyled">
-                                {imgArr_event11.map(function (image, index) {
-                                        return (
-                                            <img key={index} src={image}/>
-                                        )
-                                    })}
-                                </ul>
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="secondary" onClick={this.toggle11}>Close</Button>
-                            </ModalFooter>
-                        </Modal>
-                    </div>
-                
-                </div>
-
+            <div className="row">
+                <h1>Event 2</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event2.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
                 </div>
             </div>
-            )
+
+            <div className="row">
+                <h1>Event 3</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event3.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 4</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event4.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 5</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event5.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 6</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event6.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 7</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event7.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 8</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event8.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 9</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event9.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 10</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event10.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+
+            <div className="row">
+                <h1>Event 11</h1>
+                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event11.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </React_Bootstrap_Carousel>
+                </div>
+            </div>
+    
+          </div>;
         }
     }
 
