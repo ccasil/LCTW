@@ -55,34 +55,22 @@ class Navbar extends Component {
             data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
-          <div
-            className="collapse navbar-collapse justify-content-between align-items-center w-100"
-            id="navbarNavDropdown"
-          >
+          <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
             <ul className="navbar-nav mx-auto text-center">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
+                <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/ourmission">
-                  Our Mission
-                </Link>
+                <Link className="nav-link" to="/ourmission">Our Mission</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">
-                  Services
-                </Link>
+                <Link className="nav-link" to="/services">Services</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/events">
-                  Events
-                </Link>
+                <Link className="nav-link" to="/events">Events</Link>
               </li>
               <li className="nav-item dropdown navbar-logo mx-auto">
                 <a
@@ -91,34 +79,20 @@ class Navbar extends Component {
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Meet Our Board
                 </a>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <Link className="dropdown-item" to="/founder">
-                    Founder / CEO
-                  </Link>
-                  <Link className="dropdown-item" to="/executive">
-                    Board of Directors
-                  </Link>
-                  <Link className="dropdown-item" to="/staff">
-                    Staff
-                  </Link>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <Link className="dropdown-item" to="/founder">Founder / CEO</Link>
+                  <Link className="dropdown-item" to="/executive">Board of Directors</Link>
+                  <Link className="dropdown-item" to="/staff">Staff</Link>
                 </div>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/donations">
-                  Donations
-                </Link>
+                <Link className="nav-link" to="/donations">Donations</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/programs">
-                  Programs
-                </Link>
+                <Link className="nav-link" to="/programs">Programs</Link>
               </li>
               <li className="nav-item dropdown navbar-logo mx-auto">
                 <a
@@ -127,32 +101,20 @@ class Navbar extends Component {
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Contact Us
                 </a>
                 <div
                   className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <Link className="dropdown-item" to="/mailing">
-                    Mailing List
-                  </Link>
-                  <Link className="dropdown-item" to="/sponsorform">
-                    Sponsors
-                  </Link>
-                  <Link className="dropdown-item" to="/volunteerform">
-                    Volunteers / Internships
-                  </Link>
-                  <Link className="dropdown-item" to="/homelessform">
-                    Homeless
-                  </Link>
+                  aria-labelledby="navbarDropdownMenuLink">
+                  <Link className="dropdown-item" to="/mailing">Mailing List</Link>
+                  <Link className="dropdown-item" to="/sponsorform">Sponsors</Link>
+                  <Link className="dropdown-item" to="/volunteerform">Volunteers / Internships</Link>
+                  <Link className="dropdown-item" to="/homelessform">Homeless</Link>
                 </div>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/resources">
-                  Resources
-                </Link>
+                <Link className="nav-link" to="/resources">Resources</Link>
               </li>
             </ul>
           </div>

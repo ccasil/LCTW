@@ -6,7 +6,7 @@ class Resources extends Component {
             <div>
                 <h1 className="display-1">Resources</h1>
                 <ul className="list-unstyled">
-                    <li>STD/HIV Prevention & Control/Loving Condoms & Candy Bags</li>
+                    <li>STD/HIV Prevention &amp; Control/Loving Condoms &amp; Candy Bags</li>
                     <li>Support for the Blind and Visually Impaired</li>
                     <li>Support for Pregnant teens with Toddlers</li>
                     <li>Homeless Support and Outreach Services</li>

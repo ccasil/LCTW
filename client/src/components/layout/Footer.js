@@ -40,7 +40,6 @@ class Footer extends Component {
                                 <p>Phone: (347) 849-4618</p>
                             </td>
                         </tr>
-                     
                     </tbody>
                 </table>
             </div>

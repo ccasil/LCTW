@@ -20,7 +20,7 @@ class Founder extends Component {
             </p>
           <p className="lead">
               Missionary Chelette also worked at the Southside San Jose Boys
-              & Girls Club of America as Asst. Director facilitating groups,
+              &amp; Girls Club of America as Asst. Director facilitating groups,
               such as Smart Girls and Passport to Manhood, which educated
               children on the importance of abstinence, drugs, and sexual
               abuse.
@@ -49,7 +49,7 @@ class Founder extends Component {
               help she needed, which lead her to the Orientation Center for
               the Blind. She stayed on the campus for 6 mouth. She started
               OCB on September 01, 2015 and completed February 26, 2016. She
-              learned training in mobility, cooking, ALD, DLS, & technology
+              learned training in mobility, cooking, ALD, DLS, &amp; technology
               from teachers, (who were totally blind) with their Masters
               Degrees. While at OCB she still managed to Pastor OFIPL
               Ministries, host the prayer lines, run the Greater Greater
@@ -63,7 +63,7 @@ class Founder extends Component {
             </p>
           <p className="lead">
               Currently the Founder and CEO of Our Father International
-              Prayer-line Ministries & Love Changing The World, INC. After
+              Prayer-line Ministries &amp; Love Changing The World, INC. After
               hosting and running revivals on Prayer lines for the last 14
               years, such as Mother Board 911 Communication Prayer-Line with
               Mother Archie Mae Anderson, Pastor. Missionary Chelette has

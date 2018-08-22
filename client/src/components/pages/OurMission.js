@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 // import $ from 'jquery';
 
 import { React_Bootstrap_Carousel } from "react-bootstrap-carousel";
@@ -93,10 +93,6 @@ import image80 from '../../images/OurMissionImages/img-2127_orig.jpg';
 import image81 from '../../images/OurMissionImages/img-2128_orig.jpg';
 
 
-
-
-const styles = { height: 400, width: "100%" };
-
 class OurMission extends Component {
   constructor(props) {
     super(props);
@@ -177,7 +173,7 @@ class OurMission extends Component {
               <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 {images.map(function (image, index) {
                   return <div className="text-center">
-                      <img key={index} src={image} style={{height: 600 }} />
+                      <img key={index} src={image} style={{height: 600 }} alt="" />
                     </div>;
                 })}
               </React_Bootstrap_Carousel>
