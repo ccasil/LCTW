@@ -9,7 +9,6 @@ class Contact extends Component {
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
     const phoneemail = document.getElementById('phoneemail').value;
-    // const contactvia = document.getElementById('contactvia').value;
     const comments = document.getElementById('comments').value;
     axios({
       method: "POST",
@@ -17,16 +16,15 @@ class Contact extends Component {
       data: {
         first_name: first_name,
         last_name: last_name,
-        // contactvia: contactvia,
         phoneemail: phoneemail,
         comments: comments
       }
     }).then((response) => {
       if (response.data.msg === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
+        alert("Message Sent");
+        this.resetForm();
       } else {
-        alert("Message failed to send.")
+        alert("Message failed to send");
       }
     })
   }

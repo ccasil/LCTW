@@ -32,8 +32,10 @@ app.post("/send", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
   var phoneemail = req.body.phoneemail;
-  // var contactvia = req.body.contactvia;
+
   var comments = req.body.comments;
+
+  var organization = req.body.organization;
 
   // var content = `name: ${name} \n email: ${email} \n message: ${content} `;
 
@@ -42,7 +44,7 @@ app.post("/send", (req, res, next) => {
     from: `${first_name} ${last_name}`,
     to: "isyang1223@gmail.com",
     subject: `Add ${first_name} ${last_name} to Mailing List!`,
-    text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nMessage: ${comments}`
+    text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nMessage: ${comments} \nOrganization: ${organization}`
   };
 
   // send mail with defined transport object
@@ -54,7 +56,7 @@ app.post("/send", (req, res, next) => {
     } else {
         console.log("Message sent!")
         
-        res.json({ message: "success" });
+        res.json({ msg: "success" });
     }
   });
 });
