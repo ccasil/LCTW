@@ -545,12 +545,12 @@ class Events extends Component {
         ];
 
         const imgArr_event6 = [
-            event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, event6_image1, 
-            event6_image10, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, event6_image11, 
-            event6_image20, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, event6_image21, 
-            event6_image30, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, event6_image31, 
-            event6_image40, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, event6_image41, 
-            event6_image50, event6_image51, event6_image51
+            event6_image1, event6_image2, event6_image3, event6_image4, event6_image5, event6_image6, event6_image7, event6_image8, event6_image8, 
+            event6_image10, event6_image11, event6_image12, event6_image13, event6_image14, event6_image15, event6_image16, event6_image17, event6_image18, event6_image19, 
+            event6_image20, event6_image21, event6_image22, event6_image23, event6_image24, event6_image25, event6_image26, event6_image27, event6_image28, event6_image29, 
+            event6_image30, event6_image31, event6_image32, event6_image33, event6_image34, event6_image35, event6_image36, event6_image37, event6_image38, event6_image39, 
+            event6_image40, event6_image41, event6_image42, event6_image43, event6_image44, event6_image45, event6_image46, event6_image47, event6_image48, event6_image49, 
+            event6_image50, event6_image51, event6_image52
         ];
 
         const imgArr_event7 = [
