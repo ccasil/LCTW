@@ -75,7 +75,7 @@ class Navbar extends Component {
               <li className="nav-item dropdown navbar-logo mx-auto">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  tabIndex = "0"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
@@ -97,7 +97,7 @@ class Navbar extends Component {
               <li className="nav-item dropdown navbar-logo mx-auto">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  tabIndex = "0"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"

@@ -170,7 +170,7 @@ class Donations extends React.Component {
 
         <div className="cartItem">
           <h4> Aprons! </h4>
-          <img alt="shirt" className="shoppingImg" src={this.state.apron}></img>
+          <img alt="apron" className="shoppingImg" src={this.state.apron}></img>
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
           <div className="ShoppingOptions">
 
@@ -215,7 +215,7 @@ class Donations extends React.Component {
         <div className="cartItem">
           <h4> VIP Shirts! </h4>
 
-          <img alt="shirt" className="shoppingImg" src={this.state.vipimage}></img>
+          <img alt="vipshirt" className="shoppingImg" src={this.state.vipimage}></img>
           
 
 

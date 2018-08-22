@@ -25,7 +25,7 @@ class HomelessForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label for="contact">Select One*</label>
+                        <label htmlFor="contact">Select One*</label>
                         <select className="form-control" id="exampleFormControlSelect1">
                             <option>Male Child</option>
                             <option>Female Child</option>
@@ -36,7 +36,7 @@ class HomelessForm extends Component {
 
                     <div className="form-group row">
                         <div className="col">
-                            <label for="contact">Shirt Size*</label>
+                            <label htmlFor = "contact" > Shirt Size * </label>
                             <select className="form-control" id="exampleFormControlSelect1">
                                 <option>XS</option>
                                 <option>S</option>
@@ -47,7 +47,7 @@ class HomelessForm extends Component {
                             </select>
                         </div>
                         <div className="col">
-                            <label for="contact">Pant Size*</label>
+                            <label htmlFor="contact">Pant Size*</label>
                             <select className="form-control" id="exampleFormControlSelect1">
                                 <option>XS</option>
                                 <option>S</option>
@@ -61,7 +61,7 @@ class HomelessForm extends Component {
 
                     <div className="form-group row">
                         <div className="col">
-                            <label for="contact">Sock Size*</label>
+                            <label htmlFor="contact">Sock Size*</label>
                             <select className="form-control" id="exampleFormControlSelect1">
                                 <option>XS</option>
                                 <option>S</option>
@@ -72,7 +72,7 @@ class HomelessForm extends Component {
                             </select>
                         </div>
                         <div className="col">
-                            <label for="contact">Underwear Size*</label>
+                            <label htmlFor="contact">Underwear Size*</label>
                             <select className="form-control" id="exampleFormControlSelect1">
                                 <option>XS</option>
                                 <option>S</option>

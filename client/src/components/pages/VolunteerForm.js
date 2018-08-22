@@ -20,14 +20,6 @@ class VolunteerForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label for="contact">Select One*</label>
-                        <select className="form-control" id="exampleFormControlSelect1">
-                            <option>Email</option>
-                            <option>Phone</option>
-                        </select>
-                    </div>
-
-                    <div className="form-group">
                         <p>Email / Phone</p>
                         <input type="text" className="form-control" placeholder="" name="contactinfo" />
                     </div>

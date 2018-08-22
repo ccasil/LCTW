@@ -26,10 +26,10 @@ class Footer extends Component {
                                     <i className="fab fa-instagram"></i>
                                 </a>
                                 <a className="footermedialink" href="https://www.linkedin.com/in/love-changing-the-world-inc-8b4384148/" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-linkedin"></i>
+                                    <i className="fab fa-linkedin"></i>
                                 </a>
                                 <a className="footermedialink" href="https://www.youtube.com/channel/UCjF_zBD7MSpuplF-ULDabDw/featured" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-youtube"></i>
+                                    <i className="fab fa-youtube" > </i>
                                 </a>
                                 <a className="footermedialink" href="https://www.snapchat.com/add/lctw1" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-snapchat-square"></i>

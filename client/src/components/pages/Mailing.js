@@ -55,14 +55,6 @@ class Contact extends Component {
             </div>
           </div>
 
-          {/* <div className="form-group">
-            <label for="contact">Select One*</label>
-            <select id="contactvia" className="form-control" id="exampleFormControlSelect1">
-              <option value="email">Email</option>
-            <option value="phone">Phone</option>
-            </select>
-          </div> */}
-
           <div className="form-group">
             <p>Email / Phone</p>
             <input id="phoneemail" type="text" className="form-control" placeholder="" name="contactinfo" />
@@ -78,7 +70,7 @@ class Contact extends Component {
           </button>
         </form>
 
-        <iframe title="NMCC" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1426987778764!2d-121.82791258487573!3d37.362800243527666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcd693018f1c5%3A0x85f2b0df85498748!2s3098+Florence+Ave%2C+San+Jose%2C+CA+95127!5e0!3m2!1sen!2sus!4v1533251610484" width="100%" height="450" frameborder="0" allowfullscreen />
+        <iframe title="NMCC" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1426987778764!2d-121.82791258487573!3d37.362800243527666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcd693018f1c5%3A0x85f2b0df85498748!2s3098+Florence+Ave%2C+San+Jose%2C+CA+95127!5e0!3m2!1sen!2sus!4v1533251610484" width="100%" height="450" frameBorder="0" allowFullScreen />
 
         <div className="row">
           <div className="col">
