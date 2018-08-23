@@ -28,35 +28,66 @@ transporter.verify((error, success) => {
     }
 });
 
-app.post("/send", (req, res, next) => {
+app.post("/sendcontact", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
   var phoneemail = req.body.phoneemail;
-
   var comments = req.body.comments;
-
-  var organization = req.body.organization;
-
-  // var content = `name: ${name} \n email: ${email} \n message: ${content} `;
-
   // setup email data with unicode symbols
-  let mailOptions = {
-    from: `${first_name} ${last_name}`,
-    to: "isyang1223@gmail.com",
-    subject: `Add ${first_name} ${last_name} to Mailing List!`,
-    text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nMessage: ${comments} \nOrganization: ${organization}`
-  };
+    let mailOptions = {
+      from: `${first_name} ${last_name}`,
+      to: "isyang1223@gmail.com",
+      subject: `Add ${first_name} ${last_name} to Mailing List!`,
+      text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nMessage: ${comments}`
+    };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {
-
     if (error) {
         return console.log(error);
-
     } else {
         console.log("Message sent!")
-        
         res.json({ msg: "success" });
+    }
+  });
+});
+
+
+app.post("/sendsponsor", (req, res, next) => {
+  var first_name = req.body.first_name;
+  var last_name = req.body.last_name;
+  var phoneemail = req.body.phoneemail;
+  var organization = req.body.organization;
+  // setup email data with unicode symbols
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nOrganization: ${organization}` };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, data) => {
+    if (error) {
+      return console.log(error);
+    } else {
+      console.log("Message sent!")
+      res.json({ msg: "success" });
+    }
+  });
+});
+
+
+app.post("/sendvolunteer", (req, res, next) => {
+  var first_name = req.body.first_name;
+  var last_name = req.body.last_name;
+  var phoneemail = req.body.phoneemail;
+  var experience = req.body.experience;
+  // setup email data with unicode symbols
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nExperience: ${experience}` };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, data) => {
+    if (error) {
+      return console.log(error);
+    } else {
+      console.log("Message sent!");
+      res.json({ msg: "success" });
     }
   });
 });
