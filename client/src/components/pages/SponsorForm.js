@@ -11,7 +11,7 @@ class SponsorForm extends Component {
         const organization = document.getElementById('organization').value;
         axios({
             method: "POST",
-            url: "http://localhost:8000/send",
+            url: "http://localhost:8000/sendsponsor",
             data: {
                 first_name: first_name,
                 last_name: last_name,
@@ -21,48 +21,51 @@ class SponsorForm extends Component {
         }).then((response) => {
             if (response.data.msg === 'success') {
                 alert("Message Sent");
-                this.resetForm();
+                // this.resetForm();
             } else {
                 alert("Message failed to send");
             }
         })
     }
     resetForm() {
-        document.getElementById('contact-form').reset();
+        document.getElementById('sponsor-form').reset();
     }
 
     render() {
-        return (
-            <div>
-                <h1 className="display-1">Want to be a Sponsor?</h1>
-                <p className="lead">Hello, feel free to leave your contact info so that we can reach out to you.</p>
-                <form>
+        return <div>
+            <h1 className="display-1">Want to be a Sponsor?</h1>
+            <p className="lead">
+              Hello, feel free to leave your contact info so that we can
+              reach out to you.
+            </p>
+            <form id="sponsor-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+              <div className="form-group">
+                <p>Name*</p>
+                <div className="row">
+                  <div className="col">
+                    <input id="first_name" type="text" className="form-control" placeholder="First" name="first_name" />
+                  </div>
+                  <div className="col">
+                    <input id="last_name" type="text" className="form-control" placeholder="Last" name="last_name" />
+                  </div>
+                </div>
+              </div>
 
-                    <div className="form-group">
-                        <p>Name*</p><div className="row">
-                            <div className="col">
-                                <input id="first_name" type="text" className="form-control" placeholder="First" name="first_name" />
-                            </div>
-                            <div className="col">
-                                <input id="last_name" type="text" className="form-control" placeholder="Last" name="last_name" />
-                            </div>
-                        </div>
-                    </div>
+              <div className="form-group">
+                <p>Email / Phone</p>
+                <input id="phoneemail" type="text" className="form-control" placeholder="" name="contactinfo" />
+              </div>
 
-                    <div className="form-group">
-                        <p>Email / Phone</p>
-                        <input id="phoneemail" type="text" className="form-control" placeholder="" name="contactinfo" />
-                    </div>
+              <div className="form-group">
+                <p>Organization / Website</p>
+                <textarea id="organization" className="form-control" placeholder="" rows="3" name="organization" />
+              </div>
 
-                    <div className="form-group">
-                        <p>Organization / Website</p>
-                        <textarea id="organization" className="form-control" placeholder="" rows="3" name="organization" />
-                    </div>
-
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        );
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>;
     }
 }
 

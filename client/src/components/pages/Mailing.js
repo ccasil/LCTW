@@ -12,7 +12,7 @@ class Contact extends Component {
     const comments = document.getElementById('comments').value;
     axios({
       method: "POST",
-      url: "http://localhost:8000/send",
+      url: "http://localhost:8000/sendcontact",
       data: {
         first_name: first_name,
         last_name: last_name,
