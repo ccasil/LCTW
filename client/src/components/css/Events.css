@@ -1,10 +1,10 @@
 /* Upcoming Events Styling */
 .upcomingEventItem {
-    margin: 20px 30px;
+    margin: 10px;
 }
 .upcomingEventItem img {
-    height: 300px;
-    width: 300px;
+    height: 150px;
+    width: 150px;
 }
 .upcomingEventItem h3 {
     padding-left: 10px;

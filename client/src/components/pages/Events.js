@@ -2,11 +2,10 @@ import React, { Component } from 'react'
 import "../css/Events.css";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-
-
 import RBCarousel from "react-bootstrap-carousel";
 
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+
 
 
 // upcoming events placeholder routes
@@ -421,16 +420,16 @@ import event11_image5 from '../../images/Events/Event_11/5.jpg';
 class Events extends Component {
     constructor(props) {
         super(props);
-        this.state = {  modal12: false, modal13: false, autoplay: true };
-    
-     
+        this.state = { modal12: false, modal13: false, autoplay: true };
+
+
         this.toggle12 = this.toggle12.bind(this);
         this.toggle13 = this.toggle13.bind(this);
 
 
 
 
-    
+
     }
 
     //   Toggle Upcoming Events
@@ -439,14 +438,14 @@ class Events extends Component {
             modal12: !this.state.modal12
         });
     }
-        toggle13() {
+    toggle13() {
         this.setState({
             modal13: !this.state.modal13
         });
     }
 
     //   Toggle Previous Events
-    
+
     onSelect = (active, direction) => {
         console.log(`active=${active} && direction=${direction}`);
     };
@@ -477,7 +476,7 @@ class Events extends Component {
         }
     };
 
-      render() {
+    render() {
 
         const imgArr_event1 = [
             event1_image2, event1_image3, event1_image4, event1_image5, event1_image6, event1_image7, event1_image8,
@@ -513,26 +512,26 @@ class Events extends Component {
         ];
 
         const imgArr_event5 = [
-            event5_image1, event5_image2, event5_image3, event5_image4, event5_image5, event5_image6, event5_image7, event5_image8, event5_image9,  
-            event5_image10, event5_image11, event5_image12, event5_image13, event5_image14, event5_image15, event5_image16, event5_image17, event5_image18, event5_image19,  
-            event5_image20, event5_image21, event5_image22, event5_image23, event5_image24, event5_image25, event5_image26, event5_image28, event5_image29,  
+            event5_image1, event5_image2, event5_image3, event5_image4, event5_image5, event5_image6, event5_image7, event5_image8, event5_image9,
+            event5_image10, event5_image11, event5_image12, event5_image13, event5_image14, event5_image15, event5_image16, event5_image17, event5_image18, event5_image19,
+            event5_image20, event5_image21, event5_image22, event5_image23, event5_image24, event5_image25, event5_image26, event5_image28, event5_image29,
             event5_image30, event5_image31, event5_image32, event5_image33, event5_image34, event5_image35
         ];
 
         const imgArr_event6 = [
-            event6_image1, event6_image2, event6_image3, event6_image4, event6_image5, event6_image6, event6_image7, event6_image8, event6_image9, 
-            event6_image10, event6_image11, event6_image12, event6_image13, event6_image14, event6_image15, event6_image16, event6_image17, event6_image18, event6_image19, 
-            event6_image20, event6_image21, event6_image22, event6_image23, event6_image24, event6_image25, event6_image26, event6_image27, event6_image28, event6_image29, 
-            event6_image30, event6_image31, event6_image32, event6_image33, event6_image34, event6_image35, event6_image36, event6_image37, event6_image38, event6_image39, 
-            event6_image40, event6_image41, event6_image42, event6_image43, event6_image44, event6_image45, event6_image46, event6_image47, event6_image48, event6_image49, 
+            event6_image1, event6_image2, event6_image3, event6_image4, event6_image5, event6_image6, event6_image7, event6_image8, event6_image9,
+            event6_image10, event6_image11, event6_image12, event6_image13, event6_image14, event6_image15, event6_image16, event6_image17, event6_image18, event6_image19,
+            event6_image20, event6_image21, event6_image22, event6_image23, event6_image24, event6_image25, event6_image26, event6_image27, event6_image28, event6_image29,
+            event6_image30, event6_image31, event6_image32, event6_image33, event6_image34, event6_image35, event6_image36, event6_image37, event6_image38, event6_image39,
+            event6_image40, event6_image41, event6_image42, event6_image43, event6_image44, event6_image45, event6_image46, event6_image47, event6_image48, event6_image49,
             event6_image50, event6_image51, event6_image52
         ];
 
         const imgArr_event7 = [
-            event7_image1, event7_image2, event7_image3, event7_image4, event7_image5, event7_image6, event7_image7, event7_image8, event7_image9, 
-            event7_image10, event7_image11, event7_image12, event7_image13, event7_image14, event7_image15, event7_image16, event7_image17, event7_image18, event7_image19, 
-            event7_image20, event7_image21, event7_image22, event7_image23, event7_image24, event7_image25, event7_image26, event7_image27, event7_image28, event7_image29, 
-            event7_image30, event7_image31, event7_image32, event7_image33, event7_image34 
+            event7_image1, event7_image2, event7_image3, event7_image4, event7_image5, event7_image6, event7_image7, event7_image8, event7_image9,
+            event7_image10, event7_image11, event7_image12, event7_image13, event7_image14, event7_image15, event7_image16, event7_image17, event7_image18, event7_image19,
+            event7_image20, event7_image21, event7_image22, event7_image23, event7_image24, event7_image25, event7_image26, event7_image27, event7_image28, event7_image29,
+            event7_image30, event7_image31, event7_image32, event7_image33, event7_image34
         ];
 
         const imgArr_event8 = [
@@ -540,86 +539,86 @@ class Events extends Component {
         ];
 
         const imgArr_event9 = [
-            event9_image1, event9_image2, event9_image3, event9_image4, event9_image5, event9_image6 
+            event9_image1, event9_image2, event9_image3, event9_image4, event9_image5, event9_image6
         ];
 
         const imgArr_event10 = [
-            event10_image1, event10_image2, event10_image3, event10_image4, event10_image5, event10_image6, event10_image7, event10_image8, event10_image9, 
-            event10_image10, event10_image11, event10_image12, event10_image13, event10_image14, event10_image15, event10_image16, event10_image17, event10_image18, event10_image19, 
-            event10_image20, event10_image21, event10_image22, event10_image23, event10_image24, event10_image25, event10_image26, event10_image27, event10_image28, event10_image29, 
-            event10_image30, event10_image31, event10_image32, event10_image33, event10_image34, event10_image35, event10_image36, event10_image37, event10_image38, event10_image39, 
-            event10_image40, event10_image41, event10_image42, event10_image43, event10_image44, event10_image45, event10_image46, event10_image47, event10_image48, event10_image49, 
-            event10_image50, event10_image51, event10_image52, event10_image53, event10_image54, event10_image55, event10_image56, event10_image57, 
+            event10_image1, event10_image2, event10_image3, event10_image4, event10_image5, event10_image6, event10_image7, event10_image8, event10_image9,
+            event10_image10, event10_image11, event10_image12, event10_image13, event10_image14, event10_image15, event10_image16, event10_image17, event10_image18, event10_image19,
+            event10_image20, event10_image21, event10_image22, event10_image23, event10_image24, event10_image25, event10_image26, event10_image27, event10_image28, event10_image29,
+            event10_image30, event10_image31, event10_image32, event10_image33, event10_image34, event10_image35, event10_image36, event10_image37, event10_image38, event10_image39,
+            event10_image40, event10_image41, event10_image42, event10_image43, event10_image44, event10_image45, event10_image46, event10_image47, event10_image48, event10_image49,
+            event10_image50, event10_image51, event10_image52, event10_image53, event10_image54, event10_image55, event10_image56, event10_image57,
         ];
 
         const imgArr_event11 = [
-            event11_image1, event11_image2, event11_image3, event11_image4, event11_image5, 
+            event11_image1, event11_image2, event11_image3, event11_image4, event11_image5,
         ];
-          let { leftIcon, rightIcon } = this.state;
+        let { leftIcon, rightIcon } = this.state;
         return <div>
             <h1 className="display-1">Events</h1>
-
-            <h1>Upcoming Events</h1>
             <div className="row">
-              <div className="col">
-                <h3>New Event 1</h3>
-                <a className="btn-block" color="danger" onClick={this.toggle12}>
-                  <img className="btnImg" src={placeholder1} alt="" />
-                </a>
-                <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
-                  <ModalHeader toggle={this.toggle12}>
-                    New Event 1
-                  </ModalHeader>
-                  <ModalBody>
-                    <p className="lead">New Event1 Details</p>
-                    <p> Further details here... </p>
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="secondary" onClick={this.toggle12}>
-                      Close
+                <div className="col">
+                    <iframe title="calendar" src="https://calendar.google.com/calendar/embed?title=Love%20Changing%20the%20World%20Event%20Calendar&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=lctwcodingdojo%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+                </div>
+                <div className="col">
+                    <h4>Upcoming Events</h4>
+                    <h5>New Event 1</h5>
+                    <a className="btn-block" color="danger" onClick={this.toggle12}>
+                        <img className="btnImg" src={placeholder1} alt="" />
+                    </a>
+                    <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
+                        <ModalHeader toggle={this.toggle12}>
+                            New Event 1
+                            </ModalHeader>
+                        <ModalBody>
+                            <p className="lead">New Event1 Details</p>
+                            <p> Further details here... </p>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button color="secondary" onClick={this.toggle12}>
+                                Close
                     </Button>
-                  </ModalFooter>
-                </Modal>
-              </div>
+                        </ModalFooter>
+                    </Modal>
 
-              <div className="col">
-                <h3>New Event 2</h3>
-                <a className="btn-block" color="danger" onClick={this.toggle13}>
-                  <img className="btnImg" src={placeholder2} alt="" />
-                </a>
-                <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
-                  <ModalHeader toggle={this.toggle13}>
-                    New Event 2
-                  </ModalHeader>
-                  <ModalBody>
-                    <p className="lead">New Event2 Details</p>
-                    <p> Further details here... </p>
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="secondary" onClick={this.toggle13}>
-                      Close
+                    <h5>New Event 2</h5>
+                    <a className="btn-block" color="danger" onClick={this.toggle13}>
+                        <img className="btnImg" src={placeholder2} alt="" />
+                    </a>
+                    <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
+                        <ModalHeader toggle={this.toggle13}>
+                            New Event 2
+                            </ModalHeader>
+                        <ModalBody>
+                            <p className="lead">New Event2 Details</p>
+                            <p> Further details here... </p>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button color="secondary" onClick={this.toggle13}>
+                                Close
                     </Button>
-                  </ModalFooter>
-                </Modal>
-              </div>
+                        </ModalFooter>
+                    </Modal>
+                </div>
             </div>
 
             <h1 id="prevEventsTitle">Previous Events</h1>
 
             {/* 1st Row */}
-           
-              <div className="row">
-              <h1>Event 1</h1>
+
+            <div className="row">
+                <h1>Event 1</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                  <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                            {imgArr_event1.map(function(image, index) {
-                      return <div className="text-center">
-                          <img key={index} src={image} style={{ height: 600 }} alt="" />
-                        </div>;
-                    })}
-                  </RBCarousel>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                        {imgArr_event1.map(function (image, index) {
+                            return <div className="text-center">
+                                <img key={index} src={image} style={{ height: 600 }} alt="" />
+                            </div>;
+                        })}
+                    </RBCarousel>
                 </div>
-              </div>
+            </div>
 
             <div className="row">
                 <h1>Event 2</h1>
@@ -750,8 +749,8 @@ class Events extends Component {
                     </RBCarousel>
                 </div>
             </div>
-    </div>;
-        }
+        </div>;
     }
+}
 
-    export default Events;
+export default Events;

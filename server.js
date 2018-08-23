@@ -58,10 +58,8 @@ app.post("/sendsponsor", (req, res, next) => {
   var last_name = req.body.last_name;
   var phoneemail = req.body.phoneemail;
   var organization = req.body.organization;
-  // setup email data with unicode symbols
   let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nOrganization: ${organization}` };
 
-  // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
       return console.log(error);
@@ -78,10 +76,30 @@ app.post("/sendvolunteer", (req, res, next) => {
   var last_name = req.body.last_name;
   var phoneemail = req.body.phoneemail;
   var experience = req.body.experience;
-  // setup email data with unicode symbols
   let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nExperience: ${experience}` };
 
-  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, data) => {
+    if (error) {
+      return console.log(error);
+    } else {
+      console.log("Message sent!");
+      res.json({ msg: "success" });
+    }
+  });
+});
+
+app.post("/sendhelp", (req, res, next) => {
+  var first_name = req.body.first_name;
+  var last_name = req.body.last_name;
+  var phoneemail = req.body.phoneemail;
+  var birthday = req.body.birthday;
+  var genderage = req.body.genderage;
+  var shirt = req.body.shirt;
+  var pant = req.body.pant;
+  var sock = req.body.sock;
+  var underwear = req.body.underwear;
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nBirthday: ${birthday} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
+
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
       return console.log(error);
