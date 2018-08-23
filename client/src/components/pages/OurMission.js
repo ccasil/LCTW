@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import ReactDOM from "react-dom";
 // import $ from 'jquery';
 
-import { React_Bootstrap_Carousel } from "react-bootstrap-carousel";
+import RBCarousel from "react-bootstrap-carousel";
 
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
@@ -170,13 +170,13 @@ class OurMission extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-              <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+              <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 {images.map(function (image, index) {
                   return <div className="text-center">
                       <img key={index} src={image} style={{height: 600 }} alt="" />
                     </div>;
                 })}
-              </React_Bootstrap_Carousel>
+              </RBCarousel>
             </div>
           </div>
         </div>

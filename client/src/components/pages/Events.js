@@ -4,7 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 
 
-import { React_Bootstrap_Carousel } from "react-bootstrap-carousel";
+import RBCarousel from "react-bootstrap-carousel";
 
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
@@ -611,147 +611,146 @@ class Events extends Component {
               <div className="row">
               <h1>Event 1</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                  <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                             {imgArr_event1.map(function(image, index) {
                       return <div className="text-center">
                           <img key={index} src={image} style={{ height: 600 }} alt="" />
                         </div>;
                     })}
-                  </React_Bootstrap_Carousel>
+                  </RBCarousel>
                 </div>
               </div>
 
             <div className="row">
                 <h1>Event 2</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event2.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 3</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event3.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 4</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event4.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 5</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event5.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 6</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event6.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 7</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event7.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 8</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event8.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 9</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event9.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 10</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event10.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
 
             <div className="row">
                 <h1>Event 11</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <React_Bootstrap_Carousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event11.map(function (image, index) {
                             return <div className="text-center">
                                 <img key={index} src={image} style={{ height: 600 }} alt="" />
                             </div>;
                         })}
-                    </React_Bootstrap_Carousel>
+                    </RBCarousel>
                 </div>
             </div>
-    
-          </div>;
+    </div>;
         }
     }
 
