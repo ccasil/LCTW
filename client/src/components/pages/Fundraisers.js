@@ -227,8 +227,8 @@ render() {
                 <div className="form-group">
                     <label htmlFor="contact">Event*</label>
                     <select className="form-control" id="event">
-                        <option value="Sip and Glam">Sip and Glam</option>
-                        <option value="Sip and Paint">Sip and Paint</option>
+                    <option value="Sip &amp; Glam">Sip &amp; Glam</option>
+                    <option value="Sip &amp; Paint">Sip &amp; Paint</option>
                     </select>
                 </div>
 
@@ -237,7 +237,7 @@ render() {
             </button>
         </form>
 
-        <h2 className="display-2 text-center">Sip and Paint</h2>
+        <h3 className="display-3 text-center">1st Family Love Sip &amp; Paint Fundraiser Event</h3>
         <div className="row">
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
