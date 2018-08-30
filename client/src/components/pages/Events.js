@@ -506,7 +506,7 @@ class Events extends Component {
             </div>
 
             <div className="row">
-                <h1>Event 4</h1>
+                <h1>Sista Love's Slumber Sleepover</h1>
                 <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                     <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                         {imgArr_event4.map(function (image, index) {
