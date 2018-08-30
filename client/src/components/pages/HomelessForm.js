@@ -30,7 +30,7 @@ class HomelessForm extends Component {
         }).then(response => {
             if (response.data.msg === "success") {
                 alert("Message Sent");
-                // this.resetForm();
+                this.resetForm();
             } else {
                 alert("Message failed to send");
             }

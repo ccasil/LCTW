@@ -1,0 +1,25 @@
+{
+  "name": "lctw",
+  "version": "1.0.0",
+  "description": "//README",
+  "main": "config.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccasil/LCTW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccasil/LCTW/issues"
+  },
+  "homepage": "https://github.com/ccasil/LCTW#readme"
+}

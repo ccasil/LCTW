@@ -436,18 +436,17 @@ class Events extends Component {
                     <iframe title="Meetings and Events" src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%235F6B02&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23df230b&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
                 </div>
                 <div className="col">
-                    <h4>Upcoming Events</h4>
-                    <h5>New Event 1</h5>
+                    <h4 className="font-weight-bold">Upcoming Events</h4>
+                    <h5>Sista Love's Slumber Sleepover</h5>
                     <a className="btn-block" color="danger" onClick={this.toggle12}>
                         <img className="btnImg" src={placeholder1} alt="" />
                     </a>
                     <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
                         <ModalHeader toggle={this.toggle12}>
-                            New Event 1
+                            Sista Love's Slumber Sleepover
                             </ModalHeader>
                         <ModalBody>
-                            <p className="lead">New Event1 Details</p>
-                            <p> Further details here... </p>
+                            <img className="" src={placeholder1} height="800px;" alt="placeholder1" />
                         </ModalBody>
                         <ModalFooter>
                             <Button color="secondary" onClick={this.toggle12}>
@@ -456,17 +455,16 @@ class Events extends Component {
                         </ModalFooter>
                     </Modal>
 
-                    <h5>New Event 2</h5>
+                    <h5>Juneteenth in the Park Festival</h5>
                     <a className="btn-block" color="danger" onClick={this.toggle13}>
                         <img className="btnImg" src={placeholder2} alt="" />
                     </a>
                     <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
                         <ModalHeader toggle={this.toggle13}>
-                            New Event 2
+                            Juneteenth in the Park Festival
                             </ModalHeader>
                         <ModalBody>
-                            <p className="lead">New Event2 Details</p>
-                            <p> Further details here... </p>
+                            <img className="" src={placeholder2} height="800px;" alt="placeholder2" />
                         </ModalBody>
                         <ModalFooter>
                             <Button color="secondary" onClick={this.toggle13}>

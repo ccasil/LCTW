@@ -36,7 +36,7 @@ app.post("/sendcontact", (req, res, next) => {
   // setup email data with unicode symbols
     let mailOptions = {
       from: `${first_name} ${last_name}`,
-      to: "isyang1223@gmail.com",
+      to: "lctwcodingdojo@gmail.com",
       subject: `Add ${first_name} ${last_name} to Mailing List!`,
       text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nMessage: ${comments}`
     };
@@ -57,7 +57,7 @@ app.post("/sendsponsor", (req, res, next) => {
   var last_name = req.body.last_name;
   var phoneemail = req.body.phoneemail;
   var organization = req.body.organization;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nOrganization: ${organization}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nOrganization: ${organization}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -75,7 +75,7 @@ app.post("/sendvolunteer", (req, res, next) => {
   var last_name = req.body.last_name;
   var phoneemail = req.body.phoneemail;
   var experience = req.body.experience;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nExperience: ${experience}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nExperience: ${experience}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -97,7 +97,7 @@ app.post("/sendhelp", (req, res, next) => {
   var pant = req.body.pant;
   var sock = req.body.sock;
   var underwear = req.body.underwear;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "isyang1223@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nBirthday: ${birthday} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nBirthday: ${birthday} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -124,8 +124,8 @@ app.post("/sendfundraiser", (req, res, next) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: `${first_name} ${last_name}`,
-    to: "isyang1223@gmail.com",
-    subject: `Add ${first_name} ${last_name} to Mailing List!`,
+    to: "lctwcodingdojo@gmail.com",
+    subject: `${first_name} ${last_name} wants to hold a fundraiser!`,
     text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nType: ${type} \nEvent: ${event}`
   };
 
