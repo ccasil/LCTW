@@ -31,15 +31,11 @@ transporter.verify((error, success) => {
 app.post("/sendcontact", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
-  var phoneemail = req.body.phoneemail;
+  var phone = req.body.phone;
+  var email = req.body.email;
   var comments = req.body.comments;
   // setup email data with unicode symbols
-    let mailOptions = {
-      from: `${first_name} ${last_name}`,
-      to: "lctwcodingdojo@gmail.com",
-      subject: `Add ${first_name} ${last_name} to Mailing List!`,
-      text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nMessage: ${comments}`
-    };
+    let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE Add ${first_name} ${last_name} to Mailing List!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nMessage: ${comments}` };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {
@@ -55,9 +51,10 @@ app.post("/sendcontact", (req, res, next) => {
 app.post("/sendsponsor", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
-  var phoneemail = req.body.phoneemail;
+  var phone = req.body.phone;
+  var email = req.body.email;
   var organization = req.body.organization;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nOrganization: ${organization}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nOrganization: ${organization}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -73,9 +70,10 @@ app.post("/sendsponsor", (req, res, next) => {
 app.post("/sendvolunteer", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
-  var phoneemail = req.body.phoneemail;
+  var phone = req.body.phone;
+  var email = req.body.email;
   var experience = req.body.experience;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nExperience: ${experience}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nExperience: ${experience}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -90,14 +88,15 @@ app.post("/sendvolunteer", (req, res, next) => {
 app.post("/sendhelp", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
-  var phoneemail = req.body.phoneemail;
+  var phone = req.body.phone;
+  var email = req.body.email;
   var birthday = req.body.birthday;
   var genderage = req.body.genderage;
   var shirt = req.body.shirt;
   var pant = req.body.pant;
   var sock = req.body.sock;
   var underwear = req.body.underwear;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nBirthday: ${birthday} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nBirthday: ${birthday} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -118,16 +117,12 @@ app.use((request, response, next) => {
 app.post("/sendfundraiser", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
-  var phoneemail = req.body.phoneemail;
+  var phone = req.body.phone;
+  var email = req.body.email;
   var type = req.body.type;
   var event = req.body.event;
   // setup email data with unicode symbols
-  let mailOptions = {
-    from: `${first_name} ${last_name}`,
-    to: "lctwcodingdojo@gmail.com",
-    subject: `${first_name} ${last_name} wants to hold a fundraiser!`,
-    text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nType: ${type} \nEvent: ${event}`
-  };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to hold a fundraiser!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nType: ${type} \nEvent: ${event}` };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {

@@ -122,8 +122,8 @@ class Fundraisers extends Component {
         e.preventDefault();
         const first_name = document.getElementById('first_name').value;
         const last_name = document.getElementById('last_name').value;
-        const phoneemail = document.getElementById('phoneemail').value;
-        const type = document.getElementById('type').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById("email").value;        const type = document.getElementById('type').value;
         const event = document.getElementById('event').value;
         axios({
             method: "POST",
@@ -131,7 +131,8 @@ class Fundraisers extends Component {
             data: {
                 first_name: first_name,
                 last_name: last_name,
-                phoneemail: phoneemail,
+                phone: phone,
+                email: email,
                 type: type,
                 event: event
             }
@@ -213,8 +214,13 @@ render() {
             </div>
 
             <div className="form-group">
-                <p>Email / Phone</p>
-                <input id="phoneemail" type="text" className="form-control" placeholder="" name="contactinfo" />
+                <p>Phone</p>
+                <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
+            </div>
+
+            <div className="form-group">
+                <p>Email</p>
+                <input id="email" type="text" className="form-control" placeholder="" name="email" />
             </div>
 
             <div className="form-group">
