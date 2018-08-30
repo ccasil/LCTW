@@ -559,7 +559,7 @@ class Events extends Component {
             <h1 className="display-1">Events</h1>
             <div className="row">
                 <div className="col">
-                    <iframe title="calendar" src="https://calendar.google.com/calendar/embed?title=Love%20Changing%20the%20World%20Event%20Calendar&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=lctwcodingdojo%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+                    <iframe title="Meetings and Events" src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%235F6B02&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23df230b&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
                 </div>
                 <div className="col">
                     <h4>Upcoming Events</h4>

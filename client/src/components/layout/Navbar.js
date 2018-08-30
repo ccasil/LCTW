@@ -92,6 +92,12 @@ class Navbar extends Component {
                 <Link className="nav-link" to="/donations">Donations</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/store">Store</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/fundraisers">Fundraisers</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/programs">Programs</Link>
               </li>
               <li className="nav-item dropdown navbar-logo mx-auto">

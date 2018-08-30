@@ -148,11 +148,11 @@ class Programs extends Component {
 
       <div className="col-12">
           <Button className="btn-block btn-lg" color="danger" onClick={this.toggle3}>
-            Love Blessings Condoms &amp; Candy Bags
+            Love Blessings Candy &amp; Condoms Bags
           </Button>
           <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
             <ModalHeader toggle={this.toggle3}>
-              Love Blessings Condoms &amp; Candy Bags
+              Love Blessings Candy &amp; Condoms Bags
             </ModalHeader>
             <ModalBody>
               <p className="lead">
@@ -179,10 +179,9 @@ class Programs extends Component {
               </ul>
 
               <hr />
-            <h5>All information provided by:</h5>
-            <h5>The Santa Clara County Public Health Department</h5>
-            <h5>The Crane Center</h5>
-            <h5>Planned Parenthood</h5>
+            <p className="font-weight-bold">All information provided by:</p>
+            <p>The Santa Clara County Public Health Department - The Crane Center</p>
+            <p>Planned Parenthood</p>
 
             </ModalBody>
             <ModalFooter>
