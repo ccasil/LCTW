@@ -52,7 +52,6 @@ app.post("/sendcontact", (req, res, next) => {
   });
 });
 
-
 app.post("/sendsponsor", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
@@ -114,6 +113,31 @@ app.use((request, response, next) => {
     response.header("Access-Control-Allow-Origin", "*");
     response.header("Access-Control-Allow-Headers", "Content-Type");
     next();
+});
+
+app.post("/sendfundraiser", (req, res, next) => {
+  var first_name = req.body.first_name;
+  var last_name = req.body.last_name;
+  var phoneemail = req.body.phoneemail;
+  var type = req.body.type;
+  var event = req.body.event;
+  // setup email data with unicode symbols
+  let mailOptions = {
+    from: `${first_name} ${last_name}`,
+    to: "isyang1223@gmail.com",
+    subject: `Add ${first_name} ${last_name} to Mailing List!`,
+    text: `Name: ${first_name} ${last_name} \nEmail/Phone: ${phoneemail} \nType: ${type} \nEvent: ${event}`
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, data) => {
+    if (error) {
+      return console.log(error);
+    } else {
+      console.log("Message sent!")
+      res.json({ msg: "success" });
+    }
+  });
 });
 
 const PORT = process.env.PORT || 8000;
