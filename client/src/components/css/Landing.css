@@ -9,7 +9,9 @@
   /* filter: invert(100%); */
   /* text-decoration: underline; */
 }
-
+.title{
+  margin-top: 2rem;
+}
 .landing {
   background: url('../../images/background.jpg');
   background-repeat: no-repeat;
@@ -21,21 +23,78 @@
     position: relative;
 }
 #toptext {
-  margin: 25px;
+
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  font-size: 4rem;
 }
  #bottomtext {
-  margin-top: 75px;
+  font-size: 2rem;
+  margin-top: 10rem;
 }
 .box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+@media (min-width: 240px){
+  #toptext{
+    font-size: 2rem;
+  }
+  #bottomtext{
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+  .logo{
+    height: 200px;
+
+  }
+}
+@media (min-width: 480px){
+  #toptext{
+    font-size:2rem;
+  }
+  #bottomtext{
+    font-size: 2rem;
+    margin-top: 8rem;
+
+  }
+  .logo{
+    height: 220px;
+  }
+
+}
+
+@media (min-width: 768px){
+  #toptext{
+    font-size:3rem;
+  }
+  #bottomtext{
+    font-size:3rem;
+    margin-top: 7rem;
+
+  }
+  .logo{
+    height: 280px;
+  }
+}
+
+
+@media (min-width: 1024px){
+  #toptext{
+    font-size:4rem;
+  }
+  #bottomtext{
+    font-size:4rem;
+    margin-top: 6rem;
+  }
+}
 
 .logo {
+  top: 30%;
+  height: 360px;
   animation: App-logo-spin infinite 20s linear;
-  height: 300px;
-  margin: 25px;
 }
 
 @keyframes App-logo-spin {
