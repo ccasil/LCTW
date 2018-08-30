@@ -100,7 +100,7 @@ class Donations extends React.Component {
       <div className="donations">
         <h1 className="display-1">Store</h1>
         <p className="lead">Hello all, The Love Changing The World Family is seeking donations for the homeless and less fortunate. We are looking to make a difference in local communities and even expand our loving gestures beyond. Remember there is no donation too small, spread the word and LOVE. There will be links to send funds to. Thank you for your generous HEARTS! We LOVE you ALL!!!</p>
-
+        <div className="shoparea">
         <div className="cartItem">
           <h4> Shirts! </h4>
 
@@ -275,6 +275,7 @@ class Donations extends React.Component {
           <p> If you would like a VIP shirt, please use the contact us page.</p>
           </form>
 
+        </div>
         </div>
       </div>
     )
