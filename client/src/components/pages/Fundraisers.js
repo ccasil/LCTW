@@ -179,7 +179,7 @@ resetForm() {
     };
 render() {
 
-    const imgArr_event2 = [
+    const sipandpaint = [
         event2_image9, event2_image10, event2_image11, event2_image12, event2_image13, event2_image14, event2_image15, event2_image16, event2_image17, event2_image18, event2_image19,
         event2_image20, event2_image21, event2_image22, event2_image23, event2_image24, event2_image25, event2_image26, event2_image27, event2_image28, event2_image29,
         event2_image30, event2_image31, event2_image32, event2_image33, event2_image34, event2_image35, event2_image36, event2_image37, event2_image38, event2_image39,
@@ -237,11 +237,11 @@ render() {
             </button>
         </form>
 
+        <h2 className="display-2 text-center">Sip and Paint</h2>
         <div className="row">
-            <h1 className="text-center">Sip and Paint</h1>
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                    {imgArr_event2.map(function (image, index) {
+                    {sipandpaint.map(function (image, index) {
                         return <div className="text-center">
                             <img key={index} src={image} style={{ height: 600 }} alt="" />
                         </div>;
