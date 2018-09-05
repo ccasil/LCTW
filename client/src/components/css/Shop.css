@@ -1,3 +1,4 @@
+
 .cartItem {
 	max-width: 540px;
 	min-width:220px;
@@ -5,6 +6,27 @@
 	text-align: center;
 	margin-bottom: 2rem;
 	
+}
+
+.new{
+	text-align: center;
+}
+
+
+
+.regularItem{
+
+
+}
+
+.newItem{
+	background: url(../../images/Shop/newItem.png) no-repeat;
+	display: inline-block;
+}
+
+.newItem img {
+    position:relative;
+    z-index:-1
 }
 
 .shoparea{
