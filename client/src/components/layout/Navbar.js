@@ -92,7 +92,7 @@ class Navbar extends Component {
                 <Link className="nav-link" to="/donations">Donations</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/store">Store</Link>
+                <Link className="nav-link" to="/shop">Shop</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/fundraisers">Fundraisers</Link>

@@ -1,6 +1,6 @@
 // import React, { Component } from 'react'
 import React from 'react';
-import "../css/Store.css";
+import "../css/Shop.css";
 
 
 import BlackRed from '../../images/Shop/LOVE 1.jpg';
@@ -17,6 +17,7 @@ import Apron1 from '../../images/Shop/Apron1.JPG';
 import Apron2 from '../../images/Shop/Apron2.JPG';
 import Apron3 from '../../images/Shop/Apron3.JPG';
 import Apron4 from '../../images/Shop/Apron4.JPG';
+
 
 class Donations extends React.Component {
 
@@ -98,8 +99,29 @@ class Donations extends React.Component {
   render() {
     return (
       <div className="donations">
-        <h1 className="display-1">Store</h1>
-        <p className="lead">Hello all, The Love Changing The World Family is seeking donations for the homeless and less fortunate. We are looking to make a difference in local communities and even expand our loving gestures beyond. Remember there is no donation too small, spread the word and LOVE. There will be links to send funds to. Thank you for your generous HEARTS! We LOVE you ALL!!!</p>
+        <h1 className="display-1">Shop</h1>
+        <p className="lead">Hello all, The Love Changing The World Family is seeking donations for the homeless and less fortunate. 
+        We are looking to make a difference in local communities and even expand our loving gestures beyond. 
+        Remember there is no donation too small, spread the word and LOVE. 
+        Thank you for your generous HEARTS! We LOVE you ALL!!! 
+        No exchanges or refunds, and all sales are final.</p>
+
+
+        <div className="shoparea">
+        <div className="new">
+          <div className="cartItem">
+            <h2>Whats New!!!</h2>
+            <h4> VIP Aprons </h4>
+            <img alt="shirt" className="shoppingImg" src={this.state.image}></img>
+          </div>
+          <div className="cartItem">
+            <h2>Whats Hot!!!</h2>
+            <h4> LCTW VIP Memberships </h4>
+            <img alt="shirt" className="shoppingImg" src={this.state.image}></img>
+          </div>
+        </div>
+        <hr></hr>
+        </div>
         <div className="shoparea">
         <div className="cartItem">
           <h4> Shirts! </h4>
@@ -110,7 +132,7 @@ class Donations extends React.Component {
 
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
           <input type="hidden" name="cmd" value="_cart"></input>
-          <input type="hidden" name="business" value="H4y4shi@gmail.com"></input>
+          <input type="hidden" name="business" value="info@lovechangingtheworld"></input>
           <input type="hidden" name="lc" value="US"></input>
           <input type="hidden" name="item_name" value="Love Changing the World - Shirt"></input>
           <input type="hidden" name="button_subtype" value="products"></input>
@@ -170,12 +192,14 @@ class Donations extends React.Component {
 
         <div className="cartItem">
           <h4> Aprons! </h4>
-          <img alt="apron" className="shoppingImg" src={this.state.apron}></img>
+          <div className="newItem">
+            <img alt="apron" className="shoppingImg" src={this.state.apron}></img>
+          </div>
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
           <div className="ShoppingOptions">
 
           <input type="hidden" name="cmd" value="_cart"></input>
-          <input type="hidden" name="business" value="H4y4shi@gmail.com"></input>
+          <input type="hidden" name="business" value="info@lovechangingtheworld"></input>
           <input type="hidden" name="lc" value="US"></input>
           <input type="hidden" name="item_name" value="Aprons"></input>
           <input type="hidden" name="button_subtype" value="products"></input>

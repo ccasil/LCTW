@@ -9,7 +9,7 @@ import Events from "./components/pages/Events";
 import Founder from "./components/pages/Founder";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
-import Store from "./components/pages/Store";
+import Shop from "./components/pages/Shop";
 import Fundraisers from "./components/pages/Fundraisers";
 import Programs from "./components/pages/Programs";
 import Mailing from "./components/pages/Mailing";
@@ -41,7 +41,7 @@ class App extends Component {
             <Route exact path="/executive" component={Executive} />
             <Route exact path="/staff" component={Staff} />
             <Route exact path="/donations" component={Donations} />
-            <Route exact path="/store" component={Store} />
+            <Route exact path="/shop" component={Shop} />
             <Route exact path="/fundraisers" component={Fundraisers} />
             <Route exact path="/programs" component={Programs} />
             <Route exact path="/mailing" component={Mailing} />
