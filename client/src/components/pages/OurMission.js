@@ -146,7 +146,7 @@ class OurMission extends Component {
         <h3 className="font-weight-bold lead">
           The mission of Love Changing the World is all about LOVE first!
         </h3>
-      <p className="font-weight-bold lead">
+        <p className="font-weight-bold lead">
           LCTW is to feed, clothe, comfort and care for vulnerable people
           living in poverty with LOVE to all generations without
           discrimination.
@@ -156,20 +156,28 @@ class OurMission extends Component {
           areas of:
         </p>
         <div className="row">
-        <ul className="list-unstyled col text-left">
-          <li>Building LOVING Communities</li>
-          <li>Sponsoring events of advocacy and activism</li>
-          <li>Provide resources for people in need</li>
-          <li>Fundraising</li>
-          <li>
-            Partnership with other Non-profit organizations and Stakeholders
-          </li>
-          <li>Meeting human needs with love</li>
-        </ul>
-        <iframe className="col" title="HOMELESS MAN SHOCKS LCTW CEO with CHARMING DANCE MOVES" height="600" src="https://www.youtube.com/embed/PfmqvP30dKg" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-      </div>
-
-
+          <ul className="list-unstyled col text-left">
+            <li>Building LOVING Communities</li>
+            <li>Sponsoring events of advocacy and activism</li>
+            <li>Provide resources for people in need</li>
+            <li>Fundraising</li>
+            <li>
+              Partnership with other Non-profit organizations and
+              Stakeholders
+            </li>
+            <li>Meeting human needs with love</li>
+          </ul>
+          <iframe className="col" title="HOMELESS MAN SHOCKS LCTW CEO with CHARMING DANCE MOVES" height="600" src="https://www.youtube.com/embed/PfmqvP30dKg" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
+        </div>
+        <div>
+          <a href="https://www.nbcbayarea.com/news/local/Santa-Clara-Countys-Homeless-Population-Jumps-13-Percent-431889503.html">
+            Homless Information
+          </a>
+          <br/>
+          <a href="https://www.sharecare.com/health/hiv-aids/article/breaking-stigma-essential-facts-hiv">
+            HIV/AIDS STD Information
+          </a>
+        </div>
 
         {/* display carousel */}
         {/* <div className="container-fluid">
