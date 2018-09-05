@@ -37,42 +37,38 @@ class SponsorForm extends Component {
         return <div>
             <h1 className="display-1">Want to be a Sponsor?</h1>
             <p className="lead">
-              Hello, feel free to leave your contact info so that we can
-              reach out to you.
+            Hello, feel free to leave your contact info so that we can reach out to you.
             </p>
-            <form id="sponsor-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-              <div className="form-group">
-                <p>Name*</p>
-                <div className="row">
-                  <div className="col">
-                    <input id="first_name" type="text" className="form-control" placeholder="First" name="first_name" />
-                  </div>
-                  <div className="col">
-                    <input id="last_name" type="text" className="form-control" placeholder="Last" name="last_name" />
-                  </div>
-                </div>
-              </div>
-
+                <form id="sponsor-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                 <div className="form-group">
-                    <p>Phone</p>
-                    <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
-                </div>
+                    <p>Name*</p>
+                    <div className="row">
+                        <div className="col">
+                            <input id="first_name" type="text" className="form-control" placeholder="First" name="first_name" />
+                            </div>
+                            <div className="col">
+                            <input id="last_name" type="text" className="form-control" placeholder="Last" name="last_name" />
+                            </div>
+                        </div>
+                    </div>
 
-                <div className="form-group">
-                    <p>Email</p>
-                    <input id="email" type="text" className="form-control" placeholder="" name="email" />
-                </div>
+                    <div className="form-group">
+                        <p>Phone</p>
+                        <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
+                    </div>
 
-              <div className="form-group">
-                <p>Organization / Website</p>
-                <textarea id="organization" className="form-control" placeholder="" rows="3" name="organization" />
-              </div>
-
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </form>
-          </div>;
+                    <div className="form-group">
+                        <p>Email</p>
+                        <input id="email" type="text" className="form-control" placeholder="" name="email" />
+                    </div>
+                    <div className="form-group">
+                        <p>Organization / Website</p>
+                        <textarea id="organization" className="form-control" placeholder="" rows="3" name="organization" />
+                    </div>
+                    
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+            </div>;
     }
 }
 

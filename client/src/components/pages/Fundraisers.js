@@ -198,8 +198,17 @@ render() {
         <h1 className="display-1">Want to have a Fundraiser?</h1>
         <p className="lead">
             Hello, feel free to leave your contact info so that we can
-            reach out to you.
+            reach out to your family or corporation!
             </p>
+            <ul className="list-unstyled">
+        <li>
+            Bring families back together with LOVE events...
+            </li>
+        <li>
+            To build family relationships by having them interact with each other while doing fun activities
+            </li>
+            <li>Food and drinks not included!</li>
+        </ul>
         <form id="fundraiser-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
             <div className="form-group">
                 <p>Name*</p>
@@ -233,6 +242,7 @@ render() {
                 <div className="form-group">
                     <label htmlFor="contact">Event*</label>
                     <select className="form-control" id="event">
+                    <option value="Sip &amp; Glam">Barbeque</option>
                     <option value="Sip &amp; Glam">Sip &amp; Glam</option>
                     <option value="Sip &amp; Paint">Sip &amp; Paint</option>
                     </select>
