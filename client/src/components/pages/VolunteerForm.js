@@ -6,7 +6,8 @@ class VolunteerForm extends Component {
     e.preventDefault();
     const first_name = document.getElementById("first_name").value;
     const last_name = document.getElementById("last_name").value;
-    const phoneemail = document.getElementById("phoneemail").value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById("email").value;
       const experience = document.getElementById("experience").value;
     axios({
       method: "POST",
@@ -14,13 +15,14 @@ class VolunteerForm extends Component {
       data: {
         first_name: first_name,
         last_name: last_name,
-        phoneemail: phoneemail,
+          phone: phone,
+          email: email,
         experience: experience
       }
     }).then(response => {
       if (response.data.msg === "success") {
         alert("Message Sent");
-        // this.resetForm();
+        this.resetForm();
       } else {
         alert("Message failed to send");
       }
@@ -49,10 +51,15 @@ class VolunteerForm extends Component {
             </div>
           </div>
 
-          <div className="form-group">
-            <p>Email / Phone</p>
-            <input type="text" className="form-control" placeholder="" name="phoneemail" id="phoneemail" />
-          </div>
+            <div className="form-group">
+                <p>Phone</p>
+                <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
+            </div>
+
+            <div className="form-group">
+                <p>Email</p>
+                <input id="email" type="text" className="form-control" placeholder="" name="email" />
+            </div>
 
           <div className="form-group">
             <p>Comments / Experience</p>

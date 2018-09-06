@@ -2,6 +2,35 @@ import React, { Component } from "react";
 import "../css/Programs.css";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
+// image routes for Event 12
+import event12_image1 from '../../images/Events/Event_12/1.JPG';
+import event12_image2 from '../../images/Events/Event_12/2.JPG';
+import event12_image3 from '../../images/Events/Event_12/3.JPG';
+import event12_image4 from '../../images/Events/Event_12/4.JPG';
+import event12_image5 from '../../images/Events/Event_12/5.JPG';
+import event12_image6 from '../../images/Events/Event_12/6.JPG';
+import event12_image7 from '../../images/Events/Event_12/7.JPG';
+import event12_image8 from '../../images/Events/Event_12/8.JPG';
+import event12_image9 from '../../images/Events/Event_12/9.JPG';
+import event12_image10 from '../../images/Events/Event_12/10.JPG';
+import event12_image11 from '../../images/Events/Event_12/11.JPG';
+import event12_image12 from '../../images/Events/Event_12/12.JPG';
+import event12_image13 from '../../images/Events/Event_12/13.JPG';
+import event12_image14 from '../../images/Events/Event_12/14.JPG';
+import event12_image15 from '../../images/Events/Event_12/15.JPG';
+import event12_image16 from '../../images/Events/Event_12/16.JPG';
+import event12_image17 from '../../images/Events/Event_12/17.JPG';
+import event12_image18 from '../../images/Events/Event_12/18.JPG';
+import event12_image19 from '../../images/Events/Event_12/19.JPG';
+import event12_image20 from '../../images/Events/Event_12/20.JPG';
+import event12_image21 from '../../images/Events/Event_12/21.JPG';
+import event12_image22 from '../../images/Events/Event_12/22.JPG';
+import event12_image23 from '../../images/Events/Event_12/23.JPG';
+import event12_image24 from '../../images/Events/Event_12/24.JPG';
+import event12_image25 from '../../images/Events/Event_12/25.JPG';
+import event12_image26 from '../../images/Events/Event_12/26.JPG';
+import event12_image27 from '../../images/Events/Event_12/27.JPG';
+
 class Programs extends Component {
   constructor(props) {
     super(props);
@@ -41,6 +70,11 @@ class Programs extends Component {
   }
 
   render() {
+
+    const imgArr_event12 = [
+      event12_image1, event12_image2, event12_image3, event12_image4, event12_image5, event12_image6, event12_image7, event12_image8, event12_image9, event12_image10, event12_image11, event12_image12, event12_image13, event12_image14, event12_image15, event12_image16, event12_image17, event12_image18, event12_image19,
+      event12_image20, event12_image21, event12_image22, event12_image23, event12_image24, event12_image25, event12_image26, event12_image27]
+
     return <div>
         <h1 className="display-1">Programs</h1>
         <div className="row">
@@ -226,7 +260,13 @@ class Programs extends Component {
             <p className="lead">
               Support for young children to Empower, Encourage, &amp; Inspire them to know their worth.
               </p>
-
+              <ul className="list-unstyled">
+                {imgArr_event12.map(function (image, index) {
+                  return (
+                    <img key={index} src={image} alt="" />
+                  )
+                })}
+              </ul>
           </ModalBody>
           <ModalFooter>
             <Button color="secondary" onClick={this.toggle5}>

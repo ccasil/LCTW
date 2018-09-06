@@ -13,6 +13,7 @@ class Resources extends Component {
                 </ul>
 
                 <ul className="list-unstyled">
+                    <li><span className="font-weight-bold">Planned Parenthood:</span> 1 (800) 230-PLAN</li>
                     <li><span className="font-weight-bold">Homeless Helpline:</span> 1 (408) 510-7600</li>
                     <li><span className="font-weight-bold">Anonymous and Confidential Free HIV Testing:</span> 1 (408) 792-3720</li>
                     <li><span className="font-weight-bold">Suicide Hotline: </span><a href="http://www.suicide.org/hotlines/california-suicide-hotlines.html" target="_blank" rel="noopener noreferrer" className="d-line">suicide.org</a></li>
@@ -40,7 +41,11 @@ class Resources extends Component {
                     <li>3098 Florence Avenue</li>
                     <li>San Jose, CA 95127</li>
                     <li>Phone: 1 (408) 792-3720</li>
+                    <li><span className="font-weight-bold">Pastor Claudell Huey: </span>1 (408) 259-1008</li>
                 </ul>
+
+
+
             </div>
         );
     }

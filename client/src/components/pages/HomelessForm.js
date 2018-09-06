@@ -6,7 +6,8 @@ class HomelessForm extends Component {
         e.preventDefault();
         const first_name = document.getElementById("first_name").value;
         const last_name = document.getElementById("last_name").value;
-        const phoneemail = document.getElementById("phoneemail").value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById("email").value;
         const birthday = document.getElementById("birthday").value;
         const genderage = document.getElementById("genderage").value;
         const shirt = document.getElementById("shirt").value;
@@ -19,7 +20,8 @@ class HomelessForm extends Component {
             data: {
                 first_name: first_name,
                 last_name: last_name,
-                phoneemail: phoneemail,
+                phone: phone,
+                email: email,
                 birthday: birthday,
                 genderage: genderage,
                 shirt: shirt,
@@ -30,7 +32,7 @@ class HomelessForm extends Component {
         }).then(response => {
             if (response.data.msg === "success") {
                 alert("Message Sent");
-                // this.resetForm();
+                this.resetForm();
             } else {
                 alert("Message failed to send");
             }
@@ -59,8 +61,13 @@ class HomelessForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <p>Email / Phone</p>
-                        <input type="text" className="form-control" placeholder="" name="phoneemail" id="phoneemail" />
+                        <p>Phone</p>
+                        <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
+                    </div>
+
+                    <div className="form-group">
+                        <p>Email</p>
+                        <input id="email" type="text" className="form-control" placeholder="" name="email" />
                     </div>
 
                     <div className="form-group">

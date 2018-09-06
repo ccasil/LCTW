@@ -8,7 +8,8 @@ class Contact extends Component {
     e.preventDefault();
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
-    const phoneemail = document.getElementById('phoneemail').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById("email").value;
     const comments = document.getElementById('comments').value;
     axios({
       method: "POST",
@@ -16,7 +17,8 @@ class Contact extends Component {
       data: {
         first_name: first_name,
         last_name: last_name,
-        phoneemail: phoneemail,
+        phone: phone,
+        email: email,
         comments: comments
       }
     }).then((response) => {
@@ -52,10 +54,14 @@ class Contact extends Component {
               </div>
             </div>
           </div>
+          <div className="form-group">
+            <p>Phone</p>
+          <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
+          </div>
 
           <div className="form-group">
-            <p>Email / Phone</p>
-            <input id="phoneemail" type="text" className="form-control" placeholder="" name="contactinfo" />
+            <p>Email</p>
+          <input id="email" type="text" className="form-control" placeholder="" name="email" />
           </div>
 
           <div className="form-group">
@@ -71,7 +77,7 @@ class Contact extends Component {
         <iframe title="NMCC" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1426987778764!2d-121.82791258487573!3d37.362800243527666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcd693018f1c5%3A0x85f2b0df85498748!2s3098+Florence+Ave%2C+San+Jose%2C+CA+95127!5e0!3m2!1sen!2sus!4v1533251610484" width="100%" height="450" frameBorder="0" allowFullScreen />
 
         <div className="row">
-          <div className="col">
+          <div className="col text-left">
             <p className="lead">3098 Florence Ave, San Jose, CA 95127</p>
             <p className="lead">Email: info@lovechangingtheworld.org</p>
             <p className="lead">Phone: 1 (347) 849-4618</p>

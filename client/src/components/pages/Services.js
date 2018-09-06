@@ -12,7 +12,7 @@ class Services extends Component {
                     <li>Clothes</li>
                     <li>Love Blessings Gift Bags</li>
                     <li>Love Blessings “Backpacks”</li>
-                    <li>Love Blessings Condoms &amp; Candy / STD / HIV Prevention &amp; Control</li>
+                    <li>Love Blessings Candy &amp; Condoms / STD / HIV Prevention &amp; Control</li>
                     <li>Housing and Other Resources</li>
                     <li>Support for the Blind and Visually Impaired</li>
                     <li>Building LOVING families support groups</li>
