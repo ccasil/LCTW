@@ -166,17 +166,16 @@ class OurMission extends Component {
               Stakeholders
             </li>
             <li>Meeting human needs with love</li>
+          <li><a href="https://www.nbcbayarea.com/news/local/Santa-Clara-Countys-Homeless-Population-Jumps-13-Percent-431889503.html">
+            Homeless Information
+          </a></li>
+          <li><a href="https://www.sharecare.com/health/hiv-aids/article/breaking-stigma-essential-facts-hiv">
+            HIV/AIDS STD Information
+          </a></li>
           </ul>
           <iframe className="col" title="HOMELESS MAN SHOCKS LCTW CEO with CHARMING DANCE MOVES" height="600" src="https://www.youtube.com/embed/PfmqvP30dKg" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
         </div>
         <div>
-          <a href="https://www.nbcbayarea.com/news/local/Santa-Clara-Countys-Homeless-Population-Jumps-13-Percent-431889503.html">
-            Homless Information
-          </a>
-          <br/>
-          <a href="https://www.sharecare.com/health/hiv-aids/article/breaking-stigma-essential-facts-hiv">
-            HIV/AIDS STD Information
-          </a>
         </div>
 
         {/* display carousel */}
