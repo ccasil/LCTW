@@ -8,7 +8,7 @@ class Founder extends Component {
       <h1 className="display-1">Meet Our Founder/President, CEO</h1>
           <div className="photospace float-left">
             <img className="ceo float-left" src={ceo} height="400px;" alt="ceo" />
-            <p className="font-weight-bold">Missionary Chelette H. DeWees, Pastor</p>
+            <p className="font-weight-bold">Missionary Chelette H. DeWees, Minister</p>
           </div>
         <div className="d-inline">
           <p className="lead">
@@ -68,7 +68,7 @@ class Founder extends Component {
               years, such as Mother Board 911 Communication Prayer-Line with
               Mother Archie Mae Anderson, Pastor. Missionary Chelette has
               ran her 1 st Revival on Our Father House with the Former
-              Bishop Reynolds and Prayer Changes Things with Pastor Mary
+              Bishop Reynolds and Prayer Changes Things with the late Pastor Mary
               Fulmore.
             </p>
 

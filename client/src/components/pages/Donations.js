@@ -10,7 +10,7 @@ class Donations extends Component {
 performances and sporting events, gift cards and other resources are yet another way to
 support LCTW.</p>
                 <p>Please support our Love Blessings BACKPACKS, Love Blessings Gift Bags, &amp; Love Blessings
-Condoms &amp; Candy… NO USED ITEMS!!!</p>
+Candy &amp; Condoms… NO USED ITEMS!!!</p>
                 <p className="font-weight-bold">Sponsorships:</p>
                 <p>Through events sponsorship and program underwriting, your company can enhance its visibility
 by putting your business’s name on our T-shirts for us to advertise for a fee…</p>
