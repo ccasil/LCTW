@@ -432,47 +432,47 @@ class Events extends Component {
         return <div>
             <h1 className="display-1">Events</h1>
             <div className="row">
-                <div className="col">
-                    <iframe title="Meetings and Events" src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%235F6B02&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23df230b&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
-                </div>
-                <div className="col">
-                    <h4 className="font-weight-bold">Upcoming Events</h4>
-                    <h5>Sista Love's Slumber Sleepover</h5>
-                    <a className="btn-block" color="danger" onClick={this.toggle12}>
-                        <img className="btnImg" src={placeholder1} alt="" />
-                    </a>
-                    <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
-                        <ModalHeader toggle={this.toggle12}>
-                            Sista Love's Slumber Sleepover
-                            </ModalHeader>
-                        <ModalBody>
-                            <img className="" src={placeholder1} height="800px;" alt="placeholder1" />
-                        </ModalBody>
-                        <ModalFooter>
-                            <Button color="secondary" onClick={this.toggle12}>
-                                Close
+              <div className="col">
+                <iframe title="LCTW Calendar" src="https://calendar.google.com/calendar/b/2/embed?title=Love%20Changing%20the%20World%20Events&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%230D7813&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%237A367A&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no" />
+              </div>
+              <div className="col">
+                <h4 className="font-weight-bold">Upcoming Events</h4>
+                <h5>Sista Love's Slumber Sleepover</h5>
+                <a className="btn-block" color="danger" onClick={this.toggle12}>
+                  <img className="btnImg" src={placeholder1} alt="" />
+                </a>
+                <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
+                  <ModalHeader toggle={this.toggle12}>
+                    Sista Love's Slumber Sleepover
+                  </ModalHeader>
+                  <ModalBody>
+                    <img className="" src={placeholder1} height="800px;" alt="placeholder1" />
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button color="secondary" onClick={this.toggle12}>
+                      Close
                     </Button>
-                        </ModalFooter>
-                    </Modal>
+                  </ModalFooter>
+                </Modal>
 
-                    <h5>Juneteenth in the Park Festival</h5>
-                    <a className="btn-block" color="danger" onClick={this.toggle13}>
-                        <img className="btnImg" src={placeholder2} alt="" />
-                    </a>
-                    <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
-                        <ModalHeader toggle={this.toggle13}>
-                            Juneteenth in the Park Festival
-                            </ModalHeader>
-                        <ModalBody>
-                            <img className="" src={placeholder2} height="800px;" alt="placeholder2" />
-                        </ModalBody>
-                        <ModalFooter>
-                            <Button color="secondary" onClick={this.toggle13}>
-                                Close
+                <h5>Juneteenth in the Park Festival</h5>
+                <a className="btn-block" color="danger" onClick={this.toggle13}>
+                  <img className="btnImg" src={placeholder2} alt="" />
+                </a>
+                <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
+                  <ModalHeader toggle={this.toggle13}>
+                    Juneteenth in the Park Festival
+                  </ModalHeader>
+                  <ModalBody>
+                    <img className="" src={placeholder2} height="800px;" alt="placeholder2" />
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button color="secondary" onClick={this.toggle13}>
+                      Close
                     </Button>
-                        </ModalFooter>
-                    </Modal>
-                </div>
+                  </ModalFooter>
+                </Modal>
+              </div>
             </div>
 
             <h1 id="prevEventsTitle">Previous Events</h1>
@@ -480,135 +480,135 @@ class Events extends Component {
             {/* 1st Row */}
 
             <div className="row">
-                <h1>Event 1</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event1.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 1</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event1.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 3</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event3.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 3</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event3.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Sista Love's Slumber Sleepover</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event4.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Sista Love's Slumber Sleepover</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event4.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 5</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event5.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 5</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event5.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 6</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event6.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 6</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event6.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 7</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event7.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 7</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event7.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 8</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event8.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 8</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event8.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 9</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event9.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 9</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event9.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 10</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event10.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 10</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event10.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
 
             <div className="row">
-                <h1>Event 11</h1>
-                <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                    <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                        {imgArr_event11.map(function (image, index) {
-                            return <div className="text-center">
-                                <img key={index} src={image} style={{ height: 600 }} alt="" />
-                            </div>;
-                        })}
-                    </RBCarousel>
-                </div>
+              <h1>Event 11</h1>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event11.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
             </div>
-        </div>;
+          </div>;
     }
 }
 

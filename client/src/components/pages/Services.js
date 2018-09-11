@@ -8,7 +8,7 @@ class Services extends Component {
                 <p className="lead font-weight-bold">Our organization is experienced in Homelessness and will provide these services through
                 referrals:</p>
                 <ul className="list-unstyled">
-                    <li>New Mission Community Church (FREE Food), Every Saturday (8:30AM-1PM) @ 3098 Florence Ave, San Jose, CA 95127</li>
+                    <li>New Mission Community Food Bank (FREE Food), Every Saturday (8:30AM-11AM) @ 3098 Florence Ave, San Jose, CA 95127</li>
                     <li>Clothes</li>
                     <li>Love Blessings Gift Bags</li>
                     <li>Love Blessings “Backpacks”</li>
