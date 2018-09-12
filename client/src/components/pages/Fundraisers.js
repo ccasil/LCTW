@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+import "../css/Fundraisers.css";
 
 // image routes for Event 2
 import event2_image9 from '../../images/Events/Event_2/9.jpg';
@@ -115,9 +116,34 @@ import event2_image114 from '../../images/Events/Event_2/114.jpg';
 class Fundraisers extends Component {
     constructor(props) {
         super(props);
-        this.state = { autoplay: true };
-
+        this.state = { 
+            autoplay: true,
+            text: "LOVE activities include: waterballoon fights, relay races, and other fun bonding experiences"
+        };
+        this.change = this.change.bind(this)
+        this.switchText = this.switchText.bind(this)
     }
+    change(event) {
+        console.log(event.target.value)
+        this.setState({ value: event.target.value, text: this.switchText(event.target.value) });
+        console.log(this.state)
+    }
+    switchText(param) {
+
+        switch (param) {
+            case 'Building Bonds Through LOVE':
+                return "LOVE activities include: waterballoon fights, relay races, and other fun bonding experiences"
+            case 'Sip & Glam':
+                return "Ladies LOVE to look good; let us spruce up your life"
+            case 'Sip & Paint':
+                return "Arts and crafts are fun for everyone, we will provide the paint, canvases, and entertainment"
+
+            default:
+                return this.state.text
+
+        }
+    }
+
     handleSubmit = async(e) => {
         e.preventDefault();
         const first_name = document.getElementById('first_name').value;
@@ -212,6 +238,7 @@ render() {
             </li>
             <li>Food and drinks not included!</li>
         </ul>
+
         <form id="fundraiser-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
             <div className="form-group">
                 <p>Name*</p>
@@ -244,12 +271,15 @@ render() {
                 </div>
                 <div className="form-group">
                     <label htmlFor="contact">Event*</label>
-                    <select className="form-control" id="event">
-                    <option value="Sip &amp; Glam">Building Bonds Through LOVE</option>
-                    <option value="Sip &amp; Glam">Sip &amp; Glam</option>
-                    <option value="Sip &amp; Paint">Sip &amp; Paint</option>
+                    <select className="form-control" id="event" onChange={this.change} value={this.state.value}>
+                        <option value="Building Bonds Through LOVE">Building Bonds Through LOVE</option>
+                        <option value="Sip &amp; Glam">Sip &amp; Glam</option>
+                        <option value="Sip &amp; Paint">Sip &amp; Paint</option>
                     </select>
                 </div>
+
+            <p className="font-weight-bold">{this.state.text}</p>
+            
 
             <div className="form-group">
                 <p>Types of Activities</p>

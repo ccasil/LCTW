@@ -250,15 +250,19 @@ class Programs extends Component {
 
         <div className="col-12">
           <Button className="btn-block btn-lg" color="danger" onClick={this.toggle5}>
-          "I AM" WORTH IT!!! (coming soon)
+          "I AM" WORTH IT!
           </Button>
         <Modal isOpen={this.state.modal5} toggle={this.toggle5} className={this.props.className}>
           <ModalHeader toggle={this.toggle5}>
-            "I AM" WORTH IT!!! (coming soon)
+            "I AM" WORTH IT!
             </ModalHeader>
           <ModalBody>
             <p className="lead">
-              Support for young children to Empower, Encourage, &amp; Inspire them to know their worth.
+              Support for young girls to empower, encourage, &amp; inspire them to know their worth.
+              </p>
+              <p className="lead">
+              LeLe is a 7 year old honor student with straight A's; here she is receiving her first Build a Bear! LeLe is the perfect role-model for the "I AM" worth it program.
+She is described as being loving, caring and helpful by her peers and is very excited to get back to school.
               </p>
               <ul className="list-unstyled">
                 {imgArr_event12.map(function (image, index) {

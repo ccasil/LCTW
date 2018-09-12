@@ -41,11 +41,12 @@ class SponsorForm extends Component {
 
     render() {
         return <div>
-            <h1 className="display-1">Want to be a Sponsor?</h1>
+            <h1 className="display-1">Want to Become a Sponsor?</h1>
             <div className="centerimages">
                 <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={PlannedParenthood} alt="Planned Parenthood"></img></a>
                 <a href="https://www.sccgov.org/sites/phd/services/hiv-resources/pages/std-hiv-test-home.aspx" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={SCPublicHealth} alt="Santa Clara Public Health"></img></a>
                 <a href="https://www.homefirstscc.org/cold-weather-shelters/" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={HomeFirst} alt="Home First"></img></a>
+                <p className="lead">As a sponsor you will be featured on our Love Changing the World T-Shirts!</p> 
             </div>
                 <form id="sponsor-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                 <div className="form-group">
