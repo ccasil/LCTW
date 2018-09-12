@@ -92,11 +92,11 @@ class Navbar extends Component {
                 <Link className="nav-link" to="/donations">Donations</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sponsorform">Sponsors</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" to="/shop">Shop</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/membership">Membership</Link>
+              </li>              
               <li className="nav-item">
                 <Link className="nav-link" to="/fundraisers">Fundraisers</Link>
               </li>
@@ -117,6 +117,7 @@ class Navbar extends Component {
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink">
                   <Link className="dropdown-item" to="/mailing">Mailing List</Link>
+                  <Link className="dropdown-item" to="/sponsorform">Sponsors</Link>
                   <Link className="dropdown-item" to="/volunteerform">Volunteers / Internships</Link>
                   <Link className="dropdown-item" to="/homelessform">Homeless</Link>
                 </div>
