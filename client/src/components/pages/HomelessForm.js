@@ -71,7 +71,7 @@ class HomelessForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <p>Date of Birth</p>
+                        <p>Date of Birth*</p>
                         <input type="date" className="form-control" placeholder="" name="birthday" id="birthday" />
                     </div>
 

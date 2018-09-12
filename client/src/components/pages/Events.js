@@ -459,7 +459,7 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">LCTW supporting AdVance Projects for Cinco de Mayo</h1>
+          <h1 className="display-4">LCTW Supporting AdVance Projects for Cinco de Mayo</h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>

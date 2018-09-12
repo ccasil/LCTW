@@ -52,12 +52,12 @@ class VolunteerForm extends Component {
           </div>
 
             <div className="form-group">
-                <p>Phone</p>
+                <p>Phone*</p>
                 <input id="phone" type="text" className="form-control" placeholder="" name="phone" />
             </div>
 
             <div className="form-group">
-                <p>Email</p>
+                <p>Email*</p>
                 <input id="email" type="text" className="form-control" placeholder="" name="email" />
             </div>
 
