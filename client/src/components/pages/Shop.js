@@ -259,7 +259,7 @@ class Donations extends React.Component {
 
           <div className="cartItem">
             <h4> LCTW Aprons </h4>
-            <div className="newItem">
+            <div className="regularItem">
               <img alt="apron" className="shoppingImg" src={this.state.apron} />
             </div>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -330,7 +330,7 @@ class Donations extends React.Component {
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
+              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
               <input type="hidden" name="lc" value="US" />
               <input type="hidden" name="item_name" value="Love Changing the World - Shirt" />
               <input type="hidden" name="button_subtype" value="products" />
@@ -415,7 +415,7 @@ class Donations extends React.Component {
 
           <div className="cartItem">
             <h4> LCTW VIP T-Shirts </h4>
-            <div className="regularItem">
+            <div className="newItem">
               <img alt="vipshirt" className="shoppingImg" src={this.state.vipimage} />
             </div>
 
@@ -508,8 +508,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like a VIP shirt, please use the contact us
-                page.
+                If you would like this item, please support us by visiting the Membership page.
               </p>
             </form>
             <div className="line" />
@@ -517,7 +516,7 @@ class Donations extends React.Component {
 
           <div className="cartItem">
             <h4> LCTW VIP Tank Tops </h4>
-            <div className="regularItem">
+            <div className="newItem">
               <img alt="vipshirt" className="shoppingImg" src={this.state.viptank} />
             </div>
 
@@ -604,66 +603,35 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like a VIP TankTop, please use the contact us
-                page.
+                If you would like this item, please support us by visiting the Membership page.
               </p>
             </form>
             <div className="line" />
           </div>
 
+
           <div className="cartItem">
-            <h4> LCTW VIP Aprons </h4>
+            <h4> LCTW Aprons </h4>
             <div className="newItem">
               <img alt="vipshirt" className="shoppingImg" src={this.state.vipapron} />
             </div>
-
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
-              <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
-              <input type="hidden" name="lc" value="US" />
-              <input type="hidden" name="item_name" value="Love Changing the World - Shirt" />
-              <input type="hidden" name="button_subtype" value="products" />
-              <input type="hidden" name="no_note" value="0" />
-              <input type="hidden" name="shipping" value="5.00" />
-              <input type="hidden" name="add" value="1" />
-              <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest" />
-
               <div className="ShoppingOptions">
+                <input type="hidden" name="cmd" value="_cart" />
+              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
+                <input type="hidden" name="lc" value="US" />
+                <input type="hidden" name="item_name" value="Aprons" />
+                <input type="hidden" name="button_subtype" value="products" />
+                <input type="hidden" name="no_note" value="0" />
+                <input type="hidden" name="shipping" value="5.00" />
+                <input type="hidden" name="add" value="1" />
+                <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest" />
+
                 <table>
                   <tbody>
                     <tr>
                       <td>
-                        <input type="hidden" name="on0" value="Size" />
-                        Size
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <select name="os0">
-                          <option value="Small">Small $20.00 USD</option>
-                          <option value="Medium">Medium $20.00 USD</option>
-                          <option value="Large">Large $20.00 USD</option>
-                          <option value="Extra-Large">
-                            Extra-Large $20.00 USD
-                          </option>
-                          <option value="XX-Large">
-                            XX-Large $25.00 USD
-                          </option>
-                          <option value="3X-Large">
-                            3X-Large $25.00 USD
-                          </option>
-                          <option value="4X-Large">
-                            4X-Large $25.00 USD
-                          </option>
-                          <option value="5X-Large">
-                            5X-Large $25.00 USD
-                          </option>
-                        </select>{" "}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="hidden" name="on1" value="Color" />
+                        <input type="hidden" name="on0" value="Color" />
                         Color
                       </td>
                     </tr>
@@ -681,34 +649,19 @@ class Donations extends React.Component {
                     </tr>
                   </tbody>
                 </table>
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="option_select0" value="Small" />
-                <input type="hidden" name="option_amount0" value="20.00" />
-                <input type="hidden" name="option_select1" value="Medium" />
-                <input type="hidden" name="option_amount1" value="20.00" />
-                <input type="hidden" name="option_select2" value="Large" />
-                <input type="hidden" name="option_amount2" value="20.00" />
-                <input type="hidden" name="option_select3" value="Extra-Large" />
-                <input type="hidden" name="option_amount3" value="20.00" />
-                <input type="hidden" name="option_select4" value="XX-Large" />
-                <input type="hidden" name="option_amount4" value="25.00" />
-                <input type="hidden" name="option_select5" value="3X-Large" />
-                <input type="hidden" name="option_amount5" value="25.00" />
-                <input type="hidden" name="option_select6" value="4X-Large" />
-                <input type="hidden" name="option_amount6" value="25.00" />
-                <input type="hidden" name="option_select7" value="5X-Large" />
-                <input type="hidden" name="option_amount7" value="25.00" />
-                <input type="hidden" name="option_index" value="0" />
+
               </div>
-              <p>
-                {" "}
-                If you would like a VIP Apron, please use the contact us
-                page.
-              </p>
             </form>
+            <p>
+                {" "}
+                If you would like this item, please support us by visiting the Membership page.
+              </p>
+
             <div className="line" />
           </div>
-        </div>
+
+
+          </div>
       </div>;
   }
 }

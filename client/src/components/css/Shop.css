@@ -40,7 +40,7 @@
 }
 
 h4:hover{
-	color:#cb000b;
+	color:##c8102e;
 
 }
 
@@ -92,6 +92,11 @@ h4:hover{
 
 .cartButton{
 	margin-top: 5px;
+}
+
+.cartItem p{
+	padding-left:1rem;
+	padding-right: 1rem;
 }
 
 @media (min-width: 480px){

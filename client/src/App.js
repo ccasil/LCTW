@@ -19,6 +19,7 @@ import HomelessForm from "./components/pages/HomelessForm";
 import Services from "./components/pages/Services";
 import Staff from "./components/pages/Staff";
 import Resources from "./components/pages/Resources";
+import Membership from "./components/pages/Membership";
 
 
 import "./App.css";
@@ -49,6 +50,7 @@ class App extends Component {
             <Route exact path="/volunteerform" component={VolunteerForm} />
             <Route exact path="/homelessform" component={HomelessForm} />
             <Route exact path="/resources" component={Resources} />
+            <Route exact path="/membership" component={Membership} />
           </div>
           <Footer />
         </div>

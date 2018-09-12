@@ -1,0 +1,8 @@
+.plat 	{	background: url(../../images/Membership/plat.jpg);}
+.plat h1{	color: #e0e1e6; padding-top: 60px; font-size:52pt;}
+.gold 	{	background: url(../../images/Membership/gold.jpg);}
+.gold h1{	color: #fee251; padding-top: 60px; font-size:52pt;}
+.red 	{	background: url(../../images/Membership/red.jpg);}
+.red h1	{	color: #c8102e; padding-top: 60px; font-size:52pt;}
+.membership-description { padding: 5rem; text-align: center }
+.donation-button{margin-top: 2rem}

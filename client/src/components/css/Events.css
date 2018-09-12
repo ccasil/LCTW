@@ -13,6 +13,9 @@
     padding-left: 10px;
 }
 
+.carousel-indicators{
+    display:none;
+}
 /* Previous Events Styling */
 .previousEvents {
     margin: auto;

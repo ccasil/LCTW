@@ -5,3 +5,9 @@
 a {
   color: #c8102e;
 }
+
+.carousel-indicators{
+    display:none;
+}
+
+.parallax { height: 200px; background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;	 }
