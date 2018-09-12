@@ -68,12 +68,12 @@ class Donations extends Component {
 performances and sporting events, gift cards and other resources are yet another way to
 support LCTW.</p>
                 <p>Please support our Love Blessings BACKPACKS, Love Blessings Gift Bags, &amp; Love Blessings
-Candy &amp; Condoms… NO USED ITEMS!!!</p>
+Candy &amp; Condoms… NO USED ITEMS!</p>
                 <p className="font-weight-bold">Sponsorships:</p>
                 <p>Through events sponsorship and program underwriting, your company can enhance its visibility
-by putting your business’s name on our T-shirts for us to advertise for a fee…</p>
+by putting your business’s name on our T-shirts for us to advertise</p>
                 <p>Sponsor our annual Gala and Fundraising events express your company’s commit to community
-by underwriting one of our programs…</p>
+by underwriting one of our programs</p>
                 <p className="font-weight-bold">Employee Giving Campaigns &amp; Giving Programs:</p>
                 <p>Did you know?</p>
                 <p>Many companies have programs in place to help their employees facilitate their gift. You can
@@ -91,9 +91,9 @@ estate property, stocks, and bonds, insurance and residence as a gift to our end
                 <p>LCTW is a 501 (c)(3) Non-profit charity organization with allows you tax breaks.</p>
                 <p>For more information, please email info@lovechangingtheworld.org or call us at 1 (347) 849-
 4618.</p>
-                <p>Our LCTW Family thanks you for your LOVE blessings and support, It’s GREATLY appreciated!!!
-Let’s build LOVING communities together…</p>
-                <p>We LOVE you ALL…</p>
+                <p>Our LCTW Family thanks you for your LOVE blessings and support, It’s GREATLY appreciated!
+Let’s build LOVING communities together</p>
+                <p>We LOVE you ALL!</p>
             </div>
         );
     }

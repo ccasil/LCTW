@@ -5,14 +5,14 @@ class Membership extends Component {
     render() {
         return (
             <div>
-                <h1 className="display-1">Membership</h1>
+                <h1 className="display-1">Memberships</h1>
                 
 
                 <div className="plat parallax">
                 	<h1> Platinum </h1>
 				</div>
 				<div className="membership-description">
-					With Platinum membership you recieve the exclusive LCTW VIP Platinum T-Shirt, as well as Platinum VIP TankTop and Aprons as well. You will also recieve free tickets to events hosted by LCTW, and any new merchandise that will be released. Please check these items out in the Shop. Membership is 150$.					
+					As a PLATINUM member, you will receive the exclusive LCTW VIP Platinum T-Shirt, as well as a Platinum VIP Tank Top and Apron. You will also receive two free tickets to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Platinum membership is earned by donors who contribute $100 a month to LCTW and their cause.					
 					<div className="donation-button">
 					<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_donations"></input>
@@ -34,15 +34,14 @@ class Membership extends Component {
                 	<h1> Gold </h1>
 				</div>
 				<div className="membership-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					As a GOLD member, you will receive the exclusive LCTW VIP Gold T-Shirt, as well as a Gold VIP Tank Top and Apron. You will also receive one free ticket to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Gold membership is earned by donors who contribute $50 a month to LCTW and their cause.
 				</div>
                 <div className="red parallax">
                 	<h1> Red </h1>
 				</div>
 				<div className="membership-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>								
-
+					As a RED member, you will receive the exclusive LCTW VIP Red T-Shirt, as well as a Red VIP Tank Top and Apron. You will also receive discounted tickets to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Red membership is earned by donors who contribute $20 a month to LCTW and their cause.
+				</div>
 
 
 			</div>

@@ -35,8 +35,7 @@ class VolunteerForm extends Component {
     return <div>
         <h1 className="display-1">Want to be a Volunteer?</h1>
         <p className="lead">
-          Hello, feel free to leave your contact info so that we can reach
-          out to you.
+          If you would like to become a volunteer or hear about our internship opportunities, feel free to leave your contact info and experience so that we can reach out to you.
         </p>
         <form id="volunteer-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
           <div className="form-group">

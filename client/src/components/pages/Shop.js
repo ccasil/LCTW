@@ -121,26 +121,26 @@ class Donations extends React.Component {
     return <div className="donations">
         <h1 className="display-1">Shop</h1>
         <p className="lead">
-          Hello all, The Love Changing The World Family is seeking donations
+          Hello all, The Love Changing the World Family is seeking donations
           for the homeless and less fortunate. We are looking to make a
           difference in local communities and even expand our loving
-          gestures beyond. Remember there is no donation too small, spread
+          gestures beyond. Remember, there is no donation too small, spread
           the word and LOVE. Thank you for your generous HEARTS! We LOVE you
-          ALL!!! VIP items are for VIP members only. No exchanges or
+          ALL!!! No exchanges or
           refunds, and all sales are final.
         </p>
 
         <div className="shoparea">
           <div className="new">
             <div className="cartItem">
-              <h2>Whats New!!!</h2>
+              <h2 className="font-weight-bold">Whats New!</h2>
               <h4> VIP Aprons </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={VIPApron1} />
               </div>
             </div>
             <div className="cartItem">
-              <h2>Whats Hot!!!</h2>
+            <h2 className="font-weight-bold">Whats Hot!</h2>
               <h4> LCTW VIP Memberships </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={this.state.image} />

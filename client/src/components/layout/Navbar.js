@@ -66,16 +66,10 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/ourmission">Our Mission</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/events">Events</Link>
-              </li>
               <li className="nav-item dropdown navbar-logo mx-auto">
                 <a
                   className="nav-link dropdown-toggle"
-                  tabIndex = "0"
+                  tabIndex="0"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
@@ -89,19 +83,22 @@ class Navbar extends Component {
                 </div>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/services">Services</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/programs">Programs</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/events">Events</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/donations">Donations</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/shop">Shop</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/membership">Membership</Link>
-              </li>              
-              <li className="nav-item">
-                <Link className="nav-link" to="/fundraisers">Fundraisers</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/programs">Programs</Link>
+                <Link className="nav-link" to="/membership">Members</Link>
               </li>
               <li className="nav-item dropdown navbar-logo mx-auto">
                 <a
@@ -117,6 +114,7 @@ class Navbar extends Component {
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink">
                   <Link className="dropdown-item" to="/mailing">Mailing List</Link>
+                  <Link className="dropdown-item" to="/fundraisers">Fundraisers</Link>
                   <Link className="dropdown-item" to="/sponsorform">Sponsors</Link>
                   <Link className="dropdown-item" to="/volunteerform">Volunteers / Internships</Link>
                   <Link className="dropdown-item" to="/homelessform">Homeless</Link>

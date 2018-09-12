@@ -226,8 +226,8 @@ render() {
     return <div>
         <h1 className="display-1">Want to have a Fundraiser?</h1>
         <p className="lead">
-            Hello, feel free to leave your contact info so that we can
-            reach out to your family or corporation!
+            Leave your contact info here so that we can
+            host your next fundraising event!
             </p>
             <ul className="list-unstyled">
         <li>

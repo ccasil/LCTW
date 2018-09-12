@@ -46,7 +46,7 @@ class HomelessForm extends Component {
         return (
             <div>
                 <h1 className="display-1">Need Help?</h1>
-                <p className="lead">Hello, feel free to leave your contact info so that we can help you with your needs.</p>
+                <p className="lead">If you are in need, feel free to leave your contact info so that we can help you with you.</p>
                 <form id="help-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
 
                     <div className="form-group">

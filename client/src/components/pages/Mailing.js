@@ -38,8 +38,7 @@ class Contact extends Component {
     return <div className="contact">
         <h1 className="display-1">Contact Us</h1>
         <p className="lead">
-          Hello, feel free to leave your contact info so that we can reach
-          out to you and keep you updated with our upcoming events and much
+          Please feel free to leave your contact info here so we can keep you updated with our upcoming events and much
           more.
         </p>
         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
