@@ -1,10 +1,68 @@
 import React, { Component } from 'react';
+import RBCarousel from "react-bootstrap-carousel";
+import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+
+// image routes for Event 8
+import event8_image1 from '../../images/Events/Event_8/1.jpg';
+import event8_image2 from '../../images/Events/Event_8/2.jpg';
+import event8_image3 from '../../images/Events/Event_8/3.jpg';
 
 class Donations extends Component {
+        constructor(props) {
+        super(props);
+        this.state = { autoplay: true };
+    }
+    slideNext = () => {
+        this.slider.slideNext();
+    };
+    slidePrev = () => {
+        this.slider.slidePrev();
+    };
+    goToSlide = () => {
+        this.slider.goToSlide(4);
+    };
+    autoplay = () => {
+        this.setState({ autoplay: !this.state.autoplay });
+    };
+    _changeIcon = () => {
+        let { leftIcon, rightIcon } = this.state;
+        if (leftIcon && rightIcon) {
+            this.setState({
+                leftIcon: undefined,
+                rightIcon: undefined
+            });
+        } else {
+            this.setState({
+                leftIcon: <span className="fa fa-glass" />,
+                rightIcon: <span className="fa fa-music" />
+            });
+        }
+    };
+
     render() {
+
+        const imgArr_event8 = [
+            event8_image1, event8_image2, event8_image3
+        ];
+
+        let { leftIcon, rightIcon } = this.state;
+
         return (
             <div>
                 <h1 className="display-1">Donations</h1>
+                <p className="text-center">Our #LCTW Family would like to thank Peter's Bakery, Safeway, Lucky, Home Depot, and Walmart for your help, donations, &amp; support... We <span className="font-weight-bold">LOVE</span> you all!</p>
+                <div className="row">
+                    <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                        <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                            {imgArr_event8.map(function (image, index) {
+                                return <div className="text-center">
+                                    <img key={index} src={image} style={{ height: 600 }} alt="" />
+                                </div>;
+                            })}
+                        </RBCarousel>
+                    </div>
+                </div>
+
                 <p className="font-weight-bold">In-Kind Donations:</p>
                 <p>In-kind contributions of equipment, supplies, product, services, tickets to events, museum,
 performances and sporting events, gift cards and other resources are yet another way to

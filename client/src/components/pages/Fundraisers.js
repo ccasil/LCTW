@@ -123,8 +123,10 @@ class Fundraisers extends Component {
         const first_name = document.getElementById('first_name').value;
         const last_name = document.getElementById('last_name').value;
         const phone = document.getElementById('phone').value;
-        const email = document.getElementById("email").value;        const type = document.getElementById('type').value;
+        const email = document.getElementById("email").value;
+        const type = document.getElementById('type').value;
         const event = document.getElementById('event').value;
+        const activities = document.getElementById('activities').value;
         axios({
             method: "POST",
             url: "http://localhost:8000/sendfundraiser",
@@ -134,7 +136,8 @@ class Fundraisers extends Component {
                 phone: phone,
                 email: email,
                 type: type,
-                event: event
+                event: event,
+                activities: activities
             }
         }).then((response) => {
             if(response.data.msg === 'success') {
@@ -242,11 +245,16 @@ render() {
                 <div className="form-group">
                     <label htmlFor="contact">Event*</label>
                     <select className="form-control" id="event">
-                    <option value="Sip &amp; Glam">Barbeque</option>
+                    <option value="Sip &amp; Glam">Building Bonds Through LOVE</option>
                     <option value="Sip &amp; Glam">Sip &amp; Glam</option>
                     <option value="Sip &amp; Paint">Sip &amp; Paint</option>
                     </select>
                 </div>
+
+            <div className="form-group">
+                <p>Types of Activities</p>
+                <textarea className="form-control" placeholder="" rows="3" name="activities" id="activities" />
+            </div>
 
             <button type="submit" className="btn btn-primary">
                 Submit

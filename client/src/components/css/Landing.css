@@ -102,8 +102,3 @@ only screen and (min-width: 1024px){
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-.img-fluid {
-    max-width: 20%;
-    margin: 4px;
-}

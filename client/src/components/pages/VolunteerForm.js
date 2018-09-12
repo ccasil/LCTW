@@ -70,6 +70,7 @@ class VolunteerForm extends Component {
             Submit
           </button>
         </form>
+      <p className="lead">*Required</p>
       </div>;
   }
 }

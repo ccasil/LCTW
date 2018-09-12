@@ -225,11 +225,6 @@ import event7_image32 from '../../images/Events/Event_7/32.jpg';
 import event7_image33 from '../../images/Events/Event_7/33.jpg';
 import event7_image34 from '../../images/Events/Event_7/34.jpg';
 
-// image routes for Event 8
-import event8_image1 from '../../images/Events/Event_8/1.jpg';
-import event8_image2 from '../../images/Events/Event_8/2.jpg';
-import event8_image3 from '../../images/Events/Event_8/3.jpg';
-
 // image routes for Event 9
 import event9_image1 from '../../images/Events/Event_9/1.jpg';
 import event9_image2 from '../../images/Events/Event_9/2.jpg';
@@ -238,86 +233,35 @@ import event9_image4 from '../../images/Events/Event_9/4.jpg';
 import event9_image5 from '../../images/Events/Event_9/5.jpg';
 import event9_image6 from '../../images/Events/Event_9/6.jpg';
 
-// image routes for Event 10
-import event10_image1 from '../../images/Events/Event_10/1.jpg';
-import event10_image2 from '../../images/Events/Event_10/2.jpg';
-import event10_image3 from '../../images/Events/Event_10/3.jpg';
-import event10_image4 from '../../images/Events/Event_10/4.jpg';
-import event10_image5 from '../../images/Events/Event_10/5.jpg';
-import event10_image6 from '../../images/Events/Event_10/6.jpg';
-import event10_image7 from '../../images/Events/Event_10/7.jpg';
-import event10_image8 from '../../images/Events/Event_10/8.jpg';
-import event10_image9 from '../../images/Events/Event_10/9.jpg';
-import event10_image10 from '../../images/Events/Event_10/10.jpg';
-import event10_image11 from '../../images/Events/Event_10/11.jpg';
-import event10_image12 from '../../images/Events/Event_10/12.jpg';
-import event10_image13 from '../../images/Events/Event_10/13.jpg';
-import event10_image14 from '../../images/Events/Event_10/14.jpg';
-import event10_image15 from '../../images/Events/Event_10/15.jpg';
-import event10_image16 from '../../images/Events/Event_10/16.jpg';
-import event10_image17 from '../../images/Events/Event_10/17.jpg';
-import event10_image18 from '../../images/Events/Event_10/18.jpg';
-import event10_image19 from '../../images/Events/Event_10/19.jpg';
-import event10_image20 from '../../images/Events/Event_10/20.jpg';
-import event10_image21 from '../../images/Events/Event_10/21.jpg';
-import event10_image22 from '../../images/Events/Event_10/22.jpg';
-import event10_image23 from '../../images/Events/Event_10/23.jpg';
-import event10_image24 from '../../images/Events/Event_10/24.jpg';
-import event10_image25 from '../../images/Events/Event_10/25.jpg';
-import event10_image26 from '../../images/Events/Event_10/26.jpg';
-import event10_image27 from '../../images/Events/Event_10/27.jpg';
-import event10_image28 from '../../images/Events/Event_10/28.jpg';
-import event10_image29 from '../../images/Events/Event_10/29.jpg';
-import event10_image30 from '../../images/Events/Event_10/30.jpg';
-import event10_image31 from '../../images/Events/Event_10/31.jpg';
-import event10_image32 from '../../images/Events/Event_10/32.jpg';
-import event10_image33 from '../../images/Events/Event_10/33.jpg';
-import event10_image34 from '../../images/Events/Event_10/34.jpg';
-import event10_image35 from '../../images/Events/Event_10/35.jpg';
-import event10_image36 from '../../images/Events/Event_10/36.jpg';
-import event10_image37 from '../../images/Events/Event_10/37.jpg';
-import event10_image38 from '../../images/Events/Event_10/38.jpg';
-import event10_image39 from '../../images/Events/Event_10/39.jpg';
-import event10_image40 from '../../images/Events/Event_10/40.jpg';
-import event10_image41 from '../../images/Events/Event_10/41.jpg';
-import event10_image42 from '../../images/Events/Event_10/42.jpg';
-import event10_image43 from '../../images/Events/Event_10/43.jpg';
-import event10_image44 from '../../images/Events/Event_10/44.jpg';
-import event10_image45 from '../../images/Events/Event_10/45.jpg';
-import event10_image46 from '../../images/Events/Event_10/46.jpg';
-import event10_image47 from '../../images/Events/Event_10/47.jpg';
-import event10_image48 from '../../images/Events/Event_10/48.jpg';
-import event10_image49 from '../../images/Events/Event_10/49.jpg';
-import event10_image50 from '../../images/Events/Event_10/50.jpg';
-import event10_image51 from '../../images/Events/Event_10/51.jpg';
-import event10_image52 from '../../images/Events/Event_10/52.jpg';
-import event10_image53 from '../../images/Events/Event_10/53.jpg';
-import event10_image54 from '../../images/Events/Event_10/54.jpg';
-import event10_image55 from '../../images/Events/Event_10/55.jpg';
-import event10_image56 from '../../images/Events/Event_10/56.jpg';
-import event10_image57 from '../../images/Events/Event_10/57.jpg';
-
 // image routes for Event 11
 import event11_image1 from '../../images/Events/Event_11/1.jpg';
 import event11_image2 from '../../images/Events/Event_11/2.jpg';
-import event11_image3 from '../../images/Events/Event_11/3.jpg';
-import event11_image4 from '../../images/Events/Event_11/4.jpg';
-import event11_image5 from '../../images/Events/Event_11/5.jpg';
 
+// image routes for Event 13
+import event13_image1 from '../../images/Events/Event_13/1.JPG';
+import event13_image2 from '../../images/Events/Event_13/2.JPG';
+import event13_image3 from '../../images/Events/Event_13/3.JPG';
+import event13_image4 from '../../images/Events/Event_13/4.JPG';
+import event13_image5 from '../../images/Events/Event_13/5.JPG';
+import event13_image6 from '../../images/Events/Event_13/6.JPG';
+import event13_image7 from '../../images/Events/Event_13/7.JPG';
+import event13_image8 from '../../images/Events/Event_13/8.JPG';
 
 class Events extends Component {
     constructor(props) {
         super(props);
-        this.state = { modal12: false, modal13: false, autoplay: true };
+        this.state = { modal12: false, modal13: false, calendarmodal: false, autoplay: true };
 
-
+        this.togglecalendar = this.togglecalendar.bind(this);
         this.toggle12 = this.toggle12.bind(this);
         this.toggle13 = this.toggle13.bind(this);
 
+    }
 
-
-
-
+    togglecalendar() {
+        this.setState({
+          calendarmodal: !this.state.calendarmodal
+        });
     }
 
     //   Toggle Upcoming Events
@@ -367,7 +311,7 @@ class Events extends Component {
     render() {
 
         const imgArr_event1 = [
-            event1_image2, event1_image3, event1_image4, event1_image5, event1_image6, event1_image7, event1_image8,
+            event1_image2, event1_image3, event1_image4, event1_image5, event1_image6, event1_image7, event1_image8
         ];
 
         const imgArr_event3 = [
@@ -408,35 +352,46 @@ class Events extends Component {
             event7_image30, event7_image31, event7_image32, event7_image33, event7_image34
         ];
 
-        const imgArr_event8 = [
-            event8_image1, event8_image2, event8_image3
-        ];
-
         const imgArr_event9 = [
             event9_image1, event9_image2, event9_image3, event9_image4, event9_image5, event9_image6
         ];
 
-        const imgArr_event10 = [
-            event10_image1, event10_image2, event10_image3, event10_image4, event10_image5, event10_image6, event10_image7, event10_image8, event10_image9,
-            event10_image10, event10_image11, event10_image12, event10_image13, event10_image14, event10_image15, event10_image16, event10_image17, event10_image18, event10_image19,
-            event10_image20, event10_image21, event10_image22, event10_image23, event10_image24, event10_image25, event10_image26, event10_image27, event10_image28, event10_image29,
-            event10_image30, event10_image31, event10_image32, event10_image33, event10_image34, event10_image35, event10_image36, event10_image37, event10_image38, event10_image39,
-            event10_image40, event10_image41, event10_image42, event10_image43, event10_image44, event10_image45, event10_image46, event10_image47, event10_image48, event10_image49,
-            event10_image50, event10_image51, event10_image52, event10_image53, event10_image54, event10_image55, event10_image56, event10_image57,
+        const imgArr_event11 = [
+            event11_image1, event11_image2
         ];
 
-        const imgArr_event11 = [
-            event11_image1, event11_image2, event11_image3, event11_image4, event11_image5,
-        ];
+      const imgArr_event13 = [
+        event13_image1, event13_image2, event13_image3, event13_image4, event13_image5, event13_image6, event13_image7, event13_image8
+      ];
+
         let { leftIcon, rightIcon } = this.state;
+        
         return <div>
             <h1 className="display-1">Events</h1>
+
+          <div className="col-12">
+            <Button className="btn-block btn-lg" color="danger" onClick={this.togglecalendar}>
+              Love Changing the World Calendar
+          </Button>
+            <Modal isOpen={this.state.calendarmodal} toggle={this.togglecalendar} className={this.props.className}>
+            <ModalHeader toggle={this.togglecalendar}>
+            Love Changing the World Calendar
+            </ModalHeader>
+              <ModalBody>
+                <iframe title="LCTW Calendar" src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%2342104A&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no" />
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={this.togglecalendar}>
+                  Close
+              </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+
+          <h4 className="text-center display-4 font-weight-bold">Upcoming Events</h4>
+
             <div className="row">
               <div className="col">
-                <iframe title="LCTW Calendar" src="https://calendar.google.com/calendar/b/2/embed?title=Love%20Changing%20the%20World%20Events&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%230D7813&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%237A367A&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no" />
-              </div>
-              <div className="col">
-                <h4 className="font-weight-bold">Upcoming Events</h4>
                 <h5>Sista Love's Slumber Sleepover</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle12}>
                   <img className="btnImg" src={placeholder1} alt="" />
@@ -454,7 +409,8 @@ class Events extends Component {
                     </Button>
                   </ModalFooter>
                 </Modal>
-
+                </div>
+              <div className="col">
                 <h5>Juneteenth in the Park Festival</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle13}>
                   <img className="btnImg" src={placeholder2} alt="" />
@@ -475,12 +431,23 @@ class Events extends Component {
               </div>
             </div>
 
-            <h1 id="prevEventsTitle">Previous Events</h1>
+          <h1 className="display-2">Previous Events</h1>
 
-            {/* 1st Row */}
+          <h1 className="display-4">LOVE Starts at the HomeFirst Backyard BBQ</h1>
+          <div className="row">
+            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                {imgArr_event13.map(function (image, index) {
+                  return <div className="text-center">
+                    <img key={index} src={image} style={{ height: 600 }} alt="" />
+                  </div>;
+                })}
+              </RBCarousel>
+            </div>
+          </div>
 
+          <h1 className="display-4">37th Annual Juneteenth Festival 2018</h1>
             <div className="row">
-              <h1>Event 1</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event1.map(function(image, index) {
@@ -492,8 +459,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">LCTW supporting AdVance Projects for Cinco de Mayo</h1>
             <div className="row">
-              <h1>Event 3</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event3.map(function(image, index) {
@@ -505,8 +472,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">Sista Love's Slumber Sleepover</h1>
             <div className="row">
-              <h1>Sista Love's Slumber Sleepover</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event4.map(function(image, index) {
@@ -518,8 +485,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">Poetry in the Park</h1>
             <div className="row">
-              <h1>Event 5</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event5.map(function(image, index) {
@@ -531,8 +498,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">Juneteenth Festival 2016</h1>
             <div className="row">
-              <h1>Event 6</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event6.map(function(image, index) {
@@ -544,8 +511,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">Poetry in the Park</h1>
             <div className="row">
-              <h1>Event 7</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event7.map(function(image, index) {
@@ -557,21 +524,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">LCTW Supporting Anti-Bullying</h1>
             <div className="row">
-              <h1>Event 8</h1>
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                  {imgArr_event8.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
-                      </div>;
-                  })}
-                </RBCarousel>
-              </div>
-            </div>
-
-            <div className="row">
-              <h1>Event 9</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event9.map(function(image, index) {
@@ -583,21 +537,8 @@ class Events extends Component {
               </div>
             </div>
 
+          <h1 className="display-4">LCTW Supporting Women Rising Above Abuse (WRAA)</h1>
             <div className="row">
-              <h1>Event 10</h1>
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
-                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                  {imgArr_event10.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
-                      </div>;
-                  })}
-                </RBCarousel>
-              </div>
-            </div>
-
-            <div className="row">
-              <h1>Event 11</h1>
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event11.map(function(image, index) {

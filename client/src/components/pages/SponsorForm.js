@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import "../css/SponsorForm.css";
+
+import SCPublicHealth from '../../images/Sponsors/SCPublicHealth.png';
+import PlannedParenthood from '../../images/Sponsors/PlannedParenthood.jpg';
+import HomeFirst from '../../images/Sponsors/HomeFirst.png';
+
 class SponsorForm extends Component {
 
     handleSubmit = async (e) => {
@@ -36,9 +42,11 @@ class SponsorForm extends Component {
     render() {
         return <div>
             <h1 className="display-1">Want to be a Sponsor?</h1>
-            <p className="lead">
-            Hello, feel free to leave your contact info so that we can reach out to you.
-            </p>
+            <div className="centerimages">
+                <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={PlannedParenthood} alt="Planned Parenthood"></img></a>
+                <a href="https://www.sccgov.org/sites/phd/services/hiv-resources/pages/std-hiv-test-home.aspx" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={SCPublicHealth} alt="Santa Clara Public Health"></img></a>
+                <a href="https://www.homefirstscc.org/cold-weather-shelters/" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={HomeFirst} alt="Home First"></img></a>
+            </div>
                 <form id="sponsor-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                 <div className="form-group">
                     <p>Name*</p>
@@ -68,6 +76,7 @@ class SponsorForm extends Component {
                     
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
+                <p className="lead">*Required</p>
             </div>;
     }
 }

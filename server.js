@@ -121,8 +121,9 @@ app.post("/sendfundraiser", (req, res, next) => {
   var email = req.body.email;
   var type = req.body.type;
   var event = req.body.event;
+  var activities = req.body.activities;
   // setup email data with unicode symbols
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to hold a fundraiser!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nType: ${type} \nEvent: ${event}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to hold a fundraiser!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nType: ${type} \nEvent: ${event} \nActivities: ${activities}` };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {

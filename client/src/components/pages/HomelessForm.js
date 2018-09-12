@@ -135,6 +135,7 @@ class HomelessForm extends Component {
 
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
+                <p className="lead">*Required</p>
             </div>
         );
     }
