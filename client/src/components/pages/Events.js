@@ -247,6 +247,13 @@ import event13_image6 from '../../images/Events/Event_13/6.JPG';
 import event13_image7 from '../../images/Events/Event_13/7.JPG';
 import event13_image8 from '../../images/Events/Event_13/8.JPG';
 
+// image routes for Event 14
+import event14_image1 from '../../images/Events/Event_14/1.JPG';
+import event14_image2 from '../../images/Events/Event_14/2.JPG';
+import event14_image3 from '../../images/Events/Event_14/3.JPG';
+import event14_image4 from '../../images/Events/Event_14/4.JPG';
+import event14_image5 from '../../images/Events/Event_14/5.JPG';
+
 class Events extends Component {
     constructor(props) {
         super(props);
@@ -363,32 +370,35 @@ class Events extends Component {
       const imgArr_event13 = [
         event13_image1, event13_image2, event13_image3, event13_image4, event13_image5, event13_image6, event13_image7, event13_image8
       ];
+      const imgArr_event14 = [event14_image1, event14_image2, event14_image3, event14_image4, event14_image5];
 
         let { leftIcon, rightIcon } = this.state;
         
         return <div>
             <h1 className="display-1">Events</h1>
 
-          <div className="col-12">
-            <Button className="btn-block btn-lg" color="danger" onClick={this.togglecalendar}>
-              Love Changing the World Calendar
-          </Button>
-            <Modal isOpen={this.state.calendarmodal} toggle={this.togglecalendar} className={this.props.className}>
-            <ModalHeader toggle={this.togglecalendar}>
-            Love Changing the World Calendar
-            </ModalHeader>
-              <ModalBody>
-                <iframe title="LCTW Calendar" src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%2342104A&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no" />
-              </ModalBody>
-              <ModalFooter>
-                <Button color="secondary" onClick={this.togglecalendar}>
-                  Close
+            <div className="col-12">
+              <Button className="btn-block btn-lg" color="danger" onClick={this.togglecalendar}>
+                Love Changing the World Calendar
               </Button>
-              </ModalFooter>
-            </Modal>
-          </div>
+              <Modal isOpen={this.state.calendarmodal} toggle={this.togglecalendar} className={this.props.className}>
+                <ModalHeader toggle={this.togglecalendar}>
+                  Love Changing the World Calendar
+                </ModalHeader>
+                <ModalBody>
+                  <iframe title="LCTW Calendar" src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;src=lovechangingtheworld.org_lk5gh80s8hbnidsutdv2c89obs%40group.calendar.google.com&amp;color=%2342104A&amp;src=lovechangingtheworld.org_6b8fgr51gh1c4emfg33ol76ppg%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FLos_Angeles" style={{ border: "solid 1px #777" }} width="800" height="600" frameBorder="0" scrolling="no" />
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="secondary" onClick={this.togglecalendar}>
+                    Close
+                  </Button>
+                </ModalFooter>
+              </Modal>
+            </div>
 
-          <h4 className="text-center display-4 font-weight-bold">Upcoming Events</h4>
+            <h4 className="text-center display-4 font-weight-bold">
+              Upcoming Events
+            </h4>
 
             <div className="row">
               <div className="col">
@@ -409,7 +419,7 @@ class Events extends Component {
                     </Button>
                   </ModalFooter>
                 </Modal>
-                </div>
+              </div>
               <div className="col">
                 <h5>Juneteenth in the Park Festival</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle13}>
@@ -431,13 +441,14 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-2">Previous Events</h1>
-
-          <h1 className="display-4">LOVE Starts at the HomeFirst Courtyard BBQ</h1>
+            <h1 className="display-2">Previous Events</h1>
+          <h1 className="display-4">
+            LCTW San Joaquin County Homeless Outreach
+            </h1>
           <div className="row">
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
               <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                {imgArr_event13.map(function (image, index) {
+                {imgArr_event14.map(function (image, index) {
                   return <div className="text-center">
                     <img key={index} src={image} style={{ height: 600 }} alt="" />
                   </div>;
@@ -446,7 +457,24 @@ class Events extends Component {
             </div>
           </div>
 
-          <h1 className="display-4">37th Annual Juneteenth Festival 2018</h1>
+            <h1 className="display-4">
+              LOVE Starts at the HomeFirst Courtyard BBQ
+            </h1>
+            <div className="row">
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                  {imgArr_event13.map(function(image, index) {
+                    return <div className="text-center">
+                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                      </div>;
+                  })}
+                </RBCarousel>
+              </div>
+            </div>
+
+            <h1 className="display-4">
+              37th Annual Juneteenth Festival 2018
+            </h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -459,7 +487,9 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">LCTW Supporting AdVance Projects for Cinco de Mayo</h1>
+            <h1 className="display-4">
+              LCTW Supporting AdVance Projects for Cinco de Mayo
+            </h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -472,7 +502,9 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">Sista Love's Slumber Sleepover</h1>
+            <h1 className="display-4">
+              Sista Love's Slumber Sleepover
+            </h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -485,7 +517,7 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">Poetry in the Park</h1>
+            <h1 className="display-4">Poetry in the Park</h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -498,7 +530,7 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">Juneteenth Festival 2016</h1>
+            <h1 className="display-4">Juneteenth Festival 2016</h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -511,7 +543,7 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">Poetry in the Park</h1>
+            <h1 className="display-4">Poetry in the Park</h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -524,7 +556,9 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">LCTW Supporting P.A.R.T.I. Anti-Bullying Program</h1>
+            <h1 className="display-4">
+              LCTW Supporting P.A.R.T.I. Anti-Bullying Program
+            </h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -537,7 +571,9 @@ class Events extends Component {
               </div>
             </div>
 
-          <h1 className="display-4">LCTW Supporting Women Rising Above Abuse (WRAA)</h1>
+            <h1 className="display-4">
+              LCTW Supporting Women Rising Above Abuse (WRAA)
+            </h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
@@ -549,7 +585,11 @@ class Events extends Component {
                 </RBCarousel>
               </div>
             </div>
+
+            
           </div>;
+
+          
     }
 }
 

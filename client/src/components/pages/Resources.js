@@ -82,6 +82,7 @@ class Resources extends Component {
             <ul className="list-unstyled">
               <li>3098 Florence Avenue</li>
               <li>San Jose, CA 95127</li>
+              <li>Phone: 1 (408) 792-3720</li>
               <li>
                 <span className="font-weight-bold">
                   Pastor Claudell Huey:{" "}
@@ -90,10 +91,11 @@ class Resources extends Component {
             </ul>
 
             <p className="h4">
-              Santa Clara County Public Health Department <small className="text-muted">
+              Public Health Department Santa Clara County <small className="text-muted">
                 Crane Center
               </small>
             </p>
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsccpublichealth%2Fvideos%2F2158763354398525%2F&show_text=0&width=560" width="560" height="315" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
             {<iframe title="LCTW" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3647494125553!2d-121.91410528487653!3d37.33387254517634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb67b7e1fd15%3A0xbee30c589b7ba6e3!2sCrane+Center!5e0!3m2!1sen!2sus!4v1534203068830" width="100%" height="450" frameBorder="0" allowFullScreen />}
             <ul className="list-unstyled">
               <li className="font-weight-bold">
