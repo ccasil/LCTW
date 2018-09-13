@@ -13,7 +13,7 @@ class Staff extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={executive} height="200px;" alt="" />
+            <img className="executive" src={executive} height="400px;" alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Sister Cheri Crockett</h2>
@@ -37,11 +37,11 @@ class Staff extends Component {
             </p>
           </div>
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={cheri} height="400px;" alt="" />
+            <img className="executive" src={cheri} height="300px;" alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <p className="lead">
-              On September 02, 2017 Cheri Crockett was recognizes for
+              On September 02, 2017 Cheri Crockett was recognized for
               serving the Homeless, in San Joaquin County @ Diablo Canyon
               Country Club.
             </p>
@@ -50,7 +50,7 @@ class Staff extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={ceo} height="200px;" alt="" />
+            <img className="executive" src={ceo} height="400px;" alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Michelle Karbo</h2>
@@ -77,7 +77,7 @@ class Staff extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={graphics} height="200px;" alt="" />
+            <img className="executive" src={graphics} height="400px;" alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Ms. Aleesa Evans</h2>
