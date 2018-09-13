@@ -118,7 +118,7 @@ class Fundraisers extends Component {
         super(props);
         this.state = { 
             autoplay: true,
-            text: "LOVE activities include: waterballoon fights, relay races, and other fun bonding experiences"
+            text: "LOVE activities include: waterballoon fights, waterballoon toss, tug-of-war and other fun bonding experiences"
         };
         this.change = this.change.bind(this)
         this.switchText = this.switchText.bind(this)

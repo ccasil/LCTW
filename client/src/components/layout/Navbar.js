@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
-import lctw from "../../images/LCTW.png";
+import lctw from "../../images/LogoRoboto.png";
 
 class Navbar extends Component {
   render() {
@@ -77,9 +77,9 @@ class Navbar extends Component {
                   Meet Our Board
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <Link className="dropdown-item" to="/founder">Founder / CEO</Link>
+                  <Link className="dropdown-item" to="/founder">Founder</Link>
                   <Link className="dropdown-item" to="/executive">Board of Directors</Link>
-                  <Link className="dropdown-item" to="/staff">Staff</Link>
+                  <Link className="dropdown-item" to="/staff">Executives</Link>
                 </div>
               </li>
               <li className="nav-item">

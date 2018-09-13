@@ -82,7 +82,6 @@ class Resources extends Component {
             <ul className="list-unstyled">
               <li>3098 Florence Avenue</li>
               <li>San Jose, CA 95127</li>
-              <li>Phone: 1 (408) 792-3720</li>
               <li>
                 <span className="font-weight-bold">
                   Pastor Claudell Huey:{" "}

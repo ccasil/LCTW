@@ -80,7 +80,7 @@ class Contact extends Component {
           <div className="col text-left">
             <p className="lead">3098 Florence Ave, San Jose, CA 95127</p>
             <p className="lead">Email: info@lovechangingtheworld.org</p>
-            <p className="lead">Phone: 1 (347) 849-4618</p>
+            <p className="lead">Phone: 1 (408) 259-1008</p>
           </div>
           <div className="col">
             <form action="https://goo.gl/maps/vkXWFWQsZCy" target="_blank">

@@ -40,10 +40,20 @@ class Membership extends Component {
                 	<h1> Red </h1>
 				</div>
 				<div className="membership-description">
-					As a RED member, you will receive the exclusive LCTW VIP Red T-Shirt, as well as a Red VIP Tank Top and Apron. You will also receive discounted tickets to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Red membership is earned by donors who contribute $20 a month to LCTW and their cause.
+					As a RED member, you will receive the exclusive LCTW VIP Red T-Shirt, as well as a Red VIP Tank Top and Apron. You will be able to purchase discounted tickets to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Red membership is earned by donors who contribute $20 a month to LCTW and their cause.
 				</div>
-
-
+				<div className="basic parallax">
+					<h1> Basic </h1>
+				</div>
+				<div className="membership-description">
+					As a Basic member, you will receive a customized T-Shirt. You will be able to purchase  discounted tickets to events hosted by LCTW. Please check out these items in the Shop. Basic membership is earned by our supporters.
+				</div>
+				<div className="referral parallax">
+					<h1> Referral </h1>
+				</div>
+				<div className="membership-description">
+					If you refer a LOVED one to join our LCTW family, you will receive a FREE T-shirt of your choice!
+				</div>
 			</div>
         );
     }
