@@ -6,6 +6,7 @@ class Founder extends Component {
   render() {
     return <div className="founder">
       <h1 className="display-1">Meet Our President</h1>
+      <hr />
           <div className="photospace float-left">
             <img className="ceo float-left" src={ceo} height="400px;" alt="ceo" />
             <p className="font-weight-bold">Missionary Chelette H. DeWees, Founder</p>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
-import lctw from "../../images/LogoRoboto.png";
+import lctw from "../../images/LCTWROBOTOMID.png";
 
 class Navbar extends Component {
   render() {
