@@ -42,7 +42,7 @@ class Staff extends Component {
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <p className="lead">
               On September 02, 2017 Cheri Crockett was recognized for
-              serving the Homeless, in San Joaquin County @ Diablo Canyon
+              serving the Homeless in the San Joaquin County at the Diablo Canyon
               Country Club.
             </p>
           </div>
