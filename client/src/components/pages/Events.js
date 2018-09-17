@@ -5,8 +5,8 @@ import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
 // upcoming events placeholder routes
-import placeholder1 from '../../images/Events/26904406_782267771982878_8167205781200355992_n.jpg';
-import placeholder2 from '../../images/Events/34035695_853175221558799_4338713599494062080_n.jpg';
+import nextevent1 from '../../images/Fliers/1.JPG';
+import nextevent2 from '../../images/Fliers/2.JPG';
 
 // image routes for Event 1
 import event1_image2 from '../../images/Events/Event_1/2.jpg';
@@ -111,27 +111,21 @@ import event5_image8 from '../../images/Events/Event_5/8.jpg';
 import event5_image9 from '../../images/Events/Event_5/9.jpg';
 import event5_image10 from '../../images/Events/Event_5/10.jpg';
 import event5_image11 from '../../images/Events/Event_5/11.jpg';
-import event5_image12 from '../../images/Events/Event_5/12.jpg';
-import event5_image13 from '../../images/Events/Event_5/13.jpg';
 import event5_image14 from '../../images/Events/Event_5/14.jpg';
 import event5_image15 from '../../images/Events/Event_5/15.jpg';
-import event5_image16 from '../../images/Events/Event_5/16.jpg';
 import event5_image17 from '../../images/Events/Event_5/17.jpg';
 import event5_image18 from '../../images/Events/Event_5/18.jpg';
 import event5_image19 from '../../images/Events/Event_5/19.jpg';
 import event5_image20 from '../../images/Events/Event_5/20.jpg';
-import event5_image21 from '../../images/Events/Event_5/21.jpg';
 import event5_image22 from '../../images/Events/Event_5/22.jpg';
 import event5_image23 from '../../images/Events/Event_5/23.jpg';
 import event5_image24 from '../../images/Events/Event_5/24.jpg';
 import event5_image25 from '../../images/Events/Event_5/25.jpg';
 import event5_image26 from '../../images/Events/Event_5/26.jpg';
-import event5_image28 from '../../images/Events/Event_5/28.jpg';
 import event5_image29 from '../../images/Events/Event_5/29.jpg';
 import event5_image30 from '../../images/Events/Event_5/30.jpg';
 import event5_image31 from '../../images/Events/Event_5/31.jpg';
 import event5_image32 from '../../images/Events/Event_5/32.jpg';
-import event5_image33 from '../../images/Events/Event_5/33.jpg';
 import event5_image34 from '../../images/Events/Event_5/34.jpg';
 import event5_image35 from '../../images/Events/Event_5/35.jpg';
 
@@ -253,6 +247,25 @@ import event14_image2 from '../../images/Events/Event_14/2.JPG';
 import event14_image3 from '../../images/Events/Event_14/3.JPG';
 import event14_image4 from '../../images/Events/Event_14/4.JPG';
 import event14_image5 from '../../images/Events/Event_14/5.JPG';
+import event14_image6 from '../../images/Events/Event_14/6.JPG';
+import event14_image7 from '../../images/Events/Event_14/7.JPG';
+import event14_image8 from '../../images/Events/Event_14/8.JPG';
+import event14_image9 from '../../images/Events/Event_14/9.JPG';
+import event14_image10 from '../../images/Events/Event_14/10.JPG';
+import event14_image11 from '../../images/Events/Event_14/11.JPG';
+import event14_image14 from '../../images/Events/Event_14/14.JPG';
+import event14_image15 from '../../images/Events/Event_14/15.JPG';
+import event14_image16 from '../../images/Events/Event_14/16.JPG';
+import event14_image17 from '../../images/Events/Event_14/17.JPG';
+import event14_image18 from '../../images/Events/Event_14/18.JPG';
+import event14_image19 from '../../images/Events/Event_14/19.JPG';
+import event14_image20 from '../../images/Events/Event_14/20.JPG';
+import event14_image21 from '../../images/Events/Event_14/21.JPG';
+import event14_image22 from '../../images/Events/Event_14/22.JPG';
+import event14_image23 from '../../images/Events/Event_14/23.JPG';
+import event14_image24 from '../../images/Events/Event_14/24.JPG';
+import event14_image25 from '../../images/Events/Event_14/25.JPG';
+import event14_image26 from '../../images/Events/Event_14/26.JPG';
 
 class Events extends Component {
     constructor(props) {
@@ -338,9 +351,9 @@ class Events extends Component {
 
         const imgArr_event5 = [
             event5_image1, event5_image2, event5_image3, event5_image4, event5_image5, event5_image6, event5_image7, event5_image8, event5_image9,
-            event5_image10, event5_image11, event5_image12, event5_image13, event5_image14, event5_image15, event5_image16, event5_image17, event5_image18, event5_image19,
-            event5_image20, event5_image21, event5_image22, event5_image23, event5_image24, event5_image25, event5_image26, event5_image28, event5_image29,
-            event5_image30, event5_image31, event5_image32, event5_image33, event5_image34, event5_image35
+            event5_image10, event5_image11, event5_image14, event5_image15, event5_image17, event5_image18, event5_image19,
+            event5_image20, event5_image22, event5_image23, event5_image24, event5_image25, event5_image26, event5_image29,
+            event5_image30, event5_image31, event5_image32, event5_image34, event5_image35
         ];
 
         const imgArr_event6 = [
@@ -370,7 +383,9 @@ class Events extends Component {
       const imgArr_event13 = [
         event13_image1, event13_image2, event13_image3, event13_image4, event13_image5, event13_image6, event13_image7, event13_image8
       ];
-      const imgArr_event14 = [event14_image1, event14_image2, event14_image3, event14_image4, event14_image5];
+      const imgArr_event14 = [event14_image1, event14_image2, event14_image3, event14_image4, event14_image5, event14_image6, event14_image7, event14_image8, event14_image9,
+        event14_image10, event14_image11, event14_image14, event14_image15, event14_image16, event14_image17, event14_image18, event14_image19,
+        event14_image20, event14_image21, event14_image22, event14_image23, event14_image24, event14_image25, event14_image26];
 
         let { leftIcon, rightIcon } = this.state;
         
@@ -402,16 +417,16 @@ class Events extends Component {
 
             <div className="row">
               <div className="col">
-                <h5>Sista Love's Slumber Sleepover</h5>
+                <h5>LOVE starts at HomeFirst Courtyard BBQ #2</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle12}>
-                  <img className="btnImg" src={placeholder1} alt="" />
+                  <img className="btnImg" src={nextevent1} alt="" />
                 </a>
                 <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
                   <ModalHeader toggle={this.toggle12}>
-                    Sista Love's Slumber Sleepover
+                    LOVE starts at HomeFirst Courtyard BBQ #2
                   </ModalHeader>
                   <ModalBody>
-                    <img className="" src={placeholder1} height="800px;" alt="placeholder1" />
+                  <img className="" src={nextevent1} height="800px;" alt="nextevent1" />
                   </ModalBody>
                   <ModalFooter>
                     <Button color="secondary" onClick={this.toggle12}>
@@ -421,16 +436,18 @@ class Events extends Component {
                 </Modal>
               </div>
               <div className="col">
-                <h5>Juneteenth in the Park Festival</h5>
+                <h5>LOVE Blessings Give-A-Way</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle13}>
-                  <img className="btnImg" src={placeholder2} alt="" />
+                <img className="btnImg" src={nextevent2} alt="" />
                 </a>
                 <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
                   <ModalHeader toggle={this.toggle13}>
-                    Juneteenth in the Park Festival
+                    LOVE Blessings Give-A-Way
                   </ModalHeader>
-                  <ModalBody>
-                    <img className="" src={placeholder2} height="800px;" alt="placeholder2" />
+                <ModalBody className="text-center">
+                    <img src={nextevent2} height="800px;" alt="nextevent2" />
+                    <p className="lead font-weight-bold">It's Cold Outside <span role="img">💧🌨💦❄️</span></p>
+                    <p className="lead">#LCTW is current seeking donations of jackets, sweaters, blankets, hats, scarves, gloves, socks, long johns, backpacks, and other items for this upcoming event!</p>
                   </ModalBody>
                   <ModalFooter>
                     <Button color="secondary" onClick={this.toggle13}>
@@ -458,7 +475,10 @@ class Events extends Component {
           </div>
 
             <h1 className="display-4">
-              LOVE Starts at the HomeFirst Courtyard BBQ
+              LOVE starts at HomeFirst
+            </h1>
+            <h1 className="display-4">
+              Courtyard BBQ #1
             </h1>
             <div className="row">
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>

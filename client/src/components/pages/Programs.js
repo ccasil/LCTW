@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../css/Programs.css";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Link } from "react-router-dom";
 
 // image routes for Event 12
 import event12_image1 from '../../images/Events/Event_12/1.JPG';
@@ -77,6 +78,7 @@ class Programs extends Component {
 
     return <div>
         <h1 className="display-1">Programs</h1>
+      <p className="lead text-center">*We are in need of <Link to="/sponsorform">sponsors</Link> and <Link to="/donations">donations</Link> to support our programs and to help aid the homeless and less fortunate.</p>
         <div className="row">
         <div className="col-12">
           <Button className="btn-block btn-lg" color="danger" onClick={this.toggle1}>
