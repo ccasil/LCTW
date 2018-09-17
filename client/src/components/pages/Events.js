@@ -463,11 +463,11 @@ class Events extends Component {
             LCTW San Joaquin County Homeless Outreach
             </h1>
           <div className="row">
-            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+            <div className="col-md-12" style={{  marginTop: 40, marginBottom: 200 }}>
               <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 {imgArr_event14.map(function (image, index) {
-                  return <div className="text-center">
-                    <img key={index} src={image} style={{ height: 600 }} alt="" />
+                  return <div className="text-center" key={index}>
+                    <img  src={image} style={{ height: 600}} alt="" />
                   </div>;
                 })}
               </RBCarousel>
@@ -484,8 +484,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event13.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -499,8 +499,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event1.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -514,8 +514,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event3.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -529,8 +529,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event4.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -542,8 +542,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event5.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -555,8 +555,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event6.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -568,8 +568,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event7.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -583,8 +583,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event9.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
@@ -598,8 +598,8 @@ class Events extends Component {
               <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event11.map(function(image, index) {
-                    return <div className="text-center">
-                        <img key={index} src={image} style={{ height: 600 }} alt="" />
+                    return <div className="text-center" key={index}>
+                        <img  src={image} style={{ height: 600 }} alt="" />
                       </div>;
                   })}
                 </RBCarousel>
