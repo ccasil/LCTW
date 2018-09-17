@@ -446,7 +446,7 @@ class Events extends Component {
                   </ModalHeader>
                 <ModalBody className="text-center">
                     <img src={nextevent2} height="800px;" alt="nextevent2" />
-                    <p className="lead font-weight-bold">It's Cold Outside <span role="img">💧🌨💦❄️</span></p>
+                    <p className="lead font-weight-bold">It's Cold Outside <span role="img" aria-label="water">💧🌨💦❄️</span></p>
                     <p className="lead">#LCTW is current seeking donations of jackets, sweaters, blankets, hats, scarves, gloves, socks, long johns, backpacks, and other items for this upcoming event!</p>
                   </ModalBody>
                   <ModalFooter>

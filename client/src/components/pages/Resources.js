@@ -10,7 +10,7 @@ class Resources extends Component {
                 Condoms Bags
               </li>
               <li>Support for the Blind and Visually Impaired</li>
-              <li>Support for Pregnant teens with Toddlers</li>
+              <li>Support for Pregnant Teens with Toddlers</li>
               <li>Homeless Support and Outreach Services</li>
             </ul>
 
@@ -82,7 +82,6 @@ class Resources extends Component {
             <ul className="list-unstyled">
               <li>3098 Florence Avenue</li>
               <li>San Jose, CA 95127</li>
-              <li>Phone: 1 (408) 792-3720</li>
               <li>
                 <span className="font-weight-bold">
                   Pastor Claudell Huey:{" "}

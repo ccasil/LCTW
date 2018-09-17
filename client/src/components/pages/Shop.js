@@ -1,7 +1,7 @@
 // import React, { Component } from 'react'
 import React from 'react';
 import "../css/Shop.css";
-
+import { Link } from "react-router-dom";
 
 import BlackRed from '../../images/Shop/LOVE 1.jpg';
 import BlackWhite from '../../images/Shop/LOVE 2.jpg';
@@ -508,7 +508,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the Membership page.
+                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
               </p>
             </form>
             <div className="line" />
@@ -603,7 +603,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the Membership page.
+                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
               </p>
             </form>
             <div className="line" />
@@ -654,7 +654,7 @@ class Donations extends React.Component {
             </form>
             <p>
                 {" "}
-                If you would like this item, please support us by visiting the Membership page.
+                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
               </p>
 
             <div className="line" />

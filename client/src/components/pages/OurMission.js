@@ -162,8 +162,8 @@ class OurMission extends Component {
             <li>Provide resources for people in need</li>
             <li>Fundraising</li>
             <li>
-              Partnership with other Non-profit organizations and
-              Stakeholders
+              Partnership with other non-profit organizations and
+              stakeholders
             </li>
             <li>Meeting human needs with love</li>
             <hr />
