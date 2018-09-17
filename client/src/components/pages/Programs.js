@@ -76,7 +76,7 @@ class Programs extends Component {
       event12_image1, event12_image2, event12_image3, event12_image4, event12_image5, event12_image6, event12_image7, event12_image8, event12_image9, event12_image10, event12_image11, event12_image12, event12_image13, event12_image14, event12_image15, event12_image16, event12_image17, event12_image18, event12_image19,
       event12_image20, event12_image21, event12_image22, event12_image23, event12_image24, event12_image25, event12_image26, event12_image27]
 
-    return <div>
+    return <div className="programs">
         <h1 className="display-1">Programs</h1>
       <p className="lead text-center">*We are in need of <Link to="/sponsorform">sponsors</Link> and <Link to="/donations">donations</Link> to support our programs and to help aid the homeless and less fortunate.</p>
         <div className="row">
