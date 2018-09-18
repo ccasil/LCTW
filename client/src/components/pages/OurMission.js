@@ -142,7 +142,7 @@ class OurMission extends Component {
 
     // let { leftIcon, rightIcon } = this.state;
     return <div className="ourmission">
-        <h1 className="display-1">OUR MISSION</h1>
+        <h1 className="display-1">Our Mission</h1>
         <h3 className="font-weight-bold lead">
           The mission of Love Changing the World is all about LOVE first!
         </h3>

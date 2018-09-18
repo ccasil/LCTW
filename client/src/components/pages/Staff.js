@@ -9,7 +9,7 @@ import "../css/Landing.css";
 class Staff extends Component {
   render() {
     return <div>
-        <h1 className="display-3">Meet Our Executive Directors</h1>
+        <h3 className="display-3 text-center">Meet Our Executive Directors</h3>
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">

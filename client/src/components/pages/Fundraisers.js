@@ -224,7 +224,7 @@ render() {
     ];
     let { leftIcon, rightIcon } = this.state;
     return <div>
-        <h1 className="display-1">Want to have a Fundraiser?</h1>
+        <h2 className="display-2">Want to have a Fundraiser?</h2>
         <p className="lead">
             Leave your contact info here so that we can
             host your next fundraising event!

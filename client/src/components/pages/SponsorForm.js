@@ -41,7 +41,7 @@ class SponsorForm extends Component {
 
     render() {
         return <div>
-            <h1 className="display-1">Want to Become a Sponsor?</h1>
+            <h2 className="display-2">Want to Become a Sponsor?</h2>
             <div className="centerimages">
                 <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={PlannedParenthood} alt="Planned Parenthood"></img></a>
                 <a href="https://www.sccgov.org/sites/phd/services/hiv-resources/pages/std-hiv-test-home.aspx" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={SCPublicHealth} alt="Santa Clara Public Health"></img></a>
