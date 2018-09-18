@@ -14,29 +14,34 @@ class HomelessForm extends Component {
         const pant = document.getElementById("pant").value;
         const sock = document.getElementById("sock").value;
         const underwear = document.getElementById("underwear").value;
-        axios({
-            method: "POST",
-            url: "http://localhost:8000/sendhelp",
-            data: {
-                first_name: first_name,
-                last_name: last_name,
-                phone: phone,
-                email: email,
-                birthday: birthday,
-                genderage: genderage,
-                shirt: shirt,
-                pant: pant,
-                sock: sock,
-                underwear: underwear
-            }
-        }).then(response => {
-            if (response.data.msg === "success") {
-                alert("Message Sent");
-                this.resetForm();
-            } else {
-                alert("Message failed to send");
-            }
-        });
+        if(first_name && last_name){
+            axios({
+                method: "POST",
+                url: "http://localhost:8000/sendhelp",
+                data: {
+                    first_name: first_name,
+                    last_name: last_name,
+                    phone: phone,
+                    email: email,
+                    birthday: birthday,
+                    genderage: genderage,
+                    shirt: shirt,
+                    pant: pant,
+                    sock: sock,
+                    underwear: underwear
+                }
+            }).then(response => {
+                if (response.data.msg === "success") {
+                    alert("Message Sent");
+                    this.resetForm();
+                } else {
+                    alert("Message failed to send");
+                }
+            })
+        }
+        else{
+            alert("Please fill in the required fields")
+        }
     };
     resetForm() {
         document.getElementById("help-form").reset();

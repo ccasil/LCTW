@@ -16,27 +16,38 @@ class SponsorForm extends Component {
         const phone = document.getElementById('phone').value;
         const email = document.getElementById("email").value;
         const organization = document.getElementById('organization').value;
-        axios({
-            method: "POST",
-            url: "http://localhost:8000/sendsponsor",
-            data: {
-                first_name: first_name,
-                last_name: last_name,
-                phone: phone,
-                email: email,
-                organization: organization
-            }
-        }).then((response) => {
-            if (response.data.msg === 'success') {
-                alert("Message Sent");
-                this.resetForm();
-            } else {
-                alert("Message failed to send");
-            }
-        })
-    }
-    resetForm() {
-        document.getElementById('sponsor-form').reset();
+        var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if(first_name && last_name && phone ** reg.test(email))
+        {        axios({
+                    method: "POST",
+                    url: "http://localhost:8000/sendsponsor",
+                    data: {
+                        first_name: first_name,
+                        last_name: last_name,
+                        phone: phone,
+                        email: email,
+                        organization: organization
+                    }
+                }).then((response) => {
+                    if (response.data.msg === 'success') {
+                        alert("Message Sent");
+                        this.resetForm();
+                    } else {
+                        alert("Message failed to send");
+                    }
+                })}
+    
+        else if (first_name && last_name && phone && !reg.test(email)){
+          alert("Please enter a valid email")
+        }
+        else{
+          alert("Please fill in the required fields")
+        }
+
+    };
+     resetForm() {
+        document.getElementById("help-form").reset();
     }
 
     render() {
@@ -81,5 +92,6 @@ class SponsorForm extends Component {
             </div>;
     }
 }
+
 
 export default SponsorForm;
