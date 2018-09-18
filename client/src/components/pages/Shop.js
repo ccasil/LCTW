@@ -2,6 +2,7 @@
 import React from 'react';
 import "../css/Shop.css";
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 
 import BlackRed from '../../images/Shop/LOVE 1.jpg';
 import BlackWhite from '../../images/Shop/LOVE 2.jpg';
@@ -22,6 +23,8 @@ import VIPApron1 from '../../images/Shop/VIPApron1.JPG';
 import VIPApron2 from '../../images/Shop/VIPApron2.JPG';
 import GoldTankTop from '../../images/Shop/TankGold.JPG';
 import PlatTankTop from '../../images/Shop/TankPlat.JPG';
+import Fire from '../../images/Shop/Fire.gif'
+
 class Donations extends React.Component {
 
   constructor(props){
@@ -119,6 +122,16 @@ class Donations extends React.Component {
 
   render() {
     return <div className="donations">
+        <script>
+          $(document).ready(function(){
+            setInterval(function(){ 
+              $('#whathot').fadeToggle(1300);
+              setTimeout(function(){
+                $('#whatnew').fadeToggle(1300);
+              }, 1300)
+            }, 1300)
+          });
+        </script>
         <h1 className="display-1">Shop</h1>
         <p className="lead">
           Hello all, The Love Changing the World Family is seeking donations
@@ -132,15 +145,15 @@ class Donations extends React.Component {
 
         <div className="shoparea">
           <div className="new">
-            <div className="cartItem">
+            <div id="whatnew" className="cartItem">
               <h2 className="font-weight-bold">Whats New!</h2>
               <h4> VIP Aprons </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={VIPApron1} />
               </div>
             </div>
-            <div className="cartItem">
-            <h2 className="font-weight-bold">Whats Hot!</h2>
+            <div id="whathot" className="cartItem">
+            <h2 className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />Whats Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
               <h4> LCTW VIP Memberships </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={this.state.image} />
