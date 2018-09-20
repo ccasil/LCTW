@@ -52,7 +52,7 @@ class Donations extends Component {
                 <h1 className="display-1">Donations</h1>
                 <p className="text-center">Our #LCTW Family would like to thank New Mission Community Church, Peter's Bakery, Safeway, Lucky, The Home Depot, and Walmart for your help, donations, &amp; support... We <span className="font-weight-bold">LOVE</span> you all!</p>
                 <div className="row">
-                    <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+                    <div className="col-md-12" style={{ marginTop: 40, marginBottom: 80 }}>
                         <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                             {imgArr_event8.map(function (image, index) {
                                 return <div className="text-center" key={index}>

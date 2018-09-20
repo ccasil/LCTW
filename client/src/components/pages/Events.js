@@ -297,9 +297,8 @@ class Events extends Component {
     }
 
     //   Toggle Previous Events
-
     onSelect = (active, direction) => {
-        console.log(`active=${active} && direction=${direction}`);
+        // console.log(`active=${active} && direction=${direction}`);
     };
     slideNext = () => {
         this.slider.slideNext();
@@ -417,7 +416,8 @@ class Events extends Component {
 
             <div className="row">
               <div className="col">
-                <h5>LOVE starts at HomeFirst Courtyard BBQ #2</h5>
+                <h5>LOVE starts at HomeFirst </h5>
+                <h5>Courtyard BBQ #2</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle12}>
                   <img className="btnImg" src={nextevent1} alt="" />
                 </a>
@@ -436,6 +436,7 @@ class Events extends Component {
                 </Modal>
               </div>
               <div className="col">
+              <h5><span role="img" aria-label="water">💧🌨</span>CRY OUT<span role="img" aria-label="water">❄️💦</span></h5>
                 <h5>LOVE Blessings Give-A-Way</h5>
                 <a className="btn-block" color="danger" onClick={this.toggle13}>
                 <img className="btnImg" src={nextevent2} alt="" />
@@ -446,7 +447,7 @@ class Events extends Component {
                   </ModalHeader>
                 <ModalBody className="text-center">
                     <img src={nextevent2} height="800px;" alt="nextevent2" />
-                    <p className="lead font-weight-bold">It's Cold Outside <span role="img" aria-label="water">💧🌨💦❄️</span></p>
+                    <p className="lead font-weight-bold">It's Cold Outside</p>
                     <p className="lead">#LCTW is current seeking donations of jackets, sweaters, blankets, hats, scarves, gloves, socks, long johns, backpacks, and other items for this upcoming event!</p>
                   </ModalBody>
                   <ModalFooter>
@@ -463,7 +464,7 @@ class Events extends Component {
             LCTW San Joaquin County Homeless Outreach
             </h1>
           <div className="row">
-            <div className="col-md-12" style={{  marginTop: 40, marginBottom: 200 }}>
+            <div className="col-md-12" style={{  marginTop: 40, marginBottom: 100 }}>
               <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 {imgArr_event14.map(function (image, index) {
                   return <div className="text-center" key={index}>
@@ -481,7 +482,7 @@ class Events extends Component {
               Courtyard BBQ #1
             </h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event13.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -496,7 +497,7 @@ class Events extends Component {
               37th Annual Juneteenth Festival 2018
             </h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event1.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -511,7 +512,7 @@ class Events extends Component {
               LCTW Supporting AdVance Projects for Cinco de Mayo
             </h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event3.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -526,7 +527,7 @@ class Events extends Component {
               Sista Love's Slumber Sleepover
             </h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event4.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -539,7 +540,7 @@ class Events extends Component {
 
             <h1 className="display-4">Poetry in the Park</h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event5.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -552,7 +553,7 @@ class Events extends Component {
 
             <h1 className="display-4">Juneteenth Festival 2016</h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event6.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -565,7 +566,7 @@ class Events extends Component {
 
             <h1 className="display-4">Poetry in the Park</h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event7.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -580,7 +581,7 @@ class Events extends Component {
               LCTW Supporting P.A.R.T.I. Anti-Bullying Program
             </h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event9.map(function(image, index) {
                     return <div className="text-center" key={index}>
@@ -595,7 +596,7 @@ class Events extends Component {
               LCTW Supporting Women Rising Above Abuse (WRAA)
             </h1>
             <div className="row">
-              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+              <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                   {imgArr_event11.map(function(image, index) {
                     return <div className="text-center" key={index}>

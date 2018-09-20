@@ -173,9 +173,7 @@ class Fundraisers extends Component {
                 if(response.data.msg === 'success') {
                     alert("Message Sent");
                     this.resetForm();      
-                }
-                    
-                 else {
+                }else {
                     alert("Message failed to send");
                 }
             })
@@ -195,7 +193,7 @@ resetForm() {
 }
 
     onSelect = (active, direction) => {
-        console.log(`active=${active} && direction=${direction}`);
+        // console.log(`active=${active} && direction=${direction}`);
     };
     slideNext = () => {
         this.slider.slideNext();
@@ -311,11 +309,11 @@ render() {
 
         <h3 className="display-3 text-center">1st Family Love Sip &amp; Paint Fundraiser Event</h3>
         <div className="row">
-            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                     {sipandpaint.map(function (image, index) {
-                        return <div className="text-center">
-                            <img key={index} src={image} style={{ height: 600 }} alt="" />
+                        return <div className="text-center" key={index}>
+                            <img src={image} style={{ height: 600 }} alt="" />
                         </div>;
                     })}
                 </RBCarousel>
