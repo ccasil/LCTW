@@ -24,6 +24,7 @@ import VIPApron2 from '../../images/Shop/VIPApron2.JPG';
 import GoldTankTop from '../../images/Shop/TankGold.JPG';
 import PlatTankTop from '../../images/Shop/TankPlat.JPG';
 import Fire from '../../images/Shop/Fire.gif'
+import Star from '../../images/Shop/Star.gif'
 
 class Donations extends React.Component {
 
@@ -145,13 +146,14 @@ class Donations extends React.Component {
 
         <div className="shoparea">
           <div className="new">
-            <div id="whatnew" className="cartItem">
-              <h2 className="font-weight-bold">What's New!</h2>
+            <div className="cartItem">
+              <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />Whats New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
               <h4> VIP Aprons </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={VIPApron1} />
               </div>
             </div>
+
             <div id="whathot" className="cartItem">
             <h2 className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />What's Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
               <h4> VIP Memberships </h4>
