@@ -26,6 +26,8 @@ import PlatTankTop from '../../images/Shop/TankPlat.JPG';
 import Fire from '../../images/Shop/Fire.gif'
 import Star from '../../images/Shop/Star.gif'
 
+import logo from '../../images/Logos/logo.png';
+
 class Donations extends React.Component {
 
   constructor(props){
@@ -147,18 +149,18 @@ class Donations extends React.Component {
         <div className="shoparea">
           <div className="new">
             <div className="cartItem">
-              <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />Whats New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
-              <h4> VIP Aprons </h4>
+              <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />What's New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
+              <h4> Hoodies </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={VIPApron1} />
               </div>
             </div>
 
-            <div id="whathot" className="cartItem">
-            <h2 className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />What's Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
+            <div className="cartItem">
+            <h2 id="whathot" className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />What's Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
               <h4> VIP Memberships </h4>
               <div className="regularItem">
-                <img alt="shirt" className="shoppingImg" src={this.state.image} />
+                <img alt="member" className="shoppingImg" src={logo} />
               </div>
             </div>
           </div>

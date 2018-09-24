@@ -91,12 +91,13 @@ app.post("/sendhelp", (req, res, next) => {
   var phone = req.body.phone;
   var email = req.body.email;
   var birthday = req.body.birthday;
+  var location = req.body.location;
   var genderage = req.body.genderage;
   var shirt = req.body.shirt;
   var pant = req.body.pant;
   var sock = req.body.sock;
   var underwear = req.body.underwear;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nBirthday: ${birthday} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nBirthday: ${birthday} \nArea: ${location} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {

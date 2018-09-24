@@ -9,6 +9,7 @@ class HomelessForm extends Component {
         const phone = document.getElementById('phone').value;
         const email = document.getElementById("email").value;
         const birthday = document.getElementById("birthday").value;
+        const location = document.getElementById("location").value;
         const genderage = document.getElementById("genderage").value;
         const shirt = document.getElementById("shirt").value;
         const pant = document.getElementById("pant").value;
@@ -24,6 +25,7 @@ class HomelessForm extends Component {
                     phone: phone,
                     email: email,
                     birthday: birthday,
+                    location: location,
                     genderage: genderage,
                     shirt: shirt,
                     pant: pant,
@@ -81,6 +83,11 @@ class HomelessForm extends Component {
                 <p>Date of Birth*</p>
                 <input type="date" className="form-control" placeholder="" name="birthday" id="birthday" />
               </div>
+
+            <div className="form-group">
+              <p>Camp Location (Area)</p>
+              <input id="location" type="text" className="form-control" placeholder="" name="location" />
+            </div>
 
               <div className="form-group">
                 <label htmlFor="contact">Select One*</label>
