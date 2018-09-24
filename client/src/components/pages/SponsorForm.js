@@ -16,32 +16,43 @@ class SponsorForm extends Component {
         const phone = document.getElementById('phone').value;
         const email = document.getElementById("email").value;
         const organization = document.getElementById('organization').value;
-        axios({
-            method: "POST",
-            url: "http://localhost:8000/sendsponsor",
-            data: {
-                first_name: first_name,
-                last_name: last_name,
-                phone: phone,
-                email: email,
-                organization: organization
-            }
-        }).then((response) => {
-            if (response.data.msg === 'success') {
-                alert("Message Sent");
-                this.resetForm();
-            } else {
-                alert("Message failed to send");
-            }
-        })
-    }
-    resetForm() {
-        document.getElementById('sponsor-form').reset();
+        var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if(first_name && last_name && phone ** reg.test(email))
+        {        axios({
+                    method: "POST",
+                    url: "http://localhost:8000/sendsponsor",
+                    data: {
+                        first_name: first_name,
+                        last_name: last_name,
+                        phone: phone,
+                        email: email,
+                        organization: organization
+                    }
+                }).then((response) => {
+                    if (response.data.msg === 'success') {
+                        alert("Message Sent");
+                        this.resetForm();
+                    } else {
+                        alert("Message failed to send");
+                    }
+                })}
+    
+        else if (first_name && last_name && phone && !reg.test(email)){
+          alert("Please enter a valid email")
+        }
+        else{
+          alert("Please fill in the required fields")
+        }
+
+    };
+     resetForm() {
+        document.getElementById("help-form").reset();
     }
 
     render() {
         return <div>
-            <h1 className="display-1">Want to Become a Sponsor?</h1>
+            <h2 className="display-2">Want to become a Sponsor?</h2>
             <div className="centerimages">
                 <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={PlannedParenthood} alt="Planned Parenthood"></img></a>
                 <a href="https://www.sccgov.org/sites/phd/services/hiv-resources/pages/std-hiv-test-home.aspx" target="_blank" rel="noopener noreferrer"><img className="w-100 img-fluid d-inline-block" src={SCPublicHealth} alt="Santa Clara Public Health"></img></a>
@@ -81,5 +92,6 @@ class SponsorForm extends Component {
             </div>;
     }
 }
+
 
 export default SponsorForm;

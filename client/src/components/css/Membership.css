@@ -3,6 +3,8 @@
 .gold 	{	background: url(../../images/Membership/gold.jpg);}
 .gold h1{	color: #fee251; padding-top: 60px; font-size:52pt;}
 .red 	{	background: url(../../images/Membership/red.jpg);}
-.red h1	{	color: #c8102e; padding-top: 60px; font-size:52pt;}
+.red h1	{	color: #cd1731; padding-top: 60px; font-size:52pt;}
+.basic{ 	background: url(../../images/Membership/basic.jpg); }
+.basic h1	{	color: #8bb484; padding-top: 60px; font-size:52pt;}
 .membership-description { padding: 5rem; text-align: center }
 .donation-button{margin-top: 2rem}

@@ -153,33 +153,47 @@ class Fundraisers extends Component {
         const type = document.getElementById('type').value;
         const event = document.getElementById('event').value;
         const activities = document.getElementById('activities').value;
-        axios({
-            method: "POST",
-            url: "http://localhost:8000/sendfundraiser",
-            data: {
-                first_name: first_name,
-                last_name: last_name,
-                phone: phone,
-                email: email,
-                type: type,
-                event: event,
-                activities: activities
-            }
-        }).then((response) => {
-            if(response.data.msg === 'success') {
-    alert("Message Sent");
-    this.resetForm();
-} else {
-    alert("Message failed to send");
-}
-        })
+
+        var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if(first_name && last_name && phone && reg.test(email) ){
+            axios({
+                method: "POST",
+                url: "http://localhost:8000/sendfundraiser",
+                data: {
+                    first_name: first_name,
+                    last_name: last_name,
+                    phone: phone,
+                    email: email,
+                    type: type,
+                    event: event,
+                    activities: activities
+                }
+            }).then((response) => {
+                if(response.data.msg === 'success') {
+                    alert("Message Sent");
+                    this.resetForm();      
+                }else {
+                    alert("Message failed to send");
+                }
+            })
+        }
+        else if (first_name && last_name && phone && !reg.test(email)){
+            alert("Please enter a valid email")
+        }
+        else{
+            alert("Please fill in the required fields")
+        }
+    
+
+
     }
 resetForm() {
     document.getElementById('fundraiser-form').reset();
 }
 
     onSelect = (active, direction) => {
-        console.log(`active=${active} && direction=${direction}`);
+        // console.log(`active=${active} && direction=${direction}`);
     };
     slideNext = () => {
         this.slider.slideNext();
@@ -224,7 +238,7 @@ render() {
     ];
     let { leftIcon, rightIcon } = this.state;
     return <div>
-        <h1 className="display-1">Want to have a Fundraiser?</h1>
+        <h2 className="display-2">Want to have a Fundraiser?</h2>
         <p className="lead">
             Leave your contact info here so that we can
             host your next fundraising event!
@@ -295,11 +309,11 @@ render() {
 
         <h3 className="display-3 text-center">1st Family Love Sip &amp; Paint Fundraiser Event</h3>
         <div className="row">
-            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 200 }}>
+            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                     {sipandpaint.map(function (image, index) {
-                        return <div className="text-center">
-                            <img key={index} src={image} style={{ height: 600 }} alt="" />
+                        return <div className="text-center" key={index}>
+                            <img src={image} style={{ height: 600 }} alt="" />
                         </div>;
                     })}
                 </RBCarousel>

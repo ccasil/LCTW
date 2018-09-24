@@ -153,9 +153,10 @@ class Donations extends React.Component {
                 <img alt="shirt" className="shoppingImg" src={VIPApron1} />
               </div>
             </div>
-            <div className="cartItem">
-            <h2  id="whathot" className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />Whats Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
-              <h4> LCTW VIP Memberships </h4>
+
+            <div id="whathot" className="cartItem">
+            <h2 className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />What's Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
+              <h4> VIP Memberships </h4>
               <div className="regularItem">
                 <img alt="shirt" className="shoppingImg" src={this.state.image} />
               </div>
@@ -165,14 +166,14 @@ class Donations extends React.Component {
         <hr />
         <div className="shoparea">
           <div className="cartItem">
-            <h4> LCTW T-Shirts </h4>
+            <h4> T-Shirts </h4>
             <div className="regularItem">
               <img alt="shirt" className="shoppingImg" src={this.state.image} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
               <input type="hidden" name="lc" value="US" />
               <input type="hidden" name="item_name" value="Love Changing the World - Shirt" />
               <input type="hidden" name="button_subtype" value="products" />
@@ -272,14 +273,14 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
-            <h4> LCTW Aprons </h4>
+            <h4> Aprons </h4>
             <div className="regularItem">
               <img alt="apron" className="shoppingImg" src={this.state.apron} />
             </div>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <div className="ShoppingOptions">
                 <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
                 <input type="hidden" name="lc" value="US" />
                 <input type="hidden" name="item_name" value="Aprons" />
                 <input type="hidden" name="button_subtype" value="products" />
@@ -337,14 +338,14 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
-            <h4> LCTW TankTops </h4>
+            <h4> Tank Tops </h4>
             <div className="newItem">
               <img alt="shirt" className="shoppingImg" src={TankTop} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
               <input type="hidden" name="lc" value="US" />
               <input type="hidden" name="item_name" value="Love Changing the World - Shirt" />
               <input type="hidden" name="button_subtype" value="products" />
@@ -428,14 +429,14 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
-            <h4> LCTW VIP T-Shirts </h4>
+            <h4> VIP T-Shirts </h4>
             <div className="newItem">
               <img alt="vipshirt" className="shoppingImg" src={this.state.vipimage} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
               <input type="hidden" name="lc" value="US" />
               <input type="hidden" name="item_name" value="Love Changing the World - Shirt" />
               <input type="hidden" name="button_subtype" value="products" />
@@ -529,7 +530,7 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
-            <h4> LCTW VIP Tank Tops </h4>
+            <h4> VIP Tank Tops </h4>
             <div className="newItem">
               <img alt="vipshirt" className="shoppingImg" src={this.state.viptank} />
             </div>
@@ -625,14 +626,14 @@ class Donations extends React.Component {
 
 
           <div className="cartItem">
-            <h4> LCTW Aprons </h4>
+            <h4> VIP Aprons </h4>
             <div className="newItem">
               <img alt="vipshirt" className="shoppingImg" src={this.state.vipapron} />
             </div>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <div className="ShoppingOptions">
                 <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
                 <input type="hidden" name="lc" value="US" />
                 <input type="hidden" name="item_name" value="Aprons" />
                 <input type="hidden" name="button_subtype" value="products" />
