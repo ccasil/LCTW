@@ -16,7 +16,7 @@ class Membership extends Component {
 					<div className="donation-button">
 					<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_donations"></input>
-					<input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com"></input>
+					<input type="hidden" name="business" value="info@lovechangingtheworld.org"></input>
 					<input type="hidden" name="lc" value="US"></input>
 					<input type="hidden" name="item_name" value="Love Changing the World"></input>
 					<input type="hidden" name="item_number" value="Platinum"></input>
@@ -38,7 +38,7 @@ class Membership extends Component {
 					<div className="donation-button">
 					<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_donations"></input>
-					<input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com"></input>
+					<input type="hidden" name="business" value="info@lovechangingtheworld.org"></input>
 					<input type="hidden" name="lc" value="US"></input>
 					<input type="hidden" name="item_name" value="Love Changing the World"></input>
 					<input type="hidden" name="item_number" value="Gold"></input>
@@ -66,7 +66,7 @@ class Membership extends Component {
 					<div className="donation-button">
 					<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 					<input type="hidden" name="cmd" value="_donations"></input>
-					<input type="hidden" name="business" value="H4y4shi-facilitator@gmail.com"></input>
+					<input type="hidden" name="business" value="info@lovechangingtheworld.org"></input>
 					<input type="hidden" name="lc" value="US"></input>
 					<input type="hidden" name="item_name" value="Love Changing the World"></input>
 					<input type="hidden" name="item_number" value="Platinum"></input>
