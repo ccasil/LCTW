@@ -27,6 +27,7 @@ import Fire from '../../images/Shop/Fire.gif'
 import Star from '../../images/Shop/Star.gif'
 
 import logo from '../../images/Logos/logo.png';
+import hoody from '../../images/Shop/Hoody.jpg';
 
 class Donations extends React.Component {
 
@@ -152,7 +153,7 @@ class Donations extends React.Component {
               <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />What's New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
               <h4> Hoodies </h4>
               <div className="regularItem">
-                <img alt="shirt" className="shoppingImg" src={VIPApron1} />
+                <img alt="shirt" className="shoppingImg" src={hoody} />
               </div>
             </div>
 
