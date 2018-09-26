@@ -10,7 +10,9 @@
 
 }
 .table {
-  margin-bottom: 0px;
+      border-collapse: separate;
+    border-spacing: 0px;
+  margin: 0px;
   text-align: center;
 }
 .footermedialink {

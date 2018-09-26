@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
 import OurMission from "./components/pages/OurMission";
 import Events from "./components/pages/Events";
+import PastEvents from "./components/pages/PastEvents";
 import Founder from "./components/pages/Founder";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path="/ourmission" component={OurMission} />
             <Route exact path="/services" component={Services} />
             <Route exact path="/events" component={Events} />
+            <Route exact path="/pastevents" component={PastEvents} />
             <Route exact path="/founder" component={Founder} />
             <Route exact path="/executive" component={Executive} />
             <Route exact path="/staff" component={Staff} />

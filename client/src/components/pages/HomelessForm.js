@@ -90,8 +90,9 @@ class HomelessForm extends Component {
             </div>
 
               <div className="form-group">
-                <label htmlFor="contact">Select One*</label>
+                <label htmlFor="contact">Age / Gender</label>
                 <select className="form-control" id="genderage">
+                <option value="">Select One*</option>
                   <option value="Male Child">Male Child</option>
                   <option value="Female Child">Female Child</option>
                   <option value="Male Adult">Male Adult</option>

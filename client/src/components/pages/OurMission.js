@@ -167,10 +167,10 @@ class OurMission extends Component {
             </li>
             <li>Meeting human needs with love</li>
             <hr />
-          <li><a href="https://www.nbcbayarea.com/news/local/Santa-Clara-Countys-Homeless-Population-Jumps-13-Percent-431889503.html">
+          <li><a href="https://www.nbcbayarea.com/news/local/Santa-Clara-Countys-Homeless-Population-Jumps-13-Percent-431889503.html" target="_blank" rel="noopener noreferrer">
             Homeless Information
           </a></li>
-          <li><a href="https://www.sharecare.com/health/hiv-aids/article/breaking-stigma-essential-facts-hiv">
+          <li><a href="https://www.sharecare.com/health/hiv-aids/article/breaking-stigma-essential-facts-hiv" target="_blank" rel="noopener noreferrer">
             HIV/AIDS STD Information
           </a></li>
           </ul>

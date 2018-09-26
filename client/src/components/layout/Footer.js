@@ -9,12 +9,12 @@ class Footer extends Component {
                 <table className="table table-borderless">
                     <thead>
                         <tr>
-                            <th scope="col">Follow Our LOVE Movement #LCTW</th>
+                            <th scope="col">Follow Our #LCTW #LOVEMovement</th>
                             <th scope="col">Contact Us</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr className="text-center">
                             <th>
                                 <a className="footermedialink" href="https://www.facebook.com/lovechangingtheworld" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-facebook-square"></i>

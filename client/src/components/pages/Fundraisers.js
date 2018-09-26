@@ -118,7 +118,7 @@ class Fundraisers extends Component {
         super(props);
         this.state = { 
             autoplay: true,
-            text: "LOVE activities include: waterballoon fights, waterballoon toss, tug-of-war and other fun bonding experiences"
+            text: "Please select an event"
         };
         this.change = this.change.bind(this)
         this.switchText = this.switchText.bind(this)
@@ -131,6 +131,8 @@ class Fundraisers extends Component {
     switchText(param) {
 
         switch (param) {
+            case '':
+                return 'Please select an event'
             case 'Building Bonds Through LOVE':
                 return "LOVE activities include: waterballoon fights, relay races, and other fun bonding experiences"
             case 'Sip & Glam':
@@ -238,7 +240,7 @@ render() {
     ];
     let { leftIcon, rightIcon } = this.state;
     return <div>
-        <h2 className="display-2">Want to have a Fundraiser?</h2>
+        <h2 className="display-2 text-center">Want to have a Fundraiser?</h2>
         <p className="lead">
             Leave your contact info here so that we can
             host your next fundraising event!
@@ -279,6 +281,7 @@ render() {
             <div className="form-group">
                     <label htmlFor="contact" >Type*</label>
                     <select className="form-control" id="type">
+                    <option value="">Select One*</option>
                         <option value="Family">Family</option>
                         <option value="Corporate">Corporate</option>
                     </select>
@@ -286,6 +289,7 @@ render() {
                 <div className="form-group">
                     <label htmlFor="contact">Event*</label>
                     <select className="form-control" id="event" onChange={this.change} value={this.state.value}>
+                    <option value="">Select One*</option>
                         <option value="Building Bonds Through LOVE">Building Bonds Through LOVE</option>
                         <option value="Sip &amp; Glam">Sip &amp; Glam</option>
                         <option value="Sip &amp; Paint">Sip &amp; Paint</option>
