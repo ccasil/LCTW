@@ -55,7 +55,7 @@ class Membership extends Component {
                 	<h1> Red </h1>
 				</div>
 				<div className="membership-description">
-					As a RED member, you will receive the exclusive LCTW VIP Red T-Shirt, as well as a Red VIP Tank Top and Apron. You will be able to purchase discounted tickets to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Red membership is earned by Board Members and Staff.
+					As a RED member, you will receive the exclusive LCTW VIP Red T-Shirt, as well as a Red VIP Tank Top and Apron. You will be able to purchase discounted tickets to events hosted by LCTW, and any new merchandise that will be released. Please check out these items in the Shop. Red membership is earned by donors who contribute $35 a month to LCTW and their cause.
 					<div className="donation-button">
 						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 							<input type="hidden" name="cmd" value="_donations"></input>

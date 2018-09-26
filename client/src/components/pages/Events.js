@@ -247,7 +247,7 @@ class Events extends Component {
                 </RBCarousel>
               </div>
             </div>
-          <h5 className="lead text-center"><Link to="/pastevents">Past Events</Link></h5>
+          <h5 className="lead text-center"><Link to="/pastevents" target="_top">Past Events</Link></h5>
           </div>;
     }
 }

@@ -27,7 +27,7 @@ import Fire from '../../images/Shop/Fire.gif'
 import Star from '../../images/Shop/Star.gif'
 
 import logo from '../../images/Logos/logo.png';
-import hoody from '../../images/Shop/hoody.jpg';
+import hoody from '../../images/Shop/Hoody.jpg';
 
 class Donations extends React.Component {
 
@@ -153,7 +153,7 @@ class Donations extends React.Component {
               <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />What's New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
               <h4> Hoodies </h4>
               <div className="regularItem">
-                <img alt="shirt" className="shoppingImg" src={hoody} />
+                <img alt="hoody" className="shoppingImg" src={hoody} />
               </div>
             </div>
 
@@ -343,7 +343,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> Tank Tops </h4>
             <div className="newItem">
-              <img alt="shirt" className="shoppingImg" src={TankTop} />
+              <img alt="tank top" className="shoppingImg" src={TankTop} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -434,7 +434,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> Hoody </h4>
             <div className="regularItem">
-              <img alt="shirt" className="shoppingImg" src={hoody} />
+              <img alt="hoody" className="shoppingImg" src={hoody} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -470,7 +470,7 @@ class Donations extends React.Component {
                             XX-Large $45.00 USD
                           </option>
                           <option value="3X-Large">
-                            3X-Large 425.00 USD
+                            3X-Large 45.00 USD
                           </option>
                           <option value="4X-Large">
                             4X-Large $45.00 USD
@@ -526,7 +526,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> VIP T-Shirts </h4>
             <div className="newItem">
-              <img alt="vipshirt" className="shoppingImg" src={this.state.vipimage} />
+              <img alt="vip shirt" className="shoppingImg" src={this.state.vipimage} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -618,7 +618,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
+              If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
               </p>
             </form>
             <div className="line" />
@@ -627,7 +627,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> VIP Tank Tops </h4>
             <div className="newItem">
-              <img alt="vipshirt" className="shoppingImg" src={this.state.viptank} />
+              <img alt="vip tank top" className="shoppingImg" src={this.state.viptank} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -713,7 +713,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
+                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
               </p>
             </form>
             <div className="line" />
@@ -723,7 +723,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> VIP Aprons </h4>
             <div className="newItem">
-              <img alt="vipshirt" className="shoppingImg" src={this.state.vipapron} />
+              <img alt="vip apron" className="shoppingImg" src={this.state.vipapron} />
             </div>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <div className="ShoppingOptions">
@@ -752,7 +752,7 @@ class Donations extends React.Component {
                             Black - Red{" "}
                           </option>
                           <option value="VIP Apron - Silver Text">
-                            Black - Silver{" "}
+                            Black - Platinum{" "}
                           </option>
                         </select>{" "}
                       </td>
@@ -764,7 +764,7 @@ class Donations extends React.Component {
             </form>
             <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
+            If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
               </p>
 
             <div className="line" />
