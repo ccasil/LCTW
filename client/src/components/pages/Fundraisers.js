@@ -240,7 +240,7 @@ render() {
     ];
     let { leftIcon, rightIcon } = this.state;
     return <div>
-        <h2 className="display-2 text-center">Want to have a Fundraiser?</h2>
+        <h2 className="display-1 text-center">Want to have a Fundraiser?</h2>
         <p className="lead">
             Leave your contact info here so that we can
             host your next fundraising event!
@@ -311,7 +311,7 @@ render() {
 
         <p className="lead">*Required</p>
 
-        <h3 className="display-3 text-center">1st Family Love Sip &amp; Paint Fundraiser Event</h3>
+        <h3 className="display-1 text-center">1st Family Love Sip &amp; Paint Fundraiser Event</h3>
         <div className="row">
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
                 <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>

@@ -5,7 +5,7 @@ import defaultpic from '../../images/Board/defaultpic.png';
 class Executive extends Component {
   render() {
     return <div className="executive">
-      <h1 className="display-2">Meet Our Board of Directors</h1>
+      <h1 className="display-1">Meet Our Board of Directors</h1>
       <div className="container-fluid">
         <hr />
         <div className="row align-items-start about">
