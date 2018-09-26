@@ -22,14 +22,12 @@
     position: relative;
 }
 #toptext {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 3rem;
   font-size: 4rem;
 }
 #bottomtext {
   font-size: 2rem;
-  margin-top: 10rem;
-  margin-bottom:5rem;
+  margin-bottom:3rem;
 }
 .box {
   display: flex;
@@ -42,7 +40,6 @@
   }
   #bottomtext{
     font-size: 2rem;
-    margin-top: 10rem;
   }
   .logo{
     height: 200px;
@@ -54,8 +51,6 @@
   }
   #bottomtext{
     font-size: 2rem;
-    margin-top: 8rem;
-
   }
   .logo{
     height: 220px;
@@ -69,8 +64,6 @@
   }
   #bottomtext{
     font-size:3rem;
-    margin-top: 7rem;
-
   }
   .logo{
     height: 280px;
@@ -85,7 +78,6 @@ only screen and (min-width: 1024px){
   }
   #bottomtext{
     font-size:4rem;
-    margin-top: 6rem;
   }
   .logo{
     height: 320px;
@@ -94,7 +86,7 @@ only screen and (min-width: 1024px){
 
 .logo {
   top: 30%;
-  height: 400px;
+  height: 600px;
   animation: App-logo-spin infinite 20s linear;
   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0) 70%);
 
