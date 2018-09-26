@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import executive from "../../images/Board/executive.jpg";
-import ceo from "../../images/Board/ceo.jpeg";
 import graphics from "../../images/Board/graphics.jpg";
 import cheri from "../../images/Board/sistercheri.JPG";
+import defaultpic from '../../images/Board/defaultpic.png';
 
 import "../css/Landing.css";
 
@@ -13,7 +13,7 @@ class Staff extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={executive} height="400px;" alt="" />
+          <img className="executive" src={executive} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Sister Cheri Crockett</h2>
@@ -37,7 +37,7 @@ class Staff extends Component {
             </p>
           </div>
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={cheri} height="300px;" alt="" />
+          <img className="executive" src={cheri} style={{ height: 300 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <p className="lead">
@@ -50,7 +50,7 @@ class Staff extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={ceo} height="400px;" alt="" />
+          <img className="executive" src={defaultpic} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Michelle Karbo</h2>
@@ -77,7 +77,7 @@ class Staff extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={graphics} height="400px;" alt="" />
+          <img className="executive" src={graphics} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Ms. Aleesa Evans</h2>
@@ -100,21 +100,6 @@ class Staff extends Component {
             </p>
           </div>
         </div>
-        {/* <div className="row">
-                    <img className="executive col" src={executive} width="200px;" alt="executive" />
-                    <img className="executive col" src={treasurer} width="200px;" alt="treasurer" />
-                    <img className="executive col" src={graphics} width="200px;" alt="graphics" />
-                    <img className="executive col" src={ceo} width="200px;" alt="founder" />
-                </div>
-                <hr />
-                <h1 className="display-3">Meet Our Advisory Board</h1>
-
-                <div className="row">
-                    <img className="executive col" src={executive} width="200px;" alt="executive" />
-                    <img className="executive col" src={treasurer} width="200px;" alt="treasurer" />
-                    <img className="executive col" src={graphics} width="200px;" alt="graphcis" />
-                    <img className="executive col" src={ceo} width="200px;" alt="founder" />
-                </div> */}
       </div>;
   }
 }

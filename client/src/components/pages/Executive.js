@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import treasurer from '../../images/Board/treasurer.jpeg';
-import ceo from '../../images/Board/ceo.jpeg';
+import defaultpic from '../../images/Board/defaultpic.png';
 
 class Executive extends Component {
   render() {
@@ -10,7 +10,7 @@ class Executive extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={ceo} height="400px;" alt="" />
+            <img className="executive" src={defaultpic} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4" >Sha'Vonne Frazier</h2><h2 className="text-muted">Vice President</h2>
@@ -20,7 +20,7 @@ class Executive extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={ceo} height="400px;" alt="" />
+            <img className="executive" src={defaultpic} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Debra Armstrong</h2><h2 className="text-muted">Secretary</h2>
@@ -30,7 +30,7 @@ class Executive extends Component {
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img className="executive" src={treasurer} height="400px;" alt="" />
+            <img className="executive" src={treasurer} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4" >Minister Brian Haack</h2><h2 className="text-muted">Treasurer</h2>
