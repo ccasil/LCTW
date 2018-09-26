@@ -4,7 +4,7 @@ import "../css/Membership.css";
 class Membership extends Component {
     render() {
         return (
-            <div>
+            <div className="membership">
                 <h1 className="display-1">Memberships</h1>
                 
 

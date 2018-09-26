@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import "../css/Resources.css";
 
 class Resources extends Component {
     render() {
-        return <div>
+        return <div className="resources">
             <h1 className="display-1">Resources</h1>
             <ul className="list-unstyled">
               <li>

@@ -44,8 +44,8 @@ class VolunteerForm extends Component {
       document.getElementById("volunteer-form").reset();
   }
   render() {
-    return <div>
-        <h1 className="display-1">Want to be a Volunteer?</h1>
+    return <div className="volunteer">
+        <h2 className="display-1 text-center">Want to become a Volunteer?</h2>
         <p className="lead">
           If you would like to become a volunteer or hear about our internship opportunities, feel free to leave your contact info and experience so that we can reach out to you.
         </p>
