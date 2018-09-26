@@ -9,8 +9,8 @@ class Footer extends Component {
                 <table className="table table-borderless">
                     <thead>
                         <tr>
-                            <th scope="col">Follow Our #LCTW #LOVEMovement</th>
-                            <th scope="col">Contact Us</th>
+                            <th className="h5" scope="col">Follow Our <span className="font-weight-bold">#LCTW #LOVEMovement</span></th>
+                            <th className="h5" scope="col">Contact Us</th>
                         </tr>
                     </thead>
                     <tbody>
