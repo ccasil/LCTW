@@ -146,6 +146,7 @@ class Donations extends React.Component {
           ALL!!! No exchanges or
           refunds, and all sales are final.
         </p>
+        <p className="lead">Be on the lookout for our various LOVE Blessings Candy &amp; Condoms Gift Bags that we will be giving away!</p>
 
         <div className="shoparea">
           <div className="new">
@@ -432,7 +433,7 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
-            <h4> Hoody </h4>
+          <h4> Hoodies </h4>
             <div className="regularItem">
               <img alt="hoody" className="shoppingImg" src={hoody} />
             </div>
