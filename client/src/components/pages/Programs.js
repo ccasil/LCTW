@@ -78,10 +78,14 @@ class Programs extends Component {
 
     return <div className="programs">
         <h1 className="display-1">Programs</h1>
-      <p className="lead text-center">*We are in need of <Link to="/sponsorform">sponsors</Link> and <Link to="/donations">donations</Link> to support our programs and to help aid the homeless and less fortunate.</p>
+        <p className="lead text-center">
+          *We are in need of <Link to="/sponsorform">sponsors</Link> and <Link to="/donations">
+            donations
+          </Link> to support our programs and to help aid the homeless and less fortunate.
+        </p>
         <div className="row">
-        <div className="col-12">
-          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle1}>
+          <div className="col-12">
+            <Button className="btn-block btn-lg" color="danger" onClick={this.toggle1}>
               Love Blessings Backpacks
             </Button>
             <Modal isOpen={this.state.modal1} toggle={this.toggle1} className={this.props.className}>
@@ -90,17 +94,18 @@ class Programs extends Component {
               </ModalHeader>
               <ModalBody>
                 <p className="lead">
-                  Includes personal care and hygiene items, healthy snacks and
-                  list of social services (certified food distribution, medical
-                  care, shelter, etc.) Socks, Underclothes, T-Shirt, Blue Jeans,
-                  and other clothing is included. Distributed monthly at
-                  locations most frequented by homeless populations.
+                  Includes personal care and hygiene items, healthy snacks
+                  and list of social services (certified food distribution,
+                  medical care, shelter, etc.) Socks, Underclothes, T-Shirt,
+                  Blue Jeans, and other clothing is included. Distributed
+                  monthly at locations most frequented by homeless
+                  populations.
                 </p>
                 <p className="lead">
-                  Men, Women, Children, Infants and Toddlers of all sizes
+                  Men, Women, Children, Infants and Toddlers of all sizes...
                 </p>
-                <p className="lead font-weight-light font-italic">
-                  (Please, no used items)
+                <p className="lead font-weight-light">
+                  PLEASE!!! NO USED ITEMS
                 </p>
                 <ul className="list-unstyled">
                   <li>Backpacks</li>
@@ -116,7 +121,9 @@ class Programs extends Component {
                   <li>Hats, Scarves, Gloves</li>
                   <li>Coats, Jackets, Sweaters</li>
                   <li>Thermal Pants/Shirts</li>
-                  <span className="font-weight-bold">Additional Items:</span>
+                  <span className="font-weight-bold">
+                    Additional Items:
+                  </span>
                   <li>Blankets</li>
                   <li>Tents</li>
                   <li>Sleeping Bags</li>
@@ -125,162 +132,172 @@ class Programs extends Component {
                 </ul>
               </ModalBody>
               <ModalFooter>
-              <Button color="secondary" onClick={this.toggle1}>
-                Close
+                <Button color="secondary" onClick={this.toggle1}>
+                  Close
                 </Button>
               </ModalFooter>
             </Modal>
           </div>
 
-      <div className="col-12">
-          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle2}>
-            Love Blessings Gift Bags
-          </Button>
-          <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
-            <ModalHeader toggle={this.toggle2}>
+          <div className="col-12">
+            <Button className="btn-block btn-lg" color="danger" onClick={this.toggle2}>
               Love Blessings Gift Bags
-            </ModalHeader>
-            <ModalBody>
-              <p className="lead">
-                Includes personal care and hygiene items, healthy snacks and
-                list of social services (certified food distribution, medical
-                care, shelter, etc.) socks and others. Distributed monthly at
-                locations most frequented by homeless populations.
-              </p>
-              <p className="lead font-weight-light font-italic">
-                (Please, no used items)
-              </p>
-              <ul className="list-unstyled">
-                <li>Bottled water</li>
-                <li>Ziploc storage bags (or) Freezer bags</li>
-                <li>Hand sanitizer, Wet ones, Tissues</li>
-                <li>
-                  *Granola bars, *Protein bars, *Trail mix, *Peanuts, *Fruit
-                  snacks
-                </li>
-                <li>Chewing gum, Breath mints, Candy</li>
-                <li>Deodorant</li>
-                <li>Toothbrush, Toothpaste, Mouthwash</li>
-                <li>Lotion, Vaseline, Chap stick, Lip gloss</li>
-                <li>Bodywash, Soap, Shampoo, Conditioner</li>
+            </Button>
+            <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
+              <ModalHeader toggle={this.toggle2}>
+                Love Blessings Gift Bags
+              </ModalHeader>
+              <ModalBody>
+                <p className="lead">
+                  Includes personal care and hygiene items, healthy snacks
+                  and list of social services (certified food distribution,
+                  medical care, shelter, etc.) socks and others. Distributed
+                  monthly at locations most frequented by homeless
+                  populations.
+                </p>
+                <p className="lead font-weight-light">
+                  (Individual Packages or cases) PLEASE!!! NO USED ITEMS
+                </p>
+                <ul className="list-unstyled">
+                  <li>Bottled water</li>
+                  <li>Ziploc storage bags (or) Freezer bags</li>
+                  <li>Hand sanitizer, Wet ones, Tissues</li>
+                  <li>
+                    *Granola bars, *Protein bars, *Trail mix, *Peanuts,
+                    *Fruit snacks
+                  </li>
+                  <li>Chewing gum, Breath mints, Candy</li>
+                  <li>Deodorant</li>
+                  <li>Toothbrush, Toothpaste, Mouthwash</li>
+                  <li>Lotion, Vaseline, Chap stick, Lip gloss</li>
+                  <li>Bodywash, Soap, Shampoo, Conditioner</li>
 
-                <li>Baby wipes, Baby power, Baby Shampoo, Baby lotion</li>
-                <li>Pampers, Sanitary Napkins and Tampons (ladies)</li>
-                <li>Socks</li>
-                <li>Bible tracks, Pocket bibles</li>
-                <li>Shaving cream, Razors</li>
+                  <li>Baby wipes, Baby power, Baby Shampoo, Baby lotion</li>
+                  <li>Pampers, Sanitary Napkins and Tampons (ladies)</li>
+                  <li>Socks</li>
+                  <li>Bible tracks, Pocket bibles</li>
+                  <li>Shaving cream, Razors</li>
 
-                <span className="font-weight-bold">Winter:</span>
-                <li>Hats, Scarves, Gloves</li>
-              </ul>
-            </ModalBody>
-            <ModalFooter>
-              <Button color="secondary" onClick={this.toggle2}>
-                Close
-              </Button>
-            </ModalFooter>
-          </Modal>
+                  <span className="font-weight-bold">Winter:</span>
+                  <li>Hats, Scarves, Gloves</li>
+                </ul>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={this.toggle2}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </Modal>
           </div>
 
-      <div className="col-12">
-          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle3}>
-            Love Blessings Candy &amp; Condoms Bags
-          </Button>
-          <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
-            <ModalHeader toggle={this.toggle3}>
-              Love Blessings Candy &amp; Condoms Bags
-            </ModalHeader>
-            <ModalBody>
-              <p className="lead">
-                Provides HIV/STD education and prevention through the
-                distribution of small gift packets that include condoms,
-                candies, and information about safer sex practices and health
-                resources.
-              </p>
+          <div className="col-12">
+            <Button className="btn-block btn-lg" color="danger" onClick={this.toggle3}>
+              Love Blessings Candy &amp; Condoms Gift Bags
+            </Button>
+            <Modal isOpen={this.state.modal3} toggle={this.toggle3} className={this.props.className}>
+              <ModalHeader toggle={this.toggle3}>
+                Love Blessings Candy &amp; Condoms Bags
+              </ModalHeader>
+              <ModalBody>
+                <p className="lead">
+                  Provides HIV/STD education and prevention through the
+                  distribution of small gift packets that include condoms,
+                  candies, and information about safer sex practices and
+                  health resources.
+                </p>
 
-              <p className="lead font-weight-light font-italic">
-                (Individual Packages or cases / Please, no used items)
-              </p>
-              <ul className="list-unstyled">
-                <li>Various Candy</li>
-                <li>Flavored Condoms</li>
-                <li>Regular Condoms</li>
-                <li>Women Condoms</li>
-                <li>Men Plus Size Condoms</li>
-                <li>Lubricant</li>
-                <li>STD/HIV Prevention Information</li>
-                <li>Get Tested Information</li>
-                <li>Plan Parenthood Information</li>
-                <li>Anonymous and Confidential Free HIV testing: 1 (408) 792-3720</li>
-              </ul>
+                <p className="lead font-weight-light font-italic">
+                  (Individual Packages or cases) PLEASE!!! NO USED ITEMS
+                </p>
+                <ul className="list-unstyled">
+                <li>Various Candy (NO CHOCLATE)</li>
+                  <li>Flavored Condoms</li>
+                  <li>Regular Condoms</li>
+                  <li>Women Condoms</li>
+                  <li>Men Plus Size Condoms</li>
+                  <li>Lubricant</li>
+                  <li>STD/HIV Prevention Information</li>
+                  <li>Get Tested Information</li>
+                  <li>Plan Parenthood Information</li>
+                  <li>
+                    Anonymous and Confidential Free HIV testing: 1 (408)
+                    792-3720
+                  </li>
+                </ul>
 
-              <hr />
-            <p className="font-weight-bold">All information provided by:</p>
-            <p>The Santa Clara County Public Health Department - The Crane Center</p>
-            <p>Planned Parenthood</p>
-
-            </ModalBody>
-            <ModalFooter>
-            <Button color="secondary" onClick={this.toggle3}>
-              Close
-              </Button>
-            </ModalFooter>
-          </Modal>
+                <hr />
+                <p className="font-weight-bold">
+                  All information provided by:
+                </p>
+                <p>
+                  The Santa Clara County Public Health Department - The
+                  Crane Center
+                </p>
+                <p>Planned Parenthood</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={this.toggle3}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </Modal>
           </div>
 
-        <div className="col-12">
-          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle4}>
-          Shower of Love
-          </Button>
-        <Modal isOpen={this.state.modal4} toggle={this.toggle4} className={this.props.className}>
-          <ModalHeader toggle={this.toggle4}>
-            Shower of Love
-            </ModalHeader>
-          <ModalBody>
-            <p className="lead">
-              Will provide access to showers and laundry services to chronic and transitional homeless populations.
-              </p>
+          <div className="col-12">
+            <Button className="btn-block btn-lg" color="danger" onClick={this.toggle4}>
+              Shower of Love
+            </Button>
+            <Modal isOpen={this.state.modal4} toggle={this.toggle4} className={this.props.className}>
+              <ModalHeader toggle={this.toggle4}>
+                Shower of Love
+              </ModalHeader>
+              <ModalBody>
+                <p className="lead">
+                  Will provide access to showers and laundry services to
+                  chronic and transitional homeless populations.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={this.toggle4}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
 
-          </ModalBody>
-          <ModalFooter>
-            <Button color="secondary" onClick={this.toggle4}>
-              Close
-              </Button>
-          </ModalFooter>
-        </Modal>
-        </div>
-
-        <div className="col-12">
-          <Button className="btn-block btn-lg" color="danger" onClick={this.toggle5}>
-          "I AM" WORTH IT!
-          </Button>
-        <Modal isOpen={this.state.modal5} toggle={this.toggle5} className={this.props.className}>
-          <ModalHeader toggle={this.toggle5}>
-            "I AM" WORTH IT!
-            </ModalHeader>
-          <ModalBody>
-            <p className="lead">
-              Support for young girls to empower, encourage, &amp; inspire them to know their worth.
-              </p>
-              <p className="lead">
-              LeLe is a 7 year old honor student with straight A's; here she is receiving her first Build a Bear! LeLe is the perfect role-model for the "I AM" worth it program.
-She is described as being loving, caring and helpful by her peers and is very excited to get back to school.
-              </p>
-              <ul className="list-unstyled">
-                {imgArr_event12.map(function (image, index) {
-                  return (
-                    <img key={index} src={image} alt="" />
-                  )
-                })}
-              </ul>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="secondary" onClick={this.toggle5}>
-              Close
-              </Button>
-          </ModalFooter>
-        </Modal>
-        </div>
+          <div className="col-12">
+            <Button className="btn-block btn-lg" color="danger" onClick={this.toggle5}>
+              "I AM" WORTH IT!
+            </Button>
+            <Modal isOpen={this.state.modal5} toggle={this.toggle5} className={this.props.className}>
+              <ModalHeader toggle={this.toggle5}>
+                "I AM" WORTH IT!
+              </ModalHeader>
+              <ModalBody>
+                <p className="lead">
+                  Support for young girls to empower, encourage, &amp;
+                  inspire them to know their worth.
+                </p>
+                <p className="lead">
+                  LeLe is a 7 year old honor student with straight A's; here
+                  she is receiving her first Build a Bear! LeLe is the
+                  perfect role-model for the "I AM" worth it program. She is
+                  described as being loving, caring and helpful by her peers
+                  and is very excited to get back to school.
+                </p>
+                <ul className="list-unstyled">
+                  {imgArr_event12.map(function(image, index) {
+                    return <img key={index} src={image} alt="" />;
+                  })}
+                </ul>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={this.toggle5}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
         </div>
       </div>;
   }
