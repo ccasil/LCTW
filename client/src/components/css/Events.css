@@ -68,7 +68,7 @@ a :hover {
     margin-bottom: 20px;
 }
 
-@media (min-width: 480px){
+@media (min-width: 150px){
 	.eventImg{
         height:200px;
     }
