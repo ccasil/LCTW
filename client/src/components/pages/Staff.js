@@ -58,19 +58,6 @@ class Staff extends Component {
               Director of Outreach, Santa Clara County
             </h2>
             <p className="lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.In in
-              dui vitae urna accumsan lobortis eu ac nulla.Maecenas eget
-              porta ante, vel mollis justo.Morbi metus nulla, ullamcorper
-              vitae semper a, fermentum non ante.Phasellus id tincidunt
-              odio.Interdum et malesuada fames ac ante ipsum primis in
-              faucibus.In dignissim nibh eget cursus iaculis.In lacinia
-              purus nec magna cursus venenatis.Vestibulum pretium velit
-              erat, sit amet ultricies ante mattis non.Cras in tempus
-              lorem.Phasellus ac nisl at mauris interdum tempor ac quis
-              est.Praesent vestibulum, urna nec gravida rhoncus, elit purus
-              fermentum nibh, ac elementum leo tellus vel erat.Nunc cursus
-              lacus a ante finibus sodales non vitae ipsum.Sed id erat id
-              metus egestas varius.{" "}
             </p>
           </div>
         </div>
