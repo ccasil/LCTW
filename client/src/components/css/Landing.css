@@ -23,7 +23,9 @@
 }
 #toptext {
   margin-top: 3rem;
-  font-size: 4rem;
+  font-size: 3rem;
+  font-family: 'Great Vibes', cursive;
+
 }
 #bottomtext {
   font-size: 2rem;
@@ -36,7 +38,7 @@
 }
 @media (min-width: 240px){
   #toptext{
-    font-size: 2rem;
+    font-size: 3rem;
   }
   #bottomtext{
     font-size: 2rem;
@@ -47,7 +49,7 @@
 }
 @media (min-width: 480px){
   #toptext{
-    font-size:2rem;
+    font-size:3rem;
   }
   #bottomtext{
     font-size: 2rem;
@@ -60,7 +62,7 @@
 
 @media (min-width: 768px){
   #toptext{
-    font-size:3rem;
+    font-size:4rem;
   }
   #bottomtext{
     font-size:3rem;
@@ -74,7 +76,7 @@
 @media
 only screen and (min-width: 1024px){
   #toptext{
-    font-size:4rem;
+    font-size:5rem;
   }
   #bottomtext{
     font-size:4rem;

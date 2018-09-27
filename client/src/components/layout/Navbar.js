@@ -1,22 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
-import lctw from "../../images/Logos/LCTW.png";
 
 class Navbar extends Component {
   render() {
     return (
       <div>
 
-        <Link to="/">
-          <img
-            className="d-inline mx-auto mainlogo"
-            src={lctw}
-            height="100"
-            alt="lctw"
-          />
-        </Link>
-        <div className="d-inline buttonspace">
+        <div className="textmargin">
+          <h1 id="navbartext" className="mx-auto display-1 d-inline">Love Changing the World, Inc.</h1>
+
+        <div id="buttonspace" className="d-inline">
          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_donations"></input>
           <input type="hidden" name="business" value="info@lovechangingtheworld.org"></input>
@@ -29,6 +23,7 @@ class Navbar extends Component {
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
           </input><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></img>
         </form>
+        </div>
         </div>
 
 

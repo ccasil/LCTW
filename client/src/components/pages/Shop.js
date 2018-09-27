@@ -153,7 +153,7 @@ class Donations extends React.Component {
               <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />What's New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
               <h4> Hoodies </h4>
               <div className="regularItem">
-                <img alt="shirt" className="shoppingImg" src={hoody} />
+                <img alt="hoody" className="shoppingImg" src={hoody} />
               </div>
             </div>
 
@@ -343,7 +343,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> Tank Tops </h4>
             <div className="newItem">
-              <img alt="shirt" className="shoppingImg" src={TankTop} />
+              <img alt="tank top" className="shoppingImg" src={TankTop} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -432,9 +432,101 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
+            <h4> Hoody </h4>
+            <div className="regularItem">
+              <img alt="hoody" className="shoppingImg" src={hoody} />
+            </div>
+
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
+              <input type="hidden" name="cmd" value="_cart" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
+              <input type="hidden" name="lc" value="US" />
+              <input type="hidden" name="item_name" value="Love Changing the World - Hoody" />
+              <input type="hidden" name="button_subtype" value="products" />
+              <input type="hidden" name="no_note" value="0" />
+              <input type="hidden" name="shipping" value="5.00" />
+              <input type="hidden" name="add" value="1" />
+              <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest" />
+
+              <div className="ShoppingOptions">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="hidden" name="on0" value="Size" />
+                        Size
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <select name="os0">
+                          <option value="Small">Small $40.00 USD</option>
+                          <option value="Medium">Medium $40.00 USD</option>
+                          <option value="Large">Large $40.00 USD</option>
+                          <option value="Extra-Large">
+                            Extra-Large $40.00 USD
+                          </option>
+                          <option value="XX-Large">
+                            XX-Large $45.00 USD
+                          </option>
+                          <option value="3X-Large">
+                            3X-Large 45.00 USD
+                          </option>
+                          <option value="4X-Large">
+                            4X-Large $45.00 USD
+                          </option>
+                          <option value="5X-Large">
+                            5X-Large $45.00 USD
+                          </option>
+                        </select>{" "}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="hidden" name="on1" value="Color" />
+                        Color
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <select name="os1" >
+                          <option value="Black Hoody - Red Text">
+                            Black Hoody - Red Text
+                          </option>
+                        </select>{" "}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="option_select0" value="Small" />
+                <input type="hidden" name="option_amount0" value="40.00" />
+                <input type="hidden" name="option_select1" value="Medium" />
+                <input type="hidden" name="option_amount1" value="40.00" />
+                <input type="hidden" name="option_select2" value="Large" />
+                <input type="hidden" name="option_amount2" value="40.00" />
+                <input type="hidden" name="option_select3" value="Extra-Large" />
+                <input type="hidden" name="option_amount3" value="40.00" />
+                <input type="hidden" name="option_select4" value="XX-Large" />
+                <input type="hidden" name="option_amount4" value="45.00" />
+                <input type="hidden" name="option_select5" value="3X-Large" />
+                <input type="hidden" name="option_amount5" value="45.00" />
+                <input type="hidden" name="option_select6" value="4X-Large" />
+                <input type="hidden" name="option_amount6" value="45.00" />
+                <input type="hidden" name="option_select7" value="5X-Large" />
+                <input type="hidden" name="option_amount7" value="45.00" />
+                <input type="hidden" name="option_index" value="0" />
+              </div>
+              <input type="image" className="cartButton" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+            <div className="line" />
+          </div>
+
+          <div className="cartItem">
             <h4> VIP T-Shirts </h4>
             <div className="newItem">
-              <img alt="vipshirt" className="shoppingImg" src={this.state.vipimage} />
+              <img alt="vip shirt" className="shoppingImg" src={this.state.vipimage} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -526,7 +618,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
+              If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
               </p>
             </form>
             <div className="line" />
@@ -535,7 +627,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> VIP Tank Tops </h4>
             <div className="newItem">
-              <img alt="vipshirt" className="shoppingImg" src={this.state.viptank} />
+              <img alt="vip tank top" className="shoppingImg" src={this.state.viptank} />
             </div>
 
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
@@ -621,7 +713,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
+                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
               </p>
             </form>
             <div className="line" />
@@ -631,7 +723,7 @@ class Donations extends React.Component {
           <div className="cartItem">
             <h4> VIP Aprons </h4>
             <div className="newItem">
-              <img alt="vipshirt" className="shoppingImg" src={this.state.vipapron} />
+              <img alt="vip apron" className="shoppingImg" src={this.state.vipapron} />
             </div>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <div className="ShoppingOptions">
@@ -660,7 +752,7 @@ class Donations extends React.Component {
                             Black - Red{" "}
                           </option>
                           <option value="VIP Apron - Silver Text">
-                            Black - Silver{" "}
+                            Black - Platinum{" "}
                           </option>
                         </select>{" "}
                       </td>
@@ -672,7 +764,7 @@ class Donations extends React.Component {
             </form>
             <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">membership</Link> page.
+            If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
               </p>
 
             <div className="line" />

@@ -72,7 +72,6 @@ h4:hover{
 .display-1{
 	margin:  0px;
 	max-width: 100%;
-	font-size: 6rem;
 }
 
 .shoppingImg {
@@ -110,17 +109,11 @@ h4:hover{
 	.shoppingImg {
 		height: 10rem;
 	}
-	.display-1 {
-		font-size: 4rem;
-	}
 }
 
 @media (min-width: 768px){
 	.shoppingImg {
 		height: 11rem;
-	}
-	.display-1 {
-		font-size: 6rem;
 	}
 }
 
@@ -128,9 +121,6 @@ h4:hover{
 @media (min-width: 1024px){
 	.shoppingImg {
 		height: 12rem;
-	}
-	.display-1 {
-		font-size: 6rem;
 	}
 }
 
