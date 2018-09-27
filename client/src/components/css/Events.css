@@ -67,3 +67,40 @@ a :hover {
 .spaceToFooter {
     margin-bottom: 20px;
 }
+
+@media (min-width: 480px){
+	.eventImg{
+        height:200px;
+    }
+    .carousel {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    }
+
+}
+
+@media (min-width: 768px){
+    .eventImg{
+        height:400px;
+
+    }
+	.carousel {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    }
+}
+
+
+@media (min-width: 1024px){
+	.eventImg{
+        height:600px;
+    }
+    .carousel {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    }
+	
+}
