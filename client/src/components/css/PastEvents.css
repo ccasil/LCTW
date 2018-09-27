@@ -1,0 +1,37 @@
+
+@media (min-width: 480px){
+	.pastImg{
+        height:200px;
+    }
+    .carousel {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    }
+
+}
+
+@media (min-width: 768px){
+    .pastImg{
+        height:400px;
+
+    }
+	.carousel {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    }
+}
+
+
+@media (min-width: 1024px){
+	.pastImg{
+        height:600px;
+    }
+    .carousel {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    }
+	
+}
