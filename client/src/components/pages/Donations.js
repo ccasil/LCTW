@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RBCarousel from "react-bootstrap-carousel";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+import "../css/Donations.css";
 
 // image routes for Event 8
 import event8_image1 from '../../images/Events/Event_8/1.jpg';
@@ -56,8 +57,8 @@ class Donations extends Component {
                         <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                             {imgArr_event8.map(function (image, index) {
                                 return <div className="text-center" key={index}>
-                                    <img src={image} style={{ height: 600 }} alt="" />
-                                </div>;
+                                    <img className="donationImg" src={image} alt="" />
+                                  </div>;
                             })}
                         </RBCarousel>
                     </div>

@@ -9,11 +9,13 @@ import "../css/Landing.css";
 class Staff extends Component {
   render() {
     return <div>
-        <h3 className="display-1 text-center">Meet Our Executive Directors</h3>
+        <h3 className="display-1 text-center">
+          Meet Our Executive Directors
+        </h3>
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-          <img className="executive" src={executive} style={{ height: 350 }} alt="" />
+            <img className="executive" src={executive} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Sister Cheri Crockett</h2>
@@ -37,53 +39,39 @@ class Staff extends Component {
             </p>
           </div>
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-          <img className="executive" src={cheri} style={{ height: 300 }} alt="" />
+            <img className="executive" src={cheri} style={{ height: 300 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <p className="lead">
               On September 02, 2017 Cheri Crockett was recognized for
-              serving the Homeless in the San Joaquin County at the Diablo Canyon
-              Country Club.
+              serving the Homeless in the San Joaquin County at the Diablo
+              Canyon Country Club.
             </p>
           </div>
         </div>
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-          <img className="executive" src={defaultpic} style={{ height: 350 }} alt="" />
+            <img className="executive" src={defaultpic} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Michelle Karbo</h2>
             <h2 className="text-muted">
               Director of Outreach, Santa Clara County
             </h2>
-            <p className="lead">
-            </p>
+            <p className="lead" />
           </div>
         </div>
         <hr />
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-          <img className="executive" src={graphics} style={{ height: 350 }} alt="" />
+            <img className="executive" src={defaultpic} style={{ height: 350 }} alt="" />
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
-            <h2 className="display-4">Ms. Aleesa Evans</h2>
-            <h2 className="text-muted">Director of Graphic Design</h2>
+            <h2 className="display-4">Dawn Landrine</h2>
+            <h2 className="text-muted"></h2>
             <p className="lead">
-              Sister Aleesa Evans, grew up in the city of Merced. She has
-              always had a passion to help others, which is why she is
-              pursuing the nursing field. She graduated from Merced
-              Community College, May 22, 2015, with her Associates degree in
-              both Health Sciences and Social and Behavioral Sciences. One
-              of her dreams is to be a huge asset to all communities and to
-              be able to make a true difference. Though she is 23 years
-              young, she has a strong desire to be a positive impact on
-              others, which is why she agreed to join the Love Changing The
-              World Family. This organization has been an honest inspiration
-              and she has found her drive by being creative and assisting
-              her very own God Mother with graphic designs. She is motivated
-              to allow God to use her creatively and spiritually to reach
-              all hearts and mind with LOVE.
+              
             </p>
           </div>
         </div>

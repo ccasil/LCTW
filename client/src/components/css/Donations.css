@@ -1,0 +1,36 @@
+@media (min-width: 150px){
+	.donationImg{
+        height:200px;
+    }
+    .carousel {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+    }
+
+}
+
+@media (min-width: 768px){
+    .donationImg{
+        height:400px;
+
+    }
+	.carousel {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    }
+}
+
+
+@media (min-width: 1024px){
+	.donationImg{
+        height:600px;
+    }
+    .carousel {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    }
+	
+}
