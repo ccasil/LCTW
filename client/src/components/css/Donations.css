@@ -1,0 +1,27 @@
+@media (min-width: 150px){
+	.donationImg{
+        height:200px;
+    }
+  
+
+}
+
+@media (min-width: 768px){
+    .donationImg{
+        height:400px;
+
+    }
+
+}
+
+
+@media (min-width: 1024px){
+	.donationImg{
+        height:600px;
+    }
+  
+	
+}
+p {
+    font-size: 30px;
+}
