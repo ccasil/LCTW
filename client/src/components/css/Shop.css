@@ -109,10 +109,16 @@ h4:hover{
 	.shoppingImg {
 		height: 10rem;
 	}
+	.freeImg {
+		height: 10rem;
+	}
 }
 
 @media (min-width: 768px){
 	.shoppingImg {
+		height: 11rem;
+	}
+	.freeImg {
 		height: 11rem;
 	}
 }
@@ -122,6 +128,13 @@ h4:hover{
 	.shoppingImg {
 		height: 12rem;
 	}
+	.freeImg {
+		height: 12rem;
+	}
+}
+.free {
+	margin-bottom: 2rem;
+
 }
 
 
