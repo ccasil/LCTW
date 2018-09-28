@@ -80,6 +80,35 @@ class Staff extends Component {
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
             <img
               className="executive"
+              src={executive1}
+              style={{ height: 350 }}
+              alt=""
+            />
+          </div>
+          <div className="col col-lg-8 col-md-12 col-sm-12">
+            <h2 className="display-4">Rachelle “Nikki” DeWees</h2>
+            <h2 className="text-muted">
+              Director of Events and Programs
+            </h2>
+            <p className="lead">
+              I was born into a family that cares and loves everyone. This is
+              why the organization started Love Changing the World. We love to
+              help people that are in need. I have taken strangers into my home,
+              fed them, clothed and gave them a place to sleep. We are  God
+              Fearing family and truly believe that you never know when you are
+              entertaining an Angel. With that being said, never let anyone go
+              hungry, unclothed, go without, or be in need when you have the
+              opportunity to help. My goal will be to program and plan events
+              that will help people Live Life and give them Love that changes
+              the World. God Bless!
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div className="row align-items-start about">
+          <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
+            <img
+              className="executive"
               src={defaultpic}
               style={{ height: 350 }}
               alt=""
@@ -89,35 +118,6 @@ class Staff extends Component {
             <h2 className="display-4">Dawn Landrine</h2>
             {/* <h2 className="text-muted"></h2> */}
             <p className="lead" />
-          </div>
-        </div>
-        <hr />
-        <div className="row align-items-start about">
-          <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
-            <img
-              className="executive"
-              src={executive1}
-              style={{ height: 350 }}
-              alt=""
-            />
-          </div>
-          <div className="col col-lg-8 col-md-12 col-sm-12">
-            <h2 className="display-4">Rachelle “Nikki” DeWees</h2>
-            <h2 className="text-muted">
-              Executive Director of Events and Programs
-            </h2>
-            <p className="lead">
-              I was born into a family that cares and loves everyone. This is
-              why the Organization started Love Changing the World.We love to
-              help people that are in need. I have taking strangers in my home,
-              fed them, clothed and gave them a place to sleep.We are  God
-              Fearing family and truly believe that you never know when you are
-              entertaining an Angel. With that being said, never let anyone go
-              hungry, unclothed, go without, or be in need when you have the
-              opportunity to help. My goal will be to program and plan events
-              that will help people Live Life and give them Love that changes
-              the World. God Bless!
-            </p>
           </div>
         </div>
       </div>
