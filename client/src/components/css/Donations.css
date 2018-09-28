@@ -2,11 +2,7 @@
 	.donationImg{
         height:200px;
     }
-    .carousel {
-    width: 350px;
-    height: 200px;
-    margin: auto;
-    }
+  
 
 }
 
@@ -15,11 +11,7 @@
         height:400px;
 
     }
-	.carousel {
-    width: 600px;
-    height: 400px;
-    margin: auto;
-    }
+
 }
 
 
@@ -27,10 +19,9 @@
 	.donationImg{
         height:600px;
     }
-    .carousel {
-    width: 900px;
-    height: 600px;
-    margin: auto;
-    }
+  
 	
+}
+p {
+    font-size: 30px;
 }

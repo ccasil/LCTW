@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import executive from "../../images/Board/executive.jpg";
-import graphics from "../../images/Board/graphics.jpg";
+
 import cheri from "../../images/Board/sistercheri.JPG";
 import defaultpic from '../../images/Board/defaultpic.png';
 
@@ -69,7 +69,7 @@ class Staff extends Component {
           </div>
           <div className="col col-lg-8 col-md-12 col-sm-12">
             <h2 className="display-4">Dawn Landrine</h2>
-            <h2 className="text-muted"></h2>
+            {/* <h2 className="text-muted"></h2> */}
             <p className="lead">
               
             </p>
