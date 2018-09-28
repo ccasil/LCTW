@@ -29,6 +29,11 @@ import Star from '../../images/Shop/Star.gif'
 import logo from '../../images/Logos/logo.png';
 import hoody from '../../images/Shop/Hoody.jpg';
 
+import cc1 from '../../images/Shop/cc1.jpeg';
+import cc2 from "../../images/Shop/cc2.jpeg";
+import cc3 from "../../images/Shop/cc3.jpeg";
+import cc4 from "../../images/Shop/cc4.jpeg";
+
 class Donations extends React.Component {
 
   constructor(props){
@@ -127,14 +132,14 @@ class Donations extends React.Component {
   render() {
     return <div className="donations">
         <script>
-          $(document).ready(function(){
-            setInterval(function(){ 
-              $('#whathot').fadeToggle(1300);
-              setTimeout(function(){
-                $('#whatnew').fadeToggle(1300);
-              }, 1300)
-            }, 1300)
-          });
+          $(document).ready(function()
+          {setInterval(function() {
+            $("#whathot").fadeToggle(1300);
+            setTimeout(function() {
+              $("#whatnew").fadeToggle(1300);
+            }, 1300);
+          }, 1300)}
+          );
         </script>
         <h1 className="display-1">Shop</h1>
         <p className="lead">
@@ -143,15 +148,39 @@ class Donations extends React.Component {
           difference in local communities and even expand our loving
           gestures beyond. Remember, there is no donation too small, spread
           the word and LOVE. Thank you for your generous HEARTS! We LOVE you
-          ALL!!! No exchanges or
-          refunds, and all sales are final.
+          ALL!!! No exchanges or refunds, and all sales are final.
         </p>
-        <p className="lead">Be on the lookout for our various LOVE Blessings Candy &amp; Condoms Gift Bags that we will be giving away!</p>
+        
+      <div className="text-center lead free">
+        <p className="lead">
+          Be on the lookout for our various LOVE Blessings Candy &amp;
+          Condoms Gift Bags that we will be giving away!
+        </p>
+
+        <p className="lead">
+          IT'S FREE!!! Various types LCTW LOVE Blessings Candy & Condoms
+          Gift Bags{" "}
+        </p>
+        <Link  to="/programs">(Please see programs)</Link>
+        </div>
+        
+      <div className="free d-flex justify-content-between">
+          <img className="freeImg col-md-2 " src={cc1} alt="" />
+          <img className="freeImg col-md-2 " src={cc2} alt="" />
+        <img className="freeImg col-md-2 " src={cc3} alt="" />
+        <img className="freeImg col-md-2 " src={cc4} alt="" />
+        </div>
 
         <div className="shoparea">
           <div className="new">
             <div className="cartItem">
-              <h2 id="whatnew" className="font-weight-bold"><img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} />What's New!<img alt="star" className="star" src={Star} /><img alt="star" className="star" src={Star} /></h2>
+              <h2 id="whatnew" className="font-weight-bold">
+                <img alt="star" className="star" src={Star} />
+                <img alt="star" className="star" src={Star} />
+                What's New!
+                <img alt="star" className="star" src={Star} />
+                <img alt="star" className="star" src={Star} />
+              </h2>
               <h4> Hoodies </h4>
               <div className="regularItem">
                 <img alt="hoody" className="shoppingImg" src={hoody} />
@@ -159,10 +188,20 @@ class Donations extends React.Component {
             </div>
 
             <div className="cartItem">
-            <h2 id="whathot" className="font-weight-bold"><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} />What's Hot!<img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /><img alt="fire" className="fire" src={Fire} /></h2>
+              <h2 id="whathot" className="font-weight-bold">
+                <img alt="fire" className="fire" src={Fire} />
+                <img alt="fire" className="fire" src={Fire} />
+                <img alt="fire" className="fire" src={Fire} />
+                What's Hot!
+                <img alt="fire" className="fire" src={Fire} />
+                <img alt="fire" className="fire" src={Fire} />
+                <img alt="fire" className="fire" src={Fire} />
+              </h2>
               <h4> VIP Memberships </h4>
               <div className="regularItem">
-                <Link to="/membership"><img alt="member" className="shoppingImg" src={logo} onClick={() => window.scrollTo(0, 0)}/></Link>
+                <Link to="/membership">
+                  <img alt="member" className="shoppingImg" src={logo} onClick={() => window.scrollTo(0, 0)} />
+                </Link>
               </div>
             </div>
           </div>
@@ -284,7 +323,7 @@ class Donations extends React.Component {
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <div className="ShoppingOptions">
                 <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
+                <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
                 <input type="hidden" name="lc" value="US" />
                 <input type="hidden" name="item_name" value="Aprons" />
                 <input type="hidden" name="button_subtype" value="products" />
@@ -433,7 +472,7 @@ class Donations extends React.Component {
           </div>
 
           <div className="cartItem">
-          <h4> Hoodies </h4>
+            <h4> Hoodies </h4>
             <div className="regularItem">
               <img alt="hoody" className="shoppingImg" src={hoody} />
             </div>
@@ -490,7 +529,7 @@ class Donations extends React.Component {
                     </tr>
                     <tr>
                       <td>
-                        <select name="os1" >
+                        <select name="os1">
                           <option value="Black Hoody - Red Text">
                             Black Hoody - Red Text
                           </option>
@@ -619,7 +658,9 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-              If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
+                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">
+                  membership
+                </Link> page.
               </p>
             </form>
             <div className="line" />
@@ -714,12 +755,13 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
+                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">
+                  membership
+                </Link> page.
               </p>
             </form>
             <div className="line" />
           </div>
-
 
           <div className="cartItem">
             <h4> VIP Aprons </h4>
@@ -729,7 +771,7 @@ class Donations extends React.Component {
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
               <div className="ShoppingOptions">
                 <input type="hidden" name="cmd" value="_cart" />
-              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
+                <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
                 <input type="hidden" name="lc" value="US" />
                 <input type="hidden" name="item_name" value="Aprons" />
                 <input type="hidden" name="button_subtype" value="products" />
@@ -760,19 +802,18 @@ class Donations extends React.Component {
                     </tr>
                   </tbody>
                 </table>
-
               </div>
             </form>
             <p>
-                {" "}
-            If you would like this item, please support us by visiting the <Link to="/membership" target="_top">membership</Link> page.
-              </p>
+              {" "}
+              If you would like this item, please support us by visiting the <Link to="/membership" target="_top">
+                membership
+              </Link> page.
+            </p>
 
             <div className="line" />
           </div>
-
-
-          </div>
+        </div>
       </div>;
   }
 }
