@@ -77,7 +77,7 @@ class Founder extends Component {
           </p>
 
           <p className="lead">
-            OFIPL Ministries was founder February 04, 2013 as a way of
+            OFIPL Ministries was founded February 04, 2013 as a way of
             enriching the world through love, faith, hope, and prayer. It
             has reached thousands and helped many to overcome some of life’s
             most difficult moments and challenges. We now have over 6 active

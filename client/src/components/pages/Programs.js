@@ -102,8 +102,8 @@ class Programs extends Component {
                 <p className="lead">
                   Men, Women, Children, Infants and Toddlers of all sizes...
                 </p>
-                <p className="lead font-weight-light">
-                  PLEASE!!! NO USED ITEMS
+              <p className="lead font-weight-light font-italic">
+                (Individual packages or cases) PLEASE!!! NO USED ITEMS
                 </p>
                 <ul className="list-unstyled">
                   <li>Backpacks</li>
@@ -115,11 +115,11 @@ class Programs extends Component {
                   <li>Pampers</li>
                   <li>Blue Jeans</li>
                   <li>Sweat Pants/Shirts</li>
-                  <span className="font-weight-bold">Winter:</span>
+                  <span className="font-weight-bold winter">Winter:</span>
                   <li>Hats, Scarves, Gloves</li>
                   <li>Coats, Jackets, Sweaters</li>
                   <li>Thermal Pants/Shirts</li>
-                  <span className="font-weight-bold">
+                  <span className="font-weight-bold other">
                     Additional Items:
                   </span>
                   <li>Blankets</li>
@@ -153,8 +153,8 @@ class Programs extends Component {
                   monthly at locations most frequented by homeless
                   populations.
                 </p>
-                <p className="lead font-weight-light">
-                  (Individual Packages or cases) PLEASE!!! NO USED ITEMS
+              <p className="lead font-weight-light font-italic">
+                (Individual packages or cases) PLEASE!!! NO USED ITEMS
                 </p>
                 <ul className="list-unstyled">
                   <li>Bottled water</li>
@@ -176,7 +176,7 @@ class Programs extends Component {
                   <li>Bible tracks, Pocket bibles</li>
                   <li>Shaving cream, Razors</li>
 
-                  <span className="font-weight-bold">Winter:</span>
+                  <span className="font-weight-bold winter">Winter:</span>
                   <li>Hats, Scarves, Gloves</li>
                 </ul>
               </ModalBody>
@@ -205,7 +205,7 @@ class Programs extends Component {
                 </p>
 
                 <p className="lead font-weight-light font-italic">
-                  (Individual Packages or cases) PLEASE!!! NO USED ITEMS
+                  (Individual packages or cases) PLEASE!!! NO USED ITEMS
                 </p>
                 <ul className="list-unstyled">
                 <li>Various Candy (NO CHOCLATE)</li>
@@ -273,8 +273,7 @@ class Programs extends Component {
               </ModalHeader>
               <ModalBody>
                 <p className="lead">
-                  Support for young girls to empower, encourage, &amp;
-                  inspire them to know their worth.
+                  Design to Empower, Encourage, &amp; Inspire young girls to know their worth.
                 </p>
                 <p className="lead">
                   LeLe is a 7 year old honor student with straight A's; here
