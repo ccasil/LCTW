@@ -137,6 +137,11 @@ app.post("/sendfundraiser", (req, res, next) => {
   });
 });
 
+app.get("/*", (req, res, next) =>{
+  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
+})
+
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
