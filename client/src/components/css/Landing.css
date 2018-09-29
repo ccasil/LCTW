@@ -88,7 +88,7 @@ only screen and (min-width: 1024px){
 
 .logo {
   top: 30%;
-  height: 600px;
+  height: 400px;
   animation: App-logo-spin infinite 20s linear;
   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0) 70%);
 
