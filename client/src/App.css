@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+html,body
+{
+    width: 100%;
+    overflow-x: hidden; 
+}
 
 a {
   color: #c8102e;

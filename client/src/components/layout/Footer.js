@@ -5,7 +5,7 @@ import "../css/Footer.css";
 class Footer extends Component {
     render() {
         return (
-            <div className="container-fluid" id="footer">
+            <div className="container-fluid footer" id="footer">
                 <table className="table table-borderless">
                     <thead>
                         <tr>

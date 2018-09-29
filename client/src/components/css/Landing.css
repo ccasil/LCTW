@@ -36,6 +36,14 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.logo {
+  top: 30%;
+  height: 200px;
+  animation: App-logo-spin infinite 20s linear;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0) 70%);
+
+}
 @media (min-width: 240px){
   #toptext{
     font-size: 3rem;
@@ -84,14 +92,6 @@ only screen and (min-width: 1024px){
   .logo{
     height: 320px;
   }
-}
-
-.logo {
-  top: 30%;
-  height: 400px;
-  animation: App-logo-spin infinite 20s linear;
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0) 70%);
-
 }
 
 @keyframes App-logo-spin {

@@ -21,6 +21,23 @@
   color: white;
 }
 
+.footer p{
+    font-size: 0.5rem;
+}
+.footer .h5{
+  font-size:0.5rem;
+}
+@media (min-width: 480px){
+  .footer p{
+    font-size:1rem;
+  }
+  .footer .h5{
+    font-size:1.25rem;
+  }
+  .footermedialink{
+    font-size:1rem;
+  }
+}
 .footermedialink:hover {
   filter: invert(100%);
 }

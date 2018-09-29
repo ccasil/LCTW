@@ -27,7 +27,7 @@ import Fire from '../../images/Shop/Fire.gif'
 import Star from '../../images/Shop/Star.gif'
 
 import logo from '../../images/Logos/logo.png';
-import hoody from '../../images/Shop/hoody.jpg';
+import hoody from '../../images/Shop/Hoody.jpg';
 
 import cc1 from '../../images/Shop/cc1.jpeg';
 import cc2 from "../../images/Shop/cc2.jpeg";
