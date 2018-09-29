@@ -13,7 +13,7 @@ class Donations extends Component {
     render() {
 
         
-        return <div>
+        return <div className="donation">
             <h1 className="display-1">Donations</h1>
             <p className="text-center">
               Our #LCTW Family would like to thank New Mission Community Church, Peter's Bakery, Safeway, Lucky, The Home Depot, and Walmart for your help, donations, &amp; support... We <span className="font-weight-bold">

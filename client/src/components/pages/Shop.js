@@ -151,27 +151,32 @@ class Donations extends React.Component {
           ALL!!! No exchanges or refunds, and all sales are final.
         </p>
         
-      <div className="text-center lead free">
-        <p className="lead">
-          Be on the lookout for our various LOVE Blessings Candy &amp;
-          Condoms Gift Bags that we will be giving away!
-        </p>
 
-        <p className="lead">
-          IT'S FREE!!! Various types LCTW LOVE Blessings Candy & Condoms
-          Gift Bags{" "}
-        </p>
-        <Link  to="/programs" onClick={() => window.scrollTo(0, 0)}>(Please see programs)</Link>
-        </div>
+
+     
         
-      <div className="free d-flex justify-content-between">
-          <img className="freeImg col-md-2 " src={cc1} alt="" />
-          <img className="freeImg col-md-2 " src={cc2} alt="" />
-        <img className="freeImg col-md-2 " src={cc3} alt="" />
-        <img className="freeImg col-md-2 " src={cc4} alt="" />
-        </div>
+  
 
         <div className="shoparea">
+
+        <div>
+          <p className="lead">
+            Be on the lookout for our various LOVE Blessings Candy &amp;
+            Condoms Gift Bags that we will be giving away!
+          </p>
+           <p className="lead">
+              IT'S FREE!!! Various types LCTW LOVE Blessings Candy & Condoms
+              Gift Bags{" "}
+            </p>
+            <div className="programsLink">
+              <Link  to="/programs" onClick={() => window.scrollTo(0, 0)}>(Please see programs)</Link>
+            </div>
+          <img className="freeImg col-sm-4 col-md-2 " src={cc1} alt="" />
+          <img className="freeImg col-sm-4 col-md-2 " src={cc2} alt="" />
+          <img className="freeImg col-sm-4 col-md-2 " src={cc3} alt="" />
+          <img className="freeImg col-sm-4 col-md-2 " src={cc4} alt="" />
+        </div>
+
           <div className="new">
             <div className="cartItem">
               <h2 id="whatnew" className="font-weight-bold">
