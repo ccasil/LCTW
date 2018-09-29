@@ -161,7 +161,7 @@ class Donations extends React.Component {
           IT'S FREE!!! Various types LCTW LOVE Blessings Candy & Condoms
           Gift Bags{" "}
         </p>
-        <Link  to="/programs">(Please see programs)</Link>
+        <Link  to="/programs" onClick={() => window.scrollTo(0, 0)}>(Please see programs)</Link>
         </div>
         
       <div className="free d-flex justify-content-between">
@@ -659,7 +659,7 @@ class Donations extends React.Component {
               <p>
                 {" "}
 
-                If you would like this item, please support us by visiting the <Link to="/membership">
+                If you would like this item, please support us by visiting the <Link to="/membership" onClick={() => window.scrollTo(0, 0)}>
                   membership
                 </Link> page.
               </p>
@@ -756,7 +756,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership">
+                If you would like this item, please support us by visiting the <Link to="/membership" onClick={() => window.scrollTo(0, 0)}>
                   membership
                 </Link> page.
               </p>
@@ -807,7 +807,7 @@ class Donations extends React.Component {
             </form>
             <p>
               {" "}
-              If you would like this item, please support us by visiting the <Link to="/membership">
+              If you would like this item, please support us by visiting the <Link to="/membership" onClick={() => window.scrollTo(0, 0)}>
                 membership
               </Link> page.
             </p>
