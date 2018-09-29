@@ -4,16 +4,16 @@ import "../css/Shop.css";
 import { Link } from "react-router-dom";
 import $ from 'jquery';
 
-import BlackRed from '../../images/Shop/LOVE 1.jpg';
-import BlackWhite from '../../images/Shop/LOVE 2.jpg';
-import RedBlack from '../../images/Shop/LOVE 4.jpg';
-import RedWhite from '../../images/Shop/LOVE 3.jpg';
-import WhiteBlack from '../../images/Shop/LOVE 5.jpg';
-import WhiteRed from '../../images/Shop/LOVE 6.jpg';
-import VIP1 from '../../images/Shop/LOVE VIP 1.jpg';
-import VIP2 from '../../images/Shop/LOVE VIP 2.jpg';
-import VIP3 from '../../images/Shop/LOVE VIP 3.jpg';
-import VIP4 from '../../images/Shop/LOVE VIP 4.jpg';
+import BlackRed from '../../images/Shop/LOVE_1.jpg';
+import BlackWhite from '../../images/Shop/LOVE_2.jpg';
+import RedBlack from '../../images/Shop/LOVE_4.jpg';
+import RedWhite from '../../images/Shop/LOVE_3.jpg';
+import WhiteBlack from '../../images/Shop/LOVE_5.jpg';
+import WhiteRed from '../../images/Shop/LOVE_6.jpg';
+import VIP1 from '../../images/Shop/LOVE_VIP_1.jpg';
+import VIP2 from '../../images/Shop/LOVE_VIP_2.jpg';
+import VIP3 from '../../images/Shop/LOVE_VIP_3.jpg';
+import VIP4 from '../../images/Shop/LOVE_VIP_4.jpg';
 import Apron1 from '../../images/Shop/Apron1.JPG';
 import Apron2 from '../../images/Shop/Apron2.JPG';
 import Apron3 from '../../images/Shop/Apron3.JPG';
@@ -27,7 +27,7 @@ import Fire from '../../images/Shop/Fire.gif'
 import Star from '../../images/Shop/Star.gif'
 
 import logo from '../../images/Logos/logo.png';
-import hoody from '../../images/Shop/Hoody.jpg';
+import hoody from '../../images/Shop/hoody.jpg';
 
 import cc1 from '../../images/Shop/cc1.jpeg';
 import cc2 from "../../images/Shop/cc2.jpeg";
@@ -658,7 +658,8 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">
+
+                If you would like this item, please support us by visiting the <Link to="/membership">
                   membership
                 </Link> page.
               </p>
@@ -755,7 +756,7 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-                If you would like this item, please support us by visiting the <Link to="/membership" target="_top">
+                If you would like this item, please support us by visiting the <Link to="/membership">
                   membership
                 </Link> page.
               </p>
@@ -806,7 +807,7 @@ class Donations extends React.Component {
             </form>
             <p>
               {" "}
-              If you would like this item, please support us by visiting the <Link to="/membership" target="_top">
+              If you would like this item, please support us by visiting the <Link to="/membership">
                 membership
               </Link> page.
             </p>
