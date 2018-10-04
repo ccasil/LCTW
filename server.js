@@ -10,7 +10,7 @@ app.use(
     extended: false
   })
 );
-
+//app.use(express.static(path.join(__dirname, 'build')));
 // create reusable transporter object using the default SMTP transport
 let transport = {
   host: "smtp.gmail.com",
@@ -137,8 +137,9 @@ app.post("/sendfundraiser", (req, res, next) => {
   });
 });
 
-app.get("/*", (req, res, next) =>{
-  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
+app.get("*", (req, res, next) =>{
+  console.log("REDIRECT***********************************");
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
 
 
