@@ -34,29 +34,27 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar />
-          <Switch>
+
           <Route exact path="/" component={Landing} />
-          
-          <Route path="/ourmission" component={OurMission} />
-          <Route path="/services" component={Services} />
-          <Route path="/events" component={Events} />
-          <Route path="/pastevents" component={PastEvents} />
-          <Route path="/founder" component={Founder} />
-          <Route path="/executive" component={Executive} />
-          <Route path="/staff" component={Staff} />
-          <Route path="/donations" component={Donations} />
-          <Route path="/shop" component={Shop} />
-          <Route path="/fundraisers" component={Fundraisers} />
-          <Route path="/programs" component={Programs} />
-          <Route path="/mailing" component={Mailing} />
-          <Route path="/sponsorform" component={SponsorForm} />
-          <Route path="/volunteerform" component={VolunteerForm} />
-          <Route path="/homelessform" component={HomelessForm} />
-          <Route path="/resources" component={Resources} />
-          <Route path="/membership" component={Membership} />
-          <Route path="*" componenet={Landing}/>
-	  
-          </Switch>
+          <div className="container text-justify">	          
+            <Route path="/ourmission" component={OurMission} />
+            <Route path="/services" component={Services} />
+            <Route path="/events" component={Events} />
+            <Route path="/pastevents" component={PastEvents} />
+            <Route path="/founder" component={Founder} />
+            <Route path="/executive" component={Executive} />
+            <Route path="/staff" component={Staff} />
+            <Route path="/donations" component={Donations} />
+            <Route path="/shop" component={Shop} />
+            <Route path="/fundraisers" component={Fundraisers} />
+            <Route path="/programs" component={Programs} />
+            <Route path="/mailing" component={Mailing} />
+            <Route path="/sponsorform" component={SponsorForm} />
+            <Route path="/volunteerform" component={VolunteerForm} />
+            <Route path="/homelessform" component={HomelessForm} />
+            <Route path="/resources" component={Resources} />
+            <Route path="/membership" component={Membership} />
+          </div> 
           <Footer />
         </div>
       </Router>
