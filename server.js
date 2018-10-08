@@ -1,9 +1,9 @@
 const express = require("express");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const creds = require("./config.js");
-const passport = require("passport");
+// const passport = require("passport");
 
 const users = require("./routes/api/users");
 const app = express();
@@ -18,25 +18,25 @@ app.use(bodyParser.json());
 
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
-mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+// mongoose
+//   .connect(
+//     db,
+//     { useNewUrlParser: true }
+//   )
+//   .then(() => console.log("MongoDB Connected"))
+//   .catch(err => console.log(err));
 
 // Passport middleware
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 // Passport Config
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
 // Use Routes
-app.use('/api/users', users);
+// app.use('/api/users', users);
 
 
 //app.use(express.static(path.join(__dirname, 'build')));
