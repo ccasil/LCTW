@@ -1,17 +1,46 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const creds = require("./config.js");
+const passport = require("passport");
+
+const users = require("./routes/api/users");
 const app = express();
 
-
-app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: false
   })
 );
+
+app.use(bodyParser.json());
+
+
+// DB Config
+const db = require("./config/keys").mongoURI;
+
+// Connect to MongoDB
+mongoose
+  .connect(
+    db,
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport Config
+require('./config/passport')(passport);
+
+// Use Routes
+app.use('/api/users', users);
+
+
 //app.use(express.static(path.join(__dirname, 'build')));
+
 // create reusable transporter object using the default SMTP transport
 let transport = {
   host: "smtp.gmail.com",
@@ -29,6 +58,12 @@ transporter.verify((error, success) => {
     }
 });
 
+app.use((request, response, next) => {
+  response.header("Access-Control-Allow-Origin", "*");
+  response.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
 app.post("/sendcontact", (req, res, next) => {
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
@@ -36,7 +71,7 @@ app.post("/sendcontact", (req, res, next) => {
   var email = req.body.email;
   var comments = req.body.comments;
   // setup email data with unicode symbols
-    let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE Add ${first_name} ${last_name} to Mailing List!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nMessage: ${comments}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "info@lovechangingtheworld.org", subject: `LCTW WEBSITE Add ${first_name} ${last_name} to Mailing List!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nMessage: ${comments}` };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {
@@ -55,7 +90,7 @@ app.post("/sendsponsor", (req, res, next) => {
   var phone = req.body.phone;
   var email = req.body.email;
   var organization = req.body.organization;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nOrganization: ${organization}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "info@lovechangingtheworld.org", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to become a sponsor!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nOrganization: ${organization}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -74,7 +109,7 @@ app.post("/sendvolunteer", (req, res, next) => {
   var phone = req.body.phone;
   var email = req.body.email;
   var experience = req.body.experience;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nExperience: ${experience}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "info@lovechangingtheworld.org", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to become a volunteer!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nExperience: ${experience}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -98,7 +133,7 @@ app.post("/sendhelp", (req, res, next) => {
   var pant = req.body.pant;
   var sock = req.body.sock;
   var underwear = req.body.underwear;
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nBirthday: ${birthday} \nArea: ${location} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "info@lovechangingtheworld.org", subject: `LCTW WEBSITE ${first_name} ${last_name} needs supplies!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nBirthday: ${birthday} \nArea: ${location} \nGender/Age: ${genderage} \nShirt: ${shirt} \nPant: ${pant} \nSock: ${sock} \nUnderwear: ${underwear}` };
 
   transporter.sendMail(mailOptions, (error, data) => {
     if (error) {
@@ -110,11 +145,7 @@ app.post("/sendhelp", (req, res, next) => {
   });
 });
 
-app.use((request, response, next) => {
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Content-Type");
-    next();
-});
+
 
 app.post("/sendfundraiser", (req, res, next) => {
   var first_name = req.body.first_name;
@@ -125,7 +156,7 @@ app.post("/sendfundraiser", (req, res, next) => {
   var event = req.body.event;
   var activities = req.body.activities;
   // setup email data with unicode symbols
-  let mailOptions = { from: `${first_name} ${last_name}`, to: "lctwcodingdojo@gmail.com", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to hold a fundraiser!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nType: ${type} \nEvent: ${event} \nActivities: ${activities}` };
+  let mailOptions = { from: `${first_name} ${last_name}`, to: "info@lovechangingtheworld.org", subject: `LCTW WEBSITE ${first_name} ${last_name} wants to hold a fundraiser!`, text: `Name: ${first_name} ${last_name} \nPhone: ${phone} \nEmail: ${email} \nType: ${type} \nEvent: ${event} \nActivities: ${activities}` };
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {
@@ -138,10 +169,12 @@ app.post("/sendfundraiser", (req, res, next) => {
   });
 });
 
+
 app.get("*", (req, res, next) =>{
   console.log("REDIRECT***********************************");
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
+
 
 
 const PORT = process.env.PORT || 8000;

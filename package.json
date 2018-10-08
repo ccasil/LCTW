@@ -4,9 +4,16 @@
   "description": "//README",
   "main": "config.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
-    "nodemailer": "^4.6.8"
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.1",
+    "nodemailer": "^4.6.8",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.8.0"
   },
   "devDependencies": {},
   "scripts": {
