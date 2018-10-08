@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const creds = require("./config.js");
 const app = express();
 
+
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
