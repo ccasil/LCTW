@@ -235,7 +235,7 @@ class Events extends Component {
             <h5>LOVE starts at HomeFirst </h5>
             <h5>Courtyard BBQ #2</h5>
             <a className="btn-block" color="danger" onClick={this.toggle12}>
-              <img className="btnImg" style={{ height: "100%" }} src={nextevent1} alt="" />
+              <img className="btnImg" style={{height: "100%"}} src={nextevent1} alt="" />
             </a>
             <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
               <ModalHeader toggle={this.toggle12}>
@@ -263,7 +263,7 @@ class Events extends Component {
             </h5>
             <h5>LOVE Blessings Give-A-Way</h5>
             <a className="btn-block" color="danger" onClick={this.toggle13}>
-              <img className="btnImg" style={{ height: "100%" }} src={nextevent2} alt="" />
+              <img className="btnImg" style={{ height: "100%"}} src={nextevent2} alt="" />
             </a>
             <Modal isOpen={this.state.modal13} toggle={this.toggle13} className={this.props.className}>
               <ModalHeader toggle={this.toggle13}>
