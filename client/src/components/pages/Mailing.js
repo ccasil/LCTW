@@ -16,7 +16,7 @@ class Contact extends Component {
     {
       axios({
       method: "POST",
-      url: "http://localhost:8000/sendcontact",
+      url: "http://lovechangingtheworld.org/sendcontact",
       data: {
         first_name: first_name,
         last_name: last_name,
