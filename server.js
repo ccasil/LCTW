@@ -37,6 +37,7 @@ app.use((request, response, next) => {
 });
 
 app.post("/sendcontact", (req, res, next) => {
+  console.log("at app.post!!!!!!!!!!!!!!!!!!!")
   var first_name = req.body.first_name;
   var last_name = req.body.last_name;
   var phone = req.body.phone;
@@ -47,6 +48,7 @@ app.post("/sendcontact", (req, res, next) => {
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, data) => {
+    console.log("at sendMAIL!!!!!!!!!!!!!!!!!!!");
     if (error) {
         return console.log(error);
     } else {
