@@ -4,7 +4,9 @@ const nodemailer = require("nodemailer");
 const creds = require("./config.js");
 const app = express();
 
+
 app.use(bodyParser.json());
+
 app.use(
   bodyParser.urlencoded({
     extended: false
@@ -138,11 +140,10 @@ app.post("/sendfundraiser", (req, res, next) => {
     }
   });
 });
-
-app.get("/*", (req, res, next) =>{
-  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
+app.get("*", (req, res, next) =>{
+  console.log("REDIRECT***********************************");
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
-
 
 const PORT = process.env.PORT || 8000;
 
