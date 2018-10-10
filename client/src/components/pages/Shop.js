@@ -23,6 +23,7 @@ import VIPApron1 from '../../images/Shop/VIPApron1.JPG';
 import VIPApron2 from '../../images/Shop/VIPApron2.JPG';
 import GoldTankTop from '../../images/Shop/TankGold.JPG';
 import PlatTankTop from '../../images/Shop/TankPlat.JPG';
+import breast from "../../images/Shop/breast.jpg";
 import Fire from '../../images/Shop/Fire.gif'
 import Star from '../../images/Shop/Star.gif'
 
@@ -150,33 +151,8 @@ class Donations extends React.Component {
           the word and LOVE. Thank you for your generous HEARTS! We LOVE you
           ALL!!! No exchanges or refunds, and all sales are final.
         </p>
-        
-
-
-     
-        
-  
 
         <div className="shoparea">
-
-        <div>
-          <p className="lead">
-            Be on the lookout for our various LOVE Blessings Candy &amp;
-            Condoms Gift Bags that we will be giving away!
-          </p>
-           <p className="lead">
-              IT'S FREE!!! Various types LCTW LOVE Blessings Candy & Condoms
-              Gift Bags{" "}
-            </p>
-            <div className="programsLink">
-              <Link  to="/programs" onClick={() => window.scrollTo(0, 0)}>(Please see programs)</Link>
-            </div>
-          <img className="freeImg col-sm-4 col-md-2 " src={cc1} alt="" />
-          <img className="freeImg col-sm-4 col-md-2 " src={cc2} alt="" />
-          <img className="freeImg col-sm-4 col-md-2 " src={cc3} alt="" />
-          <img className="freeImg col-sm-4 col-md-2 " src={cc4} alt="" />
-        </div>
-
           <div className="new">
             <div className="cartItem">
               <h2 id="whatnew" className="font-weight-bold">
@@ -213,6 +189,88 @@ class Donations extends React.Component {
         </div>
         <hr />
         <div className="shoparea">
+          <div className="cartItem">
+            <h4>
+              <span role="img" aria-label="heart">
+                💗
+              </span>
+              LIMITED EDITION!!! Breast Cancer Awareness T-Shirts{" "}
+            </h4>
+            <div className="regularItem">
+              <img alt="shirt" className="shoppingImg" src={breast} />
+            </div>
+
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" className="cartForm">
+              <input type="hidden" name="cmd" value="_cart" />
+              <input type="hidden" name="business" value="info@lovechangingtheworld.org" />
+              <input type="hidden" name="lc" value="US" />
+              <input type="hidden" name="item_name" value="Breast Cancer Awareness T-Shirt" />
+              <input type="hidden" name="button_subtype" value="products" />
+              <input type="hidden" name="no_note" value="0" />
+              <input type="hidden" name="shipping" value="5.00" />
+              <input type="hidden" name="add" value="1" />
+              <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest" />
+
+              <div className="ShoppingOptionsLH">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="hidden" name="on0" value="Size" />
+                        Size
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <select name="os0">
+                          <option value="Small">Small $25.00 USD</option>
+                          <option value="Medium">Medium $25.00 USD</option>
+                          <option value="Large">Large $25.00 USD</option>
+                          <option value="Extra-Large">
+                            Extra-Large $25.00 USD
+                          </option>
+                          <option value="XX-Large">
+                            XX-Large $30.00 USD
+                          </option>
+                          <option value="3X-Large">
+                            3X-Large $30.00 USD
+                          </option>
+                          <option value="4X-Large">
+                            4X-Large $30.00 USD
+                          </option>
+                          <option value="5X-Large">
+                            5X-Large $30.00 USD
+                          </option>
+                        </select>{" "}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="option_select0" value="Small" />
+                <input type="hidden" name="option_amount0" value="25.00" />
+                <input type="hidden" name="option_select1" value="Medium" />
+                <input type="hidden" name="option_amount1" value="25.00" />
+                <input type="hidden" name="option_select2" value="Large" />
+                <input type="hidden" name="option_amount2" value="25.00" />
+                <input type="hidden" name="option_select3" value="Extra-Large" />
+                <input type="hidden" name="option_amount3" value="25.00" />
+                <input type="hidden" name="option_select4" value="XX-Large" />
+                <input type="hidden" name="option_amount4" value="30.00" />
+                <input type="hidden" name="option_select5" value="3X-Large" />
+                <input type="hidden" name="option_amount5" value="30.00" />
+                <input type="hidden" name="option_select6" value="4X-Large" />
+                <input type="hidden" name="option_amount6" value="30.00" />
+                <input type="hidden" name="option_select7" value="5X-Large" />
+                <input type="hidden" name="option_amount7" value="30.00" />
+                <input type="hidden" name="option_index" value="0" />
+              </div>
+              <input type="image" className="cartButton" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+            <div className="line" />
+          </div>
+
           <div className="cartItem">
             <h4> T-Shirts </h4>
             <div className="regularItem">
@@ -663,7 +721,6 @@ class Donations extends React.Component {
               </div>
               <p>
                 {" "}
-
                 If you would like this item, please support us by visiting the <Link to="/membership" onClick={() => window.scrollTo(0, 0)}>
                   membership
                 </Link> page.
@@ -818,6 +875,21 @@ class Donations extends React.Component {
             </p>
 
             <div className="line" />
+          </div>
+          <div>
+            <p className="lead">
+              IT'S FREE!!! Various types LCTW LOVE Blessings Candy & Condoms
+              Gift Bags{" "}
+            </p>
+            <img className="freeImg col-sm-4 col-md-2 " src={cc1} alt="" />
+            <img className="freeImg col-sm-4 col-md-2 " src={cc2} alt="" />
+            <img className="freeImg col-sm-4 col-md-2 " src={cc3} alt="" />
+            <img className="freeImg col-sm-4 col-md-2 " src={cc4} alt="" />
+            <div className="programsLink">
+              <Link to="/programs" onClick={() => window.scrollTo(0, 0)}>
+                (Please see programs)
+              </Link>
+            </div>
           </div>
         </div>
       </div>;
