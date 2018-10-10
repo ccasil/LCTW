@@ -88,7 +88,7 @@ h4:hover{
 	height: 2rem;
 }
 .cartForm .ShoppingOptions{
-	height: 120px;
+	height: 124px;
 	text-align: center;
 }
 
@@ -96,6 +96,14 @@ h4:hover{
 	min-width: 100%;
 }
 
+.cartForm .ShoppingOptionsLH{
+	height: 100px;
+	text-align: center;
+}
+
+.cartForm .ShoppingOptionsLH table {
+	min-width: 100%;
+}
 .cartButton{
 	margin-top: 5px;
 }

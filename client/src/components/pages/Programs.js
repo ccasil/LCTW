@@ -4,6 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { Link } from "react-router-dom";
 
 // image routes for Event 12
+import kid from "../../images/Events/Event_12/kid.JPG";
 import event12_image1 from '../../images/Events/Event_12/1.JPG';
 import event12_image2 from '../../images/Events/Event_12/2.JPG';
 import event12_image4 from '../../images/Events/Event_12/4.JPG';
@@ -272,6 +273,7 @@ class Programs extends Component {
                 "I AM" WORTH IT!
               </ModalHeader>
               <ModalBody>
+              <img className="center" src={kid} alt="LeLe" />
                 <p className="lead">
                   Design to Empower, Encourage, &amp; Inspire young girls to know their worth.
                 </p>
