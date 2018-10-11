@@ -16,23 +16,21 @@ class Contact extends Component {
     {
       axios({
       method: "POST",
-      url: "http://lovechangingtheworld.org/sendcontact",
+      url: "http://lovechangingtheworld.org:8000/sendcontact",
       data: {
         first_name: first_name,
         last_name: last_name,
         phone: phone,
         email: email,
         comments: comments
-      }
-      }).then((response) => {
+      }}).then((response) => {
         if (response.data.msg === 'success') {
           alert("Message Sent");
           this.resetForm();
         } else {
           alert("Message failed to send");
         }
-      })
-
+      }).catch(function (error){console.log(error)})
     }
     else if (first_name && last_name && phone && !reg.test(email)){
       alert("Please enter a valid email")

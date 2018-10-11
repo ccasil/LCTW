@@ -18,10 +18,10 @@ class SponsorForm extends Component {
         const organization = document.getElementById('organization').value;
         var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-        if(first_name && last_name && phone ** reg.test(email))
+        if(first_name && last_name && phone && reg.test(email))
         {        axios({
                     method: "POST",
-                    url: "http://localhost:8000/sendsponsor",
+                    url: "http://lovechangingtheworld.org:8000/sendsponsor",
                     data: {
                         first_name: first_name,
                         last_name: last_name,

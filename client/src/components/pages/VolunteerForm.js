@@ -16,7 +16,7 @@ class VolunteerForm extends Component {
       {
         axios({
             method: "POST",
-            url: "http://localhost:8000/sendvolunteer",
+            url: "http://lovechangingtheworld.org:8000/sendvolunteer",
             data: {
               first_name: first_name,
               last_name: last_name,

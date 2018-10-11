@@ -161,7 +161,7 @@ class Fundraisers extends Component {
         if(first_name && last_name && phone && reg.test(email) ){
             axios({
                 method: "POST",
-                url: "http://localhost:8000/sendfundraiser",
+                url: "http://lovechangingtheworld.org:8000/sendfundraiser",
                 data: {
                     first_name: first_name,
                     last_name: last_name,
