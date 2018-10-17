@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import axios from "axios";
 
 class VolunteerForm extends Component {
+
+
+  constructor(props){
+      super(props);
+      this.state = {
+        disabled : false,
+      }
+    }
+
   handleSubmit = async e => {
+    this.setState({disabled: true})
     e.preventDefault();
     const first_name = document.getElementById("first_name").value;
     const last_name = document.getElementById("last_name").value;
@@ -28,16 +38,21 @@ class VolunteerForm extends Component {
             if (response.data.msg === "success") {
               alert("Message Sent");
               this.resetForm();
+              this.setState({disabled: false});
+              
             } else {
               alert("Message failed to send");
+              this.setState({disabled: false})
             }
           });
       }
       else if (first_name && last_name && phone && !reg.test(email)){
         alert("Please enter a valid email")
+        this.setState({disabled: false});
       }
       else{
         alert("Please fill in the required fields")
+        this.setState({disabled: false});
       }
   };
   resetForm() {
@@ -77,7 +92,8 @@ class VolunteerForm extends Component {
             <textarea className="form-control" placeholder="" rows="3" name="experience" id="experience" />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+           <button disabled={this.state.disabled} type="submit" className="btn btn-primary">
+
             Submit
           </button>
         </form>
