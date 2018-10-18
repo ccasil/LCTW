@@ -2,6 +2,10 @@ import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 
 import logo from '../../images/Logos/logo.png';
+import { Link } from "react-router-dom";
+import { PropTypes } from "prop-types";
+import { connect } from "react-redux";
+
 
 import "../css/Landing.css";
 
@@ -20,5 +24,12 @@ class Landing extends Component {
     );
   }
 }
+Landing.propTypes = {
+  auth: PropTypes.object.isRequired
+};
 
-export default Landing;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(Landing);
