@@ -118,6 +118,7 @@ class Fundraisers extends Component {
         super(props);
         this.state = { 
             autoplay: true,
+            disabled: false,
             text: "Please select an event"
         };
         this.change = this.change.bind(this)
@@ -147,6 +148,7 @@ class Fundraisers extends Component {
     }
 
     handleSubmit = async(e) => {
+        this.setState({disabled: true})
         e.preventDefault();
         const first_name = document.getElementById('first_name').value;
         const last_name = document.getElementById('last_name').value;
@@ -174,17 +176,21 @@ class Fundraisers extends Component {
             }).then((response) => {
                 if(response.data.msg === 'success') {
                     alert("Message Sent");
-                    this.resetForm();      
+                    this.resetForm();
+                    this.setState({disabled: false});    
                 }else {
                     alert("Message failed to send");
+                    this.setState({disabled: false});
                 }
             })
         }
         else if (first_name && last_name && phone && !reg.test(email)){
             alert("Please enter a valid email")
+            this.setState({disabled: false})
         }
         else{
             alert("Please fill in the required fields")
+            this.setState({disabled: false})
         }
     
 
@@ -304,7 +310,8 @@ render() {
                 <textarea className="form-control" placeholder="" rows="3" name="activities" id="activities" />
             </div>
 
-            <button type="submit" className="btn btn-primary">
+            <button disabled={this.state.disabled} type="submit" className="btn btn-primary">
+
                 Submit
             </button>
         </form>

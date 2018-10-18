@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import axios from "axios";
 
 class HomelessForm extends Component {
+
+
+  constructor(props){
+      super(props);
+      this.state = {
+        disabled : false,
+      }
+    }
+
     handleSubmit = async e => {
+        this.setState({disabled: true})
         e.preventDefault();
         const first_name = document.getElementById("first_name").value;
         const last_name = document.getElementById("last_name").value;
@@ -35,14 +45,17 @@ class HomelessForm extends Component {
             }).then(response => {
                 if (response.data.msg === "success") {
                     alert("Message Sent");
+                    this.setState({disabled: false})
                     this.resetForm();
                 } else {
                     alert("Message failed to send");
+                    this.setState({disabled: false})
                 }
             })
         }
         else{
             alert("Please fill in the required fields")
+            this.setState({disabled: false});
         }
     };
     resetForm() {
@@ -152,7 +165,8 @@ class HomelessForm extends Component {
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-primary">
+              <button disabled={this.state.disabled} type="submit" className="btn btn-primary">
+
                 Submit
               </button>
             </form>
