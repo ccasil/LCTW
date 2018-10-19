@@ -14,7 +14,7 @@ class Navbar extends Component {
     this.props.logoutUser();
   }
   render() {
-    const { isAuthenticated, user } = this.props.auth;
+    // const { isAuthenticated, user } = this.props.auth;
     return (
       <div>
         <div className="textmargin">

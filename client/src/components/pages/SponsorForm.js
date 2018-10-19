@@ -17,47 +17,92 @@ class SponsorForm extends Component {
     }
 
     handleSubmit = async (e) => {
-        this.setState({disabled: true})
-        e.preventDefault();
-        const first_name = document.getElementById('first_name').value;
-        const last_name = document.getElementById('last_name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById("email").value;
-        const organization = document.getElementById('organization').value;
-        var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-        if(first_name && last_name && phone && reg.test(email))
-        {        axios({
-                    method: "POST",
-                    url: "http://lovechangingtheworld.org:8000/sendsponsor",
-                    data: {
-                        first_name: first_name,
-                        last_name: last_name,
-                        phone: phone,
-                        email: email,
-                        organization: organization
-                    }
-                }).then((response) => {
-                    if (response.data.msg === 'success') {
-                        alert("Message Sent");
-                        this.resetForm();
-                        this.setState({disabled: false});
-                    } else {
-                        alert("Message failed to send");
-                        this.setState({disabled: false});
-                    }
-                })}
-    
-        else if (first_name && last_name && phone && !reg.test(email)){
-            alert("Please enter a valid email")
-            this.setState({disabled: false});
-        }
-        else{
-            alert("Please fill in the required fields")
-            this.setState({disabled: false});
-        }
-
-    };
+                                  this.setState(
+                                    {
+                                      disabled: true
+                                    }
+                                  );
+                                  e.preventDefault();
+                                  const first_name = document.getElementById("first_name").value;
+                                  const last_name = document.getElementById("last_name").value;
+                                  const phone = document.getElementById("phone").value;
+                                  const email = document.getElementById("email").value;
+                                  const organization = document.getElementById("organization").value;
+                                  var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                  // eslint-disable-next-line
+                                  var phoneReg = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+                                  if (first_name && last_name && phoneReg.test(phone) && reg.test(email)) {
+                                    var parsedPhone = "";
+                                    for (var i = 0; i < phone.length; i++) {
+                                      if (phone[i] >= 0 && phone[i] <= 9) {
+                                        parsedPhone += phone[i];
+                                      }
+                                    }
+                                    console.log(parsedPhone);
+                                    axios({
+                                      method:
+                                        "POST",
+                                      url:
+                                        "http://lovechangingtheworld.org:8000/sendsponsor",
+                                      data: {
+                                        first_name: first_name,
+                                        last_name: last_name,
+                                        phone: parsedPhone,
+                                        email: email,
+                                        organization: organization
+                                      }
+                                    }).then(
+                                      response => {
+                                        if (
+                                          response
+                                            .data
+                                            .msg ===
+                                          "success"
+                                        ) {
+                                          alert(
+                                            "Message Sent"
+                                          );
+                                          this.resetForm();
+                                          this.setState(
+                                            {
+                                              disabled: false
+                                            }
+                                          );
+                                        } else {
+                                          alert(
+                                            "Message failed to send"
+                                          );
+                                          this.setState(
+                                            {
+                                              disabled: false
+                                            }
+                                          );
+                                        }
+                                      }
+                                    );
+                                  } else if (first_name && last_name && phoneReg.test(phone) && !reg.test(email)) {
+                                    this.setState(
+                                      {
+                                        disabled: false
+                                      }
+                                    );
+                                    alert("Please enter a valid email");
+                                  } else if (first_name && last_name && !phoneReg.test(phone) && reg.test(email)) {
+                                    this.setState(
+                                      {
+                                        disabled: false
+                                      }
+                                    );
+                                    alert("Please enter valid phone number");
+                                  } else {
+                                    this.setState(
+                                      {
+                                        disabled: false
+                                      }
+                                    );
+                                    alert("Please fill in the required fields");
+                                  }
+                                };
     resetForm() {
         document.getElementById("sponsor-form").reset();
     }
