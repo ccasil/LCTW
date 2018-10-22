@@ -1,4 +1,6 @@
 module.exports = {
-  mongoURI: "mongodb://127.0.0.1:27017/lctw",
+
+  mongoURI: "mongodb://localhost/lctw",
   secretOrKey: "secret"
+
 };
