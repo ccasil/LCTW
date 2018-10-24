@@ -21,9 +21,10 @@ const UserSchema = new Schema({
   // membershipLevel: {
   //   type: String
   // },
-  // adminLevel: {
-  //   type: String
-  // },
+  adminLevel: {
+    type: Boolean,
+    default: false
+  },
   date: {
     type: Date,
     default: Date.now
