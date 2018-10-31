@@ -2,10 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const creds = require("./config.js");
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const passport = require("passport");
 
 const users = require("./routes/api/users");
+const eventfuls = require("./routes/api/eventfuls");
 const app = express();
 
 
@@ -18,7 +19,7 @@ app.use(
 );
 
 // DB Config
-/*const db = require('./config/keys').mongoURI;
+const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
@@ -28,7 +29,6 @@ mongoose
   )
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
-*/
 
 // Passport middleware
 app.use(passport.initialize());
@@ -38,6 +38,8 @@ require('./config/passport')(passport);
 
 // Use Routes
 app.use('/api/users', users);
+app.use('/api/eventfuls', eventfuls);
+
 
 // create reusable transporter object using the default SMTP transport
 let transport = {

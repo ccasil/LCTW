@@ -15,7 +15,7 @@ import Login from "./components/auth/Login";
 
 import Register from "./components/auth/Register";
 
-
+import EventfulForm from "./components/eventfuls/EventfulForm";
 
 
 import Navbar from "./components/layout/Navbar";
@@ -39,6 +39,7 @@ import Staff from "./components/pages/Staff";
 import Resources from "./components/pages/Resources";
 import Membership from "./components/pages/Membership";
 import Dashboard from "./components/dashboard/Dashboard";
+import Eventful from "./components/eventful/Eventful";
 
 import "./App.css";
 
@@ -47,66 +48,67 @@ import "./App.css";
 
 
 // Check for token
-//if (localStorage.jwtToken) {
-//  // Set auth token header auth
-//  setAuthToken(localStorage.jwtToken);
-//  // Decode token and get user info and exp
-//  const decoded = jwt_decode(localStorage.jwtToken);
-//  // Set user and isAuthenticated
-//  store.dispatch(setCurrentUser(decoded));
+if (localStorage.jwtToken) {
+ // Set auth token header auth
+ setAuthToken(localStorage.jwtToken);
+ // Decode token and get user info and exp
+ const decoded = jwt_decode(localStorage.jwtToken);
+ // Set user and isAuthenticated
+ store.dispatch(setCurrentUser(decoded));
 
-//  // Check for expired token
-//  const currentTime = Date.now() / 1000;
-//  if (decoded.exp < currentTime) {
-//    // Logout user
-//    store.dispatch(logoutUser());
-//    // Clear current Profile
-//    store.dispatch();
-//    // store.dispatch(clearCurrentProfile());
-//    // Redirect to login
-//    window.location.href = "/login";
-//  }
-// }
+ // Check for expired token
+ const currentTime = Date.now() / 1000;
+ if (decoded.exp < currentTime) {
+   // Logout user
+   store.dispatch(logoutUser());
+   // Redirect to login
+   window.location.href = "/login";
+ }
+}
 
 class App extends Component {
   render() {
-    return (<Provider store={store}>
-      <Router>
-        <div className="App">
-          <Navbar />
+    return <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Navbar />
 
-          <Route exact path="/" component={Landing} />
-          <div className="container text-justify">	          
-            <Route path="/ourmission" component={OurMission} />
-            <Route path="/services" component={Services} />
-            <Route path="/events" component={Events} />
-            <Route path="/pastevents" component={PastEvents} />
-            <Route path="/founder" component={Founder} />
-            <Route path="/executive" component={Executive} />
-            <Route path="/staff" component={Staff} />
-            <Route path="/donations" component={Donations} />
-            <Route path="/shop" component={Shop} />
-            <Route path="/fundraisers" component={Fundraisers} />
-            <Route path="/programs" component={Programs} />
-            <Route path="/mailing" component={Mailing} />
-            <Route path="/sponsorform" component={SponsorForm} />
-            <Route path="/volunteerform" component={VolunteerForm} />
-            <Route path="/homelessform" component={HomelessForm} />
-            <Route path="/resources" component={Resources} />
-            <Route path="/membership" component={Membership} />
+            <Route exact path="/" component={Landing} />
+            <div className="container text-justify">
+              <Route path="/ourmission" component={OurMission} />
+              <Route path="/services" component={Services} />
+              <Route path="/events" component={Events} />
+              <Route path="/pastevents" component={PastEvents} />
+              <Route path="/founder" component={Founder} />
+              <Route path="/executive" component={Executive} />
+              <Route path="/staff" component={Staff} />
+              <Route path="/donations" component={Donations} />
+              <Route path="/shop" component={Shop} />
+              <Route path="/fundraisers" component={Fundraisers} />
+              <Route path="/programs" component={Programs} />
+              <Route path="/mailing" component={Mailing} />
+              <Route path="/sponsorform" component={SponsorForm} />
+              <Route path="/volunteerform" component={VolunteerForm} />
+              <Route path="/homelessform" component={HomelessForm} />
+              <Route path="/resources" component={Resources} />
+              <Route path="/membership" component={Membership} />
 
-
-           {/* <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            </Switch> */}
-          </div> 
-          <Footer />
-        </div>
-      </Router>
-    </Provider>
-    );
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
+              <Switch>
+              <PrivateRoute exact path="/eventfuls" component={EventfulForm} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/eventful/:id" component={Eventful} />
+              </Switch>
+            </div>
+            <Footer />
+          </div>
+        </Router>
+      </Provider>;
   }
 }
 
