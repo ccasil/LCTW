@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 const users = require("./routes/api/users");
-const events = require("./routes/api/events");
+const eventfuls = require("./routes/api/eventfuls");
 const app = express();
 
 
@@ -38,7 +38,7 @@ require('./config/passport')(passport);
 
 // Use Routes
 app.use('/api/users', users);
-app.use('/api/events', events);
+app.use('/api/eventfuls', eventfuls);
 
 
 // create reusable transporter object using the default SMTP transport

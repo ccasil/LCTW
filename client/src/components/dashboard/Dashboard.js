@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { deleteAccount } from "../../actions/profileActions";
-
+import { deleteAccount } from "../../actions/authActions";
+import EventfulItem from "../eventfuls/EventfulItem";
+import Eventfuls from "../eventfuls/Eventfuls";
 class Dashboard extends Component {
   componentDidMount() {
     // this.props.getCurrentProfile();
@@ -21,37 +22,33 @@ class Dashboard extends Component {
 
 
     if (user.admin) {
-      dashboardContent = (
-        <div>
-          <p className="lead text-muted">Welcome Admin {user.name}</p>
+      dashboardContent = <div>
+          <p className="lead text-muted">
+            Welcome Admin {user.name} {user.id}
+          </p>
 
-              <Link to="/create-event" className="btn btn-lg btn-info">
-                            Create Event
-            </Link>
+          <Link to="/eventfuls" className="btn btn-lg btn-info">
+            Create Event
+          </Link>
 
           <div style={{ marginBottom: "60px" }} />
-          <button
-            onClick={this.onDeleteClick.bind(this)}
-            className="btn btn-danger"
-          >
+          <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
             Delete My Account
           </button>
-        </div>
-      );
+          <Eventfuls />
+        </div>;
     } else {
-      dashboardContent = (
-        <div>
-          <p className="lead text-muted">Welcome regular {user.name}</p>
+      dashboardContent = <div>
+          <p className="lead text-muted">
+            Welcome regular {user.name} {user.id}
+          </p>
 
           <div style={{ marginBottom: "60px" }} />
-          <button
-            onClick={this.onDeleteClick.bind(this)}
-            className="btn btn-danger"
-          >
+          <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
             Delete My Account
           </button>
-        </div>
-      );
+          <Eventfuls />
+        </div>;
     }
 
     return (
@@ -70,14 +67,14 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  getCurrentProfile: PropTypes.func.isRequired,
+
   deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
+  eventful: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  eventful: state.eventful,
   auth: state.auth
 });
 

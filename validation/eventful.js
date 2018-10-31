@@ -1,7 +1,7 @@
 const Validator = require("validator");
 const isEmpty = require("./is-empty");
 
-module.exports = function validateEventInput(data) {
+module.exports = function validateEventfulInput(data) {
   let errors = {};
 
   data.title = !isEmpty(data.title) ? data.title : "";
@@ -17,6 +17,6 @@ module.exports = function validateEventInput(data) {
   return {
     errors,
     isValid: errors
-    // , isValid: isEmpty(errors)
+    // isValid: isEmpty(errors)
   };
 };
