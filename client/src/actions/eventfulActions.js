@@ -14,9 +14,7 @@ import {
 
 // Add eventful
 export const addEventful = eventfulData => dispatch => {
-    console.log(eventfulData)
     dispatch(clearErrors());
-  console.log("at evenfulAction addEventful")
     axios
       .post("/api/eventfuls", eventfulData)
       .then(res => dispatch({ type: ADD_EVENTFUL, payload: res.data }))
@@ -31,12 +29,11 @@ export const addEventful = eventfulData => dispatch => {
 // Get Eventfuls
 export const getEventfuls = () => dispatch => {
     dispatch(setEventfulLoading());
-  console.log("at evenfulAction getEventfuls")
   
     axios
       .get("/api/eventfuls")
 
-      .then(res => { console.log(res), dispatch({ type: GET_EVENTFULS, payload: res.data })})
+      .then(res =>  dispatch({ type: GET_EVENTFULS, payload: res.data }))
 
         .catch(err =>  dispatch({ type: GET_EVENTFULS, payload: null }));
 };
@@ -44,7 +41,6 @@ export const getEventfuls = () => dispatch => {
 // Get Eventful
 export const getEventful = id => dispatch => {
 
-    console.log("at evenfulAction getEventful");
     dispatch(setEventfulLoading());
     
     axios

@@ -15,11 +15,9 @@ class Eventfuls extends Component {
   render() {
     const { eventfuls, loading } = this.props.eventful;
     let eventfulContent;
-
     if (eventfuls === null || loading) {
       eventfulContent = null
     } else {
-      console.log("Here")
       eventfulContent = <EventfulFeed eventfuls={eventfuls} />;
     }
 

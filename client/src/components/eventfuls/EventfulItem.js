@@ -31,7 +31,6 @@ class EventfulItem extends Component {
 
   render() {
     const { eventful, auth, showActions } = this.props;
-    console.log("at eventful item", this.props);
 
     return <div className="card card-body mb-3">
         <div className="row">
@@ -40,10 +39,17 @@ class EventfulItem extends Component {
               <img className="rounded-circle d-none d-md-block" src={eventful.title} alt="" />
             </a> */}
             <br />
-            <p className="text-center">{eventful.name}</p>
+            <p className="text-center">Event Creator: {eventful.name}</p>
           </div>
           <div className="col-md-10">
-            <p className="lead">{eventful.title}</p>
+            <p className="lead">
+              Event Name:
+              {eventful.title}
+            </p>
+            <p className="lead">
+              Event Description:
+              {eventful.description}
+            </p>
             {showActions ? <span>
                 {/* <button onClick={this.onLikeClick.bind(this, eventful._id)} type="button" className="btn btn-light mr-1">
                   <i className={classnames("fas fa-thumbs-up", {

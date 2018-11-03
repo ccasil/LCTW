@@ -75,23 +75,23 @@ class App extends Component {
 
             <Route exact path="/" component={Landing} />
             <div className="container text-justify">
-              <Route path="/ourmission" component={OurMission} />
-              <Route path="/services" component={Services} />
-              <Route path="/events" component={Events} />
-              <Route path="/pastevents" component={PastEvents} />
-              <Route path="/founder" component={Founder} />
-              <Route path="/executive" component={Executive} />
-              <Route path="/staff" component={Staff} />
-              <Route path="/donations" component={Donations} />
-              <Route path="/shop" component={Shop} />
-              <Route path="/fundraisers" component={Fundraisers} />
-              <Route path="/programs" component={Programs} />
-              <Route path="/mailing" component={Mailing} />
-              <Route path="/sponsorform" component={SponsorForm} />
-              <Route path="/volunteerform" component={VolunteerForm} />
-              <Route path="/homelessform" component={HomelessForm} />
-              <Route path="/resources" component={Resources} />
-              <Route path="/membership" component={Membership} />
+            <Route exact path="/ourmission" component={OurMission} />
+            <Route exact path="/services" component={Services} />
+            <Route exact path="/events" component={Events} />
+            <Route exact path="/pastevents" component={PastEvents} />
+            <Route exact path="/founder" component={Founder} />
+            <Route exact path="/executive" component={Executive} />
+            <Route exact path="/staff" component={Staff} />
+              <Route exact path="/donations" component={Donations} />
+              <Route exact path="/shop" component={Shop} />
+              <Route exact path="/fundraisers" component={Fundraisers} />
+              <Route exact path="/programs" component={Programs} />
+              <Route exact path="/mailing" component={Mailing} />
+              <Route exact path="/sponsorform" component={SponsorForm} />
+              <Route exact path="/volunteerform" component={VolunteerForm} />
+              <Route exact path="/homelessform" component={HomelessForm} />
+              <Route exact path="/resources" component={Resources} />
+              <Route exact path="/membership" component={Membership} />
 
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />

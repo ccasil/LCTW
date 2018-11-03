@@ -9,7 +9,7 @@ class EventfulFeed extends Component {
     
   }
   render() {
-    console.log("items");
+
     const { eventfuls } = this.props;
     return eventfuls.map(eventful => (
       <EventfulItem key={eventful._id} eventful={eventful} />
@@ -22,7 +22,7 @@ EventfulFeed.propTypes = {
   eventfuls: PropTypes.array.isRequired
 };
 const mapStateToProps = state => ({
-  post: state.post
+  eventful: state.eventful
 });
 
 

@@ -31,14 +31,12 @@ class EventfulForm extends Component {
     const newEventful = {
       title: this.state.title,
       description: this.state.description,
-    //   comments: this.state.comments,
       pictures: this.state.pictures,
       name: user.name
     };
     this.props.addEventful(newEventful);
     this.setState({ title: "" });
     this.setState({ description: "" });
-    // this.setState({ comments: "" });
     this.setState({ pictures: "" });
   }
   onChange(e) {

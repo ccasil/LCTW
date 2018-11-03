@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
   console.log("At SERVER!!!!!!!!!!!!!")
   Eventful.find()
     .sort({ date: -1 })
-    .then(eventfuls => res.json(eventfuls))
+    .then(eventfuls => { console.log(eventfuls), res.json(eventfuls)})
     .catch(err => res.status(404).json({ noeventfulsfound: "No eventfuls found" }));
 });
 
@@ -54,10 +54,10 @@ router.post(
 
     const newEventful = new Eventful({
       title: req.body.title,
-      desciption: req.body.desciption,
-      // comments: req.body.comments,
+      description: req.body.description,
         pictures: req.body.pictures,
-      user: req.user.id
+      user: req.user.id,
+      name: req.user.name
     });
 
     newEventful.save().then(eventful => res.json(eventful));
@@ -162,17 +162,17 @@ router.post(
   "/comment/:id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-      const { errors, isValid } = validateEventfulInput(req.body);
-
-    // Check Validation
-    if (!isValid) {
-      // If any errors, send 400 with errors object
-      return res.status(400).json(errors);
-    }
+    //   const { errors, isValid } = validateEventfulInput(req.body);
+    
+    // // Check Validation
+    // if (!isValid) {
+    //   // If any errors, send 400 with errors object
+    //   return res.status(400).json(errors);
+    // }
 
     Eventful.findById(req.params.id)
       .then(eventful => {
-        const newComment = { text: req.body.text, name: req.body.name, avatar: req.body.avatar, user: req.user.id };
+        const newComment = { text: req.body.text, name: req.body.name,  user: req.user.id };
 
         // Add to comments array
         eventful.comments.unshift(newComment);
