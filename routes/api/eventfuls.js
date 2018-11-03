@@ -9,6 +9,7 @@ const User = require("../../models/User");
 
 // Validation
 const validateEventfulInput = require("../../validation/eventful");
+const validateCommentInput = require("../../validation/comment");
 
 // @route   GET api/eventfuls/test
 // @desc    Tests eventful route
@@ -19,10 +20,9 @@ router.get("/test", (req, res) => res.json({ msg: "Eventful Works" }));
 // @desc    Get eventfuls
 // @access  Public
 router.get("/", (req, res) => {
-  console.log("At SERVER!!!!!!!!!!!!!")
   Eventful.find()
     .sort({ date: -1 })
-    .then(eventfuls => { console.log(eventfuls), res.json(eventfuls)})
+    .then(eventfuls =>  res.json(eventfuls))
     .catch(err => res.status(404).json({ noeventfulsfound: "No eventfuls found" }));
 });
 
@@ -162,13 +162,13 @@ router.post(
   "/comment/:id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    //   const { errors, isValid } = validateEventfulInput(req.body);
+      const { errors, isValid } = validateCommentInput(req.body);
     
-    // // Check Validation
-    // if (!isValid) {
-    //   // If any errors, send 400 with errors object
-    //   return res.status(400).json(errors);
-    // }
+    // Check Validation
+    if (!isValid) {
+      // If any errors, send 400 with errors object
+      return res.status(400).json(errors);
+    }
 
     Eventful.findById(req.params.id)
       .then(eventful => {

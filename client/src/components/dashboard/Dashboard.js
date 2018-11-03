@@ -26,16 +26,15 @@ class Dashboard extends Component {
           <p className="lead text-muted">
             Welcome Admin {user.name} {user.id}
           </p>
-
           <Link to="/eventfuls" className="btn btn-lg btn-info">
             Create Event
           </Link>
-
           <div style={{ marginBottom: "60px" }} />
+          <Eventfuls />
+        <div style={{ marginBottom: "60px" }} />
           <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
             Delete My Account
           </button>
-          <Eventfuls />
         </div>;
     } else {
       dashboardContent = <div>
@@ -44,10 +43,11 @@ class Dashboard extends Component {
           </p>
 
           <div style={{ marginBottom: "60px" }} />
+          <Eventfuls />
+          <div style={{ marginBottom: "60px" }} />
           <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
             Delete My Account
           </button>
-          <Eventfuls />
         </div>;
     }
 
