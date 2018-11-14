@@ -10,5 +10,10 @@ export const EVENTFUL_LOADING = "EVENTFUL_LOADING";
 export const GET_EVENTFULS = "GET_EVENTFULS";
 export const GET_EVENTFUL = "GET_EVENTFUL";
 export const ADD_EVENTFUL = "ADD_EVENTFUL";
+export const ADD_UPLOAD = "ADD_UPLOAD";
 export const DELETE_EVENTFUL = "DELETE_EVENTFUL";
+export const GET_USERS = "GET_USERS"
+export const GET_USER = "GET_USER"
+export const USER_LOADING = "USER_LOADING";
+export const USERS_LOADING = "USER_LOADING";
 

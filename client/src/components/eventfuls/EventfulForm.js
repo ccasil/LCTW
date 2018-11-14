@@ -1,9 +1,18 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import InputGroup from "../common/InputGroup";
 import { addEventful } from "../../actions/eventfulActions";
+
+import Dropzone from "react-dropzone";
+
+const imageMaxSize = 1000000000; //bytes
+const acceptedFileTypes =
+  "image/x-png, image/png, image/jpg, image/jpeg, image/gif";
+const acceptedFileTypesArray = acceptedFileTypes.split(",").map(item => {
+  return item.trim();
+});
 
 class EventfulForm extends Component {
   constructor(props) {
@@ -12,12 +21,15 @@ class EventfulForm extends Component {
       title: "",
       description: "",
       // comments:'',
-      pictures: "",
+      
+      pictures: [],
       errors: {}
     };
+    console.log("this.state", this.state);
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+ 
 
   componentWillReceiveProps(newProps) {
     if (newProps.errors) {
@@ -37,35 +49,61 @@ class EventfulForm extends Component {
     this.props.addEventful(newEventful);
     this.setState({ title: "" });
     this.setState({ description: "" });
-    this.setState({ pictures: "" });
+    this.setState({ pictures: [] });
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
+ 
+
+  onDrop = (files) => {
+    console.log(files[0].name);
+    const formdata = new FormData();
+    formdata.append("picture", files[0], files[0].name);
+
+    console.log(formdata)
+    this.setState({
+      pictures: this.state.pictures.concat(files),
+    });
+
+
+  }
+  
 
   render() {
-    const { errors } = this.state;
-    return (
-      <div className="post-form mb-3">
+    const previewStyle = {
+      display: 'inline',
+      width: 100,
+      height: 100,
+    };
+    const { errors, pictures } = this.state;
+    console.log(this.state);
+
+    return <div className="post-form mb-3">
         <div className="card card-info">
-          <div className="card-header bg-info text-white">Create an Event</div>
+          <div className="card-header bg-info text-white">
+            Create an Event
+          </div>
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <InputGroup
-                  placeholder="Create a eventful title"
-                  name="title"
-                  value={this.state.title}
-                  onChange={this.onChange}
-                  error={errors.title}
-                />
-                <TextAreaFieldGroup
-                  placeholder="Description"
-                  name="description"
-                  value={this.state.description}
-                  onChange={this.onChange}
-                  error={errors.description}
-                />
+                <InputGroup placeholder="Create a eventful title" name="title" value={this.state.title} onChange={this.onChange} error={errors.title} />
+                <Dropzone onDrop={this.onDrop.bind(this)} accept={acceptedFileTypes} maxSize={imageMaxSize}>
+                  <div>
+                    drop images here, or click to select images to upload.
+                    
+                  </div>
+                </Dropzone>
+              {pictures.length > 0 &&
+                <Fragment>
+                  <h3>Previews</h3>
+                {pictures.map((picture, i) => (
+                    <p key={i}>{picture.name}</p>
+                  ))}
+                </Fragment>
+              }
+
+                <TextAreaFieldGroup placeholder="Description" name="description" value={this.state.description} onChange={this.onChange} error={errors.description} />
               </div>
               <button type="submit" className="btn btn-dark">
                 Submit
@@ -73,8 +111,7 @@ class EventfulForm extends Component {
             </form>
           </div>
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 

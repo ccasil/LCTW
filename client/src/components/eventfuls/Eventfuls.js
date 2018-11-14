@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import EventfulForm from "./EventfulForm";
 import EventfulFeed from "./EventfulFeed";
-
+import Spinner from "../common/Spinner";
 import { getEventfuls } from "../../actions/eventfulActions";
 
 class Eventfuls extends Component {

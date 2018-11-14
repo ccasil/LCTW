@@ -5,7 +5,7 @@ const EventfulSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: "users"
-  }, 
+  },
   name: {
     type: String
   },
@@ -22,8 +22,7 @@ const EventfulSchema = new Schema({
     {
       user: {
         type: Schema.Types.ObjectId,
-        ref: 'users'
-
+        ref: "users"
       },
       text: {
         type: String,
@@ -38,15 +37,14 @@ const EventfulSchema = new Schema({
       date: {
         type: Date,
         default: Date.now
-
       }
     }
-
-
   ],
-  pictures: {
-    type: String
-  },
+  pictures: [
+    { name: { type: String }, 
+    id: { type: String },
+    picture: {data: Buffer} }
+  ],
   date: {
     type: Date,
     default: Date.now

@@ -2,7 +2,15 @@ import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 
-import { GET_ERRORS, SET_CURRENT_USER } from "./types";
+import {
+  GET_ERRORS,
+  SET_CURRENT_USER,
+  GET_USERS,
+  USER_LOADING,
+  USERS_LOADING,
+  GET_USER,
+  DELETE_USER,
+} from "./types";
 
 
 
@@ -66,6 +74,46 @@ export const deleteAccount = () => dispatch => {
 
 
 }
+// Get Users
+export const getUsers = () => dispatch => {
+  dispatch(setUserLoading());
+  axios
+    .get("/api/users")
+
+    .then(res =>{dispatch({ type: GET_USERS, payload: res.data })})
+
+    .catch(err => dispatch({ type: GET_USERS, payload: null }));
+};
+
+// Get User
+export const getUser = id => dispatch => {
+
+  dispatch(setUserLoading());
+
+  axios
+    .get(`/api/users/${id}`)
+    .then(res => dispatch({ type: GET_USER, payload: res.data }))
+    .catch(err => dispatch({ type: GET_USER, payload: null }));
+};
+
+
+// update user
+export const updateUser = id => dispatch => {
+  axios
+    .post(`/api/users/${id}`)
+    .then(res => dispatch(getUsers()))
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+
+export const setUserLoading = () => {
+  return { type: USER_LOADING };
+};
+
 
 // Set logged in user
 export const setCurrentUser = decoded => {

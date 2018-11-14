@@ -14,7 +14,7 @@ import PrivateRoute from "./components/common/PrivateRoute";
 import Login from "./components/auth/Login";
 
 import Register from "./components/auth/Register";
-
+import Users from "./components/auth/Users";
 import EventfulForm from "./components/eventfuls/EventfulForm";
 
 
@@ -96,10 +96,14 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              </Switch>
+                <Route exact path="/dashboard" component={Dashboard} />
+            </Switch>
               <Switch>
-              <PrivateRoute exact path="/eventfuls" component={EventfulForm} />
+              <PrivateRoute exact path="/users" component={Users} />
+              </Switch>
+              
+              <Switch>
+              <Route exact path="/eventfuls" component={EventfulForm} />
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/eventful/:id" component={Eventful} />
