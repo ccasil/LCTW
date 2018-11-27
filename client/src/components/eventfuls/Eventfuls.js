@@ -10,7 +10,9 @@ class Eventfuls extends Component {
   
   componentDidMount() {
     this.props.getEventfuls();
+    
   }
+  
 
   render() {
     const { eventfuls, loading } = this.props.eventful;
@@ -18,6 +20,7 @@ class Eventfuls extends Component {
     if (eventfuls === null || loading) {
       eventfulContent = null
     } else {
+      
       eventfulContent = <EventfulFeed eventfuls={eventfuls} />;
     }
 

@@ -3,12 +3,14 @@ import {
   GET_EVENTFULS,
   GET_EVENTFUL,
   DELETE_EVENTFUL,
-  EVENTFUL_LOADING
+  EVENTFUL_LOADING,
+  UPLOAD_FILES
 } from "../actions/types";
 
 const initialState = {
   eventfuls: [],
   eventful: {},
+
   loading: false
 };
 
@@ -22,6 +24,8 @@ export default function(state = initialState, action) {
       return { ...state, eventful: action.payload, loading: false };
     case ADD_EVENTFUL:
       return { ...state, eventfuls: [action.payload, ...state.eventfuls] };
+    case UPLOAD_FILES:
+      return { ...state, files: [action.payload, ...state.files] };
     case DELETE_EVENTFUL:
       return {
         ...state,

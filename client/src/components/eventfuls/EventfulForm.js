@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import InputGroup from "../common/InputGroup";
-import { addEventful } from "../../actions/eventfulActions";
+import { addEventful, upload } from "../../actions/eventfulActions";
 
 import Dropzone from "react-dropzone";
 
-const imageMaxSize = 1000000000; //bytes
+const imageMaxSize = 10000000000; //bytes
 const acceptedFileTypes =
   "image/x-png, image/png, image/jpg, image/jpeg, image/gif";
 const acceptedFileTypesArray = acceptedFileTypes.split(",").map(item => {
@@ -18,14 +18,13 @@ class EventfulForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
+      eventtitle: "",
       description: "",
       // comments:'',
-      
-      pictures: [],
+      files:[],
       errors: {}
     };
-    console.log("this.state", this.state);
+
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -37,20 +36,27 @@ class EventfulForm extends Component {
     }
   }
   onSubmit(e) {
-    e.preventDefault();
-    const { user } = this.props.auth;
+                e.preventDefault();
+                const { user } = this.props.auth;
+                console.log(this.state.files);
+                const formdata = new FormData();
+                this.state.files.forEach((file, i) => {
+                  const newFile = { uri: file, type: "image/jpg" };
+                  formdata.append("file", file, file.name);
+                });
 
-    const newEventful = {
-      title: this.state.title,
-      description: this.state.description,
-      pictures: this.state.pictures,
-      name: user.name
-    };
-    this.props.addEventful(newEventful);
-    this.setState({ title: "" });
-    this.setState({ description: "" });
-    this.setState({ pictures: [] });
-  }
+                const newEventful = { eventtitle: this.state.eventtitle, description: this.state.description, pictures: this.state.pictures, name: user.name };
+
+    formdata.set("eventtitle", this.state.eventtitle);
+                formdata.append("description", this.state.description);
+                formdata.append("name", user.name);
+
+                this.props.addEventful(formdata);
+                // this.setState({ eventtitle: "" });
+                // this.setState({ description: "" });
+                // this.setState({ files: [] });
+            
+              }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -59,11 +65,17 @@ class EventfulForm extends Component {
   onDrop = (files) => {
     console.log(files[0].name);
     const formdata = new FormData();
-    formdata.append("picture", files[0], files[0].name);
+    files.map((file) => {
+      
+      formdata.append("file", file, file.name);
+    });
+    // formdata.append("file", files[0], files[0].name);
 
     console.log(formdata)
+    // this.props.upload(formdata);
     this.setState({
-      pictures: this.state.pictures.concat(files),
+     
+      files: files
     });
 
 
@@ -76,7 +88,7 @@ class EventfulForm extends Component {
       width: 100,
       height: 100,
     };
-    const { errors, pictures } = this.state;
+    const { errors, files } = this.state;
     console.log(this.state);
 
     return <div className="post-form mb-3">
@@ -87,21 +99,18 @@ class EventfulForm extends Component {
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <InputGroup placeholder="Create a eventful title" name="title" value={this.state.title} onChange={this.onChange} error={errors.title} />
+              <InputGroup placeholder="Create a eventful title" name="eventtitle" value={this.state.eventtitle} onChange={this.onChange} error={errors.eventtitle} />
                 <Dropzone onDrop={this.onDrop.bind(this)} accept={acceptedFileTypes} maxSize={imageMaxSize}>
                   <div>
                     drop images here, or click to select images to upload.
-                    
                   </div>
                 </Dropzone>
-              {pictures.length > 0 &&
-                <Fragment>
-                  <h3>Previews</h3>
-                {pictures.map((picture, i) => (
-                    <p key={i}>{picture.name}</p>
-                  ))}
-                </Fragment>
-              }
+                {files.length > 0 && <Fragment>
+                    <h3>Previews</h3>
+                    {files.map((picture, i) => (
+                      <p key={i}>{picture.name}</p>
+                    ))}
+                  </Fragment>}
 
                 <TextAreaFieldGroup placeholder="Description" name="description" value={this.state.description} onChange={this.onChange} error={errors.description} />
               </div>
@@ -122,10 +131,11 @@ EventfulForm.propTypes = {
 };
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
+  eventful: state.files
 });
 
 export default connect(
   mapStateToProps,
-  { addEventful }
+  { addEventful, upload}
 )(EventfulForm);

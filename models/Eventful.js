@@ -41,9 +41,11 @@ const EventfulSchema = new Schema({
     }
   ],
   pictures: [
-    { name: { type: String }, 
-    id: { type: String },
-    picture: {data: Buffer} }
+    {
+      image: {
+        //  data: Buffer, contentType: String 
+        }
+    }
   ],
   date: {
     type: Date,

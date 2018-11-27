@@ -11,6 +11,26 @@ const User = require("../../models/User");
 const validateEventfulInput = require("../../validation/eventful");
 const validateCommentInput = require("../../validation/comment");
 
+var multer = require("multer");
+
+var fs = require("fs");
+var path = require("path");
+
+var btoa = require("btoa");
+
+var storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, __dirname + "../../../uploads"); //you tell where to upload the files,
+  },
+  filename: function(req, file, cb) {
+    cb(null, file.fieldname + "-" + Date.now());
+  }
+});
+
+var upload = multer({
+  storage: storage
+}).array("file");
+
 // @route   GET api/eventfuls/test
 // @desc    Tests eventful route
 // @access  Public
@@ -22,19 +42,40 @@ router.get("/test", (req, res) => res.json({ msg: "Eventful Works" }));
 router.get("/", (req, res) => {
   Eventful.find()
     .sort({ date: -1 })
-    .then(eventfuls =>  res.json(eventfuls))
-    .catch(err => res.status(404).json({ noeventfulsfound: "No eventfuls found" }));
+    .then(eventfuls => res.json(eventfuls))
+    .catch(err =>
+      res.status(404).json({ noeventfulsfound: "No eventfuls found" })
+    );
 });
 
 // @route   GET api/eventfuls/:id
 // @desc    Get eventful by id
 // @access  Public
 router.get("/:id", (req, res) => {
-    Eventful.findById(req.params.id)
+  Eventful.findById(req.params.id)
     .then(eventful => res.json(eventful))
     .catch(err =>
-      res.status(404).json({ noeventfulfound: "No eventful found with that ID" })
+      res
+        .status(404)
+        .json({ noeventfulfound: "No eventful found with that ID" })
     );
+});
+// @route   POST api/eventfuls/upload
+// @desc    Upload an image
+// @access  Public
+router.post("/upload", (req, res) => {
+  upload(req, res, err => {
+    if (err) {
+      res.status(404).json({
+        uploadFailed: "Upload failed"
+      });
+    } else {
+      for (let file of req.files) {
+        let fileReadSync = fs.readFileSync(file.path);
+        console.log(fileReadSync);
+      }
+    }
+  });
 });
 
 // @route   POST api/eventfuls
@@ -44,23 +85,73 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { errors, isValid } = validateEventfulInput(req.body);
+    upload(req, res, err => {
+      console.log("!!!!!!!!!!!!!!", req.files);
+      if (err) {
+        console.log(err);
+        res.status(404).json({
+          uploadFailed: "Upload failed"
+        });
+      } else {
+        let newArr = [];
 
-    // Check Validation
-    if (!isValid) {
-      // If any errors, send 400 with errors object
-      return res.status(400).json(errors);
-    }
+        // pictures: [
+        //   {
+        //     image: { data: Buffer, contentType: String }
+        //   }
+        // ],
 
-    const newEventful = new Eventful({
-      title: req.body.title,
-      description: req.body.description,
-        pictures: req.body.pictures,
-      user: req.user.id,
-      name: req.user.name
+        for (let file of req.files) {
+          let fileReadSync = fs.readFileSync(file.path);
+          let item = {};
+          item.image = {};
+          item.image.data = fileReadSync;
+          item.image.contentType = "img/png";
+          newArr.push(item);
+
+          fs.unlink(file.path, function (err) {
+            if (err) {
+              console.log("error deleting image", file.path);
+            }
+            else {
+              console.log("deleted image", file.path);
+            }
+          })
+          
+        }
+
+        for (var i = 0; i < newArr.length; i++) {
+          var base64 = btoa(
+            new Uint8Array(newArr[i].image.data).reduce(
+              (data, byte) => data + String.fromCharCode(byte),
+              ""
+            )
+          );
+          
+          newArr[i].image.data = base64;
+         
+          
+        }
+        // const { errors, isValid } = validateEventfulInput(req.body);
+
+        // // Check Validation
+        // if (!isValid) {
+        //   // If any errors, send 400 with errors object
+        //   return res.status(400).json(errors);
+        // }
+        console.log("33333333333333333333",newArr);
+     
+        const newEventful = new Eventful({
+          title: req.body.eventtitle,
+          description: req.body.description,
+          pictures: newArr,
+          user: req.user.id,
+          name: req.user.name
+        });
+
+        newEventful.save().then(eventful => res.json(eventful));
+      }
     });
-
-    newEventful.save().then(eventful => res.json(eventful));
   }
 );
 
@@ -72,15 +163,13 @@ router.delete(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     User.findOne({ user: req.user.id }).then(eventful => {
-        Eventful.findById(req.params.id)
+      Eventful.findById(req.params.id)
         .then(eventful => {
           // Check for eventful owner
           if (eventful.user.toString() !== req.user.id) {
-            return res
-              .status(401)
-              .json({
-                notauthorized: "User not authorized"
-              });
+            return res.status(401).json({
+              notauthorized: "User not authorized"
+            });
           }
 
           // Delete
@@ -162,8 +251,8 @@ router.post(
   "/comment/:id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-      const { errors, isValid } = validateCommentInput(req.body);
-    
+    const { errors, isValid } = validateCommentInput(req.body);
+
     // Check Validation
     if (!isValid) {
       // If any errors, send 400 with errors object
@@ -172,7 +261,11 @@ router.post(
 
     Eventful.findById(req.params.id)
       .then(eventful => {
-        const newComment = { text: req.body.text, name: req.body.name,  user: req.user.id };
+        const newComment = {
+          text: req.body.text,
+          name: req.body.name,
+          user: req.user.id
+        };
 
         // Add to comments array
         eventful.comments.unshift(newComment);
@@ -193,10 +286,14 @@ router.delete(
   "/comment/:id/:comment_id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-      Eventful.findById(req.params.id)
+    Eventful.findById(req.params.id)
       .then(eventful => {
         // Check to see if comment exists
-        if (eventful.comments.filter(comment => comment._id.toString() === req.params.comment_id).length === 0) {
+        if (
+          eventful.comments.filter(
+            comment => comment._id.toString() === req.params.comment_id
+          ).length === 0
+        ) {
           return res
             .status(404)
             .json({ commentnotexists: "Comment does not exist" });

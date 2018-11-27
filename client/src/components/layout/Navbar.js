@@ -46,7 +46,7 @@ class Navbar extends Component {
       </ul>;
 
 
-    console.log("adsjhgfakjsfhkdsajf", this.props.auth.user.admin);
+
     const { isAuthenticated, user } = this.props.auth;
     const adminLvl = this.props.auth.user.admin
     return <div>

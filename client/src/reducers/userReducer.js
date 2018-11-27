@@ -39,7 +39,7 @@ export default function(state = initialState, action) {
       };
 
     default:
-      console.log("at REDUCER", action.payload);
+
       return state;
   }
 }

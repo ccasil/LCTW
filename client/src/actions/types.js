@@ -17,3 +17,4 @@ export const GET_USER = "GET_USER"
 export const USER_LOADING = "USER_LOADING";
 export const USERS_LOADING = "USER_LOADING";
 
+export const UPLOAD_FILES = "UPLOAD_FILES";

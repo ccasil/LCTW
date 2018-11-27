@@ -16,7 +16,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    console.log("at dashboard",this.props);
+   
     const { user } = this.props.auth;
     const { eventful, loading } = this.props.eventful;
     
