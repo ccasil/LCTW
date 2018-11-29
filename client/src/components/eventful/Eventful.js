@@ -6,7 +6,7 @@ import EventfulItem from "../eventfuls/EventfulItem";
 import CommentForm from "./CommentForm";
 import CommentFeed from "./CommentFeed";
 
-// import Spinner from "../common/Spinner";
+import Spinner from "../common/Spinner";
 import { getEventful } from "../../actions/eventfulActions";
 
 class Eventful extends Component {
@@ -19,7 +19,7 @@ class Eventful extends Component {
         const { eventful, loading } = this.props.eventful;
         let eventfulContent;
         if (eventful === null || loading || Object.keys(eventful).length === 0) {
-            eventfulContent = <h1>nothing here</h1>
+            eventfulContent = <Spinner />
         } else {
             eventfulContent = <div>
                 <EventfulItem eventful={eventful} showActions={false} />
