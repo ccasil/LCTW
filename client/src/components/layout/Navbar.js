@@ -76,7 +76,7 @@ class Navbar extends Component {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
-            <ul className="navbar-nav mr-auto text-center">
+            <ul className="navbar-nav mx-auto text-center">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
@@ -161,7 +161,7 @@ class Navbar extends Component {
                 </Link>
              
               </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/dashboard">
                 Dashboard
                 </Link>
@@ -170,7 +170,7 @@ class Navbar extends Component {
               
               {adminLvl ? adminLinks : null}
               {isAuthenticated ? loginLinks : loggedoutLinks}
-              
+               */}
             </ul>
           </div>
         </nav>

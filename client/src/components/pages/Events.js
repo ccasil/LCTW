@@ -5,7 +5,7 @@ import RBCarousel from "react-bootstrap-carousel";
 import { Link } from "react-router-dom";
 
 // upcoming events placeholder routes
-import nextevent1 from "../../images/Fliers/1.JPG";
+import nextevent3 from "../../images/Fliers/3.jpeg";
 import nextevent2 from "../../images/Fliers/2.JPG";
 
 // image routes for Event 13
@@ -233,16 +233,16 @@ class Events extends Component {
         <div className="row">
           <div className="col">
             <h5>LOVE starts at HomeFirst </h5>
-            <h5>Courtyard BBQ #2</h5>
+          <h5>Holiday LOVE Blessings Give-A-Way</h5>
             <a className="btn-block" color="danger" onClick={this.toggle12}>
-              <img className="btnImg" style={{height: "100%"}} src={nextevent1} alt="" />
+              <img className="btnImg" style={{height: "100%"}} src={nextevent3} alt="" />
             </a>
             <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
               <ModalHeader toggle={this.toggle12}>
                 LOVE starts at HomeFirst Courtyard BBQ #2
               </ModalHeader>
               <ModalBody>
-                <img className="" src={nextevent1} style={{ height: "100%" }} alt="nextevent1" />
+                <img className="" src={nextevent3} style={{ height: "100%" }} alt="nextevent3" />
               </ModalBody>
               <ModalFooter>
                 <Button color="secondary" onClick={this.toggle12}>
@@ -251,7 +251,7 @@ class Events extends Component {
               </ModalFooter>
             </Modal>
           </div>
-          <div className="col">
+          {/* <div className="col">
             <h5>
               <span role="img" aria-label="water">
                 💧🌨
@@ -284,7 +284,7 @@ class Events extends Component {
                 </Button>
               </ModalFooter>
             </Modal>
-          </div>
+          </div> */}
         </div>
         <h1 className="display-1">Previous Events</h1>
         <h1 className="display-4">
