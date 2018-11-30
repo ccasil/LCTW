@@ -233,13 +233,13 @@ class Events extends Component {
         <div className="row">
           <div className="col">
             <h5>LOVE starts at HomeFirst </h5>
-          <h5>Holiday LOVE Blessings Give-A-Way</h5>
+            <h5>Holiday LOVE Blessings Give-A-Way</h5>
             <a className="btn-block" color="danger" onClick={this.toggle12}>
-              <img className="btnImg" style={{height: "100%"}} src={nextevent3} alt="" />
+              <img className="btnImg" style={{ height: "100%" }} src={nextevent3} alt="" />
             </a>
             <Modal isOpen={this.state.modal12} toggle={this.toggle12} className={this.props.className}>
               <ModalHeader toggle={this.toggle12}>
-                LOVE starts at HomeFirst Courtyard BBQ #2
+                LOVE starts at HomeFirst Holiday LOVE Blessings Give-A-Way
               </ModalHeader>
               <ModalBody>
                 <img className="" src={nextevent3} style={{ height: "100%" }} alt="nextevent3" />
