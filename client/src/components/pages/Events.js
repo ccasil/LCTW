@@ -291,7 +291,7 @@ class Events extends Component {
           LCTW LOVE starts at HomeFirst 2nd Courtyard BBQ
         </h1>
         <div className="row">
-          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
+          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 300 }}>
             <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
               {imgArr_event15.map(function(image, index) {
                 return <div className="text-center" key={index}>
@@ -305,7 +305,7 @@ class Events extends Component {
           LCTW San Joaquin County Homeless Outreach
         </h1>
         <div className="row">
-          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
+          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 300 }}>
             <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
               {imgArr_event14.map(function(image, index) {
                 return <div className="text-center" key={index}>
@@ -318,7 +318,7 @@ class Events extends Component {
         <h1 className="display-4">LOVE starts at HomeFirst</h1>
         <h1 className="display-4">Courtyard BBQ #1</h1>
         <div className="row">
-          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 100 }}>
+          <div className="col-md-12" style={{ marginTop: 40, marginBottom: 300 }}>
             <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
               {imgArr_event13.map(function(image, index) {
                 return <div className="text-center" key={index}>
