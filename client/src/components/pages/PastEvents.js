@@ -3,13 +3,13 @@ import RBCarousel from "react-bootstrap-carousel";
 import "../css/PastEvents.css";
 
 // image routes for Event 1
-import event1_image2 from '../../images/Events/Event_1/2.jpg';
-import event1_image3 from '../../images/Events/Event_1/3.jpg';
-import event1_image4 from '../../images/Events/Event_1/4.jpg';
-import event1_image5 from '../../images/Events/Event_1/5.jpg';
-import event1_image6 from '../../images/Events/Event_1/6.jpg';
-import event1_image7 from '../../images/Events/Event_1/7.jpg';
-import event1_image8 from '../../images/Events/Event_1/8.jpg';
+import event1_image2 from "../../images/Events/Event_1/2.jpg";
+import event1_image3 from "../../images/Events/Event_1/3.jpg";
+import event1_image4 from "../../images/Events/Event_1/4.jpg";
+import event1_image5 from "../../images/Events/Event_1/5.jpg";
+import event1_image6 from "../../images/Events/Event_1/6.jpg";
+import event1_image7 from "../../images/Events/Event_1/7.jpg";
+import event1_image8 from "../../images/Events/Event_1/8.jpg";
 
 // image routes for Event 3
 import event3_image1 from "../../images/Events/Event_3/1.jpg";
@@ -224,8 +224,6 @@ import event9_image6 from "../../images/Events/Event_9/6.jpg";
 // image routes for Event 11
 import event11_image1 from "../../images/Events/Event_11/1.jpg";
 import event11_image2 from "../../images/Events/Event_11/2.jpg";
-
-
 
 class PastEvents extends Component {
   constructor(props) {
@@ -501,7 +499,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -524,12 +522,12 @@ class PastEvents extends Component {
           </div>
         </div>
         <h1 className="display-4">
-          LCTW Supporting AdVance Projects for Cinco de Mayo
+          LCTW Supporting Advance Projects for Cinco de Mayo
         </h1>
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -556,7 +554,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -583,7 +581,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -610,7 +608,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -637,7 +635,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -666,7 +664,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
@@ -695,7 +693,7 @@ class PastEvents extends Component {
         <div className="row">
           <div
             className="col-md-12"
-            style={{ marginTop: 40, marginBottom: 100 }}
+            style={{ marginTop: 40, marginBottom: 200 }}
           >
             <RBCarousel
               animation={true}
