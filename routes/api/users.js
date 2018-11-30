@@ -44,7 +44,7 @@ router.post('/register', (req, res) => {
             const newUser = new User({
                 name: req.body.name,
                 email: req.body.email,
-                // avatar,
+                
                 password: req.body.password
             });
 
@@ -88,7 +88,7 @@ router.post('/login', (req, res) => {
         bcrypt.compare(password, user.password).then(isMatch => {
             if (isMatch) {
                 // User Matched
-                const payload = { id: user.id, name: user.name}; // Create JWT Payload
+                const payload = { id: user.id, name: user.name, admin: user.adminLevel }; // Create JWT Payload
 
                 // Sign Token
                 jwt.sign(
@@ -120,9 +120,27 @@ router.get(
         res.json({
             id: req.user.id,
             name: req.user.name,
-            email: req.user.email
+            email: req.user.email,
+            admin: req.user.adminLevel
         });
     }
+);
+
+// @route   DELETE api/user
+// @desc    Delete user and profile
+// @access  Private
+router.delete(
+  "/",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+      console.log("at route", req.body)
+    
+      User.findOneAndRemove({ _id: req.user.id }).then(() =>
+        
+        res.json({ success: true })
+      );
+    
+  }
 );
 
 module.exports = router;
