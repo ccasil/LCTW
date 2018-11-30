@@ -3,23 +3,24 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import EventfulForm from "./EventfulForm";
 import EventfulFeed from "./EventfulFeed";
-
+import Spinner from "../common/Spinner";
 import { getEventfuls } from "../../actions/eventfulActions";
 
 class Eventfuls extends Component {
   
   componentDidMount() {
     this.props.getEventfuls();
+    
   }
+  
 
   render() {
     const { eventfuls, loading } = this.props.eventful;
     let eventfulContent;
-
     if (eventfuls === null || loading) {
       eventfulContent = null
     } else {
-      console.log("Here")
+      
       eventfulContent = <EventfulFeed eventfuls={eventfuls} />;
     }
 

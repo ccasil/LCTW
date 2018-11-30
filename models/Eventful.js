@@ -6,6 +6,9 @@ const EventfulSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "users"
   },
+  name: {
+    type: String
+  },
   title: {
     type: String,
     required: true,
@@ -15,25 +18,35 @@ const EventfulSchema = new Schema({
   description: {
     type: String
   },
-  // comments: [
-  //   {
-  //     user: {
-  //       type: Schema.Types.ObjectId,
-  //       ref: 'users'
-       
-  //     },
-  //     msg: {
-  //       type: String
-  //     },
-  //     date: {
-  //       type: Date,
-  //       default: Date.now
-  //     }
-  //   }
-  // ],
-  pictures: {
-    type: String
-  },
+  comments: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+        ref: "users"
+      },
+      text: {
+        type: String,
+        required: true
+      },
+      name: {
+        type: String
+      },
+      avatar: {
+        type: String
+      },
+      date: {
+        type: Date,
+        default: Date.now
+      }
+    }
+  ],
+  pictures: [
+    {
+      image: {
+        //  data: Buffer, contentType: String 
+        }
+    }
+  ],
   date: {
     type: Date,
     default: Date.now

@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { deleteAccount } from "../../actions/authActions";
 import EventfulItem from "../eventfuls/EventfulItem";
 import Eventfuls from "../eventfuls/Eventfuls";
+import Spinner from "../common/Spinner";
 class Dashboard extends Component {
   componentDidMount() {
     // this.props.getCurrentProfile();
@@ -15,41 +16,44 @@ class Dashboard extends Component {
   }
 
   render() {
+   
     const { user } = this.props.auth;
+    const { eventful, loading } = this.props.eventful;
+    
     // const { profile } = this.props.profile;
 
     let dashboardContent;
-
-
-    if (user.admin) {
+    // if (eventful === null || loading) {
+    //   dashboardContent = <Spinner />;
+    // } else {
+      if (user.admin) {
       dashboardContent = <div>
           <p className="lead text-muted">
-            Welcome Admin {user.name} {user.id}
+            You are admin
           </p>
-
           <Link to="/eventfuls" className="btn btn-lg btn-info">
             Create Event
           </Link>
-
+          <div style={{ marginBottom: "60px" }} />
+          <Eventfuls />
           <div style={{ marginBottom: "60px" }} />
           <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
             Delete My Account
           </button>
-          <Eventfuls />
         </div>;
     } else {
       dashboardContent = <div>
-          <p className="lead text-muted">
-            Welcome regular {user.name} {user.id}
-          </p>
+          
 
+          <div style={{ marginBottom: "60px" }} />
+          <Eventfuls />
           <div style={{ marginBottom: "60px" }} />
           <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
             Delete My Account
           </button>
-          <Eventfuls />
         </div>;
     }
+  // }
 
     return (
       <div className="dashboard">
@@ -57,6 +61,9 @@ class Dashboard extends Component {
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4">Dashboard</h1>
+              <p className="lead text-muted">
+                Welcome {user.name}
+              </p>
               {dashboardContent}
             </div>
           </div>
@@ -67,7 +74,6 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-
   deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   eventful: PropTypes.object.isRequired
