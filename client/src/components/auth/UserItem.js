@@ -52,20 +52,21 @@ class UserItem extends Component {
     }
 
     return (
-      <div>
-        <table>
+      
+        <React.Fragment>
+        
             
-          <tbody>
+         
             <tr>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{JSON.stringify(user.adminLevel)}</td>
               <td>{toggleContent}</td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    );
+          
+        
+          </React.Fragment>
+    )
   }
 }
 
