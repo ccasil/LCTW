@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import InputGroup from "../common/InputGroup";
+import { Link } from "react-router-dom"
 
 class Login extends Component {
     constructor() {
@@ -55,7 +56,7 @@ class Login extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-8 m-auto">
-                  <h1 className="display-4 text-center">Log In</h1>
+                  <h1 className="display-4 text-center">Sign In</h1>
                   <p className="lead text-center">
                     Sign in to your #LCTW account
                   </p>
@@ -65,6 +66,10 @@ class Login extends Component {
                     <InputGroup placeholder="Password" name="password" type="password" value={this.state.password} onChange={this.onChange} error={errors.password} />
                     <input type="submit" className="btn btn-info btn-block mt-4" />
                   </form>
+                        <p className="lead text-center">No account? <Link className="lead text-center" to="/register">
+                            Create one
+                  </Link></p>
+                        
                 </div>
               </div>
             </div>
