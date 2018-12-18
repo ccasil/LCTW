@@ -31,6 +31,7 @@ const InputGroup = ({
                 name={name}
                 value={value}
                 onChange={onChange}
+                type={type}
 
             />
 

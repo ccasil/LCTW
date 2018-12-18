@@ -20,7 +20,6 @@ class Dashboard extends Component {
    
     const { isAuthenticated, user } = this.props.auth;
     const { eventful, loading } = this.props.eventful;
-    console.log(isAuthenticated, user);
     const deleteButton = <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
       Delete My Account
           </button>;
@@ -65,7 +64,7 @@ class Dashboard extends Component {
             <div className="col-md-12">
               <h1 className="display-4">Dashboard</h1>
               <p className="lead text-muted">
-                Welcome {user.name}
+                Welcome {user.name ? user.name : "Guest"}
               </p>
               {dashboardContent}
               {isAuthenticated ? deleteButton : null}
