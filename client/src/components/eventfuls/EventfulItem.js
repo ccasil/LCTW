@@ -15,30 +15,33 @@ class EventfulItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      files:[],
+      files: [],
       autoplay: true
     };
   }
-  componentDidMount(){
-    
-  }
+  componentDidMount() {}
   onDeleteClick(id) {
     this.props.deleteEventful(id);
   }
 
-  convert(){
-    let newArr = []
+  convert() {
+    let newArr = [];
     console.log(this.state.eventful);
     if (this.state.eventful) {
       for (var i = 0; i < this.state.eventful.pictures.length; i++) {
         console.log(this.state.eventful.pictures[i]);
-        var base64 = btoa(new Uint8Array(this.state.eventful.pictures[i].image.data).reduce((data, byte) => data + String.fromCharCode(byte), ""));
+        var base64 = btoa(
+          new Uint8Array(this.state.eventful.pictures[i].image.data).reduce(
+            (data, byte) => data + String.fromCharCode(byte),
+            ""
+          )
+        );
 
-        newArr.push(base64)
+        newArr.push(base64);
         console.log(newArr);
       }
-      this.setState({ file: newArr })}
-    
+      this.setState({ file: newArr });
+    }
   }
 
   // onUnlikeClick(id) {
@@ -85,77 +88,52 @@ class EventfulItem extends Component {
   };
 
   render() {
+    let { leftIcon, rightIcon, files } = this.state;
+    const { eventful, auth, showActions } = this.props;
 
-             let { leftIcon, rightIcon , files } = this.state;
-             const { eventful, auth, showActions } = this.props;
-             
 
     eventful.pictures.map((image, index) => {
-      
-      files.push(image)
-      
+      files.push(image);
+    });
 
-    }
+    return <div className="card card-body mb-3">
+        <div className="row">
+          <div className="col-md-2">
+            <br />
+            <p className="text-center">Event Creator: {eventful.name}</p>
+          </div>
+          <div className="col-md-10">
+            <p className="lead">
+              Event Name:
+              {eventful.title}
+            </p>
+            <p className="lead">{eventful.description}</p>
+            <p className="lead">
+              Posted at {(new Date(eventful.date)).toLocaleDateString()}
+            </p>
 
+            <div className="col-md-12" style={{ marginTop: 40, marginBottom: 40 }}>
+              <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+                {eventful.pictures.map((image, index) => {
+                  return <div className="text-center" key={index}>
+                      <img className="eventfulImg" src={"data:image/png;base64," + image.image.data} alt="" />
+                    </div>;
+                })}
+              </RBCarousel>
+            </div>
 
-    )           
-    
-
-             return <div className="card card-body mb-3">
-                 <div className="row">
-                   <div className="col-md-2">
-                     <br />
-                     <p className="text-center">
-                       Event Creator: {eventful.name}
-                     </p>
-                   </div>
-                   <div className="col-md-10">
-                     <p className="lead">
-                       Event Name:
-                       {eventful.title}
-                     </p>
-                     <p className="lead">
-                       {eventful.description}
-                     </p>
-                     
-                       <div className="col-md-12" style={{ marginTop: 40, marginBottom: 40 }}>
-                         <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
-                           {eventful.pictures.map((image, index)=>{
-                          
-                           return (
-                             <div
-                               className="text-center"
-                               key={index}
-                             >
-                               <img
-                                 className="eventfulImg"
-                                 src=
-                                 {"data:image/png;base64," + image.image.data}
-                                 alt=""
-                               />
-                             </div>
-                           );
-
-                           }
-                             
-                            
-                           )
-                           }
-                         </RBCarousel>
-                       </div>
-                     
-                     {showActions ? <span>
-                         <Link to={`/eventful/${eventful._id}`} className="btn btn-info mr-1">
-                           {eventful.comments.length} Comments
-                         </Link>
-                         { auth.user.admin ? <button onClick={this.onDeleteClick.bind(this, eventful._id)} type="button" className="btn btn-danger mr-1">
-                             <i className="fas fa-times" />
-                           </button> : null}
-                       </span> : null}
-                   </div>
-                 </div>
-               </div>;
-           }
+            {showActions ? <span>
+                <Link to={`/eventful/${eventful._id}`} className="btn btn-info mr-1">
+                  {eventful.comments.length} Comments
+                </Link>
+                {auth.user.admin ? <button onClick={this.onDeleteClick.bind(this, eventful._id)} type="button" className="btn btn-danger mr-1">
+                    <i className="fas fa-times" />
+                  </button> : null}
+              </span> : null}
+          </div>
+        </div>
+      </div>;
+  }
 }
 
 EventfulItem.defaultProps = {
@@ -176,5 +154,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { deleteEventful, addLike, removeLike}
+  { deleteEventful, addLike, removeLike }
 )(EventfulItem);

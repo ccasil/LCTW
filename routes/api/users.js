@@ -177,8 +177,8 @@ router.get(
   }
 );
 
-// @route   DELETE api/user
-// @desc    Delete user and profile
+// @route   DELETE api/users
+// @desc    Delete user
 // @access  Private
 router.delete(
   "/",
