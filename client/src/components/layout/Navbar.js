@@ -218,14 +218,14 @@ class Navbar extends Component {
                   Resources
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/dashboard">
                   Dashboard
                 </Link>
               </li>
 
               {adminLvl ? adminLinks : null}
-              {isAuthenticated ? loginLinks : loggedoutLinks}
+              {isAuthenticated ? loginLinks : loggedoutLinks} */}
             </ul>
           </div>
         </nav>

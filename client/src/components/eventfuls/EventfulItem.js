@@ -100,12 +100,13 @@ class EventfulItem extends Component {
         <div className="row">
           <div className="col-md-2">
             <br />
-            <p className="text-center">Event Creator: {eventful.name}</p>
+            <p className="text-center">Event created by:</p>
+          <p className="text-center">{eventful.name}</p>
+
           </div>
           <div className="col-md-10">
             <p className="lead">
-              Event Name:
-              {eventful.title}
+              Event: {eventful.title}
             </p>
             <p className="lead">{eventful.description}</p>
             <p className="lead">
