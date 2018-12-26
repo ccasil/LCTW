@@ -16,10 +16,13 @@ class Dashboard extends Component {
   }
 
   render() {
-   
-    const { user } = this.props.auth;
-    const { eventful, loading } = this.props.eventful;
     
+   
+    const { isAuthenticated, user } = this.props.auth;
+    const { eventful, loading } = this.props.eventful;
+    const deleteButton = <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
+      Delete My Account
+          </button>;
     // const { profile } = this.props.profile;
 
     let dashboardContent;
@@ -37,21 +40,20 @@ class Dashboard extends Component {
           <div style={{ marginBottom: "60px" }} />
           <Eventfuls />
           <div style={{ marginBottom: "60px" }} />
-          <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
-            Delete My Account
-          </button>
+       
         </div>;
     } else {
-      dashboardContent = <div>
-          
+   
+        dashboardContent = <div>
+
 
           <div style={{ marginBottom: "60px" }} />
           <Eventfuls />
           <div style={{ marginBottom: "60px" }} />
-          <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">
-            Delete My Account
-          </button>
+    
         </div>;
+     
+      
     }
   // }
 
@@ -62,9 +64,11 @@ class Dashboard extends Component {
             <div className="col-md-12">
               <h1 className="display-4">Dashboard</h1>
               <p className="lead text-muted">
-                Welcome {user.name}
+                Welcome {user.name ? user.name : "Guest"}
               </p>
               {dashboardContent}
+              {isAuthenticated ? deleteButton : null}
+              
             </div>
           </div>
         </div>

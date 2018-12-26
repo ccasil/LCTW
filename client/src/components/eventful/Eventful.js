@@ -31,7 +31,7 @@ class Eventful extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                  <Link to="/dashboard" className="btn btn-light mb-3">
+                        <Link to="/dashboard" className="btn btn-light mb-3" style={{ marginTop: "60px" }} >
                     Back To dashboard
                   </Link>
                   {eventfulContent}

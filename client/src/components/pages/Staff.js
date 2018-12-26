@@ -76,7 +76,7 @@ class Staff extends Component {
           </div>
         </div>
         <hr />
-        <div className="row align-items-start about">
+        {/* <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
             <img
               className="executive"
@@ -104,7 +104,7 @@ class Staff extends Component {
             </p>
           </div>
         </div>
-        <hr />
+        <hr /> */}
         <div className="row align-items-start about">
           <div className="col col-lg-4 col-md-12 col-sm-12 text-center">
             <img

@@ -51,7 +51,7 @@ export const getEventfuls = () => dispatch => {
   axios
     .get("/api/eventfuls")
 
-    .then(res => {console.log("at atching get evenfuls", res.data), dispatch({ type: GET_EVENTFULS, payload: res.data })})
+    .then(res =>  dispatch({ type: GET_EVENTFULS, payload: res.data }))
 
     .catch(err => dispatch({ type: GET_EVENTFULS, payload: null }));
 };
