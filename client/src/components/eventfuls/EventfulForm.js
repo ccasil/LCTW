@@ -7,7 +7,8 @@ import { addEventful, upload } from "../../actions/eventfulActions";
 
 import Dropzone from "react-dropzone";
 
-const imageMaxSize = 1000000; //bytes
+const imageMaxSize = 10000000
+; //bytes
 const acceptedFileTypes =
   "image/x-png, image/png, image/jpg, image/jpeg, image/gif";
 const acceptedFileTypesArray = acceptedFileTypes.split(",").map(item => {
