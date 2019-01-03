@@ -26,9 +26,9 @@ class Dashboard extends Component {
     // const { profile } = this.props.profile;
 
     let dashboardContent;
-    // if (eventful === null || loading) {
-    //   dashboardContent = <Spinner />;
-    // } else {
+    if (eventful === null || loading) {
+      dashboardContent = <Spinner />;
+    } else {
       if (user.admin) {
       dashboardContent = <div>
           <p className="lead text-muted">
@@ -37,36 +37,25 @@ class Dashboard extends Component {
           <Link to="/eventfuls" className="btn btn-lg btn-info">
             Create Event
           </Link>
-          <div style={{ marginBottom: "60px" }} />
-          <Eventfuls />
-          <div style={{ marginBottom: "60px" }} />
+          
        
         </div>;
-    } else {
-   
-        dashboardContent = <div>
-
-
-          <div style={{ marginBottom: "60px" }} />
-          <Eventfuls />
-          <div style={{ marginBottom: "60px" }} />
-    
-        </div>;
-     
-      
-    }
-  // }
+    } 
+  }
 
     return (
       <div className="dashboard">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
+              <h1 className="display-1">Dashboard</h1>
               <p className="lead text-muted">
                 Welcome {user.name ? user.name : "Guest"}
               </p>
               {dashboardContent}
+              <div style={{ marginBottom: "60px" }} />
+              <Eventfuls />
+              <div style={{ marginBottom: "60px" }} />
               {isAuthenticated ? deleteButton : null}
               
             </div>

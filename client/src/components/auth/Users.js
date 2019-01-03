@@ -24,17 +24,16 @@ class Users extends Component {
       userContent = <UserFeed users={users} />;
     }
 
-    return (
-      <div className="feed">
+    return <div className="feed">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
+              <h1 className="display-1">Users</h1>
               {userContent}
             </div>
           </div>
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 

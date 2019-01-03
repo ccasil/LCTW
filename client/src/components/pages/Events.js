@@ -296,10 +296,10 @@ class Events extends Component {
                 </p>
                 <p className="lead">#LOVE starts at #HomeFirst!!!</p>
                 <p className="lead">
-                  Thank you for being a Blessing  to others and showing your
+                  Thank you for being a Blessing  to others and showing your
                   LOVE... We LOVE you ALL...
                 </p>
-                <p className="lead">~Love  One Another~ #LOVEMOVEMENT!!!</p>
+                <p className="lead">~Love  One Another~ #LOVEMOVEMENT!!!</p>
               </ModalBody>
               <ModalFooter>
                 <Button color="secondary" onClick={this.toggle12}>
@@ -362,7 +362,7 @@ class Events extends Component {
               ref={r => (this.slider = r)}
               version={4}
             >
-              {imgArr_event15.map(function(image, index) {
+              {imgArr_event15.map(function (image, index) {
                 return (
                   <div className="text-center" key={index}>
                     <img className="eventImg" src={image} alt="" />
@@ -388,7 +388,7 @@ class Events extends Component {
               ref={r => (this.slider = r)}
               version={4}
             >
-              {imgArr_event14.map(function(image, index) {
+              {imgArr_event14.map(function (image, index) {
                 return (
                   <div className="text-center" key={index}>
                     <img className="eventImg" src={image} alt="" />
@@ -415,7 +415,7 @@ class Events extends Component {
               ref={r => (this.slider = r)}
               version={4}
             >
-              {imgArr_event13.map(function(image, index) {
+              {imgArr_event13.map(function (image, index) {
                 return (
                   <div className="text-center" key={index}>
                     <img className="eventImg" src={image} alt="" />
