@@ -18,7 +18,7 @@ class Eventfuls extends Component {
     const { eventfuls, loading } = this.props.eventful;
     let eventfulContent;
     if (eventfuls === null || loading) {
-      eventfulContent = null
+      eventfulContent = <Spinner/>
     } else {
       
       eventfulContent = <EventfulFeed eventfuls={eventfuls} />;
