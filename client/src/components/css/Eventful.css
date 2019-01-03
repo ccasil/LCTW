@@ -3,9 +3,9 @@
         height:200px;
     }
     .carousel {
-    width: 350px;
+    width: 250px;
     height: 200px;
-    margin: auto;
+    margin:auto;
     }
 
 }
@@ -18,12 +18,15 @@
 	.carousel {
     width: 450px;
     height: 300px;
-    margin: auto;
+    margin:auto;
+    margin-left: 60px;
     }
 }
 
 
-@media (min-width: 1024px){
+
+
+@media (min-width: 992px){
 	.eventfulImg{
         height:400px;
     }
@@ -31,6 +34,7 @@
     width: 600px;
     height: 400px;
     margin: auto;
+    margin-left:180px;
     }
 	
 }

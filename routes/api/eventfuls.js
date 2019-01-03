@@ -187,12 +187,13 @@ router.delete(
     User.findOne({ user: req.user.id }).then(eventful => {
       Eventful.findById(req.params.id)
         .then(eventful => {
+          console.log(eventful)
           // Check for eventful owner
-          if (eventful.user.toString() !== req.user.id) {
-            return res.status(401).json({
-              notauthorized: "User not authorized"
-            });
-          }
+          // if (eventful.user.toString() !== req.user.id) {
+          //   return res.status(401).json({
+          //     notauthorized: "User not authorized"
+          //   });
+          // }
 
           // Delete
           eventful.remove().then(() => res.json({ success: true }));

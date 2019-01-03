@@ -98,23 +98,25 @@ class EventfulItem extends Component {
 
     return <div className="card card-body mb-3">
         <div className="row">
-          <div className="col-md-2">
+          {/* <div className="col-md-2">
             <br />
             <p className="text-center">Event created by:</p>
           <p className="text-center">{eventful.name}</p>
 
-          </div>
+          </div> */}
           <div className="col-md-10">
             <p className="lead">
-              Event: {eventful.title}
+              <span style={{ color: "blue" }}>{eventful.name}</span> <span
+                style={{ color: "grey" }}
+              >
+                posted at {new Date(eventful.date).toLocaleDateString()}
+              </span>
             </p>
+            <p className="lead">{eventful.title}</p>
             <p className="lead">{eventful.description}</p>
-            <p className="lead">
-              Posted at {(new Date(eventful.date)).toLocaleDateString()}
-            </p>
 
             <div className="col-md-12" style={{ marginTop: 40, marginBottom: 40 }}>
-              <RBCarousel animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
+              <RBCarousel className="" animation={true} autoplay={this.state.autoplay} slideshowSpeed={7000} leftIcon={leftIcon} rightIcon={rightIcon} onSelect={this.onSelect} ref={r => (this.slider = r)} version={4}>
                 {eventful.pictures.map((image, index) => {
                   return <div className="text-center" key={index}>
                       <img className="eventfulImg" src={"data:image/png;base64," + image.image.data} alt="" />
