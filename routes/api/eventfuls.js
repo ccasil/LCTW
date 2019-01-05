@@ -31,6 +31,15 @@ var upload = multer({
   storage: storage
 }).array("file");
 
+router.use((request, response, next) => {
+  response.header("Access-Control-Allow-Origin", "*");
+  response.header(
+    "Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS"
+  );
+  response.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
 // @route   GET api/eventfuls/test
 // @desc    Tests eventful route
 // @access  Public
