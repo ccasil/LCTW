@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const creds = require("./config.js");
 const mongoose = require("mongoose");
 const passport = require("passport");
+const path = require('path')
 
 const users = require("./routes/api/users");
 const eventfuls = require("./routes/api/eventfuls");
@@ -39,6 +40,17 @@ require('./config/passport')(passport);
 // Use Routes
 app.use('/api/users', users);
 app.use('/api/eventfuls', eventfuls);
+
+// Server static assets if in production
+if(process.env.NODE_ENV === 'production'){
+  // Set static folder
+  app.use(express.static('client/build'));
+
+  app.get('*',(res,req) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+
+}
 
 
 // create reusable transporter object using the default SMTP transport
