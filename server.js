@@ -41,16 +41,8 @@ require('./config/passport')(passport);
 app.use('/api/users', users);
 app.use('/api/eventfuls', eventfuls);
 
-// Server static assets if in production
-if(process.env.NODE_ENV === 'production'){
-  // Set static folder
-  app.use(express.static('client/build'));
 
-  app.get('*',(res,req) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
-
-}
+app.use(express.static(path.join(__dirname, "client/build")))
 
 
 // create reusable transporter object using the default SMTP transport
