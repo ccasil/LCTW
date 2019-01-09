@@ -16,7 +16,7 @@ module.exports = function validateEventfulInput(data) {
 
   return {
     errors,
-    // isValid: errors
-    isValid: isEmpty(errors)
+    isValid: errors
+    // isValid: isEmpty(errors)
   };
 };
