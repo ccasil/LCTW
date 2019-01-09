@@ -10,7 +10,7 @@ const users = require("./routes/api/users");
 const eventfuls = require("./routes/api/eventfuls");
 const app = express();
 
-app.use(express.static(path.join(__dirname, "client/build")));
+
 
 app.use(bodyParser.json());
 
@@ -41,6 +41,8 @@ require('./config/passport')(passport);
 // Use Routes
 app.use('/api/users', users);
 app.use('/api/eventfuls', eventfuls);
+
+app.use(express.static('client/build'));
 
 
 
@@ -176,10 +178,9 @@ app.post("/sendfundraiser", (req, res, next) => {
     }
   });
 });
-app.get("*", (req, res, next) =>{
-  console.log("REDIRECT***********************************");
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 const PORT = process.env.PORT || 8000;
 
