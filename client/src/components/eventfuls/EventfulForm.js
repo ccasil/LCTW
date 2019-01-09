@@ -60,7 +60,7 @@ class EventfulForm extends Component {
   onSubmit(e) {
     e.preventDefault();
     const { user } = this.props.auth;
-    console.log(e.target);
+ 
 
 
     const formdata = new FormData();
@@ -76,7 +76,7 @@ class EventfulForm extends Component {
     //   name: user.name
     // };
 
-    formdata.set("eventtitle", this.state.eventtitle);
+    formdata.append("eventtitle", this.state.eventtitle);
     formdata.append("description", this.state.description);
     formdata.append("name", user.name);
 
