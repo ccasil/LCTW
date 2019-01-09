@@ -96,14 +96,14 @@ router.post(
   (req, res) => {
     upload(req, res, err => {
       console.log(req.body)
-                              const { errors, isValid } = validateEventfulInput(req.body);
+                              // const { errors, isValid } = validateEventfulInput(req.body);
 
-                              // Check Validation
-                              if (!isValid) {
-                                console.log(errors)
-                                // If any errors, send 400 with errors object
-                                return res.status(400).json(errors);
-                              }
+                              // // Check Validation
+                              // if (!isValid) {
+                              //   console.log(errors)
+                              //   // If any errors, send 400 with errors object
+                              //   return res.status(400).json(errors);
+                              // }
 
 
                               console.log("!!!!!!!!!!!!!!", req.files);
