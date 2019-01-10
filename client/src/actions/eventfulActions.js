@@ -17,15 +17,20 @@ import {
 
 
 const config = {
-  headers: { 'Content-Type': 'multipart/form-data' },
-  // onUploadProgress: progressEvent => console.log("Upload Progress" + Math.round(progressEvent.loaded / progressEvent.total * 100) + "%")
+  onUploadProgress: progressEvent => console.log("Upload Progress" + Math.round(progressEvent.loaded / progressEvent.total * 100) + "%")
 }
 // Add eventful
 export const addEventful = (eventfulData) => dispatch => {
   dispatch(clearErrors());
   
   axios
-    .post("/api/eventfuls", eventfulData, config)
+    ({
+      method: 'post',
+      url: '/api/eventfuls',
+      data: eventfulData,
+      config: { headers: { 'Content-Type': 'multipart/form-data' } }
+    })
+    // .post("/api/eventfuls", eventfulData, config)
     .then(res => dispatch({ type: ADD_EVENTFUL, payload: res.data }))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
