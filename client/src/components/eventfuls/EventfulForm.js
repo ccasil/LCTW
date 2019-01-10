@@ -125,7 +125,6 @@ class EventfulForm extends Component {
       height: 100
     };
     const { errors, files } = this.state;
-    console.log(this.state);
 
     return (
       <div className="post-form mb-3">
