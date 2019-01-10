@@ -64,7 +64,7 @@ class HomelessForm extends Component {
 
         axios({
           method: "POST",
-          url: "http://lovechangingtheworld.org:8000/sendhelp",
+          url: "http://lovechangingtheworld.org/sendhelp",
           data: {
             first_name: first_name,
             last_name: last_name,
