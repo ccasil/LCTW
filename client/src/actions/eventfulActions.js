@@ -23,8 +23,7 @@ const config = {
 export const addEventful = (eventfulData) => dispatch => {
   dispatch(clearErrors());
   
-  axios
-    ({
+  axios({
       method: 'post',
       url: '/api/eventfuls',
       data: eventfulData,
