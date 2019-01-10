@@ -43,7 +43,7 @@ class SponsorForm extends Component {
                                       method:
                                         "POST",
                                       url:
-                                        "http://lovechangingtheworld.org:8000/sendsponsor",
+                                        "http://lovechangingtheworld.org/sendsponsor",
                                       data: {
                                         first_name: first_name,
                                         last_name: last_name,
