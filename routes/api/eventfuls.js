@@ -95,7 +95,7 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     upload(req, res, err => {
-      console.log(req.body)
+      console.log("req.body!!!!!", req.body)
                               // const { errors, isValid } = validateEventfulInput(req.body);
 
                               // // Check Validation
@@ -106,7 +106,7 @@ router.post(
                               // }
 
 
-                              console.log("!!!!!!!!!!!!!!", req.files);
+                              console.log("req.files!!!!!", req.files);
                               if (err) {
                                 console.log(err);
                                 res
