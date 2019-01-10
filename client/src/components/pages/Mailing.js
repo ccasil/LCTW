@@ -35,7 +35,7 @@ class Contact extends Component {
       console.log(parsedPhone);
       axios({
         method: "POST",
-        url: "http://lovechangingtheworld.org:8000/sendcontact",
+        url: "http://lovechangingtheworld.org/sendcontact",
         data: {
           first_name: first_name,
           last_name: last_name,
