@@ -13,36 +13,51 @@ import {
   UPLOAD_FILES
 } from "./types";
 
-
-
-
 const config = {
-  onUploadProgress: progressEvent => console.log("Upload Progress" + Math.round(progressEvent.loaded / progressEvent.total * 100) + "%")
-}
+  onUploadProgress: progressEvent =>
+    console.log(
+      "Upload Progress" +
+        Math.round((progressEvent.loaded / progressEvent.total) * 100) +
+        "%"
+    )
+};
 // Add eventful
-export const addEventful = (eventfulData) => dispatch => {
+export const addEventful = eventfulData => dispatch => {
   dispatch(clearErrors());
-  
-  axios({
-      method: 'post',
-      url: '/api/eventfuls',
-      data: eventfulData,
-      config: { headers: { 'Content-Type': 'multipart/form-data' } }
-    })
-    // .post("/api/eventfuls", eventfulData, config)
-    .then(res => dispatch({ type: ADD_EVENTFUL, payload: res.data }))
-    .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
+
+  // ({
+  //     method: 'post',
+  //     url: '/api/eventfuls',
+  //     data: eventfulData,
+  //     config: { headers: { 'Content-Type': 'multipart/form-data' } }
+  //   })
+
+  axios
+    .post("/api/eventfuls", eventfulData, config)
+    .then(res =>
+      dispatch({
+        type: ADD_EVENTFUL,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
 };
 // Add Like
 export const upload = formdata => dispatch => {
   axios
     .post("/api/eventfuls/upload", formdata)
-    .then(res =>{console.log("res!!!!!!!!", res),
-      dispatch({
-        type: UPLOAD_FILES,
-        payload: res.data
-      })}
-    )
+    .then(res => {
+      console.log("res!!!!!!!!", res),
+        dispatch({
+          type: UPLOAD_FILES,
+          payload: res.data
+        });
+    })
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -58,7 +73,7 @@ export const getEventfuls = () => dispatch => {
   axios
     .get("/api/eventfuls")
 
-    .then(res =>  dispatch({ type: GET_EVENTFULS, payload: res.data }))
+    .then(res => dispatch({ type: GET_EVENTFULS, payload: res.data }))
 
     .catch(err => dispatch({ type: GET_EVENTFULS, payload: null }));
 };
