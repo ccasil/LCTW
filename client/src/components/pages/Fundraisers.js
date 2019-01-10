@@ -173,7 +173,7 @@ class Fundraisers extends Component {
       }
       axios({
         method: "POST",
-        url: "http://lovechangingtheworld.org:8000/sendfundraiser",
+        url: "http://lovechangingtheworld.org/sendfundraiser",
         data: {
           first_name: first_name,
           last_name: last_name,
