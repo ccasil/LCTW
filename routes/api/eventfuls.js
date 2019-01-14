@@ -85,7 +85,7 @@ router.get("/:id", (req, res) => {
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
-  upload.any(),
+  upload.array("file"),
   (req, res) => {
     console.log("req.body!!!!!", req.body);
     const { errors, isValid } = validateEventfulInput(req.body);
@@ -137,13 +137,6 @@ router.post(
 
       newEventful.save().then(eventful => res.json(eventful));
     }
-
-
-    //....code
-    //now req.body sould work
-    //file should be at req.files
-
-  ;
   }
 );
 
