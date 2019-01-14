@@ -18,13 +18,15 @@ var fs = require("fs");
 var path = require("path");
 
 var btoa = require("btoa");
-router.use(bodyParser.json());
 
 router.use(
   bodyParser.urlencoded({
     extended: false
   })
 );
+router.use(bodyParser.json());
+
+
 
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -162,17 +164,11 @@ router.post(
 
                                 const newEventful = new Eventful(
                                   {
-                                    title:
-                                      req.body
-                                        .eventtitle,
-                                    description:
-                                      req.body
-                                        .description,
+                                    title: req.body.eventtitle,
+                                    description: req.body.description,
                                     pictures: newArr,
-                                    user:
-                                      req.user.id,
-                                    name:
-                                      req.user.name
+                                    user: req.user.id,
+                                    name: req.user.name
                                   }
                                 );
 

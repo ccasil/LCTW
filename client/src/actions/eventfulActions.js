@@ -31,8 +31,7 @@ export const addEventful = eventfulData => dispatch => {
     method: 'post',
     url: '/api/eventfuls',
     data: eventfulData,
-    processData: false,
-    contentType: undefined
+    config: { headers: { 'Content-Type': 'multipart/form-data' } }
 
   }).then(res =>
       dispatch({
