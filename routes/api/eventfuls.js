@@ -112,7 +112,7 @@ router.post(
         item.image.contentType = "img/png";
         newArr.push(item);
 
-        fs.unlink(file.path, function(err) {
+        fs.unlinkSync(file.path, function(err) {
           if (err) {
             console.log("error deleting image", file.path);
           } else {
