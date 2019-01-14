@@ -24,27 +24,14 @@ const config = {
 // Add eventful
 export const addEventful = eventfulData => dispatch => {
   dispatch(clearErrors());
-  // .post("/api/eventfuls", eventfulData, config)
+  // ({ method: "post", url: "/api/eventfuls", data: eventfulData, config: { headers: { "Content-Type": "multipart/form-data" } } });
   
-
-  axios({
-    method: 'post',
-    url: '/api/eventfuls',
-    data: eventfulData,
-    config: { headers: { 'Content-Type': 'multipart/form-data' } }
-
-  }).then(res =>
-      dispatch({
-        type: ADD_EVENTFUL,
-        payload: res.data
-      })
-    )
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
+  
+  axios
+    .post("/api/eventfuls", eventfulData, config)
+    .then(res => dispatch({ type: ADD_EVENTFUL, payload: res.data }))
+    .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
+  
 };
 // Add Like
 export const upload = formdata => dispatch => {
@@ -63,6 +50,7 @@ export const upload = formdata => dispatch => {
         payload: err.response
       })
     );
+  
 };
 
 // Get Eventfuls
@@ -89,6 +77,7 @@ export const getEventful = id => dispatch => {
 
 // Delete EVENTful
 export const deleteEventful = id => dispatch => {
+  if (window.confirm('Are you sure? This can NOT be undone!')) {
   axios
     .delete(`/api/eventfuls/${id}`)
     .then(res => dispatch({ type: DELETE_EVENTFUL, payload: id }))
@@ -98,6 +87,7 @@ export const deleteEventful = id => dispatch => {
         payload: err.response.data
       })
     );
+  }
 };
 
 // Add Like
@@ -142,6 +132,7 @@ export const addComment = (eventfulId, commentData) => dispatch => {
 
 // Delete Comment
 export const deleteComment = (eventfulId, commentId) => dispatch => {
+  if (window.confirm('Are you sure? This can NOT be undone!')) {
   axios
     .delete(`/api/eventfuls/comment/${eventfulId}/${commentId}`)
     .then(res => dispatch({ type: GET_EVENTFUL, payload: res.data }))
@@ -151,6 +142,7 @@ export const deleteComment = (eventfulId, commentId) => dispatch => {
         payload: err.response.data
       })
     );
+  }
 };
 
 // Set loading state
