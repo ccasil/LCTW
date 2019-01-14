@@ -99,7 +99,7 @@ router.post(
 
     console.log("req.files!!!!!", req.files);
     if (!req.files) {
-      console.log(err);
+      
       res.status(404).json({ uploadFailed: "Upload failed" });
     } else {
       let newArr = [];
