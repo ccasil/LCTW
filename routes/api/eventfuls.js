@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
+const bodyParser = require("body-parser");
 
 // Eventful model
 const Eventful = require("../../models/Eventful");
@@ -17,6 +18,13 @@ var fs = require("fs");
 var path = require("path");
 
 var btoa = require("btoa");
+router.use(bodyParser.json());
+
+router.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
 
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -117,12 +125,6 @@ router.post(
                                   });
                               } else {
                                 let newArr = [];
-
-                                // pictures: [
-                                //   {
-                                //     image: { data: Buffer, contentType: String }
-                                //   }
-                                // ],
 
                                 for (let file of req.files) {
                                   let fileReadSync = fs.readFileSync(file.path);
