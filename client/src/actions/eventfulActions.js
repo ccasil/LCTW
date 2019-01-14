@@ -14,7 +14,6 @@ import {
 } from "./types";
 
 const config = {
-  headers: { "Content-Type": "multipart/form-data" },
   onUploadProgress: progressEvent =>
     console.log(
       "Upload Progress" +
@@ -25,10 +24,11 @@ const config = {
 // Add eventful
 export const addEventful = eventfulData => dispatch => {
   dispatch(clearErrors());
-
-      // .post("/api/eventfuls", eventfulData, config)
+  // ({ method: "post", url: "/api/eventfuls", data: eventfulData, config: { headers: { "Content-Type": "multipart/form-data" } } });
   
-  axios({ method: "post", url: "/api/eventfuls", data: eventfulData, config: config })
+  
+  axios
+    .post("/api/eventfuls", eventfulData, config)
     .then(res => dispatch({ type: ADD_EVENTFUL, payload: res.data }))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   
