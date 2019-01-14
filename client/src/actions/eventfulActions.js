@@ -24,17 +24,17 @@ const config = {
 // Add eventful
 export const addEventful = eventfulData => dispatch => {
   dispatch(clearErrors());
+  // .post("/api/eventfuls", eventfulData, config)
+  
 
-  // ({
-  //     method: 'post',
-  //     url: '/api/eventfuls',
-  //     data: eventfulData,
-  //     config: { headers: { 'Content-Type': 'multipart/form-data' } }
-  //   })
+  axios({
+    method: 'post',
+    url: '/api/eventfuls',
+    data: eventfulData,
+    processData: false,
+    contentType: undefined
 
-  axios
-    .post("/api/eventfuls", eventfulData, config)
-    .then(res =>
+  }).then(res =>
       dispatch({
         type: ADD_EVENTFUL,
         payload: res.data
