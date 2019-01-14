@@ -54,9 +54,6 @@ class EventfulForm extends Component {
 
     }
   }
-
-
-
   onSubmit(e) {
     e.preventDefault();
     const { user } = this.props.auth;
@@ -109,13 +106,8 @@ class EventfulForm extends Component {
         this.setState({
           files: files
         });
-
-
       }
     }
-
-
-    
   };
 
   render() {

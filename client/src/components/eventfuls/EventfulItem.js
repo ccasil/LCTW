@@ -21,6 +21,7 @@ class EventfulItem extends Component {
   }
   componentDidMount() {}
   onDeleteClick(id) {
+    
     this.props.deleteEventful(id);
   }
 
