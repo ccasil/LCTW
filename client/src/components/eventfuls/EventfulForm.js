@@ -57,10 +57,12 @@ class EventfulForm extends Component {
   onSubmit(e) {
     e.preventDefault();
     const { user } = this.props.auth;
- 
-
-
     const formdata = new FormData();
+    formdata.append("eventtitle", this.state.eventtitle);
+    formdata.append("description", this.state.description);
+    formdata.append("name", user.name);
+
+    
     this.state.files.forEach((file, i) => {
       const newFile = { uri: file, type: "image/jpg" };
       formdata.append("file", file, file.name);
@@ -73,9 +75,7 @@ class EventfulForm extends Component {
     //   name: user.name
     // };
 
-    formdata.append("eventtitle", this.state.eventtitle);
-    formdata.append("description", this.state.description);
-    formdata.append("name", user.name);
+
 
     this.props.addEventful(formdata);
     this.setState({ eventtitle: "" });
