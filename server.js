@@ -12,6 +12,7 @@ const app = express();
 
 
 
+
 app.use(bodyParser.json());
 
 app.use(
@@ -178,9 +179,14 @@ app.post("/sendfundraiser", (req, res, next) => {
     }
   });
 });
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"),
+      path.join(__dirname, global.rootPath, "uploads")
+    );
 });
+
 
 const PORT = process.env.PORT || 8000;
 
