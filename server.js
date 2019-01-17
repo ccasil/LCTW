@@ -10,6 +10,7 @@ const users = require("./routes/api/users");
 const eventfuls = require("./routes/api/eventfuls");
 const app = express();
 
+app.use(express.static(path.join(__dirname, global.rootPath, "uploads")));
 
 
 
