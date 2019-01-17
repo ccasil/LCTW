@@ -182,8 +182,7 @@ app.post("/sendfundraiser", (req, res, next) => {
 
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"),
-      path.join(__dirname, global.rootPath, "uploads")
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html").join(__dirname, global.rootPath, "uploads")
     );
 });
 
