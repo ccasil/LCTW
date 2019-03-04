@@ -143,17 +143,22 @@ class Navbar extends Component {
                   <Link className="dropdown-item" to="/founder">
                     Founder
                   </Link>
-                  <Link className="dropdown-item" to="/executive">
+                  {/* <Link className="dropdown-item" to="/executive">
                     Directors
                   </Link>
                   <Link className="dropdown-item" to="/staff">
                     Executives
-                  </Link>
+                  </Link> */}
                 </div>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/services">
                   Services
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/outreach">
+                  Outreach
                 </Link>
               </li>
               <li className="nav-item">

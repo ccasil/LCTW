@@ -28,6 +28,8 @@ import Founder from "./components/pages/Founder";
 import Executive from "./components/pages/Executive";
 import Donations from "./components/pages/Donations";
 import Shop from "./components/pages/Shop";
+import Outreach from "./components/pages/Outreach";
+
 import Fundraisers from "./components/pages/Fundraisers";
 import Programs from "./components/pages/Programs";
 import Mailing from "./components/pages/Mailing";
@@ -77,11 +79,12 @@ class App extends Component {
             <div className="container text-justify">
             <Route exact path="/ourmission" component={OurMission} />
             <Route exact path="/services" component={Services} />
+            <Route exact path="/outreach" component={Outreach} />
             <Route exact path="/events" component={Events} />
             <Route exact path="/pastevents" component={PastEvents} />
             <Route exact path="/founder" component={Founder} />
-            <Route exact path="/executive" component={Executive} />
-            <Route exact path="/staff" component={Staff} />
+            {/* <Route exact path="/executive" component={Executive} /> */}
+            {/* <Route exact path="/staff" component={Staff} /> */}
               <Route exact path="/donations" component={Donations} />
               <Route exact path="/shop" component={Shop} />
               <Route exact path="/fundraisers" component={Fundraisers} />
@@ -91,6 +94,7 @@ class App extends Component {
               <Route exact path="/volunteerform" component={VolunteerForm} />
               <Route exact path="/homelessform" component={HomelessForm} />
               <Route exact path="/resources" component={Resources} />
+
               <Route exact path="/membership" component={Membership} />
 
               <Route exact path="/register" component={Register} />
