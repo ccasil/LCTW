@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../css/Outreach.css";
 import { Link } from "react-router-dom";
-import nextevent3 from "../../images/Fliers/3.jpeg";
+import nextevent5 from "../../images/Fliers/5.JPG";
 import nextevent4 from "../../images/Fliers/4.JPG";
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
@@ -105,9 +105,11 @@ class Outreach extends Component {
             </ModalFooter>
           </Modal>
         </div>
+
         <h4 className="text-center display-4 font-weight-bold">
           Upcoming Events
         </h4>
+
         <div className="row">
           <div className="col">
             <h5>#LCTW ReaLOVE Inspiration & Prayer Support Group</h5>
@@ -124,7 +126,6 @@ class Outreach extends Component {
               />
               <p className="lead">Click here for more info</p>
             </a>
-
             <Modal
               isOpen={this.state.modal12}
               toggle={this.toggle12}
@@ -142,10 +143,64 @@ class Outreach extends Component {
                 />
                 <p className="lead">
                   This LOVING support group is to inspire and encourage each
-                  person with new short and long term goals to help you better
-                  your FUTURE... PRAYER is available to everyone and yet
-                  optional...
+                  person with new short and long term goals to help you
+                  better your FUTURE... PRAYER is available to everyone and
+                  yet optional...
                 </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={this.toggle12}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+          <div className="col">
+            <h5>#LCTW Green Apple Sip & Paint</h5>
+            <h5>Sunday, March 17, 2019 3pm – 7pm</h5>
+            <br />
+            <a className="btn-block" color="danger" onClick={this.toggle12}>
+              <img
+                className="btnImg"
+                style={{ height: "100%" }}
+                src={nextevent5}
+                alt=""
+              />
+              <p className="lead">Click here for more info</p>
+            </a>
+            <Modal
+              isOpen={this.state.modal12}
+              toggle={this.toggle12}
+              className={this.props.className}
+            >
+              <ModalHeader toggle={this.toggle12}>
+                #LCTW Green Apple Sip & Paint
+              </ModalHeader>
+              <ModalBody>
+                <img
+                  className=""
+                  src={nextevent5}
+                  style={{ height: "100%" }}
+                  alt="nextevent5"
+                />
+                <p className="lead">Great FOOD!!!</p>
+                <p className="lead">Great MUSIC!!!</p>
+                <p className="lead">Great TIME!!!</p>
+                <p className="lead">
+                  Donations $25.00 with Paint $20.00 without Paint
+                </p>
+                <p className="lead">*LIMITED TICKETS AVAILABLE!!!</p>
+                <p className="lead">💚 *INCREASE YOUR CHANCES TO WIN!!!</p>
+                <p className="lead">
+                  BRING A BLANKET and get a FREE RAFFLE TICKET!!!
+                </p>
+                <p className="lead">
+                  Best Dressed “GREEN” GAMES and more… FULL OF LOVE!!!
+                </p>
+                <p className="lead">
+                  Stop by our #LCTW shop and order your T-Shirts today!!!
+                </p>
+                <p className="lead">SEE YOU THERE!!!</p>
               </ModalBody>
               <ModalFooter>
                 <Button color="secondary" onClick={this.toggle12}>
